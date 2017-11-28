@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="432,142" roundcorner="5,5">
+  <VerticalLayout name="root">
+    <HorizontalLayout name="VouchersInfo">
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

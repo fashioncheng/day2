@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="94,170">
+<VerticalLayout name="root" bkimage="playcontrol_more_bk.png">
+    <Option name="BT_Download" group="MoreOpt" align="center" padding="27,22,0,0" width="46" height="17" statusimage="playcontrol_download.png"/>
+    <Option name="BT_MV" group="MoreOpt" align="center" padding="27,17,0,0" width="46" height="17" statusimage="MV.png"/>
+    <Option name="BT_KSong" group="MoreOpt" align="center" padding="27,17,0,0" width="46" height="17" statusimage="playcontrol_KSong.png"/>
+    <Option name="BT_Share" group="MoreOpt" align="center" padding="27,17,0,0" width="46" height="17" statusimage="playcontrol_share.png"/>
+</VerticalLayout>
+</Window>

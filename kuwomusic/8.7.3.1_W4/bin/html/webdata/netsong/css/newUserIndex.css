@@ -1,0 +1,14 @@
+body {background:rgba(0,0,0,0.5) !important;overflow:hidden;font-size: 12px;}
+h3 {font-size: 16px;margin-bottom:8px;}
+/*主动安装*/
+.newUserIndex {width:800px;height:500px;background:#fff;margin:72px 0 0 116px;background: url(../img/newUserIndex/second/active.jpg);cursor:pointer;}
+.closeWindow_active {float:right;margin:20px 20px 0 0;width:16px;height:16px;display: block;}
+/*被动安装*/
+.newUserIndex_passive {width:800px;height:500px;background:#fff;margin:72px 0 0 116px;background:#1a1b1e;position: relative;}
+.top {overflow: hidden;text-align: center;}
+.top .vipIcon {float:left;}
+.closeWindow {float:right;margin:20px 20px 0 0;width:16px;height:16px;display: block;background: url(../img/newUserIndex/second/prassive_close.jpg);}
+.passive {margin: 8px auto 0}
+.getVip {display:block;width: 290px;height: 55px;font-size: 24px;color:#fff;text-align: center;line-height: 55px;background: #57627a;margin: 58px auto 0}
+.newUserIndex_passive span {font-size: 16px;text-align: center;display: block;line-height: 55px;opacity: 0.2;color:#fff;}
+.errorTips{position:absolute; left:50%; top:50%; display:none; width:260px; height:70px; line-height:70px; margin-left:-130px; margin-top:-35px; text-align:center; font-size:16px; color:#fff; background:#000; opacity:0.8;z-index:999;}

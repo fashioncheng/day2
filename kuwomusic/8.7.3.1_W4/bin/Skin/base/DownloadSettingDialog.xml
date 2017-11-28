@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="500,400" caption="0,0,0,35" roundcorner="2,2">
+	<Default name="VScrollBar" value="buttonlength=&quot;16&quot; width=&quot;9&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,9,16'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='10,0,19,16'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='20,0,29,16'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='30,0,39,16'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,17,9,33'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='10,17,19,33'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='20,17,29,33'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='30,17,39,33'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,51,9,53'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='10,51,19,53'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='20,51,29,53'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=30,51,39,53'&quot;" />
+	<Default name="HScrollBar" value="buttonlength=&quot;16&quot; height=&quot;9&quot; button1normalimage=&quot;file='scrollbar_public_h.png' source='0,0,16,9'&quot; button1hotimage=&quot;file='scrollbar_public_h.png' source='17,0,33,9'&quot; button1pushedimage=&quot;file='scrollbar_public_h.png' source='34,0,50,9'&quot; button1disabledimage=&quot;file='scrollbar_public_h.png' source='51,0,67,16'&quot; button2normalimage=&quot;file='scrollbar_public_h.png' source='0,10,16,19'&quot; button2hotimage=&quot;file='scrollbar_public_h.png' source='17,10,33,19'&quot; button2pushedimage=&quot;file='scrollbar_public_h.png' source='34,10,50,19'&quot; button2disabledimage=&quot;file='scrollbar_public_h.png' source='34,17,51,33'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_h_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_h_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_h_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_h_4.png&quot; bknormalimage=&quot;file='scrollbar_public_h.png' source='0,30,16,30'&quot; bkhotimage=&quot;file='scrollbar_public_h.png' source='17,30,33,30'&quot; bkpushedimage=&quot;file='scrollbar_public_h.png' source='34,30,50,30'&quot; bkdisabledimage=&quot;file='scrollbar_public_h.png' source=51,30,67,30'&quot;" />
+	<Default name="Combo" value="statusimage=&quot;dropdown_common_cfg.png&quot; height=&quot;26&quot; textpadding=&quot;5,7,5,5&quot; " />	
+	<Default name="Option" value="setcursor=&quot;true&quot; textcolor=&quot;Config.DefaultText&quot; normalimage=&quot;Download_Radio_1.png&quot; hotimage=&quot;Download_Radio_2.png&quot; selectedimage=&quot;Download_Radio_3.png&quot; disabledimage=&quot;Download_Radio_4.png&quot; height=&quot;16&quot; textpadding=&quot;16,-2,1,0&quot; align=&quot;left&quot; font=&quot;Config.DefaultText&quot; " />
+	<Default name="Edit" value="height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; normalimage=&quot;download_EditBox_1.png&quot; focusedimage=&quot;download_EditBox_2.png&quot; disabledimage=&quot;download_EditBox_3.png&quot; disabledtextcolor=&quot;#FF111111&quot; font=&quot;Config.DefaultText&quot;" /> 
+	<Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,1,16,17'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;16,-3,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;Config.DefaultText&quot;" />
+  <EventHook event="OnSkinChange">
+    <Attribute control="text_title1" value="textcolor=&quot;PopWnd.title.textcolor&quot;" />
+  </EventHook>
+  
+	<VerticalLayout name="layout_clientrect">
+		<HorizontalLayout name="layout_dialog_title" height="34">
+			<Label name="text_title1" padding="10,0,0,0" align="left" font="Main.ChannelTitle" textcolor="PopWnd.title.textcolor" text="" />
+			<Button name="button_Close" padding="0,7,8,0" width="19" height="20" statusimage="download_CloseBtn.png"/>
+		</HorizontalLayout>
+		<VerticalLayout name="layout_intro" height="57">
+      <HorizontalLayout name="title_layout" height="20" inset="28,0,20,0">
+        <Label name="text_songname"  varwidth="true" maxwidth="320" align="left" font="YAHEI.NO18" textcolor="#ff46b4e6" endellipsis="true"/>
+        <Label name="text_author" align="left" font="YAHEI.NO18" textcolor="#ff46b4e6" endellipsis="true"/>
+      </HorizontalLayout>			
+			<HorizontalLayout name="layout_VipTip"  height="22" visible="false">
+				<Label name="text_Vip1" padding="18,0,0,0" width="160" textcolor="#FFFF9900" align="left" text="下载歌曲为VIP会员特权，请" />
+				<Button name="button_OpenVip" text="开通VIP" width="50" textcolor="#FFCC0000" setcursor="true" font="YAHEI.N12_UNDERLINE"/>
+				<Label name="text_Vip2" textcolor="#FFFF9900" align="left" text="后下载" />
+			</HorizontalLayout>
+			<Label name="download_oper_intros" visible="false" height="14" padding="28,2,0,0" textcolor="#ff999999"/>
+      <Label name="text_vivo_title" padding="28,3,0,0" height="14" align="left" font="YAHEI.NO12" text="乐享极智-vivo智能手机推荐您欣赏Hi-Fi品质音乐" textcolor="#ff008cd7" endellipsis="true"/>
+      <Control height="3"/>
+		</VerticalLayout>
+		<VerticalLayout name="layout_songinfo" padding="30,0,30,0" height="150" bkcolor="#fff9f9f9" bordercolor="#ffe9eaeb"/>
+		<Control height="13"/>
+    <HorizontalLayout name="layout_link" height="30" padding="40,0,30,0">
+      <Label align="left" varwidth="true" textcolor="#FF666666" text="下载链接:"/>
+      <Label name="lblLink" padding="15,0,0,0"  textcolor="#FF666666"/>
+      <Button name="btnCopyLink" width="90" text="复制链接" statusimage="btn_myList_downAndShare.png"/>
+    </HorizontalLayout>
+    <Control height="10"/>
+		<HorizontalLayout name="layout_downladpath" height="40" padding="0,0,0,0">
+			<Label  name="label_downloadpath" align="left" textcolor="#FF666666" text="保存位置:" pos="40,0,135,30" float="true" font="Default.FontName"/>
+			<Edit name="edit_path" float="true"  pos="108,3,432,29"/> 
+			<Button name="button_selectpath" pos="415,3,432,29" float="true" textcolor="#FF000000" statusimage="btn_selectdownpath.png"/>
+			<Button name="button_browserdir" pos="431,3,470,29" float="true" textcolor="#FF000000" statusimage="btn_downopendir.png"/>
+		</HorizontalLayout>		
+		<Control height="7"/>
+		<HorizontalLayout name="layout_operatorbutton">
+			<Button name="button_startdownload_pc" padding="108,0,0,0" width="140" height="36" iconimage="icon_download_pc.png" icondest="19,10,121,26" statusimage="btn_download_statusb.png"/>
+			<Button name="button_startdownload_phone" padding="20,0,0,0" width="140" height="36" enabled="false" iconimage="icon_download_phone_disable.png" icondest="21,9,118,27" statusimage="btn_download_statusb.png"/>
+			<VerticalLayout >
+			<Control height="9"/>
+			<Button name="label_moresetting" padding="5,0,0,0" width="60" height="20" textcolor="#FF46B4E6" text="更多设置" font="Default.FontName" setcursor="true"/>
+			<Control height="9"/>
+			</VerticalLayout>
+			<Control width="30"/>
+		</HorizontalLayout>	
+		<HorizontalLayout name="KwAppCommend" height="80" padding="2,0,2,0" visible="false">
+		</HorizontalLayout>
+		<Control height="2"/>
+	</VerticalLayout>
+</Window>

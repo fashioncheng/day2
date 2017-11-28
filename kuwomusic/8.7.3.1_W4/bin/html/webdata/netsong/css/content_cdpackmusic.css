@@ -1,0 +1,319 @@
+/*公用*/
+html{overflow:visible; overflow-x:hidden;background: url('../img/cdpack/second/bodyBg.png');}
+
+/*公用背景css开始*/
+.headBg{position:absolute; z-index:0; top:0; left:0; width:100%;}
+body{background: #1f1f1f url('../img/cdpack/second/bodyBg.png');}
+
+
+/*滚动条的宽度*/
+body::-webkit-scrollbar{width:10px;}
+/*滚动条的宽度*/
+
+ /* 滚动条的滑轨背景颜色 */
+body::-webkit-scrollbar-track {background:url(../img/cdpack/second/bodyBg.png);}
+ /* 滚动条的滑轨背景颜色 */
+ 
+
+/* 滑块颜色 */
+body::-webkit-scrollbar-thumb {border:none;border-radius: 5px;background-color: #2e2e2e;} 
+/* 滑块颜色 */
+
+
+/* 滑轨两头的监听按钮颜色 */
+body::-webkit-scrollbar-button { background:transparent;} 
+/* 滑轨两头的监听按钮颜色 */
+
+/*显示滚动条上方的渐增按钮*/
+body::-webkit-scrollbar-button:start:decrement,
+body::-webkit-scrollbar-button:end:increment 
+{display: none;height:15px;}
+
+/*隐藏滚动条上方的渐增按钮*/
+body::-webkit-scrollbar-button:vertical:start:increment,
+body::-webkit-scrollbar-button:vertical:end:decrement 
+{display: none;}
+
+/* 定义滚动条渐增按扭的样式 */
+/*body::-webkit-scrollbar-button:end:increment {background-image: url(../img/bar_down.jpg);margin-top:2px;}*/
+/* 定义滚动条渐增按扭的样式 */
+
+
+/* 定义滚动条渐减按扭的样式 */
+/*body::-webkit-scrollbar-button:start:decrement {background-image: url(../img/bar_up.jpg);margin-bottom:2px;}*/
+/* 定义滚动条渐减按扭的样式 */
+
+
+/*公用背景css结束*/
+
+/*头部信息部分开始*/
+.headInfoBox{height:168px; margin-bottom:50px;}
+.headInfoBox .cdPicBox{position:relative; float:left; width:170px; height:170px; padding:30px 30px 0 30px;margin: -5px 0 0 -2px;}
+.headInfoBox .cdPicBox .projection{position:absolute; bottom:0; width:164px; height:4px; background:url(../img/cdpack/cdBox_big_bottom.png) no-repeat;}
+.headInfoBox .cdPicBox .cdCoverBox{position:absolute; width:170px; height:170px; background:url(../img/cdpack/second/cdCover.png) no-repeat; }
+.headInfoBox .cdPicBox .cdHeadPic{position:absolute; transform: translate(2px,4px);height: 160px;width: 160px;}
+.headInfoBox .cdHeadInfo{padding-top:30px;}
+.headInfoBox .cdHeadInfo .cdName{height:22px; line-height:20px; padding-top:3px; margin-bottom:15px; font-size:20px; color:rgba(255,255,255,0.85);overflow: hidden;text-overflow: ellipsis;white-space: nowrap;position: relative;}
+.headInfoBox .line2,.headInfoBox .line3{overflow:hidden;color:rgba(255,255,255,0.5)}
+.headInfoBox .line2 li{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;line-height:30px; font-size:14px; position: relative;margin-left: 1px;}
+
+.headInfoBox .line3 li{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;line-height:30px; font-size:14px; position: relative;}
+span.art_tag{margin-right: 23px;}
+span.pub_time_tag{margin-left: 1px;}
+span.suffix{width: 50px;}
+span.category{width: 80px;}
+span.audio_rate{margin-right: 41px;}
+
+/*.line2 .li_suffix_info,.line2 .li_present_info{margin-left: 213px; }*/
+
+.line3 .li_present_info{width: 250px;float: left;}
+.line2 .li_artist_info{width: 355px;float: left;}
+
+.line2 .li_suffix_info{width: 110px;float: right;margin-right: 103px;}
+.line3 .li_category_info{width: 172px;float: right;margin-right: 41px;}
+
+/*.headInfoBox .line2 li .artist_name{display: block; overflow: hidden;text-overflow: ellipsis;white-space: normal;background: #FFabab;}*/
+
+.headInfoBox .btnBox{height:30px; margin-top:10px;}
+.headInfoBox .btnBox a{float:left; width:80px; height:30px; line-height:30px; font-weight:500; border-radius:2px;}
+.headInfoBox .btnBox .all_play{position:relative; width:96px; text-indent:30px; color:#fff; background:#ca9d63;}
+.headInfoBox .btnBox .all_play span{position:absolute; left:12px; top:8px; width:0; height:0; border-left:11px solid #fff; border-top:7px solid transparent; border-bottom:7px solid transparent;}
+.headInfoBox .btnBox .all_play:hover{background:#b08956;}
+.headInfoBox .btnBox .all_add{position:relative; width:78px; height:28px; line-height:28px; margin-left:10px; text-indent:36px; color:#9c9c9c; border:1px solid #cacaca;}
+.headInfoBox .btnBox .all_add span{position:absolute; background:#999;}
+.headInfoBox .btnBox .all_add span.transverse{left:14px; top:12px; width:14px; height:2px;}
+.headInfoBox .btnBox .all_add span.portrait{left:20px; top:6px; width:2px; height:14px;}
+.headInfoBox .btnBox .all_add:hover{width:80px; height:30px; line-height:30px; color:#fff; background:#ca9d63; border:none;}
+.headInfoBox .btnBox .all_add:hover span{background:#fff;}
+.headInfoBox .btnBox .all_add:hover span.transverse{top:14px;}
+.headInfoBox .btnBox .all_add:hover span.portrait{top:8px;}
+.headInfoBox .btnBox .share{position:relative; width:78px; height:28px; line-height:28px; margin-left:10px; text-indent:38px; color:#9c9c9c;background: #333; }
+.headInfoBox .btnBox .share:hover{height:30px; color:#fff; background:#b08956; border:none;}
+.headInfoBox .btnBox .share span{position:absolute; left:12px; top:7px; width:16px; height:16px; background:url(../img/cdpack/share.png) no-repeat;}
+.headInfoBox .btnBox .share:hover span{background:url(../img/cdpack/share_h.png) no-repeat;}
+/*头部信息部分结束*/
+
+/*控制信息盒子部分css*/
+.contentBox{padding:0 10px 0 30px;}
+.contentBox .controlBox{height:32px;position: relative;border-bottom: 1px solid #333;}
+.contentBox .controlBox a{float:left;line-height:30px; color:#999;position: relative;width: 109px;height: 32px;text-align:center;margin-right: 4px;border-radius: 4px 4px 0 0; }
+.contentBox .controlBox a:hover{background: #333;}
+.contentBox .controlBox a.active{color:#c2ab8c;background: #333;border-radius: 4px 4px 0 0 ;}
+.contentBox .controlBox span.sep_line{width: auto;height: 1px;background: #333;position: relative;}
+
+
+/*控制信息盒子部分css结束*/
+
+/*音乐列表css开始*/
+/*音乐列表标题部分css开始*/
+.titleinfoBox{height:30px; line-height:30px; font-size:15px; color:rgba(255,255,255,0.5); font-weight:normal;overflow:hidden;position: relative;padding-top: 11px;}
+#songsnum{margin-left: 6px;margin-right: 14px;}
+/*.titleinfoBox .ml{margin-left:13px;}*/
+.titleinfoBox .ml input{float:left; margin:10px 10px 0 0; vertical-align:top;}
+.titleinfoBox .ml font{float:left; width:25px;}
+.titleinfoBox .mr_box{height:51px; overflow:hidden;}
+.titleinfoBox .mr_box .mr_box_r{float:right;}
+.titleinfoBox .mr_box .mr_center_con{overflow:hidden; zoom:1;}
+.titleinfoBox .mr_box .mr_center_con span{float:left;}
+.titleinfoBox .mr_box .mr_center_con span.m_name_box{width: 40%;}
+.titleinfoBox .mr_box .mr_center_con span.m_artist_box{width:42%;}
+.titleinfoBox .mr_box .mr_center_con span.m_long_box{width: 15%;}
+.titleBox{position: relative;overflow: hidden;}
+.titleinfoBox.f1{float: left;}
+/*音乐列表音乐部分css开始*/
+.disk_sep{height: 25px;}
+.disk_sep .disk_index{display: inline-block; position: absolute;font-size: 13px;margin-left: 13px;margin-top: 3px;color: rgba(255, 255, 255, 0.50);}
+.cdmusic_wrap{height:36px; line-height:36px; font-size:12px; color:#333; overflow:hidden;}
+.cdmusic_wrap:hover{background:#333;}
+.music_wrapClicked {background:#333;}
+.cdmusic_wrap .m_l{float:left; margin-left:7px;}
+.cdmusic_wrap .m_l input{float:left; margin:12px 10px 0 0; vertical-align:top;}
+.cdmusic_wrap .m_l .num{float:left; width:25px;color: rgba(255,255,255,0.85);font-size: 16px;margin-right: 12px;}
+.cdmusic_wrap .m_l .num_icon{float: left;width: 24px;height: 24px;background:url("../img/cdpack/second/disk_ani.png");margin-top:6px;margin-right: 20px;margin-left: -7px; animation:disk_rotate 3s steps(1, start) infinite;}
+.cdmusic_wrap .m_l .num_icon_pause{float: left;width: 24px;height: 24px;background:url("../img/cdpack/second/disk_pause.png");margin-top:6px;margin-right: 20px;margin-left: -7px;}
+.cdmusic_wrap .m_l .num_icon_play_failed{float: left;width: 16px;height: 14px;background:url("../img/cdlist_play_failed.png");margin-top:12px;margin-right: 20px;}
+.cdmusic_wrap .mr_box{height:36px; overflow:hidden;}
+.cdmusic_wrap .mr_box .mr_box_r{float:right;margin-right: 5px;}
+
+.cdmusic_wrap .mr_box .mr_box_r p.sample{color: rgba(255,255,255,0.85);font-size: 14px;}
+.cdmusic_wrap .mr_box .mr_box_r p.sample:hover{color: #ca9d63;}
+.cdmusic_wrap .mr_box .mr_box_r p.sample_playing{color: #ca9d63;}
+.cdmusic_wrap .mr_box .mr_box_r p.sample_hot{color: #c84141;}
+.cdmusic_wrap .mr_box .mr_box_r p.sample_hot:hover{color: #c84141;}
+
+.cdmusic_wrap .mr_box .mr_center_con{position: relative;display: block;overflow:hidden; zoom:1;}
+.cdmusic_wrap .mr_box .mr_center_con a{float:left;}
+.cdmusic_wrap .mr_box .mr_center_con p{float:left;}
+.cdmusic_wrap .mr_box .mr_center_con a.m_name_box{width:36%;color: rgba(255,255,255,0.85);font-size: 14px; float: left;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-right: 25px;}
+.cdmusic_wrap .mr_box .mr_center_con a.m_name_box:hover{color: #ca9d63;}
+.cdmusic_wrap .mr_box .mr_center_con a.m_name_box_playing{color: #ca9d63;}
+.cdmusic_wrap .mr_box .mr_center_con a.m_name_box:hover{}
+
+.cdmusic_wrap .mr_box .mr_center_con a.m_name_box_hot{width:36%;color: #c84141;font-size: 14px; float: left;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-right: 25px;}
+.cdmusic_wrap .mr_box .mr_center_con a.m_name_box_hot:hover{}
+
+.cdmusic_wrap .mr_box .mr_center_con p.m_artist_box{width:37%;color: rgba(255,255,255,0.85);font-size: 14px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden;margin-right: 29px;}
+.cdmusic_wrap .mr_box .mr_center_con p.m_artist_box:hover{color: #ca9d63;}
+.cdmusic_wrap .mr_box .mr_center_con p.m_artist_box_playing{color: #ca9d63;}
+.cdmusic_wrap .mr_box .mr_center_con p.m_artist_box_hot{width:37%;color: #c84141;font-size: 14px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden;margin-right: 29px;}
+.cdmusic_wrap .mr_box .mr_center_con p.m_artist_box_hot:hover{}
+
+.cdmusic_wrap .mr_box .mr_center_con a.m_album_box{width:25%;color: #333;}
+
+.cdmusic_wrap .mr_box .mr_center_con p.m_long_box{width:15%;color: rgba(255,255,255,0.85);font-size: 14px;float: left;position: relative;}
+.cdmusic_wrap .mr_box .mr_center_con p.m_long_box:hover{color: #ca9d63;}
+.cdmusic_wrap .mr_box .mr_center_con p.m_long_box_playing{color: #ca9d63;}
+.cdmusic_wrap .mr_box .mr_center_con p.m_long_box_hot{width:15%;color: #c84141;font-size: 14px;float: left;position: relative;}
+.cdmusic_wrap .mr_box .mr_center_con p.m_long_box_hot_hover{}
+/*音乐列表css结束*/
+
+/*详情部分css开始*/
+.infoBox{display:none;}
+.infoBox .titleinfoBox{position:relative; height:22px; margin:17px 0 8px 0; overflow:hidden;}
+.infoBox .titleinfoBox .leftbg{float:left; width:8px; height:16px; background:url(../img/cdpack/title_bg_l.png) no-repeat;}
+
+.infoBox .titleinfoBox .rightbg{float:left; width:8px; height:16px; background:url(../img/cdpack/title_bg_r.png) no-repeat;}
+.infoBox .titleinfoBox .linebg{position:absolute; width:100%; height:1px; margin:7px 0 0 4px; background:#f0f0f0;}
+.infoBox p{line-height:28px; color:#9c9c9c;position: relative;text-indent: 2em;}
+.titleinfoBox .album_detail{height: 25px;float:left;line-height:20px; margin:0 8px; font-size:18px; font-weight:500; color:#999;}
+/*曲目部分css结束*/
+
+#commentArea #messageCon{font:14px "Microsoft YaHei", arial,sans-serif;    background-color: #333;}
+.contentBox #commentArea .textBox{height: 74px;    background-color: #333;border: none;}
+.contentBox #commentArea #list img,.contentBox #commentArea #rec_list img{vertical-align:baseline;}
+.popup.titleBox{position: relative;}
+
+.contentBox #commentArea #messageBtn{border: none;background-color: #333;color: rgba(255,255,255,0.6);}
+.contentBox #commentArea #messageBtn:hover{background: #ca9d63;color: #fff;}
+.contentBox #commentArea .listBox{background: url(../img/cdpack/second/bodyBg.png);}
+.contentBox #commentArea .box{border: none;}
+.contentBox #commentArea .box{border: none;}
+.contentBox #commentArea .listBox h4{border: none;}
+.contentBox #commentArea .commentBox{background: #333;}
+.contentBox #commentArea #messageCon{color: #999;}
+.contentBox #commentArea span.emotion{background: url('../img/cdpack/second/commentIcon.png');}
+.contentBox #commentArea span.emotion:hover{background-position:0px 0px;}
+.contentBox #commentArea .user a {color: #9c9c9c;}
+.contentBox #commentArea .replyBox{color:#999;}
+.contentBox #commentArea .info_ a{color:#9c9c9c;float: right;}
+
+/*.contentBox #commentArea .user a,.commentBox #commentArea,.commentBox #commentArea .userComment,.commentBox #commentArea .userComment a,.commentBox #commentArea .time {color:rgba(255,255,255,0.4);}*/
+
+
+
+.commentBox p{color:#9c9c9c;font-size: 15px; }
+.commentBox a{color: #c2ab8c;opacity: 0.8;}
+
+
+.commentBox #commentArea span.user a{color: rgba(255,255,255,0.4)}
+.commentBox #commentArea span.user a:hover{color: #c2ab8c}
+.commentBox #commentArea span.userComment a{color: rgba(255,255,255,0.4)}
+.commentBox #commentArea span.userComment a:hover{color:#c2ab8c}
+
+.commentBox #commentArea .time {color:rgba(255,255,255,0.4);}
+.commentBox #commentArea .listBox .praise{background: url(../img/cdpack/second/cancelLike.png)no-repeat right 2px;height: 16px;}
+.commentBox #commentArea .listBox .praise:hover{background: url('../img/cdpack/second/like.png')no-repeat right 2px;height: 16px;color: #c2ab8c;}
+.commentBox #commentArea .listBox .praised{background: url(../img/cdpack/second/Like.png)no-repeat right 2px;color: #c2ab8c;}
+.commentBox #commentArea .listBox .praised:hover{background: url(../img/cdpack/second/Like.png)no-repeat right 2px;}
+
+
+.commentBox #commentArea .listBox .reply{color: #666;}
+.commentBox #commentArea .listBox .reply:hover{color: #c2ab8c;}
+
+.commentBox #commentArea .listBox .delete{color: #666;}
+.commentBox #commentArea .listBox .delete:hover{color: #c2ab8c;}
+
+.contentBox #commentArea .listBox .info_ span{background:#fff;opacity: 0.2;}
+.contentBox #commentArea .faceBox{background: #282828;border: 0;}
+
+.contentBox #commentArea .scrollBox::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);border-radius: 0px;background-color: #282828;}
+.contentBox #commentArea .scrollBox::-webkit-scrollbar-thumb{border-radius: 5px;background-color: #2e2e2e;}
+.contentBox #commentArea .listBox .noComment{color: rgba(255,255,255,0.8);}
+
+
+.contentBox #commentArea .info_ span {background: rgba(255,255,255,0.4);}
+.contentBox #commentArea .commentBox {background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.4);}
+
+.contentBox .pageComment .current {background: #c2ab8c;opacity: 1;}
+.contentBox .pageComment a {color:#fff;opacity: 0.4}
+.contentBox .pageComment a:hover {color:#c2ab8c;opacity: 1}
+.contentBox .pageComment .current:hover {color:#fff;}
+.contentBox .pageComment a.nonext,.contentBox .pageComment a.noprev {color: #888999; opacity: 0.4}
+
+
+
+/*没有详情时的提示内容*/
+
+.login_guide .nologinImg{margin:  0 auto;width: 121px;height: 121px;background: url("../img/unlogin_img.png");margin}
+.login_guide .unlogin_tip {margin: 12px auto;text-align: center;color: #9c9c9c;}
+/*没有详情时的提示内容*/
+
+
+/*播放时的动画效果*/
+@keyframes disk_rotate{
+            0%{
+                background-position: 0 0;
+            }
+            5%{
+                background-position: -24px 0;
+            }
+            10%{
+                background-position: -48px 0 ;
+            }
+            15%{
+                background-position: -72px 0 ;
+            }
+            20%{
+                background-position: -96px 0 ;
+            }
+            25%{
+                background-position: -120px 0 ;
+            }
+            30%{
+                background-position: -144px 0 ;
+            }
+            35%{
+                background-position: -168px 0 ;
+            }
+            40%{
+                background-position: -192px 0 ;
+            }
+            45%{
+                background-position: -216px 0 ;
+            }
+            50%{
+                background-position: -240px 0 ;
+            }
+            55%{
+                background-position: -264px 0 ;
+            }
+            60%{
+                background-position: -288px 0 ;
+            }
+            65%{
+                background-position: -312px 0 ;
+            }
+            70%{
+                background-position: -336px 0 ;
+            }
+            75%{
+                background-position: -360px 0 ;
+            }
+            80%{
+                background-position: -384px 0 ;
+            }
+            85%{
+                background-position: -408px 0 ;
+            }
+            90%{
+                background-position: -432px 0 ;
+            }
+            95%{
+                background-position: -456px 0 ;
+            }
+            100%{
+                background-position: -480px 0 ;
+            }
+        } 
+/*播放时的动画效果*/
+

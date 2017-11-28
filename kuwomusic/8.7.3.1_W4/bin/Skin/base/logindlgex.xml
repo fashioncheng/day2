@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window  caption="0,0,0,80" roundcorner="3,3" size="566,402">
+	<Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;14&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,1,14,15'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;20,-6,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;Config.DefaultText&quot;" />
+
+	<VerticalLayout   bkimage="bg_login.png" >
+		<HorizontalLayout name="titlepanel" height="80" inset="0,0,0,0" width="560">
+			<Label name="MessageBox_Title" bkimage="title_login.png" padding="6,6,0,0"/>			
+			<Button name="close" pos="531,14,550,34" float="true" statusimage="Config_CloseBtn.png"/>			
+		</HorizontalLayout>
+		<TabLayout name="login_type_choose" height="281">
+			<VerticalLayout name="old_login_type" height="267" >
+			<Label height="65"/>
+			<HorizontalLayout height="150">
+				<VerticalLayout >
+					<Button name="qqlogin" padding="30,0,0,0" width="110" height="110" statusimage="btn_new_QQ_login.png" setcursor="true"/>
+					<Label height="10"/>				
+					<Label text="QQ账号登录"  padding="43,0,0,0" varwidth="true" minwidth="20" maxwidth="100" font="Main.ChannelTitle" textcolor="#ff333333"/>
+				</VerticalLayout>			
+				<VerticalLayout >
+					<Button name="wblogin" padding="20,0,0,0" width="110" height="110" statusimage="sina_weibo_login.png" setcursor="true"/>
+					<Label height="10" />
+					<Label text="微博账号登录" padding="30,0,0,0" varwidth="true" minwidth="20" maxwidth="100" font="Main.ChannelTitle" textcolor="#ff333333"/>
+				</VerticalLayout>			
+				<VerticalLayout >
+					<Button name="weixinlogin" padding="10,0,0,0" width="110" height="110" statusimage="weixin_login.png" setcursor="true"/>
+					<Label height="10" />
+					<Label text="微信账号登录" padding="20,0,0,0" varwidth="true" minwidth="20" maxwidth="100" font="Main.ChannelTitle" textcolor="#ff333333"/>
+				</VerticalLayout>
+				<VerticalLayout >
+					<Button name="kuwologin" padding="0,0,0,0" width="110" height="110" statusimage="kuwo_login.png" setcursor="true"/>
+					<Label height="10" />
+					<Label text="酷我账号登录" padding="10,0,0,0" varwidth="true" minwidth="20" maxwidth="100" font="Main.ChannelTitle" textcolor="#ff333333"/>
+				</VerticalLayout>
+		</HorizontalLayout>
+		<Label height="51" />
+		
+		<HorizontalLayout height="1" padding="0,0,0,0">
+			<Control width="20"/>
+			<Control bkimage="fengexian.png" />
+			<Control width="20"/>
+		</HorizontalLayout>	
+	  </VerticalLayout>
+	
+	 <VerticalLayout name="login_suc_type" height="279">
+		<Label name="sep_login" height="20"></Label>
+		<HorizontalLayout height="163">
+			<Control width="208" />
+			<VerticalLayout >
+				<HorizontalLayout height="95">
+					<Control />
+					<Label name="login_info_img" width="95" bkimage="def100.jpg" ></Label>
+					<Label name="login_type_mini" height="16" width="16" float="true" pos="99,73"></Label>
+					<Control />
+				</HorizontalLayout>
+				<Control height="6" />				
+				<Label name="login_info_nick" text="您上次登录的账号:" align="center" endellipsis="true" font="Default.FontName" textcolor="#ff666666" ></Label>
+				<Control height="6" />
+				<HorizontalLayout height="35">
+					<Control />
+					<Button name="login_Pre_loginNow" width="120"  text="立即登录" font="Main.ChannelTitle" textcolor="#ffffffff" statusimage="btn_login_new.png" ></Button>	
+					<Control />
+				</HorizontalLayout>				
+			</VerticalLayout>
+			<Control width="208" />			
+		</HorizontalLayout>
+		<Label height="20" ></Label>
+		<HorizontalLayout height="75">
+		<Control />
+		<HorizontalLayout width="90" name="hor_login_qq" >
+			<VerticalLayout name="log_tip_qq">
+				<Button name="login_pre_btn_qq" width="50" height="50" statusimage="login_qq.png" setcursor="true"></Button>
+				<Control height="6" />
+				<Label name="qq_log_info" height="16" varwidth="true" text="QQ登录" font="Default.FontName" textcolor="#ff999999"></Label>			
+			</VerticalLayout>
+			<Control width="40" />
+		</HorizontalLayout>		
+		<HorizontalLayout width="90" name="hor_login_weibo">
+			<VerticalLayout name="log_tip_weibo" >
+				<Button name="login_pre_btn_weibo" width="50" height="50" statusimage="login_weibo.png" setcursor="true"></Button>
+				<Control height="6" />
+				<Label name="weibo_log_info" varheight="true" text="微博登录" height="16" varwidth="true" font="YAHEI.NO12" textcolor="#ff999999"></Label>			
+			</VerticalLayout>
+			<Control width="40" />
+		</HorizontalLayout>
+		<HorizontalLayout  width="90" name="hor_login_wechat">
+			<VerticalLayout name="log_tip_wechat">
+				<Button name="login_pre_btn_wechat" width="50" height="50" statusimage="login_wechat.png" setcursor="true"></Button>	
+				<Control height="6" />
+				<Label name="wechat_log_info" height="16" text="微信登录" height="16" varwidth="true" font="YAHEI.NO12" textcolor="#ff999999"></Label>		
+			</VerticalLayout>
+			<Control width="40" />
+		</HorizontalLayout>
+		<HorizontalLayout width="50" name="hor_login_kuwo">			
+			<VerticalLayout name="log_tip_kuwo">
+				<Button name="login_pre_btn_kuwo" width="50" height="50" statusimage="login_kuwo.png" setcursor="true"></Button>
+				<Control height="6" />
+				<Label name="kuwo_log_info" height="16" varwidth="true" text="酷我登录" font="YAHEI.NO12" textcolor="#ff999999"></Label>
+			</VerticalLayout>
+		</HorizontalLayout>
+		<Control />
+		</HorizontalLayout>		
+	 </VerticalLayout>	
+		</TabLayout>		
+		<Control />
+		<HorizontalLayout height="42">
+			<Control />
+      <CheckBox name="chk_license" text="同意" float="true" pos="20,10,75,10" selected="true" textcolor="#ff666666" font="Default.FontName" />
+      <Button name="btn_user_poli" text="《酷我音乐用户服务协议》"  varwidth="true" minwidth="40" maxwidth="120" float="true" pos=" 63,10,240,27"  font="PlaylistFindTip.UnderLine" textcolor="#ff46b4e6" setcursor="true" />
+      <Button name="btn_priv_poli" text="《隐私政策》" float="true"  pos=" 170,10,345,27" font="PlaylistFindTip.UnderLine" textcolor="#ff46b4e6" setcursor="true" />
+			<Label text="还没有酷我账号,"  padding="0,-6,0,0" varwidth="true" minwidth="40" maxwidth="120" font="YAHEI.NO12" textcolor="#ff666666" />
+			<Button name="registeraccount" text="快速注册"  padding="0,-6,0,0" varwidth="true" minwidth="40" maxwidth="120" font="PlaylistFindTip.UnderLine" textcolor="#ff46b4e6" setcursor="true"/> 
+			<Control width="20" />
+		</HorizontalLayout>		
+  </VerticalLayout>
+</Window> 

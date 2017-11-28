@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Skin>
+	<Color>
+		<Color name="Global.White" value="#FFFFFFFF" />
+		<Color name="Global.Black" value="#FF000000" />
+		<Color name="Global.Playlist" value="#FFF9F9F9" />
+		<Color name="Global.Playlist2" value="#ff0099ff" />
+		<Color name="Default.FontColor" value="#FF111111" />
+		<Color name="Main.EditDefaultTextColor" value="#FF5c7080" />
+		<Color name="NetSong.ListFont" value="#FF226699" />
+		<Color name="NetSong.ListSelect" value="#FFEBEDED" />
+		<Color name="NetSong.ListHover" value="#FFF4F4F4" />
+		<Color name="NetSong.EditDefaultTextColor" value="#FFC0C0C0" />
+		<Color name="NetSong.ArtistCategory" value="#FF6A6A6A" />
+		<Color name="Eqdlg.ContentColor" value="#FF226699"/>
+		<Color name="Minisite.BorderColor" value="#FF923232"/>
+		<Color name="Vip.MvLimitClolr" value="#FF246698"/>
+		<Color name="Main.Bk" value="#FF10A1DF"/>
+		<Color name="PopWnd.Bk" value="#FF10A1DF"/>
+		<Color name="Default.ToolWndBK" value="#FFF5F5F5" />
+		<Color name="Config.DefaultText" value="#FF333333" />
+		<Color name="Config.BtnNormal" value="#FFF0F8FF" />
+		<Color name="Config.BtnBorderNormal" value="#FFBCC9D1" />
+		<Color name="Config.PanelBkColor" value="#FFF0F8FF" />
+		<Color name="Config.List.BkColor" value="#FFFFFFFF" />
+		<Color name="Config.List.BorderColor" value="#FF95B4C4" />
+		<Color name="Config.List.HeadBkColor1" value="#FFF7FBFF" />
+		<Color name="Config.List.ItemAlternateBkColor1" value="#FFF7F7F7" />
+		<Color name="Config.List.ItemAlternateBkColor2" value="#FFFFFFFF" />
+		<Color name="Config.List.ItemHoverBkColor" value="#FFEDF5FD" />
+		<Color name="Config.List.ItemSelBkColor" value="#FFD8EBFD" />
+		<Color name="Config.List.ItemDisableBkColor" value="#FF98999B" />
+		<Color name="LocalPanel.HeaderColor" value="#FF999999"/>
+		<Color name="playingLayer.bkcolor" value="#33000000" />
+		<Color name="TabPlayControlPanel.bkcolor.normal" value="#33000000" />
+		<Color name="TabPlayControlPanel.bkcolor.playing" value="#33000000" />
+		<Color name="PlayControlPanel.bkcolor.normal" value="#ff27282a" />
+		<Color name="PlayControlPanel.bkcolor.playing" value="#33000000" />
+		<Color name="PlayControlPanel.bkcolor.mvplaying" value="#ff1b1b1b" />
+		<Color name="PopWnd.title.textcolor" value="#ff333333" />
+		<Color name="Msgbox.message.textcolor" value="#ff000000" />
+		<Color name="Msgbox.link.textcolor" value="#FF46B4E6" />
+		<Color name="Msgbox.nomoreshow.textcolor" value="#FF000000" />
+		<Color name="Msgbox.button.textcolor" value="#ff000000" />
+		<Color name="Msgbox.button.hottextcolor" value="#ff000000" />
+		<Color name="Msgbox.button.focusedtextcolor" value="#ff000000" />
+		<Color name="Msgbox.edit.textcolor" value="#ff000000" />
+		<Color name="Msgbox.edit.defaulttextcolor" value="#ff000000" />
+		<Color name="Msgbox.edit.nativebkcolor" value="#ffffffff" />
+		<Color name="SkinWnd.tab.textcolor" value="#ff333333" />
+		<Color name="SkinWnd.tab.hottextcolor" value="#ff46b4e6" />
+		<Color name="SkinWnd.tab.pushedtextcolor" value="#ff46b4e6" />
+		<Color name="SkinWnd.tab.selectedtextcolor" value="#ff46b4e6" />
+		<Color name="CreateList.error.textcolor" value="#fff0a05a" />
+	</Color>
+	<Font>
+		<Font name="Default.FontName" fontname="微软雅黑" size="12"/>
+		<Font name="Default.FontName.Orign" fontname="雅黑" size="12"/>
+		<Font name="Default.FontName.UnderLine" fontname="微软雅黑" size="14" underline="true" />
+		<Font name="Default.FontName.Bold" fontname="微软雅黑" size="12" bold="true" />
+		<Font name="Default.FontName.UnderLineBold" fontname="微软雅黑" size="12" underline="true" bold="true" />
+		<Font name="Main.ChannelTitle" fontname="微软雅黑" size="14" />
+		<Font name="MessageBox.Title" fontname="微软雅黑" size="20"/>
+		<Font name="Main.Loading" fontname="微软雅黑" size="24" />
+		<Font name="Main.Loading.UnderLine" fontname="微软雅黑" size="24" underline="true" />
+		<Font name="MessageBox.Content" fontname="微软雅黑" size="12"/>
+		<Font name="Playlist.PlayingSongName" fontname="微软雅黑" size="14" bold="true"/>
+		<Font name="PlaylistFindTip14" fontname="微软雅黑" size="14"/>
+		<Font name="PlaylistFindTip" fontname="微软雅黑" size="12"/>
+		<Font name="PlaylistFindTip.UnderLine" fontname="微软雅黑" size="12" underline="true" />
+		<Font name="Playlist.PlayControl" fontname="微软雅黑" size="12" />
+		<Font name="LocalPanel.Header" fontname="微软雅黑" size="18" bold="true" />
+		<Font name="YAHEI.NO10" fontname="微软雅黑" size="10"/>
+		<Font name="YAHEI.NO11" fontname="微软雅黑" size="11"/>
+		<Font name="YAHEI.NO12" fontname="微软雅黑" size="12"/>
+		<Font name="YAHEI.NO12.UNDERLINE" fontname="微软雅黑" size="12" underline="true"/>
+		<Font name="YAHEI.N014" fontname="微软雅黑" size="14"/>
+		<Font name="YAHEI.N014.BOLD" fontname="微软雅黑" size="14" bold="true"/>
+		<Font name="YAHEI.N014.UNDERLINE" fontname="微软雅黑" size="14" underline="true"/>
+		<Font name="YAHEI.N016" fontname="微软雅黑" size="16"/>
+		<Font name="YAHEI.N016.BOLD" fontname="微软雅黑" size="16" bold="true"/>
+		<Font name="YAHEI.NO18" fontname="微软雅黑" size="18"/>
+		<Font name="YAHEI.NO18.BOLD" fontname="微软雅黑" size="18" bold="true"/>
+		<Font name="YAHEI.N020" fontname="微软雅黑" size="20"/>
+		<Font name="YAHEI.N022" fontname="微软雅黑" size="22"/>
+		<Font name="YAHEI.NO23" fontname="微软雅黑" size="23"/>
+		<Font name="YAHEI.NO24" fontname="微软雅黑" size="24"/>
+		<Font name="YAHEI.N12_UNDERLINE" fontname="微软雅黑" size="12" underline="true" />
+		<Font name="YAHEI.NO30" fontname="微软雅黑" size="30"/>
+		<Font name="Playlist.more" fontname="微软雅黑" size="16" bold="true" />
+		<Font name="Default.Title" fontname="Arial" size="12" bold="true"/>
+		<Font name="Playlist.newlist" fontname="微软雅黑" size="20" />
+		<Font name="PopUp.Title" fontname="微软雅黑" size="14"/>
+		<Font name="PopUp.SectionTitle" fontname="微软雅黑" size="12"/>
+		<Font name="PopUp.DefaultText" fontname="微软雅黑" size="12"/>
+		<Font name="ChangeSkin.Title" fontname="微软雅黑" size="16"/>
+		<Font name="SkinSetWallPaper.Title" fontname="微软雅黑" size="14"/>
+		<Font name="Config.Default" fontname="微软雅黑" size="12"/>
+		<Font name="Config.SectionTitle" fontname="微软雅黑" size="20"/>
+		<Font name="Config.PanelTitle" fontname="微软雅黑" size="15"/>
+		<Font name="Config.DefaultText" fontname="微软雅黑" size="14"/>
+		<Font name="Config.Button" fontname="微软雅黑" size="12"/>
+		<Font name="Config.Content" fontname="微软雅黑" size="12"/>
+		<Font name="Config.Lyric" fontname="微软雅黑" size="12"/>
+		<Font name="UIPopupWnd.Title" fontname="雅黑" size="12" bold="true"/>
+		<Font name="UIPopupWnd.Content" fontname="Tahoma" size="12" bold="false" />
+		<Font name="EqDlg.Default" fontname="Arial" size="9"/>
+		<Font name="Lyric_PreText_UnderLine" fontname="微软雅黑" size="16" underline="true"/>
+		<Font name="Lyric_PreText_NoUnderLine" fontname="微软雅黑" size="16"/>
+		<Font name="Minisite.Title" fontname="宋体" size="12" bold="true" />
+		<Font name="uidownload.startdown" fontname="宋体" size="14" />
+		<Font name="Small_Font" fontname="微软雅黑" size="13"/>
+		<Font name="PlayControl" fontname="宋体" size="11"/>
+		<Font name="DlgHarmonyMsg" fontname="宋体" size="14" bold="true"/>
+		<Font name="Cloud.BigFont" fontname="宋体" size="14" bold="true" />
+		<Font name="Cloud.SmallFont" fontname="宋体" size="12"  />
+		<Font name="SearchChannel.SearchTitle" fontname="宋体" size="12" bold="true"/>
+		<Font name="Artist.Name.Bold" fontname="雅黑" size="14" bold="true" />
+		<Font name="Download.SongInfo" fontname="微软雅黑" size="10"/>
+		<Font name="NowPlayingChannel.FontBig" fontname="微软雅黑" size="30"/>
+		<Font name="Login.LabelText" fontname="微软雅黑" size="16"/>
+		<Font name="Minisite2013.Title" fontname="微软雅黑" size="16" />
+		<Font name="LRCDlg.Title" fontname="微软雅黑" size="14" />
+		<Font name="LRCDlg.SongName" fontname="微软雅黑" size="14" bold="true" />
+		<Font name="LRCCtrl.Button" fontname="微软雅黑" size="14" bold="true" />
+		<Font name="Arial.NO10" fontname="Arial" size="10" />
+		<Font name="Arial.NO18.Bold" fontname="Arial" size="18" bold="true" />
+		<Font name="UpgradeDlg.Title" fontname="微软雅黑" size="14" bold="true" />
+		<Font name="UpgradeDlg.SubTitle" fontname="微软雅黑" size="12" bold="false" />
+		<Font name="UpgradeDlg.Button" fontname="微软雅黑" size="18" bold="false" />
+		<Font name="RadioName.Title" fontname="微软雅黑" size="24" bold="false" />
+		<Font name="RadioVIPCache.Title" fontname="微软雅黑" size="16" underline="true"/>
+	</Font>
+	<BkImage>
+		<Default border="0,0,0,0" blurborder="0,0,0,0" transborder="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Main.Bk"/>
+			<BkImage name="lyricbk" inset="0,0,0,0" image="bk.xxx" delay="true"/>
+			<BkImage name="blurboder" inset="0,0,0,0" image="playlistborder.png"/>
+			<!--
+			<BkImage name="boder" inset="0,0,0,0" image="bk_main_boder.png"  border="true"/>
+			<BkImage name="blurboder" inset="0,0,0,0" image="bk_main_blurboder.png"  border="true"  blur="true"/>
+			<BkImage name="transboder_left" border="true"  blur="true"trans="true" direction="1" type="3" startxy="0,0" border="true"  blur="true"/>
+			<BkImage name="transboder_right" border="true"  blur="true"trans="true" direction="2" type="3" startxy="0,0" border="true"  blur="true"/>
+			-->
+		</Default>
+		<Main border="0,0,0,0" blurborder="0,0,0,0" transborder="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Main.Bk"/>
+			<BkImage name="lyricbk" inset="0,0,0,0" image="bk.xxx" delay="true"/>
+			<BkImage name="blurboder" inset="0,0,0,0" image="playlistborder.png"/>
+		</Main>
+		<ConfigMain border="0,0,0,0" blurborder="0,0,0,0" transborder="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Main.Bk"/>
+			<BkImage name="lyricbk" inset="0,0,0,0" image="bk.xxx" delay="true"/>
+			<BkImage name="blurboder" inset="0,0,0,0" image="playlistborder.png"/>
+		</ConfigMain>
+
+		<!--
+		<IrrPopWnd border="5,3,5,7" blurborder="5,3,5,7" transborder="130,80,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="PopWnd.Bk" round="5,5"/>
+			<BkImage name="bkimg" startxy="0,0" image="PopWnd_bk.xxx" delay="true" round="5,5"/>
+			<BkImage name="bkmask" inset="0,0,0,0" image="popwnd_mask.png" delay="false"/>
+			<BkImage name="bkborder" inset="0,0,0,0" border="true" blur="true" image="popwnd_border.png" delay="false"/>
+		  <BkImage name="transboder_left" image="abc.png" border="true" blur="true" trans="true" direction="1" type="2" startxy="0,0"/>
+		</IrrPopWnd>
+    -->
+
+		<PopWnd border="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="PopWnd.Bk" round="2,2"/>
+			<BkImage name="bkimg" inset="1,1,1,1" image="PopWnd_bk.xxx" delay="true" round="1,1"/>
+			<BkImage name="bkmask" inset="0,0,0,0" image="popwnd_mask.png" delay="false" round="1,1"/>
+		</PopWnd>
+		<PopWndConfig border="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="PopWnd.Bk" round="2,2"/>
+			<BkImage name="bkimg" inset="0,0,0,0" image="PopWnd_bk.xxx" delay="true" round="1,1"/>
+			<BkImage name="bkmask" inset="0,0,0,0" image="popwnd_mask.png" delay="false" round="1,1"/>
+		</PopWndConfig>
+		<PopWndAndroid border="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="PopWnd.Bk" round="2,2"/>
+			<BkImage name="bkimg" inset="1,1,1,1" image="PopWnd_bk.xxx" delay="true" round="1,1"/>
+			<BkImage name="bkmask" inset="0,0,0,0" image="popwnd_mask1.png" delay="false" round="1,1"/>
+		</PopWndAndroid>
+		<PopWndNoTrans border="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="PopWnd.Bk" round="2,2"/>
+			<BkImage name="bkimg" inset="1,1,1,1" image="PopWnd_bk.xxx" delay="true" round="1,1"/>
+			<BkImage name="bkmask" inset="0,0,0,0" image="popwnd_mask.png" delay="false" round="1,1"/>
+		</PopWndNoTrans>
+		<PopWndWhite border="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Global.White" round="2,2"/>
+			<BkImage name="bkmask" inset="0,0,0,0" image="popwnd_mask.png" delay="false" round="1,1"/>
+		</PopWndWhite>
+		<ConfigWnd blurborder="3,2,3,4">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Global.White"/>
+			<BkImage name="blurboder" inset="0,0,0,0" image="Config_Border.png" delay="true" border="true" blur="true"/>
+		</ConfigWnd>
+		<EmptyBK></EmptyBK>
+		<WebPopWnd border="1,1,1,1" blurborder="1,1,1,1">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="PopWnd.Bk" round="5,5"/>
+			<BkImage name="bkimg" startxy="0,0" image="PopWnd_bk.xxx" delay="true" round="5,5"/>
+			<BkImage name="bkmask" inset="0,0,0,0" image="webpopwnd_mask.png" delay="false"/>
+			<BkImage name="bkborder" inset="0,0,0,0" border="true" image="webpopwnd_border.png" delay="false"/>
+			<BkImage name="blurboder" inset="0,0,0,0" border="true" image="webpopwnd_border.png" blur="true" delay="false"/>
+		</WebPopWnd>
+		<ToolPopWnd blurborder="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Global.White" round="5,5"/>
+			<BkImage name="bkborder" inset="0,0,0,0" image="Config_Border.png" delay="false" border="true"/>
+		</ToolPopWnd>
+		<PathPopWnd blurborder="0,0,0,0">
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Global.White" round="1,1"/>
+			<BkImage name="bkborder" inset="0,0,0,0" image="Config_Border.png" delay="false" border="true"/>
+		</PathPopWnd>
+		<VipOpenShowPage blurborder="0,0,0,0">
+			<BkImage name="bkimg" inset="0,0,0,0" image="bk.png" delay="true"/>
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Global.White" round="5,5"/>
+			<BkImage name="bkboder" inset="0,0,0,0" border="true" image="Config_Border.png" delay="false"/>
+		</VipOpenShowPage>
+		<FullWnd>
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Main.Bk" round="5,5"/>
+			<BkImage name="fullwndbk" inset="0,0,0,0" image="bk.xxx" delay="true"/>
+		</FullWnd>
+		<MiniDlg blurborder="0,0,0,0">
+			<BkImage name="bkimg" inset="0,0,0,0" image="bk_Mini.png" blur="true"/>
+		</MiniDlg>
+		<MiniPlayListDlg>
+			<BkImage name="bkimg" inset="0,0,0,0" image="bk_Mini.png" delay="false"/>
+			<BkImage name="bkmask" inset="0,0,0,0" image="bkmask_Mini.png" delay="false"/>
+		</MiniPlayListDlg>
+		<StarGreetWnd>
+			<BkImage name="bkimg" inset="0,0,0,0" image="bk_stargreetings.png" delay="false"/>
+		</StarGreetWnd>
+		<StartPageWnd>
+			<BkImage name="bkimg" inset="0,0,0,0" delay="false"/>
+		</StartPageWnd>
+		<SearchPopupDlg border="2,2,2,2">
+			<BkImage name="bkimg" inset="0,0,0,0"  border="true" round="true" />
+		</SearchPopupDlg>
+		<MenuBk blurborder="5,5,5,6">
+			<BkImage name="bkimg" inset="-5,-5,-5,-6" image="menu_common_bk.png" round="true" />
+		</MenuBk>
+		<MenuBk2 blurborder="5,5,5,6">
+			<BkImage name="bkimg" inset="-5,-5,-5,-6" image="TanMuMenuBk.png" round="true" />
+		</MenuBk2>
+	</BkImage>
+	<ImageAttribute>
+		<Image name="Log.png" changecolor="false" />
+		<Image name="bk.png" changecolor="false" />
+	</ImageAttribute>
+
+	<Variable>
+		<var name="${LyricBkMask}" value="LyricBkMask.png" />
+		<var name="${LyricBkMask-10}" value="LyricBkMask-10.png" />
+		<var name="${mylist_mask}" value="mylist_mask.png" />
+		<var name="${plhline_visible}" value="true" />
+	</Variable>
+</Skin>

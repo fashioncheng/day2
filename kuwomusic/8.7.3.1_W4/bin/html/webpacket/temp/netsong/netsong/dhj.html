@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>大合集内容页面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="js/jquery.js" type="text/javascript"></script>		
+	<script src="js/dhj.js" type="text/javascript"></script>
+    <style>
+    body,h1,h2,h3,h4,h5,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,button,input,textarea,th,td { margin:0; padding:0;}
+    body,button,input,select,textarea { font:12px "Microsoft YaHei", arial,sans-serif;}
+    body { background:#fafafa;}
+    address,cite,dfn,em,var { font-style:normal;}
+    html,body {cursor:default;overflow:hidden;}
+    ul,ol,li { list-style:none;}
+    img { border:0 none; display:block;} 
+    a{ text-decoration:none; cursor:pointer;}
+    .heji_pic{margin-left:0px;}
+    body{background-color:#f4f4f4;}
+    .colf60{color:#f60;}
+    .heji{width:100%;overflow:hidden;height:100%;position:relative;display: none;margin-bottom: 10px;}
+    .pic100{width:70px;height:70px;float:left;}
+    .hj_main{float:left;background:#f2f2f2;height:70px;position:absolute;left:75px;width:100%;padding-left:15px;}
+    .w_c_dhj .hj_main{background:#f4f4f4;left:70px;}
+    .heji h2{color:#333;height:30px;padding-top:7px;font-weight:normal;font-size: 1.5em;position: relative;}
+    .heji h2 a{color: #333;font-weight: bold;}
+    .heji h2 a:hover{color: #46b4e6;}
+    .heji h2 .w_p1 a:hover{color: #fff;}
+    .hj_search{height:19px;overflow:hidden;margin-top:2px;}
+    .w_c_dhj .hj_search{margin-top:7px;}
+    .hj_search span{float:left;color:#999}
+    .hj_search span.w_span1{float: none;display: block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width: 80%;}
+    .hj_search p{width:90px;float:left;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;}
+    .hj_search .hj_song{}
+    .mcbtn{width:16px;height:13px;background:url(img/dhj/btn2.png) 0 -28px;display:inline-block;overflow:hidden;vertical-align:middle}
+    .mcbtn:hover{background-position:0 0;}
+    .hj_search em{float: left;display: inline;margin-right: 5px;}
+    .heji_pic{float: left;display: inline;width: 70px;height: 70px;}
+    .w_heji{float: left;display: inline;}
+    .w_heji a{color: #333;}
+    .w_heji p:hover{color:#46b4e6}
+    .w_heji a:hover{color:#46b4e6;}
+    .w_p1{padding-left: 15px;border-bottom: none;border-bottom:none!important;right:20px;width:120px; position:relative;}
+    .w_p1 span{width:100%; text-align:center; line-height:22px!important;font-size:14px;}
+    .w_p1 .allplay{ position:relative;}
+    .w_c_dhj .w_p1{float: left;padding-left: 15px;border-bottom: none;display: inline-block;}
+    .hj_main .btn_left{*left:0px;}
+    .hj_search b{font-size:16px;font-weight:normal;color:#46b4e6; cursor:pointer;}
+    .hj_search i{color:#d3d2d2; font-style:normal;}
+    .dhjnew1{clear:both; position:absolute;right:90px;top:13px;}
+    .w_c_dhj .dhjnew1{right:10px;}
+    .dhjnew2{width:86px;height:24px; text-align:center; margin-right:20px; position:relative;}
+    .heji .dhjnew2 a{ background:url(img/dhj/dhjnew1.gif);color:#fff;font-size:14px;display:block;width:86px;height:24px; line-height:24px; font-weight:normal;}
+    .heji .dhjnew2 a:hover{ background:url(img/dhj/dhjnew2.gif);color:#fff;font-size:14px;}
+    .dhjnew3{ text-align:right;color:#999999;font-size:12px;right:20px;width:200px;position:absolute;margin-top:5px;}
+    .dhjnew4{height:15px;width:86px;font-size:12px;color:#9f9f9f;margin-top:5px; text-align:center; }
+    .ff66{color:#ff6600!important;font-style: normal;}
+    </style>
+</head>
+<body class="w_c_dhj">
+	<div style="padding-left:0px;display:block;margin-top:0px;">
+		<div class="heji" id="search_heji_artist">
+	        <div class="heji_pic"></div>
+	        <div class="hj_main">
+    	        <h2></h2>
+                <div class="hj_search" style="color:#888999;margin-top:2px;"></div>
+                <div class="hj_search"></div>
+            </div>
+        </div>
+        <div class="heji" id="search_heji_playlist">
+	        <div class="heji_pic"></div>
+	        <div class="hj_main">
+    	        <h2></h2>
+                <div class="hj_search" style="margin-top:5px;"></div>
+                <div class="hj_search"></div>
+            </div>
+        </div>
+        <div class="heji" id="search_heji_album">
+	        <div class="heji_pic"></div>
+	        <div class="hj_main">
+    	        <h2></h2>
+                <div class="hj_search"></div>
+                <div class="hj_search"></div>
+            </div>
+        </div>
+        <div class="heji" id="search_heji_subject">
+	        <div class="heji_pic"></div>
+	        <div class="hj_main">
+    	        <h2></h2>
+                <div class="hj_search" style="margin-top:5px;"></div>
+                <div class="hj_search"></div>
+                <div class="hj_search"></div>
+            </div>
+        </div>
+        <div class="heji" id="search_heji_banglist">
+            <style>
+               .w_djhj1{float:right;width:90px;height:70px;overflow:hidden;padding-right:16px;} 
+               .w_djhj1 a{ display:block; width:90px; height:70px; background:url(img/dhj/djzone.png) no-repeat;}
+               .w_djhj1 a:hover{background:url(img/dhj/djzonehover.png) no-repeat;}
+               .heji .w_djhj2{ margin-right:0px;width:85px;overflow:hidden;height:24px;margin-top:1px;}
+               .heji .w_djhj2 a{ background:url(img/dhj/djnewplay.png) no-repeat;width:80px;height:24px;display:block;}
+               .heji .w_djhj2 a:hover{ background:url(img/dhj/djnewplayhover.png) no-repeat;}
+            </style>
+            <div class="heji_pic">
+            </div>
+            <div class="hj_main">
+    	        <h2></h2>
+    	        <div class="hj_search">
+    	        </div>
+            </div>    
+            <div class="w_djhj1">
+                <a hidefocus href="###" onclick="goDJZone();return false;"></a>
+            </div>
+        </div>
+        <div class="heji" id="search_concert" style="width:620px;height:70px;">
+        </div>
+        <style>
+        .juneBox{background:#f2f2f2;height:70px;cursor:pointer;}
+        .juneBoxLeft{float:left;width:95px;height:70px;overflow: hidden;margin-right:14px;display:inline;}
+        .juneBoxLeft .pic100{width:95px;height:70px;}
+        .juneBoxRight{overflow: hidden;zoom:1;padding-top:10px;position: relative;height:60px;}
+        .juneBoxRright{padding-right:17px;position: absolute;top:22px;right:0;width:140px;}
+        .juneBoxRleftTop{height:25px;}
+        .juneBoxRleftBottom{height:14px;line-height:14px;font-size: 12px;color: #353535;margin-top:10px;}
+        .juneListenicon{float:left;background:url(img/dhj/listenicon2.gif) no-repeat;width:13px;height:17px;margin:4px 9px 0 0;}
+        .juneListenBtn1{float:left;font-size:14px;margin-top:4px;}
+        .juneBoxRleftBottom img{vertical-align: middle;margin-right:10px;}
+        .juneBoxRleftBottom em{margin:0 5px;color: #adadad;}
+        .juneBoxRleftBottom .targetNow{color: #2298d6;}
+        .juneListenBtn2{float:right;width:94px;height:28px;background:url(img/dhj/listenher.jpg) no-repeat;}
+        .juneBoxRrightBottom{height:33px;line-height:33px;text-align: right;clear: both;}
+        .juneBoxRrightBottom em{color: #ff7b77;font-size: 14px;}
+        .targetNow a{color:#2298d6;}
+        .xiu_hot{width:16px;height:7px;float:left;background:url(img/dhj/hot.png) no-repeat;margin-left:4px;margin-top:7px;}
+        </style>
+        <div class="heji" id="search_heji_xiu">
+	        <div class="juneBox" onclick="openXIU(this,-8);return false;">
+                <div class="juneBoxLeft">
+                </div>
+                <div class="juneBoxRight">
+                    <div class="juneBoxRleft">
+                        <div class="juneBoxRleftTop">
+                            <span class="juneListenicon"></span>
+                            <span class="juneListenBtn1"></span>
+                            <span class="xiu_hot"></span>
+                        </div>
+                        <div class="juneBoxRleftBottom">   
+                        </div>
+                    </div>
+                    <div class="juneBoxRright">
+                        <div class="juneBoxRrightTop"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	<div id="w_dhj_width" style="display:none;position:absolute;top:0px;left:0px;"></div>
+</body>
+</html>

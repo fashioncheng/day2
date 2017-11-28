@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+/*酷我ALBUM的css*/
+/*mv可直接播放的方块css*/
+/*目前修改旧样式*/
+.kw_album{padding:0}
+.kw_album .b_name{height:36px;}
+.kw_album .b_name a{display:-webkit-box; line-height:18px; text-align:left; overflow:hidden; white-space: normal; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
+.kw_album .b_pic .i_play{transform:translate(0);}
+
+/*白领专辑样式*/
+.kw_wc_album{float:left; width:182px; height:222px; margin-right:10px; text-align:center; overflow:hidden;}
+.kw_wc_album .albumbg{position:relative; display:block; width:182px; height:182px; background:url(../img/cdpack/album_bg.png) no-repeat;}
+.kw_wc_album .albumbg img{position:absolute; left:10px; top:10px; -webkit-mask:url(../img/cdpack/album_mask.png) no-repeat;}
+.kw_wc_album .albumshadow{position:absolute; left:10px; top:10px; display:none; width:164px; height:164px; background:rgba(0,0,0,.35); -webkit-mask:url(../img/cdpack/album_mask.png) no-repeat; border-radius:50%;}
+.kw_wc_album .albumbg:hover .albumshadow{display:block;}
+.kw_wc_album .albumbg .albumring{position:absolute; left:70.5px; top:68.5px; width:44px; height:44px; background:url(../img/cdpack/album_ring.png) no-repeat;}
+.kw_wc_album .artistname{display:inline-block; max-width:182px; line-height:20px; color:#999; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.kw_wc_album .artistname:hover{color:#21a0ed;}
+.kw_wc_album .albuminfo{margin-top:4px; text-align:center;}
+.kw_wc_album .albuminfo a{display:inline-block; max-width:182px; line-height:20px; color:#999; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.kw_wc_album .albuminfo .albumname{margin-bottom:-4px; color:#666;}
+.kw_wc_album .albuminfo a:hover{color:#21a0ed;}
+.kw_wc_album .albumartistinfo{margin-top:-2px;}

@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>专区内容页</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="css/common.css" rel="stylesheet" type="text/css" />
+	<link href="css/zone.css" rel="stylesheet" type="text/css" />
+
+	<style type="text/css">
+		.zone_con{width:620px; height:auto; clear:both; overflow:hidden;}
+		.list{position:absolute; width:76px; border:1px solid #84d4f9; border-top:none; top:30px; left:0; background:#fff; z-index:99; overflow:hidden; display:none;}
+		.list a{ height:24px; line-height:24px; display:block; background:none; width:76px;margin:0; float:none; text-align: center; color:#666;}
+		.list a:hover{background:#f7f7f7;color:#7fd5fd;}
+		.list .subdef{background:#f7f7f7;color:#7fd5fd;}
+		.clearfix:after{content:""; display:block; clear:both;}
+		.clearfix{zoom:1;}
+		.con_right{display:none; margin-right:14px;}
+		.zone_w630{width:614px; position:relative;margin-bottom:10px;}
+		.zone_tit span{font-size:18px;color:#46b4e6;}
+		.ly_titlepic{ width:100px; height:100px; position:absolute;}
+		.ly_titlepic img{ width:100px !important}
+		.ly_txt{ margin-left:116px;}
+		.zone_huati{background:#f4f4f4;padding:10px}
+		.zone_huati img{float:left;margin-right:15px}
+		.zone_huati_t{color:#333;font-size:18px; position:relative;height:26px; font-weight:bold}
+		.zone_huati_p{line-height:20px;font-size:12px; min-height:68px; padding-top:4px;}
+		.zone_gray_btn{width:120px;height:26px;line-height:26px;text-align:center;color:#333;position:absolute;right:4px;top:0;font-size:12px;background:url(img/zone/gray_btn.png);font-weight:normal;}
+		.zone_gray_btn:hover{background-position:0 -26px;text-decoration:none}
+		.y_btn:hover{background-position:0 -26px;text-decoration:none}
+		#w_comment .lyLista{ width:596px !important;}
+		#w_liuyan .lyBtncv{ width:614px !important;}
+		#w_liuyan textarea{ width:592px !important;}
+	</style>  
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/comm.js"></script>
+	<script type="text/javascript" src="js/contentcomm.js"></script>
+	<script type="text/javascript" src="js/zone.js"></script>
+</head>
+<body scroll="no">
+	<div class="allcontent" id="allcontent">
+		<div class="allpad" id="flowContent" style="margin:0 auto;width:620px;margin-top:10px;">
+			<!--专区内容页开始-->
+		 	<div class="zone_con">
+				<div class="nav">
+					<ul class="clearfix"></ul>
+				</div>
+				<div class="con_right">
+					<div class="con_rightnav">
+						<h1 class="selall">
+				            <span class="checkall"><input type="checkbox" checked="true" class="all_ckb" /><font></font></span>
+				            <a hidefocus href="###" class="all_down" title="下载选中歌曲">下载</a>
+				            <a hidefocus href="###" class="all_mv" title="观看选中MV">MV</a>
+				            <a hidefocus href="###" class="all_add" title="添加选中歌曲">添加</a>
+				            <a hidefocus href="###" class="all_play" title="播放选中歌曲">播放全部</a>
+			            </h1>	
+					</div>
+					<ul class="kw_music_list"></ul>
+
+				</div>
+
+				<div id="zoneMVGedan" class="commondiv">
+					<h1 class="selall selall_mv" style="position:relative;zoom:1;">
+				        <span class="checkall"><font></font></span>
+				        <a hidefocus href="###" class="all_playmv" title="播放全部MV" style="margin-right:30px;">播放全部</a>
+			        </h1>	
+					<ul class="kw_mv_list likelist2" style="width:106%;"></ul>
+				</div>
+				<div id="zoneFocusWarp">
+					<div class="zoneFocusImg">
+						<ul></ul>
+						<a href="###" id="zoneNext" hidefocus title="下一个" onclick="return false;"></a>
+						<a href="###" id="zonePre" hidefocus title="上一个" onclick="return false;"></a>
+					</div>
+				</div>
+				<div id="zoneGedan" class="commondiv"></div>
+				<div id="bigGedanLei" class="commondiv"></div>
+				<div id="zonely"></div>
+				<p class="p20"></p>
+				<div class="page"></div>
+		</div>
+		<!--专区内容页结束-->
+	</div>
+</body>
+</html>

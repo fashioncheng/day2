@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="320,280" caption="0,0,0,128" roundcorner="10,10">
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,2,14,16'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;14,-2,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;YAHEI.NO12&quot;" />
+  <Default name="Label" value="font=&quot;PopUp.SectionTitle&quot; height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; textpadding=&quot;0,-3,0,0&quot; " />
+  <Default name="Button" value="setcursor=&quot;true&quot; height=&quot;25&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;PopUp.SectionTitle&quot; hottextcolor=&quot;#ff000000&quot; pushedtextcolor=&quot;#ff000000&quot; focusedtextcolor=&quot;#ff000000&quot;" />
+  <VerticalLayout name="layout_clientrect" bkimage="UpqualityFinish.png">
+		<HorizontalLayout name="layout_dialog_title" height="40">
+      <Control />
+      <Button name="button_Close" padding="0,21,17,0" width="19" height="20" statusimage="Config_CloseBtn.png" />
+		</HorizontalLayout>
+
+    <VerticalLayout padding="70,140,0,0">
+      <Label name="label_text1"  height="32" textcolor="#FF333333" font="YAHEI.NO18" />
+      <Label name="label_text2" padding="15,0,0,0" height="32" textcolor="#FF333333" font="YAHEI.NO18" />
+    </VerticalLayout>
+    
+	</VerticalLayout>
+</Window>

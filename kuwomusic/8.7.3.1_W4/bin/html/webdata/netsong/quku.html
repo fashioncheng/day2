@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>曲库首页</title>	
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="css/index.css" rel="stylesheet" type="text/css" />
+	<link href="css/comm_MV.css" rel="stylesheet" type="text/css" />
+	<link href="css/comm_OASC.css" rel="stylesheet" type="text/css" />
+	<link href="css/comm_PLAYLIST.css" rel="stylesheet" type="text/css" />
+	<link href="css/comm_RADIO.css" rel="stylesheet" type="text/css" />
+	<link href="css/comm_ALBUM.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/comm2.js" type="text/javascript"></script>
+	<script src="js/music.js" type="text/javascript"></script>	
+	<script src="js/index.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="kw_wc" class="index_index">
+		<div class="bannerBox" data-model="kw_bannerlist">
+			<div class="focus" id="focusImg">
+			    <div id="w_focus"></div>					
+                <i class="prev" title="上一个" id="lxPre"></i>
+                <i class="next" title="下一个" id="lxNext"></i>
+				<span class="btn" id="focus_btn">
+				</span>
+                <div id="focusplay" onclick="focusPlay(); return false;" title="直接播放">
+                    <a href="javascript:;" hidefocus></a>
+                </div>
+			</div>
+			<div class="ad ading">
+			    <a class="adx" hidefocus href="javascript:;" title="关闭" onclick="callClient('CANCEL_AD?position=1');return false;"></a>
+				<div id="delay_load_recom_2015_r1" class="adarea"></div>
+			</div>
+			<div class="vip">
+			    <div class="vipcontent">
+				    <p class="v_name">
+				        <b class="v_b_name" onclick="goUser();"></b>
+				        <b class="v_b_ulevel"></b>
+				        <b class="musicPackIcon"></b>
+				        <b class="v_b_vlevel"></b>
+				    </p>
+
+				    <p class="v_level">
+				    	<a class="v_login" onclick="callClient(&quot;UserLogin?src=login&quot;);">请登录</a>
+				    </p>
+				    <p class="all_num"><font>累计播歌：</font><span></span></p>
+				    <a href="javascript:;" hidefocus="" class="vip_btn" onclick="callClient('CANCEL_AD?position=2');return false;">立即续费</a>
+				</div>
+			</div>
+		</div>
+		<div class="recommendBox">
+			<ul class="recommendListBox"></ul>
+		</div>
+		<div class="personalizationBox" data-model="kw_playlistmodel">
+			<div class="indexTitleBox">
+				<h2>推荐歌单</h2>
+				<a href="javascript:;" class="index_more" onclick="commonClick({'source':'1001','name':'个性化推荐','other':'|csrc=曲库->首页->个性化推荐'});">></a>
+			</div>
+			<ul class="kw_indexListBox kw_rcmPl">
+				
+			</ul>
+		</div>
+		<div class="indexRadioBox" data-model="kw_radiolistmodel">
+			<div class="indexTitleBox ">
+				<h2>推荐电台</h2>
+				<a href="javascript:;" class="radio_locationName" ></a>
+				<a href="javascript:;" class="index_more" onclick="go_radio_page(); return false;">></a>
+				<!--长度限制-->
+				<div id="radio_listBox" style="display: none;">
+					<ol id="BroadcastSlide"> 
+							
+					</ol>
+				</div>				
+			</div>		
+			<ul class="kw_indexListBox kw_indexRadio">
+				
+			</ul>			
+		</div>
+		<div class="LastMvBox" data-model="kw_mvlistmodel">
+			<div class="indexTitleBox">
+				<h2>最潮视频</h2>
+				<a href="javascript:;" class="index_more" onclick="go_channel_mv_page(); return false;">></a>
+			</div>
+			<ul class="kw_indexListBox kw_indexMvListBox">
+				
+			</ul>
+		</div>
+		<div class="kw_originalBox" data-model="kw_huodongmodel">
+			<div class="indexTitleBox">
+				<h2>主播电台</h2>
+				<div class="entrance">
+				</div>
+				<a href="javascript:;" class="index_more" onclick="go_original_page(); return false;">></a>
+			</div>
+			<ul class="kw_indexListBox kw_originalList">
+				
+			</ul>
+		</div>
+		<div class="hotColumnBox" data-model="kw_huodongmodel">
+			<div class="indexTitleBox">
+				<h2>热门专栏</h2>
+				<div class="entrance">
+				</div>
+				<a href="javascript:;" class="index_more" onclick="commonClick({'source':'1001','name':'热门专栏'});">></a>
+			</div>
+			<ul class="kw_indexListBox kw_hotColumnList">
+				
+			</ul>
+		</div>
+		<div class="ad2Box">
+			<div class="gxh2015ad2Box">
+				<a class="adx2" hidefocus="" href="###" title="关闭" onclick="callClient('CANCEL_AD?position=2');return false;"></a>
+				<div class="gxh2015ad2" id="delay_load_top_2"></div>
+			</div>
+			<a href="###" hidefocus="" class="open_vip" id="open_vip" onclick="callClient('CANCEL_AD?position=2');return false;">开通VIP去广告</a>
+		</div>
+		<div class="newAlbumBox" data-model="kw_albumlistModel">
+			<div class="indexTitleBox">
+				<h2>新碟上架</h2>
+				<div class="entrance">
+				</div>
+			</div>
+			<ul class="kw_indexListBox kw_albumList">
+				
+			</ul>
+		</div>
+		<div class="musicPeripheryBox" data-model="kw_huodongmodel">
+			<div class="indexTitleBox">
+				<h2>音乐周边</h2>
+			</div>
+			<ul class="kw_indexListBox musicPeripheryList">
+				
+			</ul>
+		</div>
+	</div>
+	<a href="javascript:;" hidefocus="" class="opinion" onclick="callClient('UserFeedback');">我要反馈 <span>></span></a>
+	<a href="###" hidefocus class="rtop backTop" onclick="returnTop(); return false;" style="display: none; position: fixed; right: 18px; bottom: 18px;"></a>
+	<!--model-->
+	<ul id="kw_playlistModel" style="display:none;">
+		<li class="{$boxcname}">
+			<a href="javascript:;" class="{$imgcname}" title="{$titlename}" onclick="{$click}">
+				{$imgstr}
+				{$rnum}
+				<span class="{$shadowcname}"></span>
+				<i class="i_play" onclick="{$iplay}" data-ipsrc="{$ipsrc}" data-csrc="{$csrc}" title="直接播放"></i>
+				{$al_flag}
+				<span class="playcnt">{$playcnt}</span>
+			</a>
+			<p class="kw_plinfoBox {$rcm_class}">
+				<a href="javascript:;" class="kw_plinfo {$rcm_info_class}" title="{$titlename}" onclick="{$click}">{$name}</a>
+			{$des}
+			</p>
+		</li>
+	</ul>
+	<ul id="kw_radiolistModel" style="display:none;">
+		<li class="br_wrap {$radioClass}">
+			<a _onclick="{$log}{$click}" onclick="{$log}{$click}" title="{$titlename}" class="br_pic" href="javascript:;" hidefocus="">
+				<span class="br_shade"></span>
+				<i title="直接播放" class="i_play i_play_big"></i>
+				{$imgstr}
+				<div class="lstdiv">
+                    <span class="listeners">{$listnum}</span>
+                </div>
+			</a>
+			<p class="br_name">
+				<a onclick="{$log}{$click}" title="{$titlename}" href="javascript:;" hidefocus="">{$disname}</a>
+			</p>
+		</li>
+	</ul>
+	<ul id="kw_mvlistModel" style="display:none;">
+		<li class="bmv_wrap">
+			{$barrageIcon}
+			<a onclick="someMV(this);" data-csrc="{$csrc}" data-mv="{$mvinfo}" title="" class="bmv_pic" href="javascript:;" hidefocus="">
+				<span class="bmv_shade"></span>
+				<i title="直接播放" class="i_play i_play_big"></i>
+				{$imgstr}
+			</a>
+			<p class="bmv_info">
+				<a data-csrc="{$csrc}" data-mv="{$mvinfo}" onclick="someMV(this);" title="{$mvna}" href="javascript:;" hidefocus="">{$mvna}</a>
+				<br/>
+				<a onclick="{$artistclick}" title="{$artist}" href="javascript:;" hidefocus="">{$artist}</a>
+			</p>
+		</li>
+	</ul>
+	<ul id="kw_albumlistModel" style="display:none;">
+		<li class="b_wrap kw_album">
+			<a onclick="{$click}" title="{$albumtitle}" class="b_pic" href="javascript:;" hidefocus="">
+				<span class="l_adm"></span>
+				<span class="b_shade"></span>
+				<i onclick="{$iplay}" data-ipsrc="{$datapsrc}" data-csrc="{$csrc}" title="直接播放" class="i_play"></i>
+				<img class="lazy" width="120" height="120" src="img/def120.png" class="" onerror="imgOnError(this,120);" data-original="{$pic}">
+			</a>
+			<p class="b_name">
+				<a onclick="{$click}" title="{$multipletitle}" href="javascript:;" hidefocus="">{$multiplename}</a>
+			</p>
+		</li>
+	</ul>
+	<ul id="kw_rcmalbumlistModel" style="display:none;">
+		<li class="kw_wc_album">
+			<a onclick="{$click}" title="{$albumtitle}" class="albumbg" href="javascript:;" hidefocus="">
+				<img class="lazy" width="164" height="164" src="img/def150.png" class="" onerror="imgOnError(this,150);" data-original="{$pic}">
+				<span class="albumshadow"></span>
+				<span class="albumring"></span>
+			</a>
+			<p class="albuminfo">
+				<a onclick="{$click}" title="{$albumtitle}" class="albumname" href="javascript:;" hidefocus="">{$albumdisname}</a>
+			</p>
+			<p class="albuminfo albumartistinfo">
+				<a onclick="{$artistclick}" title="{$artisttitle}" class="artistname" href="javascript:;" hidefocus="">{$artistname}</a>
+			</p>
+		</li>
+	</ul>
+	<ul id="kw_huodongModel" style="display:none;">
+		<li class="kw_bwrap">
+			<a onclick="{$click}" title="{$titlename}" class="b_pic" href="javascript:;" hidefocus="">
+				<span class="b_shade"></span>
+				{$imgstr}
+			</a>
+			<p class="b_name">
+				<a onclick="{$click}" title="{$titlename}" href="javascript:;" hidefocus="">{$name}</a>
+			</p>
+		</li>
+	</ul>
+	<ul id="kw_originalModel" style="display:none;">
+		<li class="kw_owrap">
+			<a href="javascript:;" class="leftimg" title="{$title}" onclick="{$click}">
+				<img width="90" height="90" class="lazy" src="img/def90.jpg" onerror="imgOnError(this,90);" data-original="{$pic}">
+			</a>
+			<div class="infoBox">
+				<a href="javascript:;" title="{$title}" onclick="{$click}">{$name}</a>
+				<p>{$info}</p>
+			</div>
+		</li>
+	</ul>
+	<div id="kw_bannerlist" style="display:none;">
+		<ul class="m_bannerImg">
+			<a class="{$classname}" data-source="{$source}" data-sourceid="{$focussourceid}" data-name="{$name}" onclick="{$click}" href="javascript:;" hidefocus="" id="jdtpic{$indexnum}" title="{$titlename}">
+				<img class="lazy" onerror="imgOnError(this,520);" width="520" height="160" id="jdtimg{$indexnum}" src="img/def520.jpg" data-original="{$pic}">
+			</a>
+		</ul>
+		<ul class="m_bannerBtn">
+			<a href="javascript:;" class="{$classname}" hidefocus="" title="{$titlename}"></a>
+		</ul>
+	</div>
+	<ul id="kw_keywordModel" style="display:none;">
+		<a href="javascript:;" class="{$classname}" onclick="{$click}" title="{$titlename}">{$name}{$newIcon}</a>
+	</ul>
+</body>
+</html>

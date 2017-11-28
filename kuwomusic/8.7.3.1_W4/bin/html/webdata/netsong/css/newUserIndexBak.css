@@ -1,0 +1,49 @@
+body {background:rgba(0,0,0,0.5) !important;overflow:hidden;font-size: 12px;}
+h3 {font-size: 16px;margin-bottom:8px;}
+/*主动安装*/
+.newUserIndex {width:675px;height:375px;background:#fff;margin:106px 0 0 192px;padding:37px 40px 0 40px;position: relative;}
+.leftBox{float:left;}
+.rightBox {float:right;width:230px;}
+.rightBox a {margin-top:6px;}
+.bangBox,.radioBox,.topTitle,.kuMusicBox,.xiuBox,.signBox,.mvBox {overflow: hidden;}
+.b_wrap,.br_wrap {margin-right:5px;width:100px;}
+.b_wrap .b_pic img,.b_wrap .b_pic:hover .b_shade {border-radius: 0}
+.b_wrap .b_name a,.br_wrap .br_name a,.topTitle a,.bmv_wrap .bmv_name a  {color:#666666;font-size:12px;}
+.br_wrap .br_pic,.b_wrap .b_pic,.br_wrap .br_pic .br_shade {width:100px;height: 100px;}
+.br_wrap {padding-bottom: 6px;}
+.b_wrap p {text-align: left;}
+.topTitle a {float:right;margin-top:6px;}
+.topTitle h3 {float:left;vertical-align: bottom;}
+.topTitle i {float:right;margin:2px 0 0 5px; width: 12px;height: 12px;background: url(../img/newUserIndex/more.png);}
+.bang {margin-bottom: 5px;overflow: hidden;}
+.bangCover {float:left;cursor: pointer;position: relative;}
+.bangCover .shade{position: absolute;top:0;left: 0;background: rgba(0,0,0,0.3);width:100%;height: 100%;display: none;}
+.bangCover .shade img {margin:25px 0 0 25px;}
+.bangCover:hover .shade {display: block;}
+.bang ul {width:129px;float:right;margin-top:10px;}
+.bang ul li {width: 100%;float: left;}
+.bang ul li a {float:left;}
+.bang ul li a.w_name {max-width: 79px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;color:#333333;}
+.bang ul li a.artist {max-width: 50px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;color:#999999;}
+.closeWindow {width:11px;height: 10px;display: block;position: absolute;right: 10px;top:10px;background: url(../img/close.png);}
+.closeWindow:hover {background-position: -11px 0}
+/*被动安装*/
+.newUserIndex_passive {width:580px;height:500px;background:#fff;margin:35px 0 0 248px;padding:37px 40px 0 40px;position: relative;}
+.signBox,.xiuBox,.mvBox {margin-bottom:21px;}
+.xiuBox ul li {float:left;margin-right: 5px;}
+/*mv*/
+.mvBox {height: 139px;}
+.bmv_wrap,.bmv_wrap .bmv_pic,.bmv_wrap .bmv_pic .bmv_shade,.bmv_wrap .bmv_pic img,.bmv_wrap p,.bmv_wrap a {width:100px;}
+.bmv_wrap .bmv_pic {border-radius: 0;}
+.bmv_wrap .bmv_pic .bmv_shade,.bmv_wrap .bmv_pic img,.bmv_wrap .bmv_pic {height: 70px;}
+.bmv_wrap {margin-right: 5px;padding:0;}
+.bmv_wrap p {text-align: left;}
+.bmv_wrap .bmv_info a {color:#999;font-size:12px;}
+.tm_mv{display:block;z-index:999;background:url(../img/tanmu/tm.png);width:27px;height:14px;position:absolute;right:0px;top:0px;}
+/*error*/
+.errorBox {width:390px;height: 257px;background:#fff;margin:138px 0 0 375px;text-align: center;position: relative;padding-top:53px;}
+.errorBox p {font-size: 16px;line-height: 78px;}
+.errorBox img {margin:0 auto;}
+.errorBox .choose a {float:left;font-size: 14px;display: inline-block;width: 148px;height: 38px;line-height: 40px;color:rgb(64,171,255);border: 1px solid rgb(64,171,255);}
+.errorBox a.leave {float: right;color:rgb(153,153,153);border: 1px solid rgb(153,153,153)}
+.choose {width:320px;background: #000;margin:0 auto;}

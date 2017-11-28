@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="467,200" caption="0,0,0,80" roundcorner="10,10"><!--467,200 --><!--602,422 -->
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,0,14,14'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;16,-3,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;Config.Button&quot;" />	 
+ <Default name="Label" value="font=&quot;PopUp.SectionTitle&quot; height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; textpadding=&quot;0,-3,0,0&quot; " />
+  <!--Default name="Button" value="setcursor=&quot;true&quot; height=&quot;25&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;PopUp.SectionTitle&quot; hottextcolor=&quot;#ff000000&quot; pushedtextcolor=&quot;#ff000000&quot; focusedtextcolor=&quot;#ff000000&quot;" /-->
+  <Default name="Button" value="fadetime=&quot;300&quot;"/>
+ <VerticalLayout > <!-- bkcolor="#FFFF0000"-->
+	<!--1. 升级介绍-->
+	 <VerticalLayout name="update_Introduce" inset="0,0,0,0" visible="false"> 
+			<!--标题栏 -->
+			<HorizontalLayout name="layout_dialog_title" height="141" bkimage="Update_Title.png">
+				<!-- <Control /> -->
+				<!--升级提示也得标题 -->
+				<HorizontalLayout>
+					<Label bkimage="logo_small.png" padding="15,16,0,0" width="90" height="29"/><!--+5,+6 -->
+					<Label bkimage="update_f.png"  padding="20,26,0,0" width="53" height="99" /><!--小火箭 -->
+					<Label text="有新版本可升级体验" padding="10,50,0,0" height="40"  textcolor="#FFFFFFFF" font="YAHEI.NO30"  />
+				</HorizontalLayout>
+				<Button name="button_Close" padding="0,10,10,0" width="19" height="20" statusimage="Config_CloseBtn.png" />
+			</HorizontalLayout>
+			<!--升级介绍,最多显示五条-->
+			<VerticalLayout name="check_ok_vlayout" bkimage="update_bk.png" childpadding="0,0,0,0"  visible="false">
+				<Label text="新版特性：" textcolor="#FF333333" font="YAHEI.N016" height="17" padding="40,20,0,0" />
+				<Label   text=""  name="info_1" textcolor="#FF666666" font="YAHEI.N014" maxwidth="560" endellipsis="true" padding="40,7,0,0"/>
+				<Label   text=""  name="info_2" textcolor="#FF666666" font="YAHEI.N014" maxwidth="560" endellipsis="true" padding="40,7,0,0"/>
+				<Label   text=""  name="info_3" textcolor="#FF666666" font="YAHEI.N014" maxwidth="560" endellipsis="true" padding="40,7,0,0"/>
+				<Label   text=""  name="info_4" textcolor="#FF666666" font="YAHEI.N014" maxwidth="560" endellipsis="true" padding="40,7,0,0"/>
+				<Label   text=""  name="info_5" textcolor="#FF666666" font="YAHEI.N014" maxwidth="560" endellipsis="true" padding="40,7,0,0"/>
+				<Button name="button_Update" text="快速升级" textcolor="#FFFFFFFF" font="YAHEI.N016" padding="190,8,0,0" width="220" height="50" statusimage="btn_update.png" />
+			</VerticalLayout>
+			<VerticalLayout name="checkVer_vlayout" bkimage="update_bk.png">
+				<Label text="正在检查更新，请稍后..." textcolor="#FF333333" font="YAHEI.N016" height="17" padding="216,20,0,0" />
+			</VerticalLayout>
+	</VerticalLayout>
+	<!-- 2.升级下载安装包页面-->
+	<VerticalLayout visible="false" name="update_downPackVlayout">
+		<HorizontalLayout  bkimage="Update_Title.png" height="282">
+			
+			<Label bkimage="logo_big.png" padding="174,67,0,0" align="right" width="253" height="82"/><!--+4,+4 -->
+			<Label text="升级中..." padding="-170,185,0,0" height="40"  textcolor="#FFFFFFFF" font="YAHEI.NO24"  />
+			<Button name="downing_button_Min" padding="0,10,10,0" width="19" height="20" statusimage="min.png" />
+		</HorizontalLayout>
+		<VerticalLayout bkimage="update_bk.png" childpadding="0,0,0,0">
+			<Label text="正在下载文件，请稍后..." textcolor="#FF666666" font="YAHEI.N016" height="17" padding="212,30,0,0" /><!-- fgimage="lrc_PlayerProgress_fg.png" lrc_progress_thumb.png   fgpadding="1,0,1,2"-->
+			<!--<Slider name="downProgress" padding="42,25,0,0" height="10" width="520" max="100" min="0" value="0" step="1" enabled="false" bkimage="update_progres_bk.png"  fgimage="playcontrol_volumnfg.png" thumbimage="lrc_progress_thumb.png" thumbsize="8,8" /> -->
+			
+			<Progress name="downProgress" padding="42,25,0,0" height="8" width="520" max="100" min="0" value="10" step="1" enabled="false" bkimage="update_progres_bk.png"  fgimage="update_progress.png"/><!--update_progress.png update_downpack.png -->
+			
+			<Label text="0%" name="proValusLabel" textcolor="#FF666666" align="center" font="YAHEI.N016" height="17" padding="17,25,0,0" />
+		</VerticalLayout>
+	</VerticalLayout>
+	<!-- 3.无新版升级页面-->
+	<VerticalLayout name="update_noNewVlayout" visible="false">
+		<VerticalLayout  bkimage="Update_Title.png" height="282" ><!-- bkcolor="#FF00FF00"-->
+			
+				<Button name="button_Close" padding="572,10,0,0" width="19" height="20" statusimage="Config_CloseBtn.png" />
+				<Label bkimage="logo_big.png" padding="174,39,0,0" align="right" width="253" height="82"/><!--+4,+4 -->
+				<HorizontalLayout>
+					<Label bkimage="update_ok.png" padding="165,32,0,0" align="center" width="28" height="28"/><!--+4,+4 -->
+					<Label text="当前版本已经是最新版本"  align="left" padding="2,28,0,0" height="40"  textcolor="#FFFFFFFF" font="YAHEI.NO23"  />
+				</HorizontalLayout>	
+		</VerticalLayout>
+		<VerticalLayout bkimage="update_bk.png">
+			<Label  text="好音质 用酷我" padding="0,28,0,0"  textcolor="#FF666666" align="center" font="YAHEI.N016" /><!--+4,+4 -->
+			<Button  name="button_ok" text="我知道了" textcolor="#FFFFFFFF" font="YAHEI.N016" align="center" padding="190,13,0,0" width="220" height="50" statusimage="btn_update.png" />
+		</VerticalLayout>
+	</VerticalLayout>
+	
+	<!-- 4.升级失败提示页面-->
+	<VerticalLayout name="update_failedVlayout" bkimage="update_failed_bk.png" visible="false"><!-- bkimage="update_failed_bk.png"-->
+		<HorizontalLayout height="49">
+			<Label bkimage="logo_small.png" padding="16,15,0,0" align="right" width="90" height="29"/><!--+4,+4 -->
+			<Button name="button_Close" padding="339,10,0,0" width="19" height="20" statusimage="Config_CloseBtn.png" />
+		</HorizontalLayout>
+		<Label bkimage="update_failed.png"  padding="210,-15" width="48" height="48"/>
+		<HorizontalLayout>
+			<!-- <Label text="酷我音乐未成功安装，可" width="190"  padding="93,0,0,0" textcolor="#FFFFFFFF" font="YAHEI.N016" />-->
+			<!-- <Button name="reTry"  width="80" height="40" textcolor="#FFFFFFFF"  font="YAHEI.N016" text="重新启动" padding="-17,-10,0,0" textcolor="#ff3fb7ff" hottextcolor="#ffffffff" />-->
+			<Label text="酷我音乐升级未成功，请稍后重试" width="260"  padding="114,30,0,0" textcolor="#FFFFFFFF" font="YAHEI.N016" />
+		</HorizontalLayout>
+			<Label text="您还可以直接" width="120" padding="140,0,0,0" textcolor="#FFFFFFFF" font="YAHEI.N016" />
+	<Button name="down_newVer" text="下载最新版"  width="88" height="30" align="center" padding="234,-30,0,0" font="YAHEI.N016" textcolor="#ff3fb7ff" hottextcolor="#ffffffff"/>
+		<Label />
+	</VerticalLayout>
+	<!--升级完成页，无捆绑页提示页-->
+	<VerticalLayout name="update_FinshVlayout" visible="false">
+		<!--标题栏 -->
+			<HorizontalLayout  name="layout_dialog_title" height="141" bkimage="Update_Title.png">
+				<!-- <Control /> -->
+				<!--升级提示也得标题 -->
+				<HorizontalLayout>
+					<Label bkimage="logo_small.png" padding="15,12,0,0" width="90" height="29"/><!--+5,+6 -->
+					<Label bkimage="update_finsh.png"  padding="38,49,0,0" width="36" height="36" />
+					<Label align="left" text="已经升级为最新版本" padding="2,50,0,0" height="40"  textcolor="#FFFFFFFF" font="YAHEI.NO30"  />
+				</HorizontalLayout>
+			 <Button name="button_Close" padding="0,10,10,0" width="19" height="20" statusimage="Config_CloseBtn.png" />
+				
+			</HorizontalLayout>
+			<!--升级介绍,最多显示五条-->
+			<VerticalLayout bkimage="update_bk.png" childpadding="0,0,0,0">
+				<Label text="新版特性：" textcolor="#FF333333" font="YAHEI.N016" height="17" padding="40,20,0,0" />
+				<Label text="" name="finsh_info_1" textcolor="#FF666666" font="YAHEI.N014" maxwidth="560" endellipsis="true" padding="40,7,0,0"/>
+				<Label text="" name="finsh_info_2" textcolor="#FF666666" font="YAHEI.N014" maxwidth="560" endellipsis="true" padding="40,7,0,0"/>
+				<Label text="" name="finsh_info_3" textcolor="#FF666666" font="YAHEI.N014" maxwidth="560" endellipsis="true" padding="40,7,0,0"/>
+				<Label text="" name="finsh_info_4" textcolor="#FF666666" font="YAHEI.N014" maxwidth="560" endellipsis="true" padding="40,7,0,0"/>
+				<Label text="" name="finsh_info_5" textcolor="#FF666666" font="YAHEI.N014" maxwidth="560" endellipsis="true" padding="40,7,0,0"/>
+				<Button name="button_ok" text="我知道了" textcolor="#FFFFFFFF" font="YAHEI.N016" padding="190,8,0,0" width="220" height="50" statusimage="btn_update.png" />
+			</VerticalLayout>
+	</VerticalLayout>
+	
+	<!-- 升级完成页面，有捆绑-->
+	<VerticalLayout name="update_FinshBindVlayout" visible="false"> <!--update_FinshBindVlayout-->
+		<VerticalLayout  bkimage="Update_Title.png" height="282" ><!-- bkcolor="#FF00FF00"-->
+		
+				<Button name="button_Close" padding="572,10,0,0" width="19" height="20" statusimage="Config_CloseBtn.png" />
+				<Label bkimage="logo_big.png" padding="174,34,0,0" align="right" width="253" height="82"/><!--+4,+4 -->
+				<HorizontalLayout  height="68">
+					<Label bkimage="update_ok.png" padding="198,33,0,0" align="center" width="28" height="28"/>
+					<Label text="已升级为最新版本"  align="left" padding="10,28,0,0" height="40"  textcolor="#FFFFFFFF" font="YAHEI.NO24"  />
+				</HorizontalLayout>	
+				<VerticalLayout name="bindVlayout"><!-- -->
+					<HorizontalLayout>
+						<CheckBox  name="item0" visible="false" textcolor="#b0FFFFFF" font="YAHEI.N014" width="80" height="17"   padding="143,10,0,0" align="center" text="" userdate="bind|1"  hotimage="update_ok.png" statusimage="update_bindCk.png"></CheckBox>
+						<CheckBox  name="item1" visible="false" padding="56,10,0,0"  textcolor="#b0FFFFFF" font="YAHEI.N014" height="16" text="" userdate="bind|1"  hotimage="update_ok.png" statusimage="update_bindCk.png"></CheckBox>
+						<CheckBox  name="item2" visible="false" padding="-57,10,0,0" textcolor="#b0FFFFFF" font="YAHEI.N014" height="16" text="" userdate="bind|1"  hotimage="update_ok.png" statusimage="update_bindCk.png"></CheckBox>
+					</HorizontalLayout>
+						<HorizontalLayout  padding="0,10,0,0">
+						<CheckBox visible="false" width="80" height="16" name="item3"  padding="143,0,0,0" font="YAHEI.N014" textcolor="#b0FFFFFF" text="" userdate="bind|1"  hotimage="update_ok.png" statusimage="update_bindCk.png"></CheckBox>
+						<CheckBox visible="false" name="item4"  padding="56,0,0,0" textcolor="#b0FFFFFF" font="YAHEI.N014" height="16" text="" userdate="bind|1"  hotimage="update_ok.png" statusimage="update_bindCk.png"></CheckBox>
+						<CheckBox visible="false" name="item5"  padding="-57,0,0,0" textcolor="#b0FFFFFF" font="YAHEI.N014" height="16" text="" userdate="bind|1"  hotimage="update_ok.png" statusimage="update_bindCk.png"></CheckBox>
+					</HorizontalLayout>
+				</VerticalLayout>
+		</VerticalLayout>
+		<VerticalLayout bkimage="update_bk.png">
+			<Label  text="好音质 用酷我" padding="0,28,0,0"  textcolor="#FF666666" align="center" font="YAHEI.N016" /><!--+4,+4 -->
+			<Button  name="finshBind_button_ok" text="我知道了" textcolor="#FFFFFFFF" font="YAHEI.N016" align="center" padding="190,18,0,0" width="220" height="50" statusimage="btn_update.png" />
+		</VerticalLayout>
+	</VerticalLayout>
+</VerticalLayout>
+</Window>

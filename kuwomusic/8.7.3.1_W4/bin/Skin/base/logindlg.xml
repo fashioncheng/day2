@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window  caption="0,0,0,80" roundcorner="3,3" size="572,402">
+	<Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;14&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,1,14,15'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;16,-3,0,0&quot; padding=&quot;0,8,0,0&quot;" />
+
+	<VerticalLayout  bkimage="bg_login.png">
+   <HorizontalLayout name="titlepanel" height="80" inset="0,0,0,0" bkimage="loginbanner.png" width="560" padding="6,6,0,0">
+   		<Label name="MessageBox_Title"/>	
+    	<Button name="close" pos="531,8,550,28" float="true" statusimage="Config_CloseBtn.png"/>
+    </HorizontalLayout>
+    <Label height="40"/>     
+    <!--<HorizontalLayout height="58">
+			<Button name="qqlogin" float="true" pos="40,10,205,49" statusimage="btn_qqlogin.png" setcursor="true"/>
+			<Button name="wblogin" float="true" pos="223,10,398,49" statusimage="btn_wblogin.png" setcursor="true"/>
+		</HorizontalLayout>
+		<Control  height="1" bkimage="fengexian.png" />-->
+    <HorizontalLayout  height="37" inset="0,0,0,0">
+    	<Label text="" float="true" textcolor="Config.DefaultText" align="left" pos="38, 30, 110, 51" />
+    	<Edit name="username" float="true" pos="100, 0, 460, 36" maxchar="40" tooltip="请在这里输入您的账号" normalimage="Config_EditBox_1.png" focusedimage="Config_EditBox_2.png" />    	
+    </HorizontalLayout>
+    <Label name="username_errtip" height="22" textcolor="#FFFF0000" textpadding="110,0,0,0"/>
+    <HorizontalLayout height="37" >
+			<Label text="" float="true" textcolor="Config.DefaultText" align="left" pos="38,0,110,19" />
+		<Edit name="password" float="true" pos="100, 0, 460,36" password="true" tooltip="请在这里输入您的密码" normalimage="Config_EditBox_1.png" focusedimage="Config_EditBox_2.png"/>
+			<Button text="显示密码" name="show_password" float="true"  visible="false" textcolor="#FF999999" pos="395,10,455,30" setcursor="true" tabstop="false"/>
+		<Button text="忘记密码" name="getpassword" float="true"  textcolor="#FF46B4E6" pos="460,10,530,30" setcursor="true" tabstop="false"/>
+    </HorizontalLayout>	
+    <Label name="password_errtip" height="22" textcolor="#FFFF0000" textpadding="110,0,0,0"/>
+    <HorizontalLayout height="30"> 
+     	<CheckBox name="autologin" float="true" pos="100,0,214,18" text="自动登录"/>
+     	<CheckBox name="rempassword" pos="315,0,415,18" float="true" text="记住密码"/>
+    </HorizontalLayout> 
+    <TabLayout name="info_result" height="42">
+	    <HorizontalLayout height="42" >
+	      <Button name="login" float="true" pos="100,0,270,40" text="登录" setcursor="false" height="40" statusimage="btn_login_new.png" font="YAHEI.N014" textcolor="Global.White" hottextcolor="Global.White"/>
+	      <Button name="register" float="true" pos="290,0,460,40" text="注册" setcursor="false" height="40" statusimage="btn_reg.png" font="YAHEI.N014" textcolor="Config.DefaultText" textcolor="Config.DefaultText" hottextcolor="Global.White" />	      
+	    </HorizontalLayout>
+	    <Label name="result" bkimage="login_result.png" textcolor="#ff0044bb" align="center" height="42"/>
+    </TabLayout>
+    <Label height="38"/>
+    <HorizontalLayout>
+    	<Label text="其它账户登录 : " textcolor="#FF46B4E6" font="Default.FontName" float="true" pos="360,12,480,27" align="left"/>
+    	<Button name="btn_kuwo_other_login_qq" bkimage="other_qq_login.png" height="24" width="24" float="true" pos="449,7,473,31" setcursor="true" />
+    	<Button name="btn_kuwo_other_login_weibo" bkimage="other_weibo_login.png" height="24" width="24" float="true" pos="483,7,507,31" setcursor="true" />
+    	<Button name="btn_kuwo_other_login_weixin" bkimage="other_weixin_login.png" height="24" width="24" float="true" pos="517,7,541,31" setcursor="true" />
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

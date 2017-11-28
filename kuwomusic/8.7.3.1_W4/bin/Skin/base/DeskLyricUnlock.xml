@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="32,32" caption="0,0,0,50">
+  <VerticalLayout>
+    <HorizontalLayout name="DL_LockState" height="32" inset="3,3,3,3">
+      <HorizontalLayout bkimage="DL_ToolBK.png">
+        <Button width="26" height="26" name="DeskLyric_UnLock" tooltip="解锁桌面歌词" iconimage="DL_UnLock.png" icondest="4,3,21,23" statusimage="DL_btn_bk.png" padding="0,0,2,0"/>
+      </HorizontalLayout>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>搜索内容页面</title>
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="css/content.css" rel="stylesheet" type="text/css" />
+	<link href="css/channel_search.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/comm2.js"></script>
+    <script type="text/javascript" src="js/comm_search.js"></script>
+	<script type="text/javascript" src="js/channel_search.js"></script>
+</head>
+<body>
+	<div class="channelContent">
+		<div class="search_topBox">
+			<p class="seach_title">
+				搜索到"
+				<span></span>
+				"的相关歌曲
+			</p>
+			<p class="seach_other_word"></p>
+			<div class="tabBox">
+				<a class="active" href="javascript:;" data-type="all">单曲</a>
+				<a href="javascript:;" data-type="mv">MV</a>
+				<a href="javascript:;" data-type="setlist">歌单</a>
+				<a href="javascript:;" data-type="radio">电台</a>
+				<a href="javascript:;" data-type="artist">歌手</a>
+				<a href="javascript:;" data-type="album">专辑</a>
+				<a href="javascript:;" data-type="lrc">歌词</a>
+			</div>
+		</div>
+		<!-- 大合集开始 -->
+		<div id="dhjBox">
+			<div style="padding-left:0px;display:block;margin-top:0px;">
+				<div class="heji" id="search_heji_artist">
+			        <div class="heji_pic"></div>
+			        <div class="hj_main">
+		    	        <h2></h2>
+		                <div class="hj_search" style="color:#888999;margin-top:2px;"></div>
+		                <div class="hj_search"></div>
+		            </div>
+		        </div>
+		        <div class="heji" id="search_heji_playlist">
+			        <div class="heji_pic"></div>
+			        <div class="hj_main">
+		    	        <h2></h2>
+		                <div class="hj_search" style="margin-top:5px;"></div>
+		                <div class="hj_search"></div>
+		            </div>
+		        </div>
+		        <div class="heji" id="search_heji_album">
+			        <div class="heji_pic"></div>
+			        <div class="hj_main">
+		    	        <h2></h2>
+		                <div class="hj_search"></div>
+		                <div class="hj_search"></div>
+		            </div>
+		        </div>
+		        <div class="heji" id="search_heji_subject">
+			        <div class="heji_pic"></div>
+			        <div class="hj_main">
+		    	        <h2></h2>
+		                <div class="hj_search" style="margin-top:5px;"></div>
+		                <div class="hj_search"></div>
+		                <div class="hj_search"></div>
+		            </div>
+		        </div>
+		        <div class="heji" id="search_heji_banglist">
+		            <div class="heji_pic">
+		            </div>
+		            <div class="hj_main">
+		    	        <h2></h2>
+		    	        <div class="hj_search">
+		    	        </div>
+		            </div>    
+		            <div class="w_djhj1">
+		                <a hidefocus href="###" onclick="goDJZone();return false;"></a>
+		            </div>
+		        </div>
+		        <div class="heji" id="search_concert" style="width:620px;height:70px;"></div>
+			</div>
+			<div id="w_dhj_width" style="display:none;position:absolute;top:0px;left:0px;"></div>
+		</div>
+		<!-- 大合集结束 -->
+	    <div id="content">
+	    	<div class="common_content w_musiclist" id="singerBox" style="margin-top:3px;">
+	            <h1 class="selall tag" style="padding-top:17px;border:0">
+					<a style="margin:0" title="播放选中歌曲" class="all_play" href="###" hidefocus>播放全部</a>
+					<a title="添加选中歌曲" class="all_add" href="###" hidefocus>添加</a>
+				    <a title="下载选中歌曲" class="all_down" href="###" hidefocus>下载</a>				    
+			    </h1>
+				<h1 class="selall" style="position: static; left: 0px; margin-bottom:0px; border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;">
+	                <div>
+	                    <div class="ml">
+	                            <span class="checkall"><input type="checkbox" checked="true" class="all_ckb"><font></font></span>
+	                        <span class="s_list">操作</span>
+	                        </div>
+	                    <div class="mr_box">
+	                        <div class="mr_box_r">
+	                            <span class="s_list" style="text-align: left;">热度</span>
+	                            <span class="s_list" style="width:31px;float: right;margin-right:0px;">音质</span>
+	                        </div>
+	                        <div class="mr_center_con" style="overflow: hidden;zoom:1;">
+	                            <span class="s_list m_name_box">歌名</span>
+	                            <span class="s_list m_artist_box">歌手</span>
+	                            <span class="s_list m_album_box" style="margin-right: 0">专辑</span>
+	                        </div>
+	                    </div>
+	                </div>
+	            </h1>
+	            <ul class="kw_music_list" data-model="kw_musiclistModel"></ul>
+	        </div>
+	        <div class="common_content w_artist">
+	            <ul class="kw_artist_list" style="margin-top:20px; margin-right:-40px;" data-model="kw_artistlistModel"></ul>
+	        </div>   
+	        <div class="common_content w_album">
+	            <ul class="kw_album_list" style="width:auto; margin-top:20px; margin-right:-40px;" data-model="kw_albumlistModel"></ul>
+	        </div>      
+	        <div class="common_content w_mv">
+	            <h1 class="selall selall_mv" style="padding-top:20px;width:99.5%;border:0">
+				    <a hidefocus href="###" class="all_playmv" title="播放全部MV" style="margin-left:0">播放全部</a>
+				    <span class="checkall checkallNum" style="float:right; width:auto;"><font style="margin-right:0;"></font></span>
+			    </h1>	
+	            <ul class="kw_mv_list" style="width:auto; margin-right:-30px;" data-model="kw_mvModel"></ul>
+	        </div>       
+            <div class="common_content w_playlist">
+                <ul class="kw_playlist" style="margin-top:20px; margin-right:-40px;" data-model="kw_playlistModel"></ul>
+            </div>
+            <div class="common_content w_radiolist">
+                <ul class="kw_radiolist" style="margin-top:20px; margin-right:-37px;"></ul>
+            </div>
+	        <div class="common_content w_lrc" style="margin-top:3px;">
+	            <h1 class="selall tag" style="padding-top:17px;border:0">
+					<a style="margin:0" title="播放选中歌曲" class="all_play" href="###" hidefocus>播放全部</a>
+					<a title="添加选中歌曲" class="all_add" href="###" hidefocus>添加</a>
+				    <a title="下载选中歌曲" class="all_down" href="###" hidefocus>下载</a>				    
+			    </h1>
+				<h1 class="selall" style="position: static; left: 0px;border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;">
+	                <div>
+	                    <div class="ml">
+	                            <span class="checkall"><input type="checkbox" checked="true" class="all_ckb"><font></font></span>
+	                        <span class="s_list" style="float:left;width:auto">操作</span>
+	                        </div>
+	                    <div class="mr_box">
+	                        <div class="mr_box_r">
+	                            <span class="s_list" style="text-align: left;">热度</span>
+	                            <span class="s_list" style="width:31px;float: right;margin-right:0px;">音质</span>
+	                        </div>
+	                        <div class="mr_center_con" style="overflow: hidden;zoom:1;">
+	                            <span class="s_list m_name_box">歌名</span>
+	                            <span class="s_list m_artist_box">歌手</span>
+	                            <span class="s_list m_album_box" style="margin-right: 0">专辑</span>
+	                        </div>
+	                    </div>
+	                </div>
+	            </h1>
+	            <ul class="kw_music_list"></ul>
+	        </div>          
+	        <div class="common_content w_noresult">
+	            <p class="l_p1" style="word-break:break-all;word-wrap:break-word;">没有找到与“<em></em>”相关的结果，换个词再试试？</p>
+				<p class="l_p2">酷我音乐建议您：</p>
+				<p class="l_p3">请检查输入的关键词是否有误或过长。</p>
+				<p class="l_p3">请向我们<a hidefocus href="javascript:;" onclick="callClient('UserFeedback');">反馈</a>，我们将尽快补充数据。</p>
+				<p class="l_p3 l_p4" id="noresult_con">
+				</p>
+	        </div>       
+	        <div class="page"></div>            
+	    </div>
+	</div>
+	<!-- 美女秀弹层开始 -->
+	<div class="heji" id="search_heji_xiu" style="display:none;" data-isshow="0">
+	    <div class="juneBox" onclick="openXIU(this,-8);return false;">
+	        <div class="juneBoxLeft"></div>
+	        <div class="juneBoxRight">
+	            <div class="juneBoxRleft">
+	                <div class="juneBoxRleftTop" style="overflow:hidden;">
+	                    <div class="xiuIconBox ">
+	                        <span class="ppIcon fl"></span>
+	                        <div class="realManIcon">真人演唱</div>
+	                    </div>
+	                    <!--<span class="juneListenicon"></span>-->
+	                    <span class="juneListenBtn1"></span>
+	                    <!--<span class="xiu_hot"></span>-->
+	                </div>
+	            </div>
+	            <div class="xiuInfoBox">
+                    <div class="musicName"></div>
+                </div>
+	            <div class="singerName"></div>
+	        </div>
+	        <div class="juneBoxRright">
+	        	<div class="juneBoxRleftBottom"></div>
+	            <div class="juneBoxRrightTop"></div>
+	        </div>
+	    </div>
+	</div>
+	<!-- 美女秀弹层结束 -->
+	<style>
+	.w_rtop { 
+	    position:fixed;
+	    _position:absolute; 
+	    display:none; 
+	    width:26px; 
+	    height:26px; 
+	    background:url(img/top.png) no-repeat 0 0; 
+	    z-index:9999999; 
+	    right:10px; 
+	    bottom:10px;
+	    _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)-10));
+	 }
+    .w_rtop:hover { background:url(img/top_hover.png) no-repeat 0 0;}
+    .kw_ugcInfoIcon {margin-left:5px;}
+	</style>
+	<a href="#" hidefocus class="w_rtop"></a>
+	<!-- model -->
+	<ul id="kw_musiclistModel" style="display:none;">
+		<li class="music_wrap {$liclass}" c-rid="{$rid}" data-index="{$indexnum}" title="{$tips}">
+			{$earthBlock}
+			<div class="m_r">
+				<div class="mr_r">
+					<div class="m_left">
+						{$vericon}
+						<input type="checkbox" checked="true" class="m_ckb">
+						<span class="num">{$ordinal}</span>
+						<div data-rid="{$rid}" class="icon">
+							<a hidefocus="" href="javascript:;" class="m_add" title="添加歌曲"></a>
+							<a hidefocus="" href="javascript:;" class="m_down" title="下载歌曲">{$moneyIcon}</a>
+							<a hidefocus="" href="javascript:;" class="m_more" title="更多操作"></a>
+						</div>
+					</div>
+					<div class="mr_box">
+						<div class="m_right">
+							<div class="box_right">
+								<div style="float:left;width:96px;">
+									<i class="m_score">
+										<span style="width:{$score100}%;"></span>
+									</i>
+									{$infoStr}
+								</div>
+								<i title="选择试听音质" data-md="{$formats}" class="m_hd pz {$hqlevel}"></i>
+							</div>
+						</div>
+						<div class="m_middle">
+							<div class="nameMv">
+								<span class="m_name">
+									<a data-rid="{$rid}" class="w_name" hidefocus="" href="javascript:;">{$musicname}</a>
+									{$mviconstr}
+								</span>
+								{$isnewstr}
+							</div>
+							<span class="m_artist">
+								<a onclick="{$artistclick}" class="forLog" hidefocus="" href="javascript:;">
+									{$artistname}
+								</a>
+							</span>
+							<span class="m_album">
+								<a onclick="{$albumclick}" class="forLog" hidefocus="" href="javascript:;">{$albumname}</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+		{$verlist}
+	</ul>
+	<ul id="kw_verlistModel" style="display:none;">
+		<li class="music_wrap {$liclass}" c-rid="{$rid}" data-index="{$indexnum}" title="{$tips}">
+			{$earthBlock}
+			<div class="m_r">
+				<div class="mr_r">
+					<div class="m_left">
+						<div data-rid="{$rid}" class="icon">
+							<a hidefocus="" href="javascript:;" class="m_add" title="添加歌曲"></a>
+							<a hidefocus="" href="javascript:;" class="m_down" title="下载歌曲">{$moneyIcon}</a>
+							<a hidefocus="" href="javascript:;" class="m_more" title="更多操作"></a>
+						</div>
+					</div>
+					<div class="mr_box">
+						<div class="m_right">
+							<div class="box_right">
+								<div style="float:left;width:96px;">
+									<i class="m_score">
+										<span style="width:68%;"></span>
+									</i>
+									{$infoStr}
+								</div>
+								<i title="选择试听音质" data-md="{$formats}" class="m_hd pz {$hqlevel}"></i>
+							</div>
+						</div>
+						<div class="m_middle">
+							<div class="nameMv">
+								<span class="m_name">
+									<a data-rid="{$rid}" class="w_name" hidefocus="" href="javascript:;">{$musicname}</a>
+									{$mviconstr}
+								</span>
+								{$isnewstr}
+							</div>
+							<span class="m_artist">
+								<a onclick="{$artistclick}" class="forLog" hidefocus="" href="javascript:;">
+									{$artistname}
+								</a>
+							</span>
+							<span class="m_album">
+								<a onclick="{$albumclick}" class="forLog" hidefocus="" href="javascript:;">{$albumname}</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<ul id="kw_mvModel" style="display:none;">
+		<li class="bmv_wrap {$copyrightClass}" data-index="{$indexnum}" data-rid="{$rid}">
+			{$barrageicon}
+			{$bmv_earthBlock}
+			<a data-mv="{$mvdata}" onclick="{$click}" title="{$titlename}" class="bmv_pic forRefLog" href="javascript:;" hidefocus="">
+				<span class="bmv_shade"></span>
+				<i title="直接播放" class="i_play i_play_big"></i>
+				<img class="lazy" width="165" height="95" src="img/def165.png" onerror="imgOnError(this,165);" data-original="{$pic}">
+			</a>
+			<p class="bmv_name">
+				<a data-mv="{$mvdata}" onclick="{$click}" title="{$titlename}" class="forRefLog" href="javascript:;" hidefocus="">{$name}</a>
+			</p>
+			<p class="bmv_info">
+				<a onclick="{$artistclick}" title="{$artisttitle}" href="javascript:;" hidefocus="">{$artistname}</a>
+				{$bmv_earth}
+			</p>
+		</li>
+	</ul>
+	<ul id="kw_playlistModel" style="display:none;">
+		<li class="b_wrap">
+			<a onclick="{$click}" title="{$titlename}" class="b_pic forRefLog" data-rid="{$rid}" href="javascript:;" hidefocus="">
+				<span class="b_shade"></span>
+				<i onclick="{$iPlay}" data-csrc="{$csrc}" data-ipsrc="{$ipsrc}" title="直接播放" class="i_play"></i>
+				<img width="120" height="120" src="img/def120.png" class="lazy" onerror="imgOnError(this,120);" data-original="{$pic}">
+				{$isAq}
+			</a>
+			<p class="b_name">
+				<a onclick="{$click}" title="{$titlename}" href="javascript:;" hidefocus="">{$showname}</a>
+			</p>
+			<p class="b_info">
+				<a onclick="{$click}" title="{$musicnum}" href="javascript:;" hidefocus="">{$musicnum}</a>
+			</p>
+		</li>
+	</ul>
+	<ul id="kw_radiolistModel" style="display:none;">
+		<li class="br_wrap {$radioClass}">
+			<a _onclick="{$log}{$click}" onclick="{$log}{$click}" title="{$titlename}" class="br_pic forRefLog" data-rid="{$rid}" href="javascript:;" hidefocus="">
+				<span class="br_shade"></span>
+				<i title="直接播放" class="i_play i_play_big"></i>
+				<img width="140" height="140" src="img/def150.png" class="lazy" onerror="imgOnError(this,150);" data-original="{$pic}">
+                <div class="lstdiv">
+                    <span class="listeners">{$listnum}</span>
+                </div>
+			</a>
+			<p class="br_name">
+				<a onclick="{$log}{$click}" title="{$titlename}" href="###" hidefocus="">{$showdisname}</a>
+			</p>
+			<p class="br_info"></p>
+		</li>
+	</ul>
+	<ul id="kw_artistlistModel" style="display:none;">
+		<li class="b_wrap">
+			<a title="{$titlename}" hidefocus="" href="javascript:;" onclick="{$click}" class="b_pic forRefLog" data-rid="{$rid}">
+				<span class="b_shade"></span>
+				<i onclick="{$iPlayClick}" data-csrc="{$csrc}" class="i_play" title="直接播放"></i>
+				<img class="lazy" onerror="imgOnError(this,120);" src="img/def120.png" width="120" height="120" data-original="{$pic}">
+			</a>
+			<p class="b_name">
+				<a hidefocus="" href="javascript:;" onclick="{$click}" title="{$titlename}">{$showname}</a>
+			</p>
+			<p class="b_info">
+				<a title="{$musicnum}" href="javascript:;" hidefocus="" onclick="{$click}">{$musicnum}</a>
+			</p>
+		</li>
+	</ul>
+	<ul id="kw_albumlistModel" style="display:none;">
+		<li class="b_wrap">
+			<a onclick="{$albumclick}" title="{$titlename}" class="b_pic forRefLog" data-rid="{$rid}" href="javascript:;" hidefocus="">
+				<span class="l_adm"></span>
+				<span class="b_shade"></span>
+				<i onclick="{$iPlayClick}" data-csrc="{$csrc}" title="直接播放" class="i_play"></i>
+				<img class="lazy" width="120" height="120" src="img/def120.png" onerror="imgOnError(this,120);" data-original="{$pic}">
+			</a>
+			<p class="b_name">
+				<a onclick="{$albumclick}" title="{$albumtitle}" href="javascript:;" hidefocus="">{$showdisname}</a>
+			</p>
+			<p class="b_info">
+				<a onclick="{$artistclick}" title="{$artisttitle}" href="javascript:;" hidefocus="">{$showartistname}</a>
+			</p>
+		</li>
+	</ul>
+	<ul id="kw_lrclistModel" style="display:none;">
+		<li class="music_wrap {$liclass}" c-rid="{$rid}" data-index="{$indexnum}" title="{$tips}">
+			{$earthBlock}
+			<div class="m_r">
+				<div class="mr_r">
+					<div class="m_left">
+						<input type="checkbox" checked="true" class="m_ckb">
+						<span class="num">{$ordinal}</span>
+						<div data-rid="{$rid}" class="icon">
+							<a hidefocus="" href="javascript:;" class="m_add" title="添加歌曲"></a>
+							<a hidefocus="" href="javascript:;" class="m_down" title="下载歌曲">{$moneyIcon}</a>
+							<a hidefocus="" href="javascript:;" class="m_more" title="更多操作"></a>
+						</div>
+					</div>
+					<div class="mr_box">
+						<div class="m_right">
+							<div class="box_right">
+								<div style="float:left;width:96px;">
+									<i class="m_score">
+										<span style="width:{$score100}%;"></span>
+									</i>
+									{$iconType}
+								</div>
+								<i title="选择试听音质" data-md="{$formats}" class="m_hd pz {$hqlevel}"></i>
+							</div>
+						</div>
+						<div class="m_middle">
+							<div class="nameMv">
+								<span class="m_name">
+									<a data-rid="{$rid}" class="w_name" hidefocus="" href="javascript:;">{$musicname}</a>
+									{$mviconstr}
+								</span>
+								{$isnewstr}
+							</div>
+							<span class="m_artist">
+								<a onclick="{$artistclick}" class="forLog" hidefocus="" href="javascript:;">
+									{$artistname}
+								</a>
+							</span>
+							<span class="m_album">
+								<a onclick="{$albumclick}" class="forLog" hidefocus="" href="javascript:;">{$albumname}</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+		<div class="sou_geci {$lrcClass}">
+			<span title="{$tips}">{$lrcstr}</span>
+		</div>
+	</ul>
+	<div id="kw_otherwordModel" style="display:none;">
+		<a href="javascript:;" onclick="clientSearch(this);" data-key="{$key}">{$diskey}</a>
+	</div>
+</body>
+</html>

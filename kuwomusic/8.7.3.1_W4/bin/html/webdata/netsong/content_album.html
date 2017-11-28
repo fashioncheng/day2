@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>专辑内容页面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="css/content.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/comm2.js" type="text/javascript"></script>
+	<script src="js/create_structure.js" type="text/javascript"></script>
+	<script src="js/music.js" type="text/javascript"></script>	
+	<script src="js/commentModel.js" type="text/javascript"></script>		
+	<script src="js/content_album.js" type="text/javascript"></script>
+</head>
+<body>	
+	<div class="channelContent" style="padding:0 24px 0 25px;">
+		<div id="content" class="max_content">
+			<div class="album_head" style="overflow:visible;height:157px;">
+				<div class="pic">
+                    <img src="img/kuwo.jpg" onerror="imgOnError(this,150);" width="150" height="150" />
+                    <span class="bg_vinyl"></span>
+                </div>
+				<div class="h_r" style="height:100px;float:left;padding-left: 12px;">
+					<div class="name">
+                        <b></b>
+					    <div class="wb">
+					        <a href="###" hidefocus class="jianjie_z" onclick="iframeShow(this);return false;">查看简介</a>
+					        <div class="w_jianjie">
+					            <a class="close" hidefocus title="关闭" hidefocus href="###" onclick="iframeHide();return false;"></a>
+					            <span class="tj"></span>
+					            <h2>简介</h2>
+					            <div class="w_jianjie_con"></div>
+					        </div>
+					        <div class="kw_ugcInfoIconAlbum"></div> 					        
+					    </div>
+					</div>
+					<div class="InfoBox"  style="display:none">
+						<p class="artist mb10"><span class="icon icon_u"></span></p>
+	                    <p class="classify" style="display: none"></p>
+						<p class="lang mb10" style="displa:none;"><span class="icon icon_lang"></span></p>
+						<p class="datetime mb10" style="displa:none;"><span class="icon icon_date"></span></p>
+					</div>
+				</div>
+
+			</div>
+	        <style>
+	        i { font-style:normal;}
+	        font { font-size:12px;}
+	        .name{ position:relative;z-index:999;}
+	        .name b{font-weight:normal; float: left;
+                font-size: 20px;
+                color: #000000;}
+	        .wb{width:100px;position:relative;top:3px;*top:1px;width:auto;float:left;}
+            .jianjie_z{font-size:12px;padding-left:20px;color: #999; position: relative;display:none;}
+            .jianjie_z:hover{text-decoration: none;color:#07b2e5;}
+            .w_jianjie h2{font-size:18px;float:none; position:absolute;top:3px;left:10px;}
+            .w_jianjie{width:265px;height:285px;position:absolute;background-color:#fff;border:1px solid #d2d2d2;top:30px;display:none;left:15px;}
+            .w_jianjie_con{
+                top:30px;left:10px;padding-right:5px; word-break:break-all; 
+                overflow-x:hidden;overflow-y:auto;height:255px;position:absolute;color:#323c50;
+                width:250px;
+	            font-size:12px;color:#888999;
+            }
+            .w_jianjie_con::-webkit-scrollbar{
+				width:15px;
+			}
+			.w_jianjie_con::-webkit-scrollbar-track {
+
+			background-color: #fafafa;
+
+			} /* 滚动条的滑轨背景颜色 */
+
+			 
+
+			.w_jianjie_con::-webkit-scrollbar-thumb {
+			border:1px solid #dbdfe2;
+			background-color: #f3f3f3;
+
+			} /* 滑块颜色 */
+
+			.w_jianjie_con::-webkit-scrollbar-button {
+			 background:transparent;
+			/*background-color: #7c2929;*/
+
+			} /* 滑轨两头的监听按钮颜色 */
+
+			/*显示滚动条上方的渐增按钮*/
+			.w_jianjie_con::-webkit-scrollbar-button:start:decrement,
+			.w_jianjie_con::-webkit-scrollbar-button:end:increment {
+				    display: block;
+				    height:15px;
+				}
+				/*隐藏滚动条上方的渐增按钮*/
+			.w_jianjie_con::-webkit-scrollbar-button:vertical:start:increment,
+			.w_jianjie_con::-webkit-scrollbar-button:vertical:end:decrement {
+				    display: none;
+				}
+				/* 定义滚动条渐增按扭的样式 */
+			.w_jianjie_con::-webkit-scrollbar-button:end:increment {
+				    background-image: url(img/bar_down.jpg);
+				    margin-top:2px;
+				}
+				/* 定义滚动条渐减按扭的样式 */
+			.w_jianjie_con::-webkit-scrollbar-button:start:decrement {
+				    background-image: url(img/bar_up.jpg);
+				    margin-bottom:2px;
+				}
+            .close { position:absolute; right:5px; top:5px; display:block; width:11px; height:10px; overflow:hidden; background:url(img/close.png) no-repeat 0 0;z-index:99999;}
+            .close:hover { background:url(img/close.png) no-repeat -11px 0;}
+            .tj { position:absolute; display:block; width:14px; height:8px; top:-8px; left:12px; background:url(img/tj_icon.png) no-repeat;}
+
+            .w_buyalbum{display:none; width:89px; height:28px; line-height:28px; color:#000; font-size:12px;text-indent: 30px ;background:url(img/icon_png8.png) no-repeat -204px -164px;}
+            .w_buyalbum:hover{background:url(img/icon_png8.png) no-repeat -204px -193px;}
+             .toolbar .like_btn.like_current{width:79px;}
+	        </style>
+			<h1 class="toolbar">
+                <a hidefocus href="###" class="all_play" title="播放选中歌曲">播放全部</a>
+                <a hidefocus href="###" class="all_add" title="添加选中歌曲">添加</a>
+                <a hidefocus href="###" class="all_down" title="下载选中歌曲">下载</a>
+                <a hidefocus href="###" class="like_btn like_current" c-target="ALBUM" style="padding-left: 0;"></a>
+				<div class="toolbarRight">
+					<a hidefocus href="###" class="copyLink"><span>分享下载链接</span></a>
+					<div class="isNewUserTips">
+						<span>点击复制专辑下载链接，分享给更多人欣赏。</span>
+						<div class="closeTips"></div>
+					</div>
+	                <a hidefocus href="###" class="w_buyalbum">立即购买</a>
+				</div>
+            </h1>
+
+            <h1 class="selall" style="position: relative; z-index: 99; margin-bottom: 0px;">
+                <div>
+                    <div class="ml" style="width:134px;">
+                        <span class="checkall" style="float:left"><input type="checkbox" checked="true" class="all_ckb"><font></font></span>
+                    	<span class="s_list" style="float:left;width:auto;">操作</span>
+                    </div>
+                    <div class="mr_box">
+                        <div class="mr_box_r">
+                            <span class="s_list" style="text-align: left;">热度</span>
+                            <span class="s_list" style="width:31px;float: right;margin-right:0px;">音质</span>
+                        </div>
+                        <div class="mr_center_con" style="overflow: hidden;zoom:1;">
+                            <span class="s_list m_name_box" style="width: 70%; margin-right: 0px;">歌名</span>
+                            <span class="s_list m_artist_box" style="width: 29%; margin-right: 0px;">歌手</span>
+                        </div>
+                    </div>
+                </div>
+            </h1>
+
+
+			<div style="float:left;width:100%;overflow:hidden;">
+				<ul class="kw_music_list"></ul>
+			</div>
+			<div class="w_nothing"></div>	
+			<h2 style="display:none"><span class="title">相关专辑</span><span class="more"><em>/</em><a href="###" hidefocus onclick="allAlbum();return false;">全部专辑</a></span></h2>
+			<ul class="kw_album_list" style="width:105%; height:160px; position:relative;display:none;"></ul>
+			<div class="page"></div>
+			<div class="nothing" style="display:none"><span class="pic"></span><font>暂无相关内容...</font></div>
+		</div>
+	</div>
+	<a href="###" hidefocus class="rtop backTop" onclick="returnTop(); return false;" style="display: none; position: fixed; right: 18px; bottom: 18px;"></a>
+	<div class="tipsBox">
+        <p>链接已复制</p>
+    </div>
+    <div class="IsNewInstallUser"></div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+﻿
+/* 导航 */
+.nav{height:32px;background:#f5f5f5;font-family:微软雅黑;margin:0 0 10px 0;padding-left:5px;width:609px; overflow:hidden; display:none;}
+.nav a{color:#46b4e6;}
+.nav a:hover{text-decoration:none;}
+.nav h1{float:left;font-weight:normal;font-size:22px;margin-bottom:0px;width:auto;}
+.nav h1 a{background:none;font-size:22px;float:none;margin:0;line-height:32px;}
+.nav p{overflow:hidden;padding:2px 0 0 15px;font-size:14px;}
+.nav p a{float:left; padding:0 5px;height:28px;line-height:28px; margin-right:5px;}
+.nav p a:hover{background:#46b4e6;color:#fff;text-decoration:none}
+.nav p a.def{background:#46b4e6;color:#fff;text-decoration:none}
+.zoneNavline{width:1px;height:20px;background:url(../img/zone/line1.gif); float:left;margin:4px 8px 0 0}
+
+/* 焦点图 */
+#zoneFocusWarp{ display:none; position:relative; overflow:hidden; clear:both;}
+.focus{position:relative;width:465px;height:160px;margin-bottom:7px;z-index:3;}
+.zoneFocus_btn{ text-align:center;position:absolute;bottom:4px;left:5px; z-index:999999999999}
+.zoneFocus_btn a{float:left;width:9px; height:9px;font-size:0;overflow:hidden;background:url(../img/zone/page.png);margin-right:5px;}
+.zoneFocus_btn .focusbtnnow,.zoneFocus_btn a:hover{background:url(../img/zone/pageH.png);}
+.zoneFocusImg{ width:614px; height:157px; overflow:hidden; position:relative; margin-bottom:10px;}
+.zoneFocusImg ul{float:left; width:614px;  height:157px; position:relative; overflow:hidden; padding:0; margin:0;}
+.zoneFocusImg ul li{float:left; width:614px; height:157px; position:absolute; left:0; top:0; padding:0; margin:0; z-index:1}
+#zonePre,#zoneNext{width:30px;height:70px;display:block;background:url(../img/zone/left_icon.png);position:absolute;top:45px;overflow:hidden; z-index:99999999;display:none;}
+#zonePre{left:0;}
+#zonePre:hover{background:url(../img/zone/left_iconH.png);}
+#zoneNext{background:url(../img/zone/right_icon.png);position:absolute;right:0;}
+#zoneNext:hover{background:url(../img/zone/right_iconH.png);}
+
+/* 块块样式 */
+.zone_con h4{height:20px; line-height:20px; font-weight:normal; color:#323c50; font-size:16px}
+#bigGedanLei{width:106%; display:none; padding-bottom:10px;}
+#zoneMVGedan{width:650px; display:none; padding-bottom:10px; position: relative; padding-top:0px; margin-top:0;}
+#zoneGedan{width:106%; display:none;}
+
+#bigGedanLei .qu_listfa,#zoneGedan .lot_box .qu_listfa{width:104px !important; height:124px; margin:0 24px 5px 0 !important; position:relative;}
+#bigGedanLei .qu_listfa .qu_list,#zoneGedan .lot_box .qu_listfa .qu_list{width:104px; height:104px;background:none; }
+#bigGedanLei .qu_listfa .qu_name,#zoneGedan .lot_box .qu_listfa .qu_name{ width:92px; left:2px;}
+
+#zoneGedan .lot_box_mv .qu_listfa,#zoneMVGedan .qu_listfa{width:144px; height:103px; margin:0 13px 10px 0; position:relative;}
+#zoneGedan .lot_box_mv .qu_list,#zoneMVGedan .qu_list{width:144px; height:82px;background:none;}
+#zoneGedan .lot_box_mv .qu_list a.qu_pho_2 img,#zoneMVGedan .qu_list a.qu_pho_2 img{ width:140px; height:78px; margin:0;}
+#zoneGedan .qu_pho_2 .qq_opa,#zoneMVGedan .qu_pho_2:hover .qq_opa{left:0; top:0; width:140px; height:78px;}
+#zoneGedan .qu_pho_2:hover .qq_opa,#zoneMVGedan .qu_pho_2:hover .qq_opa{display:block;height:78px!important;width:140px;background:url(../img/zone/qqtongming2.png) no-repeat; }
+#zoneGedan .lot_box_mv .qu_name,#zoneMVGedan .qu_name{ width:132px; left:2px;}
+
+
+.zone_con .qu_listfa .qu_pho{padding:0px; width:100px; height:100px; border:#fafafa 2px solid;}
+.zone_con .qu_pho:hover{border:#46b4e6 2px solid;}
+.zone_con .qu_pho_2{padding:0px; width:140px; height:78px; border:#fafafa 2px solid; background:none}
+.zone_con .qu_pho_2:hover{border:#46b4e6 2px solid;}
+.zone_con .qu_name{color:#FFF;bottom:22px; position:absolute;height:20px; line-height:20px; padding:0 4px;}
+.zone_con .qu_name a{color:#FFF; }
+.zone_con .qu_name a:hover{text-decoration:underline; color:#fff}
+.zone_con .qu_dec{ line-height:21px; height:21px;}
+.zone_con .qu_pho .qq_opa{left:0; top:0;}
+.zone_con .qu_pho .em{left:6px; top:6px;}
+.zone_con .qu_pho_2 .em{left:6px; top:6px;}
+.zone_con .newtitle{right:0; top:0;}
+.zone_con .hottitle{right:0; top:0;}
+.zone_con .l_adm{left:0; top:-1px;}
+.zone_con .l_hd{left:0; top:-1px;}
+
+/* 长块样式 */
+#zoneGedan .divclass1{ height:254px !important;}
+#zoneGedan .lot_box .divclass1 .qu_list{ height:233px !important;}
+#zoneGedan .lot_box .divclass1 .qu_pho{ height:229px !important;}
+#zoneGedan .lot_box .divclass1 .qu_pho .qq_opa{ height:229px !important;}
+#zoneGedan .lot_box .divclass1 .qu_pho:hover .qq_opa{display:block; background:url(../img/zone/qqtongming.png) repeat;}
+#zoneGedan .divclass1 img{ height:229px;}
+
+/*专区块块MV列表样式*/
+#zoneMVGedan .allmvplay{top:0 !important; right:4% !important; margin-right:14px;}
+
+/* 留言板 */
+#zonely{display:none; width:620px;}
+
+.color01{ color:#333 !important;}
+
+
+.zone_con .con_right{padding-left:7px;}
+.fenleiCategory{ width:100%; height:auto; overflow:hidden; padding-top:5px;}
+.fenleiCategory h4{margin-bottom:8px;}
+#bigGedanLei .qu_listfa, #zoneGedan .lot_box .qu_listfa{display:inline;}
+#zoneGedan .lot_box{margin-bottom:-2px;}
+.fenleiCategory{margin-top:-3px;}
+

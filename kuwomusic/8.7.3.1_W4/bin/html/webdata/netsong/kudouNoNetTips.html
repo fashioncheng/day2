@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>积分无网</title>	
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		.noConnectNetBox {width:100%;text-align: center;}
+		.noConnectNetBox img {margin-top: 42px;margin-bottom: 18px;width:95px;height: 57px;}
+		.noConnectNetBox span {font-size: 14px;color: #666666;line-height: 20px;-webkit-user-select: none;}
+		.noConnectNet #refreshBtn {margin: 0 auto;-webkit-user-select: none;margin-top: 22px;cursor: pointer;border-style: none;font-size: 14px;width: 200px;height: 40px;line-height: 40px;border: 0;color: #FFFFFF;border-radius: 4px;background-color: #21a0ed;}
+		.noConnectNet #refreshBtn:hover {background-color: #2398e5;}
+	</style>
+</head>
+<body>
+	<div class="noConnectNetBox">
+	    <img src="img/icon_wifi.png">
+	    <div class="noConnectNet">
+	        <span>您的网络存在异常，请检查网络</span>
+	        <p id="refreshBtn">点击刷新</p>
+	    </div>
+	</div>
+</body>
+<script type="text/javascript">
+	document.getElementById("refreshBtn").onclick = function(){
+		var url = window.location.href;
+		var index = url.indexOf("?");
+		var param = "";
+		if(index>0){
+			param = url.substring(index);
+		}
+		window.location.href="http://www.kuwo.cn/kudou/page/kudouMsg"+param;
+	}
+</script>
+</html>

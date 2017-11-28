@@ -1,0 +1,156 @@
+/*页面初始设置*/
+.channelContent{padding:0 25px;}
+#content { width:100%; height:auto; margin:0 auto; padding-top:0; position:relative;}
+.common_content  { overflow-x:hidden;}
+/*页面公用*/
+.ff66{color:#ff6600!important;font-style: normal;}
+h1 .checkall{width:63px;}
+h1 .checkall font {width:auto;}
+.l_p1{color:#000;font-size:18px;margin-top:50px;}
+.l_p1 em{color:#ff6600}
+.l_p2{color:#999;font-size:18px;margin-top:40px;}
+.l_p3{line-height:31px;color:#333}
+.l_p3 a{color:#69c2eb;text-decoration:underline;}
+.l_p4 a{margin-right:20px;}
+
+h1.selall .ml{width:134px;}
+.m_left {float:left;width:134px;}
+.m_middle {overflow: hidden;}
+.m_right {float:right;width:146px;}
+.box_right {float:right;width:146px;}
+.music_wrap a.earth {float:left;margin-left:0;margin-left:5px;}
+.music_wrap .pz {float:left;margin-left:11px;}
+.music_wrap .aq {margin-left:5px;}
+.music_wrap .m_score {margin-right:0;}
+.mr_box {overflow: hidden;}
+.music_wrap .nameMv,.nameMv{float:left;width:55%;}
+.music_wrap .m_artist,.m_artist {float:left;width:22%;}
+.music_wrap .m_album,.m_album {float:left;width:22%;}
+/*公用结束*/
+/*单曲歌曲列表调整*/
+#singerBox h1.selall .ml{float:left; display:inline; width:102px; padding:0 39px 0 36px;}
+#singerBox h1.selall .m_name_box{width:47%;}
+#singerBox h1.selall .m_album_box{width:30%;}
+#singerBox .music_wrap .m_left {position:relative; float:left;width:177px;}
+#singerBox .music_wrap .m_left .m_ckb{margin-left:36px;}
+#singerBox .music_wrap .nameMv,.nameMv{float:left;width:47%;}
+#singerBox .music_wrap .m_artist,.m_artist {float:left;width:22%;}
+#singerBox .music_wrap .m_album,.m_album {float:left;width:30%;}
+/*多版本图标*/
+#singerBox .music_wrap .m_left .m_ver{position:absolute; width:16px; height:16px; margin:9px 10px 0 10px; background:url(../img/search_ver.png) no-repeat;}
+#singerBox .music_wrap .m_left .m_ver:hover{background-position:-25px 0;}
+#singerBox .music_wrap .m_left .m_veractive{background-position:0 -25px;}
+#singerBox .music_wrap .m_left .m_veractive:hover{background-position:-25px -25px;}
+#singerBox .music_wrap .m_left .verShow{}
+#singerBox .music_wrap .num{margin-right:0;}
+/*多版本歌曲css*/
+#singerBox .kw_ver_list{display:none;}
+#singerBox .kw_ver_list .music_wrap .icon{margin-left:89px;}
+/*调整结束*/
+
+/*搜索结果页面上方描述+tab切换部分css*/
+.search_topBox{padding-top:20px;}
+.search_topBox .seach_title,.search_topBox .seach_other_word{height:14px; line-height:14px; padding-bottom:22px; font-size:14px; color:#999;}
+.search_topBox .seach_other_word{display:none; margin-top:-12px;}
+.search_topBox .seach_other_word span{float:left;}
+.search_topBox .seach_other_word a{float:left; margin-right:10px; font-size:14px; color:#ff6705;}
+.search_topBox .seach_title span{font-size:14px; color:#ff6705;}
+.search_topBox .tabBox{height:29px; border:1px solid #dbdbdb; border-right:none; border-top:none;}
+.search_topBox .tabBox a{position:relative; float:left; width:79px; height:28px; line-height:28px; text-align:center; color:#323c50; border:1px solid #dbdbdb; border-left:none;}
+.search_topBox .tabBox a:hover{color:#19aad2;}
+.search_topBox .tabBox a.active{z-index:2; color:#19aad2; border-top:2px solid #0091e1; border-bottom:none; background:#fff;}
+/*结束*/
+
+/*电台修改*/
+.br_wrap {margin-right: 13px;}
+/*结束*/
+
+/*歌词部分css*/
+.w_lrc .music_wrap{background-color: rgb(245,245,245);}
+.sou_geci {margin-left: 134px; color: #888999; height: 38px; line-height: 38px; overflow: hidden;}
+.sou_geci span { width: 100%; height: 38px; float: left; overflow: hidden; font-size: 12px;text-overflow: ellipsis;white-space: nowrap;}
+
+/*美女秀弹层开始*/
+#search_heji_xiu{position:fixed; left:0; bottom:0; width:100%;}
+.juneBox{position:relative; background:#f7f7f7;height:85px;cursor:pointer;overflow:hidden;}
+.juneBox .juneBoxLeft{float:left;height:75px;width:75px;overflow: hidden;display:inline;position: relative;margin:5px 8px 0 5px;display: inline;}
+.juneBox .juneBoxLeft .pic100{height:75px;width:75px;background:url(../img/def60.jpg) no-repeat;background-size: 100%}
+.juneBox .juneBoxRight{overflow: hidden;zoom:1;position: relative;background: #f9f9f9;margin-top:11px;}
+.juneBox .juneBoxRright{position: absolute;width:180px;height: 40px;right: 28px;top:23px;background:#626262;border-radius: 4px;overflow: hidden;}
+.juneBox .juneBoxRleftTop{height:20px;}
+.juneBox .juneListenicon{float:left;background:url(../img/dhj/listenicon2.gif) no-repeat;width:13px;height:17px;margin:4px 9px 0 0;}
+.juneBox .juneListenBtn1{float:left;font-size:14px;margin-top:4px;}
+.juneBox .juneBoxRleftBottom{float:left;width:80px;}
+.juneBox .juneBoxRleftBottom span {display: block;text-align: center;color:#ffffff;font-size:12px;}
+.juneBox .juneBoxRleftBottom span:first-child {color:#feca2e;margin-top:3px;}
+.juneBox .juneBoxRleftBottom img{vertical-align: middle;margin-right:10px;}
+.juneBox .juneBoxRleftBottom em{margin:0 5px;color: #adadad;}
+.juneBox .juneBoxRleftBottom .targetNow{color: #2298d6;}
+.juneBox .juneListenBtn2{float:right;width:100px;height:40px;line-height:40px;background:#21a0ed;color:#fff;text-align: center;}
+.juneBox .juneBoxRrightBottom{height:33px;line-height:33px;text-align: right;clear: both;}
+.juneBox .juneBoxRrightBottom em{color: #ff7b77;font-size: 14px;}
+.juneBox .targetNow a{color:#2298d6;}
+.juneBox .xiu_hot{width:16px;height:7px;float:left;background:url(../img/dhj/hot.png) no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/dhj/hot.png');margin-left:4px;margin-top:7px;}
+.juneBox .musicName{font-size:14px;color:#333333;margin-top:6px;}
+.juneBox .singerName{color:#999999;font-size:12px;height: 25px;line-height: 25px;}
+.juneBox .xiuIconBox {overflow:hidden;}
+.juneBox .xiuIconBox .realManIcon{float:left;width:65px;height: 20px;line-height: 20px;color:#fff;background:#21a0ed;border-radius: 4px;font-size: 12px;text-align: center;margin-left:7px;}
+.juneBox .xiuIconBox .ppIcon{width:14px;height: 20px;float:left;background: url(../img/dhj/20.gif) no-repeat;}
+.juneBox .mask_singer{width:68px;height: 68px;display:none;position: absolute;top:0px;left:0px;}
+/*美女秀弹层结束*/
+
+/*大合集部分css开始*/
+#dhjBox{display:none; margin-bottom:-10px; padding-top:20px;}
+#dhjBox .heji_pic{margin-left:0px;}
+#dhjBox .colf60{color:#f60;}
+#dhjBox .heji{width:100%;overflow:hidden;height:100%;position:relative;display: none;margin-bottom: 10px;}
+#dhjBox .pic100{width:70px;height:70px;float:left;}
+#dhjBox .hj_main{float:left;background:#f2f2f2;height:70px;position:absolute;left:70px;width:100%;padding-left:15px;}
+#dhjBox .w_c_dhj .hj_main{background:#f4f4f4;left:70px;}
+#dhjBox .heji h2{color:#333; width:100%; height:30px; line-height:28px; margin:0; padding-top:7px;font-weight:normal; font-size:24px;position: relative;}
+#dhjBox .heji h2 a{font-size:18px; color: #333;font-weight: bold;}
+#dhjBox .heji h2 a:hover{color: #46b4e6;}
+#dhjBox .heji h2 i{font-size:18px;}
+#dhjBox .heji h2 .w_p1 a:hover{color: #fff;}
+#dhjBox .hj_search{float:left; width:100%; height:19px;overflow:hidden;margin-top:2px;}
+#dhjBox .w_c_dhj .hj_search{margin-top:7px;}
+#dhjBox .hj_search span{float:left;color:#999}
+#dhjBox .hj_search span.w_span1{float: none;display: block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width: 80%;}
+#dhjBox .hj_search p{width:90px;float:left;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;}
+#dhjBox .hj_search .hj_song{}
+#dhjBox .mcbtn{width:16px;height:13px;background:url(../img/dhj/btn2.png) 0 -28px;display:inline-block;overflow:hidden;}
+#dhjBox .mcbtn:hover{background-position:0 0;}
+#dhjBox .hj_search em{float: left;display: inline;margin-right: 5px;}
+#dhjBox .heji_pic{float: left;display: inline;width: 70px;height: 70px;}
+#dhjBox .w_heji{float: left;display: inline;}
+#dhjBox .w_heji a{color: #333;}
+#dhjBox .w_heji p:hover{color:#46b4e6}
+#dhjBox .w_heji a:hover{color:#46b4e6;}
+#dhjBox .w_p1{padding-left: 15px;border-bottom: none;border-bottom:none!important;right:20px;width:120px; position:relative;}
+#dhjBox .w_p1 span{width:100%; text-align:center; line-height:22px!important;font-size:14px;}
+#dhjBox .w_p1 .allplay{ position:relative;}
+#dhjBox .w_c_dhj .w_p1{float: left;padding-left: 15px;border-bottom: none;display: inline-block;}
+#dhjBox .hj_main .btn_left{*left:0px;}
+#dhjBox .hj_search b{font-size:16px;font-weight:normal;color:#46b4e6; cursor:pointer;}
+#dhjBox .hj_search i{color:#d3d2d2; font-style:normal;}
+#dhjBox .dhjnew1{clear:both; position:absolute;right:90px;top:13px;}
+#dhjBox .w_c_dhj .dhjnew1{right:10px;}
+#dhjBox .dhjnew2{width:86px;height:24px; text-align:center; margin-right:20px; position:relative;}
+#dhjBox .heji .dhjnew2 a{ background:url(../img/dhj/dhjnew1.gif);color:#fff;font-size:14px;display:block;width:86px;height:24px; line-height:24px; font-weight:normal;}
+#dhjBox .heji .dhjnew2 a:hover{ background:url(../img/dhj/dhjnew2.gif);color:#fff;font-size:14px;}
+#dhjBox .dhjnew3{text-align:right;color:#999999;font-size:12px;right:20px;width:200px;position:absolute;}
+#dhjBox .dhjnew4{height:15px;width:86px;font-size:12px;color:#9f9f9f; text-align:center; }
+#dhjBox .ff66{color:#ff6600!important; font-style: normal;}
+#dhjBox .w_djhj1{float:right;width:90px;height:70px;overflow:hidden;padding-right:16px;} 
+#dhjBox .w_djhj1 a{ display:block; width:90px; height:70px; background:url(../img/dhj/djzone.png) no-repeat;}
+#dhjBox .w_djhj1 a:hover{background:url(../img/dhj/djzonehover.png) no-repeat;}
+#dhjBox .heji .w_djhj2{ margin-right:0px;width:85px;overflow:hidden;height:24px;margin-top:1px;}
+#dhjBox .heji .w_djhj2 a{ background:url(../img/dhj/djnewplay.png) no-repeat;width:80px;height:24px;display:block;}
+#dhjBox .heji .w_djhj2 a:hover{ background:url(../img/dhj/djnewplayhover.png) no-repeat;}
+/*大合集部分css结束*/
+
+/*歌单无损标*/
+.isAq {width: 45px;height: 16px;background:url(../img/m_hd.png) no-repeat -1px -69px;;position: absolute;bottom: 4px;right: 4px;z-index: 96;}
+
+.br_pic .lstdiv{position: absolute;width: 140px;height: 25px;top:115px;z-index: 96;}
+.br_pic .listeners{position: relative;float: right;margin-right: 5px;color: #ffffff;font-size: 12px;background: url(../img/play_radio/listen.png)2px no-repeat;padding: 1px 2px 0px 20px;text-shadow: 1px 1px 1px rgba(33,33,33,0.87);}

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>分类频道页面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="css/channel.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/comm2.js" type="text/javascript"></script>
+	<script src="js/create_structure.js" type="text/javascript"></script>
+	<script src="js/music.js" type="text/javascript"></script>
+	<script src="js/channel_classify.js" type="text/javascript"></script>
+</head>
+<body>	
+	<div class="channelContent">
+		<div id="content" class="content">
+			<div class="hot_classify">
+				<!-- <a href="###" title="DJ" hidefocus="" style="" onclick="commonClick({'source':'40','sourceid':'88079','name':'DJ','id':'0','extend':'','other':'|psrc=分类->|bread=-2,5,分类,-2'})"> -->
+				<a href="###" title="DJ" hidefocus="" style="" onclick="commonClick({'source':'43','sourceid':'1','name':'DJ专区','id':'0','extend':'|HOT','other':'|psrc=分类->|bread=-2,5,分类,-2|csrc=曲库->分类->DJ专区'})">
+					<img src="img/classify_dj.jpg" width="230" height="90">
+				</a>
+
+				<a href="###" title="原创电台" hidefocus="" style="" onclick="commonClick({'source':'21','sourceid':'http://album.kuwo.cn/album/h/mbox?id=911&from=jxfocus','name':'酷我音乐调频','id':'87045','extend':'','other':'|psrc=分类->|bread=-2,5,分类,-2|csrc=曲库->分类->原创电台'})">
+					<img src="img/classify_dt.jpg" width="230" height="90">
+				</a>
+				<a href="###" title="精选集" hidefocus="" style="margin-right: 0px" onclick="commonClick({'source':'-2','sourceid':'86237','name':'精选集','id':'0','extend':'','other':'|psrc=分类->|bread=-2,5,分类,-2'})">
+					<img src="img/classify_jxj.jpg" width="230" height="90">
+				</a>
+			</div>			
+			<div class="kw_classify_list"></div>
+		</div>
+	</div>
+	<a href="###" hidefocus="" class="rtop backTop" onclick="returnTop(); return false;" style="display: none; position: fixed; right: 18px; bottom: 18px;"></a>
+</body>
+</html>

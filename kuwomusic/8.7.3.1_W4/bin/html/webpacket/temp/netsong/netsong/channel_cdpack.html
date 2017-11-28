@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>cd包频道</title>	
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/channel_cdpack.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/comm2.js" type="text/javascript"></script>
+	<script src="js/channel_cdpack.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="indexContentBox">
+		<div class="cdIndexTop">
+			<div class="cdMenu">
+				<ul class="cdInexLabel" data-model="kw_cdInexLabelModel"></ul>
+			</div>
+			<div class="searchBox"></div>
+		</div>
+		<div class="menuPageTop">
+			<div class="pageType_con">
+				<img class="menuBg" src="img/cdpack/second/mdTopBg.png" />
+				<div class="typeList pageCon">
+					<div class="cdInfoBox">
+						<h1></h1>
+						<div class="cdIntroBox">
+							<i></i>
+							<div class="cdIntro">
+								<div class="cdIntroIcon"></div>
+								<p></p>
+							</div>
+						</div>
+						<span></span>
+					</div>
+					<div class="listBox">
+						<ul class="childLabelList">
+							<li class="active">全部</li>
+						</ul>
+					</div>
+					<a href="javascript:;" class="leftBtn"><img src="img/cdpack/second/leftBtn.png" /></a>
+					<a href="javascript:;" class="rightBtn"><img src="img/cdpack/second/rightBtn.png" /></a>
+				</div>
+			</div>
+		</div>	
+		<div class="nodataBox">
+			<img src="img/cdpack/nodata.png">
+			<p>暂无相关内容噢，</p>
+			<p>酷小我正在努力获取资源中...</p>
+		</div>
+		<ul class="cdListBox" data-model="kw_cdlistModel"></ul>
+		<div id="page" class="page"></div>
+	</div>
+	<span id="target"></span>
+	<a href="###" hidefocus class="rtop backTop" onclick="returnTop(); return false;" style="display: none; position: fixed; right: 0x; bottom: 10px;"></a>
+	<!-- model -->
+	<ul id="kw_cdInexLabelModel" style="display:none;">
+		<li onclick="{$click}">
+			<img src="{$pic}" />
+			<div class="splice"></div>
+			<span style="{$color}" >{$name}</span>
+		</li>
+	</ul>
+	<ul id="kw_cdlistModel" style="display:none;">
+		<li class="cdList cd_{$id}">
+			<a href="javascript:;" hidefocus class="cdimg" onclick="{$click}">
+				<img class="toppic lazy" width="140" height="132" src="img/cdpack/second/def150.png" data-original="{$pic}" onerror="imgOnError(this,'150cd');">
+				<div class="cover"></div>
+				<div class="cdTagBox">
+					<div class="downTimes"><span></span>{$downTimes}</div>
+					{$isMd}
+				</div>
+				<span class="cdshadow"></span>
+				<i onclick="{$iclick}return false;" class="i_down j_i_down" data-id="{$id}">
+					<i class="i_Arrow"></i>
+				</i>
+			</a>
+			<div class="cdInfo">
+				<div class="cdInfoCon">
+					<a href="javascript:;" class="cdName" title="{$cdname}" onclick="{$click}">{$cdname}</a>
+					<span class="artistName" title="{$artistname}">{$artistname}</span>
+					<p class="cdIntr">{$cdInfo}</p>
+					<p class="type">{$type}</p>
+					<span class="size {$notype}">{$size}</span>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<ul id="kw_focusPicModel" style="display:none;">
+		<li class="bannerlist">
+			<a href="javascript:;">
+				<img class="lazy" width="740" height="190" src="img/def750.png" data-original="{$pic}"  onerror="imgOnError(this,750)">
+			</a>
+		</li>
+	</ul>
+	<ul id="kw_tagModel" style="display:none;">
+		<li class="{$typeName}" data-tagId="{$id}">{$name}</li>
+	</ul>
+	<div id="kw_searchListModel" style="display:none">
+		<div class="item">
+			<label>{$label}：</label>
+			<ul class="tagList" data-model="kw_tagModel"></ul>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,296 @@
+/* reset */
+body{ font:14px "微软雅黑",Helvetica,sans-serif,Arial;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,input,textarea,p,th,td{ padding:0; margin:0}
+img{ border:0}
+em{ font-weight:normal; font-style:normal}
+ol,ul,li{ list-style:none}
+h1,h2,h3,h4,h5,h6{ font-weight:normal; font-size:100%}
+button,input,select,textarea{ font-size:100%;}
+input,button,textarea,select,optgroup,option{ font-family:inherit; font-size:inherit; font-style:inherit; font-weight:inherit;}
+input::-ms-clear{display:none;}
+input::-ms-reveal{display:none;}
+.clearfix:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+*html .clearfix{ zoom: 1;}
+*:first-child+html .clearfix { zoom:1;}
+.clear{ clear:both;}
+a{ text-decoration:none;}
+.fl{ float:left;}
+.fr{ float:right;}
+.hide{ display:none;}
+ 
+.bg{ background:url(../img/topic/icon.png) no-repeat; }
+.allPlayBg{ background:url(../img/topic/play_all_bg.jpg) no-repeat; }
+.topic_con{ width:750px; margin:0 auto; overflow:hidden; position:relative;}
+.yindao{position:absolute; width:166px; height:102px; z-index:999; right:213px; top:30px; zoom:1; display:none;}
+.yindao_content{width:166px; height:102px; background:url(../img/topic/yindao.png) no-repeat;}
+.close_yindao{ position:absolute; width:20px; height:20px; background:none; right:21px; top:12px;display:block;}
+.banner{ float:left; width:450px; height:120px; overflow:hidden; position:relative;}
+.pic_play a{ display:block; background:url(../img/topic/play.png) no-repeat; width:30px; height:30px; line-height:30px; position:absolute; right:5px; bottom:5px;}
+.pic_play a:hover{ background:url(../img/topic/play.png) no-repeat 0 -30px;}
+.sc_comm{ width:280px; height:120px; float:left; border-left:none; background:#f6f6f6;margin-left:20px;}
+.sc{ width:143px; height:54px; overflow:hidden; margin:12px auto 8px;}
+.sc p{ float:left; width:71px; font-size:12px; text-align:center; color:#999; border-right:1px solid #e6e6e6;}
+.sc p font{font-size:12px;}
+.sc p img{ display:block; width:32px; height:32px; margin:0 auto;}
+.sc p span{ display:block; height:20px; line-height:20px;}
+.nothing1 .shareBtn,.top .share{ background-position:0 0; display:block; width:138px; height:35px; line-height:35px; text-align:center; font-size:18px; color:#fafafa; margin:0 auto;}
+.share:hover{ text-decoration:none; background-position:0 -35px;}
+.share1 { float:left; width:200px; height:44px; background:url(../img/topic/top_icon_btn.png) no-repeat 0 -88px; margin:10px 0 0 40px; display:inline;}
+.share1:hover{ background:url(../img/topic/top_icon_btn.png) no-repeat 0 -132px;}
+.playJx { float:left; width:200px; height:44px; background:url(../img/topic/top_icon_btn.png) no-repeat 0 0;margin:10px 0 0 40px; display:inline;}
+.playJx:hover{background:url(../img/topic/top_icon_btn.png) no-repeat 0 -44px;}
+.comment{ position:relative;  height:0px;  padding:0 11px; background:url(../img/topic/comment_title.jpg) no-repeat 11px top #fff; z-index:888; overflow:hidden;}
+.comment .txtTips{ text-align:right; color:#666; height:35px; line-height:30px;}
+
+.comment .txtTips span{ font-size:22px; color:#46b4e6; padding:0 4px; font-weight:block; font-family:Constantia, Georgia; }
+.comment img{ display:block; float:left; margin-right:10px;}
+.comment .comm{ width:653px; float:left;}
+.comment .comm .top{ margin-bottom:6px; height:36px; float:left; position:relative; width:665px;}
+.comment .comm .music{ float:left; width:532px; height:34px; border:1px dashed #FFF; line-height:34px; margin-right:13px; font-size:12px; position:relative; overflow:hidden;}
+.comment .comm .music a.close{ position:absolute; width:12px; height:11px; background:url(../img/topic/close.png) no-repeat;  right:10px; z-index:2; top:12px;}
+.comment .comm .music a.close:hover{background:url(../img/topic/close_hover.png) no-repeat; }
+.comment .comm .music1{ color:#999; border:1px solid #d8d8d8; background:#f1f1f1; text-align:center;overflow:hidden;width:500px; padding-right:25px; padding-left:5px;float:left;overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.comment .comm .music2{ background:url(../img/topic/music2.jpg) no-repeat; color:#333;}
+.comment .comm .music p{ background-position:60px -72px; text-align:center;}
+.comment .comm .select{border:1px solid #d8d8d8; width:118px; height:34px; position:absolute; cursor:pointer; right:0; top:0;}
+.comment .comm .select p{ height:20px; line-height:20px; overflow:hidden; float:left; margin-top:6px;}
+.comment .comm .select p.color{ width:24px;  height:24px;margin:5px 10px 0 10px; display:inline;}
+.comment .comm .select p.orange{ background:#f90;}
+.comment .comm .select p.green{ background:#46b90a;}
+.comment .comm .select p.blue{ background:#46b4e6;}
+.comment .comm .select p.tag{ width:3em; color:#333;}
+.comment .comm .select .taglist{ position:absolute; top:34px; width:118px; background:#fff;left:-1px; border:1px solid #d8d8d8; z-index:999;}
+.comment .comm .select .taglist div{ border-bottom:1px dashed #E6E6E6; height:33px; line-height:33px; width:120px; cursor:pointer;}
+.comment .comm .select em.icon{ float:left; width:11px; height:10px;  overflow:hidden;line-height:10px; background-position:0 -176px; cursor:pointer; margin-top:13px;}
+.comment textarea{ resize:none; width:653px; height:78px; border:1px solid #d8d8d8; padding:5px; font-size:12px; color:#c3c3c3; margin-bottom:10px; overflow:visible;}
+.comment .submit{ width:80px; height:25px; line-height:25px; border:0 none; text-align:center; cursor:pointer; background-position:0 -110px; font-size:12px; color:#333; float:right;}
+.comment .submit:hover{ background-position:0 -135px;}
+.share_wrap{padding-top:20px;padding-bottom:10px;}
+.share_wrap .tab_menu{ height:29px;line-height:29px; background:url(../img/topic/line.jpg) repeat-x left bottom; position:relative; overflow:hidden;}
+.share_wrap .tab_menu ul{ overflow:hidden;}
+.share_wrap .tab_menu li{ float:left; height:29px; position:relative; line-height:29px; width:90px; text-align:center; margin-right:20px; cursor:pointer; color:#333; padding:0;}
+.share_wrap .tab_menu li a{ color:#333; float:left; height:29px; line-height:29px; width:90px; text-align:center; }
+.share_wrap .tab_menu li a:hover{ color:#46b4e6; text-decoration:none;}
+.share_wrap .tab_menu li.current a{ color:#0096d2; background:url(../img/topic/nav_a_z.png) 0 1px;}
+.share_wrap .tab_menu li.current{ color:#0096d2;background:url(../img/topic/nav_a_z.png) right -29px;}
+.share_wrap .tab_menu li.current a:hover{ text-decoration:none;}
+.move_div{ height:4px; width:620px; position:absolute; bottom:-1px; left:0; z-index:2; float:left; overflow:hidden;}
+.moveKuai{height:4px; width:90px; position:absolute; top:0; left:0; background:#46b4e6;}
+
+.share_wrap .tab_div{ width:750px; margin:0 auto; position:relative; overflow:hidden;}
+.share_wrap .menu_line{float:left; width:750px; height:44px; overflow:hidden; position:relative;}
+.share_wrap .tab_div .menu{ float:left; width:660px; padding-top:10px;overflow:hidden; height:auto; padding-bottom:10px; position:relative; z-index:2;}
+.share_wrap .tab_div .menu li{ float:left; width:80px; height:22px; line-height:22px; text-align:center; font-size:12px; overflow:hidden;  padding:0; margin:0;}
+.share_wrap .tab_div .menu li a{ color:#0096d2;}
+.share_wrap .tab_div .menu li.current{ background:#21a0ed; color:#fff; padding:0; margin:0;}
+.share_wrap .tab_div .menu li.current1{ background:#21a0ed; color:#fff;}
+.share_wrap .tab_div .menu li.current a{ color:#fff;  padding:0; margin:0;}
+.share_wrap .tab_div .menu li.current a:hover{ text-decoration:none;}
+.share_wrap .tab_div .menu li.current1 a{ color:#fff;}
+.share_wrap .tab_div .menu li.current1 a:hover{ text-decoration:none;}
+.share_wrap .tab_div .menu li.line{ width:31px; color:#cfcfcf;border-top:none; position:relative; top:0;left:0;}
+.share_wrap .all_play{float:left; overflow:hidden; width:86px; height:29px; z-index:999999; margin-top:10px; display:none;}
+.share_wrap .all_play a{float:left; width:86px; height:29px; line-height:29px; font-size:12px; color:#fff; text-indent:29px;}
+.share_wrap .all_play a:hover{ background-position:0 -30px; text-decoration:none;}
+.music_list{ float:left; height:auto; overflow:hidden; width:750px;}
+.usercomment{ border-bottom:1px dashed #e5e5e5; overflow:hidden; height:auto; float:left; width:750px; margin-bottom:10px;position:relative;}
+.listParent li{ margin-top:0;}
+.usercomment a img{ display:block; float:left; margin-right:10px;overflow:hidden; position:relative; }
+.usercomment .comm{ float:left; width:683px; font-size:12px;}
+.usercomment .comm .username{ font-weight:bold; height:18px; line-height:18px; margin-bottom:3px;}
+.usercomment .comm .username a{ color:#333;}
+.usercomment .comm .username a:hover{text-decoration:none; color:#46b4e6}
+.usercomment .comm .username span{ color:#999; font-weight:normal; margin-left:10px;}
+.usercomment .comm .mu{ padding:4px 0;position:relative; height:16px; overflow:hidden; margin-bottom:2px;}
+.usercomment .comm .singer{ height:16px; line-height:16px; float:left; width:545px; }
+.usercomment .comm .singer a.play{ width:16px; height:16px; display:block; float:left; margin-right:6px; background-position:0 -336px;}
+.usercomment .comm .singer a.play:hover{ background-position:-24px -336px;}
+.usercomment .comm .singer a{ font-weight:bold;}
+.usercomment .comm .singer a:hover{text-decoration:none;}
+.usercomment .comm .music_info a.artist_a:hover{color:#46b4e6 !important;}
+.usercomment .comm .music_info a.play_music:hover{color:#46b4e6 !important; }
+.usercomment .comm .uom{ float:left; padding:0 4px;}
+.usercomment .music_info{float:left; width:520px;overflow:hidden; white-space:nowrap; text-overflow:ellipsis; position:absolute; top:5px;left:24px;}
+.usercomment .music_info a{font-weight:bold; text-decoration:none;}
+
+a.orange{ color:#f90;}
+a.blue{ color:#46b4e6;}
+a.green{ color:#46b90a;}
+.usercomment .comm dl{ float:right; height:16px; overflow:hidden; position:relative;}
+.usercomment .comm dl dd{ float:left;}
+.icon{ width:16px; height:15px; float:left; margin-left:10px; display:inline;}
+.icon a{ display:block; width:100%; height:15px; overflow:hidden; float:left;}
+.icon a.play{ background-position:0 -253px;}
+.current .icon a.play{ background-position:0 -272px;}
+.icon a.add{ background-position:-25px -253px;}
+.current .icon a.add{ background-position:-25px -272px;}
+.icon a.down{ background-position:-49px -253px;}
+.current .icon a.down{ background-position:-49px -272px;}
+.icon a.share{ background-position:-74px -253px;}
+.current .icon a.share{ background-position:-74px -272px;}
+.icon a.more{ background-position:-100px -253px;}
+.current .icon a.more{ background-position:-100px -272px;}
+
+.usercomment .comm .tips{ color:#666; line-height:140%; padding:4px 0; width:685px; float:left; word-wrap: break-word;word-break:break-all;}
+.usercomment .comm .zan{ float:right; height:24px; line-height:18px; color:#46b4e6; font-size:12px; cursor:pointer;}
+.zan a{ display:block; width:16px; height:14px; float:left; margin-right:5px;}
+.zan font{font-size:12px;}
+.like{ background-position:0 -298px;margin-top:3px;}
+.liked{ background-position:-18px -298px; margin-top:3px;}
+.usercomment .comm .myshare {float:right; height:24px; line-height:18px; color:#46b4e6; font-size:12px; margin-right:10px;cursor:pointer;}
+.myshare .share{ background:url(../img/topic/icon.png) no-repeat -74px -254px; width:16px; height:15px; float:left; margin:2px 4px 0 0;}
+
+
+.page{ width:100%; text-align:center; height:26px; line-height:24px; margin:18px 0; font-size:12px;}
+.page a{ color:#226699;text-decoration:none; padding:0 6px;}
+.page a.nopage{border:1px solid #c6d8e6; padding:2px 8px;  color:gray;}
+.page a.nopage:hover{color:gray;}
+
+.page a.ypage{border:1px solid #c6d8e6; padding:2px 8px;}
+
+
+/* 话题歌曲榜 */
+.sate{ width:620px; margin:0 auto; height:34px; line-height:34px;}
+.sate p{ color:#999;}
+.sate p a{ color:#46b4e6;}
+.sate p a:hover{ text-decoration:none;}
+.musiclist{ font-size:12px; margin-top:6px;}
+.musiclist.adcurrent{ height:30px; line-height:30px;}
+.musiclist.current{ background:#f2f2f2; padding:16px 0 16px 0; height:44px; overflow:hidden;}
+.musiclist .num{ float:left;width:39px; font-size:16px; color:#c0bebf; text-align:center;}
+.musiclist .rightcon{ float:left;width:711px; }
+.musiclist .topnum{ font-size:24px; color:#f58c0d;}
+.musiclist .musicname{ float:left; width:314px; margin-right:20px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.musiclist .artistname{ float:left; width:102px; margin-right:20px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.musiclist.current .musicname{ font-weight:600;}
+.musiclist .musicname a{ color:#333; }
+.musiclist .musicname a:hover{ color:#46b4e6; text-decoration:none;}
+.musiclist .artistname a{ color:#333; }
+.musiclist .artistname a:hover{ color:#46b4e6; text-decoration:none;}
+
+.musiclist .zan{ color:#999; float:left; width:125px;}
+.musiclist.adcurrent .zan, .musiclist.adcurrent dl{ line-height:16px; margin-top:8px;}
+.musiclist dl{ float:left; position:relative;}
+.musiclist dl dd{ position:relative;}
+.musiclist .tips{ float:left; width:700px; position:relative; padding-top:5px;}
+.musiclist .tips p{float:left; width:650px; color:#999; margin-right:10px; line-height:20px; position:relative; overflow:hidden; }
+.musiclist .tips .users{ float:left; height:20px; left:74px; top:0; width:1000000px; position:absolute; display:inline-block; overflow:hidden;}
+.musiclist .tips .users em{float:left; position:absolute; left:0; top:0; line-height:20px;}
+.musiclist .tips p font{ float:left;  font-size:12px; width:100px; line-height:20px;}
+.musiclist .tips p a{ color:#999; margin:0 4px; float:left; line-height:20px;}
+.musiclist .tips p a:hover{ color:#46b4e6;}
+.musiclist .tips a.btn{ display:block; position:absolute; right:0; top:6px; color:#999; text-indent:10px;}
+.musiclist .tips a.btn1{ background-position:-52px -316px;}
+.musiclist .tips a.btn2{ background-position:0 -316px;}
+.musiclist .user_change{float:left; height:20px; width:40px; display:none; }
+.musiclist .user_change .prev{float:left; height:20px; width:20px; background:url(../img/topic/prev.png) no-repeat center center}
+.musiclist .user_change .prev:hover{float:left; height:20px; width:20px; background:url(../img/topic/prev_hover.png) no-repeat center center}
+.musiclist .user_change .next{float:left; height:20px; width:20px; background:url(../img/topic/next.png) no-repeat center center; border:none; padding:0; margin:0;}
+.musiclist .user_change .next:hover{float:left; height:20px; width:20px; background:url(../img/topic/next_hover.png) no-repeat center center}
+.musiclist .user_change .noprev{float:left; height:20px; width:20px; background:url(../img/topic/prev.png) no-repeat center center}
+.musiclist .user_change .noprev:hover{float:left; height:20px; width:20px; background:url(../img/topic/prev.png) no-repeat center center}
+.musiclist .user_change .nonext{float:left; height:20px; width:20px; background:url(../img/topic/next.png) no-repeat center center; border:none; padding:0; margin:0;}
+.musiclist .user_change .nonext:hover{float:left; height:20px; width:20px; background:url(../img/topic/next.png) no-repeat center center; border:none; padding:0; margin:0;}
+
+
+/*我要分享搜索模块*/
+.search_topic{ float:left; width:512px; height:22px; line-height:22px; padding:6px 10px; font-size:12px; border:1px solid #d8d8d8; margin-right:13px; color:#c3c3c3;}
+.search_topic::-ms-clear { display: none; }
+.share_search{ position:relative;  height:36px; float:left;}
+.share_search .searchBtn{background:url(../img/topic/topicSearch.png) no-repeat center center; width:20px; height:20px; position:absolute; right:16px; top:8px; z-index:999;}
+.share_search .bgceng{background:#fff; width:40px; height:34px; position:absolute; right:14px; top:1px; z-index:888;}
+.searc_tips{ position:absolute; top:35px; left:0; background:#fff; height:auto; width:532px; overflow:hidden;  border:1px solid #E6E6E6;border-top:none; }
+.searc_tips li{line-height:24px; padding:0 10px; cursor:pointer; overflow:hidden; margin:0; float:left;}
+.searc_tips li.current{ background:#46b4e6;height:24px;overflow:hidden;}
+.searc_tips li .tips_num{float:right; width:100px; text-align:right; color:#666;font-size:12px;}
+.searc_tips li .tips_name{float:left; width:260px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; color:#666;text-decoration:none; background:#FFF;font-size:12px;}
+.searc_tips li.current .tips_name{ background:#46b4e6;}
+.searc_tips li.current .tips_num{color:#fff;}
+.searc_tips li.current .tips_name{color:#fff; text-decoration:none;}
+
+.search_wrap{position:absolute; width:532px;  top:35px; left:0; z-index:999999; display:none;}
+.search_cont{ float:left; width:532px;  border:1px solid #E6E6E6;border-top:none; height:auto; background:#f8f8f8; }
+.search_cont ul{height:0; padding:0; margin:0; vertical-align:bottom; overflow-y:auto;}
+.search_cont ul li{ line-height:24px; height:24px; overflow:hidden;cursor:pointer;}
+.search_cont ul li.current{background:#46b4e6;height:24px;overflow:hidden;}
+.search_cont ul li span{ float:right; width:40px; height:24px;}
+.search_cont ul li span .play{ float:left; width:16px; height:11px; margin:6px 0 0 5px; background:url(../img/topic/tips_play.png) no-repeat;}
+.search_cont ul li.current span .play{ background:url(../img/topic/tips_play_hover.png) no-repeat;}
+.search_cont ul li .search_music{ float:left; width:216px;padding-left:10px; overflow:hidden;  white-space:nowrap; text-overflow:ellipsis;}
+.search_cont ul li .search_music a{ text-decoration:none; color:#666; font-size:12px;}
+.search_cont ul li.current{padding:0;}
+.search_cont ul li.current .search_music a{ text-decoration:none; color:#fff;}
+.search_cont ul li .search_name{ float:left; width:100px;padding-left:10px; overflow:hidden;  white-space:nowrap; text-overflow:ellipsis;}
+.search_cont ul li .search_name a{ text-decoration:none; color:#666;font-size:12px;}
+.search_cont ul li.current .search_name a{ text-decoration:none; color:#fff;}
+.search_close{ height:24px; line-height:24px; background:#FFF; width:532px; border-left:1px solid #E6E6E6;border-right:1px solid #E6E6E6;}
+.search_close font{ color:#999; font-size:12px; padding-left:10px;}
+.search_close a.close{ float:right; width:12px; height:11px; background:url(../img/topic/close.png) no-repeat;  margin:6px 4px 0 0}
+.search_close a.close:hover{background:url(../img/topic/close_hover.png) no-repeat; }
+
+/* 我的分享 */
+.nothing1 { width:326px; height:135px; margin:50px auto 0; text-align:center;}
+.nothing1 p { text-align:center; color:#999; margin:10px 0;}
+.ts {float:left; color:red; font-size:12px;}
+.topic_con .line_box{ line-height:18px; background:#fdfdeb; border:#f5edbf 1px solid; padding:4px 12px; font-size:12px; color:#666;display:none;}
+.topic_con .line_box span{ font-weight:bold;}
+.new_like_icon{ float:left; position:absolute; padding-left:6px; left:74px; top:3px; width:auto; height:16px; line-height:16px;  background:url(../img/topic/new_like_icon.png) no-repeat left top;}
+.new_like_icon font{ font-size:10px; color:#fff; font-style:normal;}
+.new_like_icon span{ float:right; width:6px; height:16px; background:url(../img/topic/new_like_icon.png) no-repeat 0 -16px; position:absolute; right:-6px; top:0;}
+
+
+
+
+/*二期*/
+.songnum,.topicnum{ float:left;}
+.songnum span,.topicnum span{ float:left; width:16px; height:16px; margin:6px 5px 0 10px; overflow:hidden;}
+.songnum span{ background:url(../img/topic/icon.png) no-repeat 0 -356px; }
+.topicnum span{ background:url(../img/topic/icon.png) no-repeat -16px -356px;}
+.songnum font,.topicnum font{font-size:12px; color:#999;}
+
+.mask { display:none; height:122px; overflow:hidden; background:#000;  opacity:0.4;}
+.b_play { display:none; width:28px; height:28px; background:url(../img/topic/b_play_bg.png) no-repeat 0 0;}
+.b_play_h {background:url(../img/topic/b_play_h_bg.png) no-repeat 0 0;}
+
+.b1_wrap { float:left; position:relative; width:104px; height:104px; overflow:hidden;}
+.b1_wrap .pic { float:left; position:absolute; left:0; top:0; width:100px; height:100px; border:#fafafa 2px solid; z-index:1; cursor:pointer;}
+.b1_wrap .pic img { float:left;  position:absolute; left:0; top:0; width:100px; height:100px;}
+.b1_wrap .current1 .mask { display:block; float:left; z-index:998; position:absolute;}
+.b1_wrap .current1 .b_play { display:block; float:left; z-index:999; position:absolute; bottom:10px; right:10px; }
+
+.b9_wrap { float:left; position:relative; width:360px; height:122px; overflow:hidden;}
+.b9_wrap .pic { float:left; position:absolute; left:0; top:0; width:360px; height:122px; z-index:1; cursor:pointer;}
+.b9_wrap .pic img { float:left;  position:absolute; left:0; top:0; width:360px; height:122px;}
+.b9_wrap .current1 .mask { display:block; float:left; z-index:998; position:absolute; width:360px;}
+.b9_wrap .current1 .b_play { display:block; float:left; z-index:999; position:absolute; bottom:10px; right:10px; }
+
+
+
+/*往期话题*/
+.topic_con .topic_list{ float:left; width:750px; height:auto; overflow:hidden;}
+.topic_con .topic_list li{ float:left; width:360px; height:auto; overflow:hidden; margin-bottom:30px;}
+.topic_con .left { float:left;width:360px; display:inline;}
+.topic_con .right { float:left; width:360px; height:70px; overflow:hidden; background:#f1f1f1;}
+.topic_con .right p { float:left; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.topic_con .right p a{ font-size:12px; color:#333; font-weight:bold; text-decoration:none;}
+.topic_con .right p a:hover{ color:#46b4e6; text-decoration:underline;}
+.topic_con .topic_tit { width:340px; height:33px; line-height:33px; overflow:hidden; margin:0 10px;}
+.topic_con .right .topic_words { font-size:12px; color:#999; margin:3px 0; padding-left:10px;}
+.topic_con .right .play_jx { float:right; width:111px; height:29px; overflow:hidden; background:url(../img/topic/topic_play_jx.png) no-repeat 0 0; margin-right:14px;}
+.topic_con .right .play_jx:hover { background:url(../img/topic/topic_play_jx.png) no-repeat 0 -30px;}
+.zan_tips { float:left; position:absolute; right:0; top:10px; width:auto; height:24px;  line-height:24px; padding: 0 10px; background:#e2e2e2; font-size:12px; display:none; color:#666;}
+
+.mr32{ margin-right:30px;}
+.share_bottom { height:26px;}
+.share_bottom .share_icon{ float:left;}
+.share_bottom .share_icon font{ float:left; font-size:12px; color:#666; line-height:20px; margin-right:5px;}
+.share_bottom .share_icon a{ float:left; width:18px; height:18px; margin:2px 6px 0 0 ;}
+.share_bottom .share_icon .sina{ background:url(../img/topic/share_icon.png) no-repeat 0 -18px;}
+.share_bottom .share_icon .qw { background:url(../img/topic/share_icon.png) no-repeat -24px -18px;}
+.share_bottom .share_icon .qzone { background:url(../img/topic/share_icon.png) no-repeat -48px -18px;}
+.share_bottom .share_icon .ren { background:url(../img/topic/share_icon.png) no-repeat -72px -18px;}
+
+.share_bottom .share_icon .current .sina{ background:url(../img/topic/share_icon.png) no-repeat 0 0;}
+.share_bottom .share_icon .current .qw { background:url(../img/topic/share_icon.png) no-repeat -24px 0;}
+.share_bottom .share_icon .current .qzone { background:url(../img/topic/share_icon.png) no-repeat -48px 0;}
+.share_bottom .share_icon .current .ren { background:url(../img/topic/share_icon.png) no-repeat -72px 0;}

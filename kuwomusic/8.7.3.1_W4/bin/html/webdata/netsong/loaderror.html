@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>错误页面</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<style>
+	.l_loadfail{height:190px;position:absolute;margin-top:-157px;top:50%;width:98.5%;}
+	.l_loadfail img{display:block;margin:0 auto;}
+	.l_loadfail p{text-align:center;font-size:22px;}
+	.l_loadfail p a{color:#46b4e6;text-decoration:underline;}
+</style>
+<script>
+function callClient(call){
+	try{
+		return window.external.callkwmusic(call);
+	}catch(e){
+		return "";
+	}
+}
+function getValue(url, key){
+	url = url.toString();
+	if(url.indexOf('#')>=0){
+		url = url.substring(0,url.length-1);
+	}
+	var value='';
+	var begin = url.indexOf(key + '=');
+	if(begin>=0){
+		var tmp = url.substring(begin + key.length + 1);
+		var eqIdx = tmp.indexOf('=');
+		var end = 0;
+		if(eqIdx>=0){
+			tmp = tmp.substring(0,eqIdx);
+			end = tmp.lastIndexOf('&');
+		}else{
+			end = tmp.length;
+		}
+		if(end>=0){
+			try{
+				value = decodeURIComponent(tmp.substring(0,end));
+			}catch(e){
+				value = tmp.substring(0,end);
+			}
+		}else{
+			try{
+				value = decodeURIComponent(tmp);
+			}catch(e){
+				value = tmp;
+			}
+		}
+	}
+	return value;
+}
+function loadok(){
+    var re=/%26/g;
+	var location = window.location.href.replace(re, '&');
+	var type = getValue(location,"type");
+	if(type=="LoginNavRefresh"){
+	    document.getElementById("w_p3").style.display = "block";
+	}else if(type=="NavRefresh"){
+        document.getElementById("w_p2").style.display = "block";
+    }else{
+        document.getElementById("w_p1").style.display = "block";
+    }
+}	
+</script>
+</head>
+<style>
+body{background:#fafafa;}
+</style>
+<body onload="loadok();" style="background:rgb(250,250,250)!important">
+	<div class="allpad">
+		<div class="l_loadfail">
+			<img src="img/jiazai.jpg" />
+			<p id="w_p1" style="display:none;">网络似乎有点问题 , <a hidefocus href="###" onclick="callClient('Navigate?');return false;">点此刷新页面</a></p>
+			<p id="w_p2" style="display:none;">网络似乎有点问题 , <a hidefocus href="###" onclick="callClient('NavRefresh');return false;">点此刷新页面</a></p>
+			<p id="w_p3" style="display:none;font-size:14px;">网络似乎有点问题 , <a hidefocus href="###" onclick="callClient('NavRefresh');return false;">点此刷新页面</a></p>
+		</div>
+	</div>	
+</body>
+</html>

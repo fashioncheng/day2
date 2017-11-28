@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>电台频道页面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="css/channel.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/comm.js" type="text/javascript"></script>
+	<script src="js/scene_radio.js" type="text/javascript"></script>	
+	<style>
+	html{overflow-x:hidden;overflow-y:auto;}
+	html{ scrollbar-face-color:#f3f3f3; scrollbar-arrow-color:#637f83; scrollbar-highlight-color:#dae0e0; scrollbar-shadow-color:#dae0e0; scrollbar-darkshadow-color:#fff;scrollbar-track-color:#fafafa; scrollbar-3dlight-color:#fff;}
+	.kw_radio_list,.content{width:auto;}
+	.sub_nav,h2,.kw_radio_list{float:none;}
+	.br_wrap,.br_pic{position:relative; overflow:hidden;}
+	.content{overflow:hidden;}
+	.channelContent{margin:0 auto;overflow:hidden;}
+	</style>
+</head>
+<body>	
+	<div class="channelContent">
+		<div id="content" class="content">
+			<div class="sub_nav mb10"></div>
+			<div class="radio_con">
+			    <div style="height:9999px;">
+			    </div>
+			</div>
+		</div>
+	</div>
+	<style>
+	.w_rtop { 
+	    position:fixed;
+	    _position:absolute; 
+	    display:none; 
+	    width:26px; 
+	    height:26px; 
+	    background:url(img/top.png) no-repeat 0 0; 
+	    z-index:9999999; 
+	    right:10px; 
+	    bottom:10px;
+	    _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)-10));
+	 }
+    .w_rtop:hover { background:url(img/top_hover.png) no-repeat 0 0;}
+	</style>
+	<a href="#" hidefocus class="w_rtop"></a>	
+</body>
+</html>

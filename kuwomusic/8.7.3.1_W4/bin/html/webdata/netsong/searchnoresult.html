@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>搜索无结果页面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/searchnoresult.js"></script>
+	<script type="text/javascript" src="js/comm2.js"></script>
+	<script>
+		$(function(){
+				$(window).resize(function(){
+						var w1 = $(window).width();
+						$(".con_right,.noresult").width(w1-48);
+				});	
+				window.onresize=function(){
+						var w1 = $(window).width();
+						$(".con_right,.noresult").width(w1-48);	
+				}
+		});
+	</script>
+	<style>
+	.l_p1{color:#000;font-size:18px;margin-top:50px;}
+    .l_p1 em{color:#ff6600}
+    .l_p2{color:#999;font-size:18px;margin-top:40px;}
+    .l_p3{line-height:31px;color:#333}
+    .l_p3 a{color:#69c2eb;}
+    .l_p4 a{margin-right:20px;}
+	</style>
+</head>
+<body>
+	<div class="allcontent" id="allcontent" style="margin:0;width:auto;">
+		<div class="allpad" id="flowContent" style="margin: 0;overflow:hidden;width:auto;padding-left:0px;padding-top:0px;">
+			<!--搜索结果内容页开始-->
+			<div class="search_con" style="margin:0 33px 0 15px;">
+				<div class="con_right">
+					<div class="pd20 search_common noresult">
+						<p class="l_p1" style="word-break:break-all;word-wrap:break-word;width:100%;overflow:hidden;">
+						    没有找到与“<em></em>”相关的结果，换个词再试试？
+						</p>
+						<p class="l_p2">酷我音乐建议您：</p>
+						<p class="l_p3">请检查输入的关键词是否有误或过长。</p>
+						<p class="l_p3">请向我们<a hidefocus href="###" onclick="callClient('UserFeedback');">反馈</a>，我们将尽快补充数据。</p>			
+						<p class="l_p3 l_p4" id="noresult_con">
+						</p>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

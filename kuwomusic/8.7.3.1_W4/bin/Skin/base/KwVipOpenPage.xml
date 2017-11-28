@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="550,505" caption="0,0,0,40" roundcorner="1,1" >
+  <EventHook event="OnSkinChange">
+    <Attribute control="title" value="textcolor=&quot;PopWnd.title.textcolor&quot;" />
+  </EventHook>
+  
+	<VerticalLayout  bkcolor="#00000000"> 
+		<HorizontalLayout name="titlepanel" height="34" >
+			<Label name="title" padding="10,0,0,0" font="YAHEI.N014" text="酷我支付" textcolor="PopWnd.title.textcolor"/>
+			<Button name="close" width="19" height="20" padding="0,7,8,0" statusimage="Config_CloseBtn.png" />
+    </HorizontalLayout>
+    
+    <VerticalLayout name="webcontrol" padding="5,0,5,5">
+    </VerticalLayout>
+   </VerticalLayout> 
+  
+</Window>

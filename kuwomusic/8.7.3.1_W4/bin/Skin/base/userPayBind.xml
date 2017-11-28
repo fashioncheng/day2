@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="368,232" caption="0,0,0,35" roundcorner="2,2">
+  <EventHook event="OnSkinChange">
+    <Attribute control="text_title" value="textcolor=&quot;PopWnd.title.textcolor&quot;" />
+  </EventHook>
+  <VerticalLayout name="root">
+  	<HorizontalLayout height="30">
+      <Label name="Usr_title" padding="10,5,0,0" align="left" font="Main.ChannelTitle" textcolor="PopWnd.title.textcolor" text="账号绑定" />
+	  <Control />
+      <Button name="btn_close" padding="0,8,0,0" width="19" height="20" statusimage="download_CloseBtn.png" />
+	</HorizontalLayout>
+    <HorizontalLayout name="UsrPayBindInfo">
+    
+	</HorizontalLayout>
+  </VerticalLayout>
+</Window>

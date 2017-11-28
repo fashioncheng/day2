@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>新用户首页</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="css/newUserIndex.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/comm2.js" type="text/javascript"></script>
+	<script src="js/music.js" type="text/javascript"></script>
+	<script src="js/newUserIndex.js" type="text/javascript"></script>
+</head>
+<body>
+	<!-- 主动安装 -->
+	<div class="newUserIndex">
+		<a class="closeWindow_active" href="javascript:;" data-clickFlag="new_user_active_close"></a>
+	</div>
+
+	<!-- 被动安装 -->
+	<div class="newUserIndex_passive">
+		<div class="top">
+			<img class="vipIcon" src="img/newUserIndex/second/prassive_vip.jpg" />
+			<a class="closeWindow" href="javascript:;" data-clickFlag="new_user_passive_close"></a>
+		</div>
+		<img class="passive" src="img/newUserIndex/second/prassive.jpg" />
+		<a class="getVip" href="javascript:;" onclick="getVip()">兑换会员</a>
+		<span>欢迎体验7天VIP会员</span>
+		<div class="errorTips"></div>
+	</div>
+
+</body>
+</html>

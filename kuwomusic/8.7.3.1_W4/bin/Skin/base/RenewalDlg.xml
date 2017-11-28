@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,35" size="646,450">
+  <VerticalLayout name="root" bkimage="renewalbg.jpg">
+    <HorizontalLayout height="34">
+	  <Label name="text_title" padding="10,0,0,0" align="left"/>
+      <Button name="Close" padding="0,1,1,0" width="30" height="30" statusimage="renewal_close.png"/>
+    </HorizontalLayout>
+	<Label name="boxText" padding="0,302,0,0" align="center" textcolor="#FF333333" font="YAHEI.N016"/>
+	<Button name="renewal_btn" padding="201,16,1,0" width="242" height="56" statusimage="renewal_ok.png" text="立即续费" textcolor="#FFFFFFFF" font="YAHEI.NO23"/>
+  </VerticalLayout>
+</Window>

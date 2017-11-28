@@ -1,0 +1,1110 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="700,500" caption="0,0,0,32" maxwidth="700" maxheight="500">
+<Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+<Default name="HScrollBar" value="buttonlength=&quot;16&quot; height=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_public_h.png' source='0,0,16,12'&quot; button1hotimage=&quot;file='scrollbar_public_h.png' source='17,0,33,12'&quot; button1pushedimage=&quot;file='scrollbar_public_h.png' source='34,0,50,12'&quot; button1disabledimage=&quot;file='scrollbar_public_h.png' source='51,0,67,12'&quot; button2normalimage=&quot;file='scrollbar_public_h.png' source='0,13,16,25'&quot; button2hotimage=&quot;file='scrollbar_public_h.png' source='17,13,33,25'&quot; button2pushedimage=&quot;file='scrollbar_public_h.png' source='34,13,50,25'&quot; button2disabledimage=&quot;file='scrollbar_public_h.png' source='51,13,67,25'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_h_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_h_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_h_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_h_4.png&quot; bknormalimage=&quot;file='scrollbar_public_h.png' source='0,26,16,38'&quot; bkhotimage=&quot;file='scrollbar_public_h.png' source='17,26,33,38'&quot; bkpushedimage=&quot;file='scrollbar_public_h.png' source='34,26,50,38'&quot; bkdisabledimage=&quot;file='scrollbar_public_h.png' source=51,26,67,38'&quot;" />
+<Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,0,14,14'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;16,-3,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;Config.Button&quot;" />	
+<Default name="Edit" value="height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; normalimage=&quot;Config_EditBox_1.png&quot; focusedimage=&quot;Config_EditBox_2.png&quot; disabledimage=&quot;Config_EditBox_3.png&quot; disabledtextcolor=&quot;#FF111111&quot; font=&quot;Config.DefaultText&quot;" />
+<Default name="Button" value="setcursor=&quot;true&quot; height=&quot;25&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;Config.DefaultText&quot; hottextcolor=&quot;#ff000000&quot; pushedtextcolor=&quot;#ff000000&quot; focusedtextcolor=&quot;#ff000000&quot;" />
+<Default name="LiveButton" value="setcursor=&quot;true&quot; height=&quot;25&quot; bkcolor=&quot;Config.BtnNormal&quot; font=&quot;Config.DefaultText&quot;" />	
+<Default name="Combo" value="statusimage=&quot;Config_Combo.png&quot; textcolor=&quot;Config.DefaultText&quot; height=&quot;24&quot; width=&quot;79&quot; textpadding=&quot;5,4,5,5&quot; itembkcolor=&quot;#FFFFFFFF&quot; itemselectedbkcolor=&quot;#FFa9b2b8&quot; itemhotbkcolor=&quot;#BBd9e2e8&quot; font=&quot;Config.DefaultText&quot; scrollwheel=&quot;ifpushed&quot;" />	
+<Default name="SpinButton" value="height=&quot;22&quot; width=&quot;67&quot; h_height=&quot;20&quot; h_bkcolor=&quot;#FFFFFFFF&quot; h_bordercolor=&quot;#FFCDB192&quot; e_height=&quot;18&quot; e_padding=&quot;2,1,0,1&quot; e_textpadding=&quot;1,2,0,1&quot; v_height=&quot;21&quot; v_width=&quot;15&quot; v_inset=&quot;1,0,1,0&quot; bu_padding=&quot;0,1,0,0&quot; bu_statusimage=&quot;Config_SpinBtn_Up.png&quot; bu_width=&quot;13&quot; bu_height=&quot;10&quot; bd_padding=&quot;0,0,0,1&quot; bd_statusimage=&quot;Config_SpinBtn_Down.png&quot; bd_width=&quot;13&quot; bd_height=&quot;10&quot; font=&quot;Config.DefaultText&quot;" />
+<Default name="Option" value="setcursor=&quot;true&quot; textcolor=&quot;Config.Button&quot; checkinfo=&quot;dest='0,0,0,0'&quot; normalimage=&quot;Radio_Small_1.png&quot; hotimage=&quot;Radio_Small_2.png&quot; selectedimage=&quot;Radio_Small_3.png&quot; disabledimage=&quot;Radio_Small_4.png&quot; height=&quot;13&quot; textpadding=&quot;16,-2,1,0&quot; align=&quot;left&quot; font=&quot;Config.Button&quot; " />
+<Default name="Text" value="font=&quot;Config.Button&quot; height=&quot;35&quot; " />
+<Default name="Label" value="font=&quot;Config.Button&quot; height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; textpadding=&quot;0,0,0,0&quot; " />
+<Default name="List" value="font=&quot;Config.DefaultText&quot; checkboximage=&quot;Config_CheckBox&quot; checkboxpos=&quot;15,0,0,0&quot; bkcolor=&quot;Config.List.BkColor&quot; itembkcolor=&quot;Config.List.ItemAlternateBkColor1&quot; itembkcolor2=&quot;Config.List.ItemAlternateBkColor2&quot; itemselectedbkcolor=&quot;Config.List.ItemSelBkColor&quot; itemhotbkcolor=&quot;Config.List.ItemHoverBkColor&quot; itemdisabledtextcolor=&quot;Config.List.ItemDisableBkColor&quot; " />
+<Default name="HotkeyEdit" value="font=&quot;Config.DefaultText&quot; height=&quot;25&quot; " />
+<VerticalLayout name="root"  inset="1,0,1,1">
+  <HorizontalLayout name="HeadArea" height="32">
+		<Text text="系统设置"   height="25" padding="12, 6, 10, 0" font="Config.DefaultText" textcolor="#F8FFFFFF"/>
+		<Control enabled="false" mouse="false" />
+		<Button name="BtnClose" padding="0,6,4,0" width="19" height="20" statusimage="Config_CloseBtn.png"/>
+    </HorizontalLayout>
+  <HorizontalLayout name="AllButHeadArea" height="468">
+		<VerticalLayout text="导航按钮区" width="130" bkcolor="#FFf0f0f0">
+      <Control height="10"></Control>
+			<Option textpadding="40,0,0,2" group="CfgBtnPanel" font="Config.DefaultText" width="260" height="35" align="left" statusimage="nav_bt_bk.png" selectedimage="nav_bt_bk_3.png" selectedtextcolor="#FF858585" name="PnlBtnAboutUs"  text="关于" userdata="content_about"/>
+			<Option textpadding="40,0,0,2" group="CfgBtnPanel" font="Config.DefaultText" width="260" height="35" align="left" normalimage="nav_bt_bk_1.png" hotimage="nav_bt_bk_2.png" selectedimage="nav_bt_bk_3.png" selectedtextcolor="#FF858585"  name="PnlBtnSystem"  text="常规设置" userdata="1"/>
+			<Option textpadding="40,0,0,2" group="CfgBtnPanel" font="Config.DefaultText" width="260" height="35" align="left" normalimage="nav_bt_bk_1.png" hotimage="nav_bt_bk_2.png" selectedimage="nav_bt_bk_3.png" selectedtextcolor="#FF858585" name="PnlBtnLyrics"  text="窗口歌词" />
+			<Option textpadding="40,0,0,2" group="CfgBtnPanel" font="Config.DefaultText" width="260" height="35" align="left" normalimage="nav_bt_bk_1.png" hotimage="nav_bt_bk_2.png" selectedimage="nav_bt_bk_3.png" selectedtextcolor="#FF858585"  name="PnlBtnDesktopLyrics" text="桌面歌词" />
+			<Option textpadding="40,0,0,2" group="CfgBtnPanel" font="Config.DefaultText" width="260" height="35" align="left" normalimage="nav_bt_bk_1.png" hotimage="nav_bt_bk_2.png" selectedimage="nav_bt_bk_3.png" selectedtextcolor="#FF858585"  name="PnlBtnDownload" text="本地下载" />			
+			<Option textpadding="40,0,0,2" group="CfgBtnPanel" font="Config.DefaultText" width="260" height="35" align="left" normalimage="nav_bt_bk_1.png" hotimage="nav_bt_bk_2.png" selectedimage="nav_bt_bk_3.png" selectedtextcolor="#FF858585"  name="PnlBtnHotkey" text="快捷键" />
+      <Option textpadding="40,0,0,2" group="CfgBtnPanel" font="Config.DefaultText" width="260" height="35" align="left" normalimage="nav_bt_bk_1.png" hotimage="nav_bt_bk_2.png" selectedimage="nav_bt_bk_3.png" selectedtextcolor="#FF858585"  name="PnlBtnNetwork" text="网络代理" />
+      <Option textpadding="40,0,0,2" group="CfgBtnPanel" font="Config.DefaultText" width="260" height="35" align="left" normalimage="nav_bt_bk_1.png" hotimage="nav_bt_bk_2.png" selectedimage="nav_bt_bk_3.png" selectedtextcolor="#FF858585"  name="PnlBtnPlugin" text="音频设置" />
+      <!--
+      <Option textpadding="40,0,0,2" group="CfgBtnPanel" font="Config.DefaultText" width="260" height="35" align="left" normalimage="nav_bt_bk_1.png" hotimage="nav_bt_bk_2.png" selectedimage="nav_bt_bk_3.png" selectedtextcolor="#FF858585" name="PnlBtnLyricsFile" text="歌词文件" />			
+      <Option textpadding="40,0,0,2" group="CfgBtnPanel" font="Config.DefaultText" width="260" height="35" align="left" normalimage="nav_bt_bk_1.png" hotimage="nav_bt_bk_2.png" selectedimage="nav_bt_bk_3.png" selectedtextcolor="#FF858585"  name="PnlBtnPlay" text="播放设置" />
+      <Option textpadding="40,0,0,2" group="CfgBtnPanel" font="Config.DefaultText" width="260" height="35" align="left" normalimage="nav_bt_bk_1.png" hotimage="nav_bt_bk_2.png" selectedimage="nav_bt_bk_3.png" selectedtextcolor="#FF858585"  name="PnlBtnFileAssociation" text="文件关联" />
+      <Option textpadding="40,0,0,2" group="CfgBtnPanel" font="Config.DefaultText" width="260" height="35" align="left" normalimage="nav_bt_bk_1.png" hotimage="nav_bt_bk_2.png" selectedimage="nav_bt_bk_3.png" selectedtextcolor="#FF858585"  name="PnlBtnCloud" text="云同步" />
+			<Option textpadding="40,0,0,2" group="CfgBtnPanel" font="Config.DefaultText" width="260" height="35" align="left" normalimage="nav_bt_bk_1.png" hotimage="nav_bt_bk_2.png" selectedimage="nav_bt_bk_3.png" selectedtextcolor="#FF858585"  name="PnlBtnHabit" text="操作习惯" />
+      -->
+		</VerticalLayout>
+		
+    <VerticalLayout name="PanelItemTabAndApplyArea" bkcolor="#f8ffffff">
+      <ConfigDlgVScrollLayout name="PanelItemTab" inset="25,0,0,0" vscrollbar="true">
+        <VerticalLayout name="PnlAboutUsContent" text="关于" height="120">
+        <HorizontalLayout height="44">
+          <Text name="biaotilan" padding="0,20,0,0" font="Config.DefaultText" text="关于"  />
+        </HorizontalLayout>
+        <Control height="1" width="518" padding="5,0,0,0" bkcolor="#FFd2d2d2" />
+        <HorizontalLayout height="43">
+          <Label name="AboutUs_LB_Version" width="250" height="15" padding="15,15,0,0" font="Config.Button" text="版本：V8.0.0.0_BCS28"/>
+          <Label name="AboutUs_LB_ReleaseTime" width="150" height="15" padding="42,15,0,0" font="Config.Button" text="发布日期：2013.12.30"/>
+        </HorizontalLayout>
+        <HorizontalLayout height="56">
+          <Button name="AboutUs_LB_CheckNewVersion" height="24" width="79" text="检查更新" padding="19,0,0,0"/>
+          <Button name="AboutUs_LB_IWantFeedback" height="24" width="79" text="我要反馈" padding="21,0,0,0"/>
+		  <Button name="AboutUs_LB_UserProtocol" height="24" width="106" text="用户服务协议" padding="21,0,0,0"/>
+          <Button name="AboutUs_LB_PrivPolicy" height="24" width="79" text="隐私政策" padding="21,0,0,0"/>
+        </HorizontalLayout>
+        </VerticalLayout>
+        <VerticalLayout name="PnlSystemContent" text="常规设置" height="380" sepwidth="1">
+        <HorizontalLayout height="42">
+          <Text name="biaotilan" padding="0,20,0,0" font="Config.DefaultText" text="常规设置"  />
+        </HorizontalLayout>
+        <Control height="1" width="518" padding="5,0,0,0" bkcolor="#FFd2d2d2" />
+        <HorizontalLayout height="40">
+          <Text name="biaotilan" height="13" width="150" padding="15,16,0,0" font="Config.Button" text="启动时："  />
+        </HorizontalLayout>
+        <HorizontalLayout height="29" padding="19,0,0,0">
+          <CheckBox name="System_CB_AutoPlay" text="自动播放歌曲"  width="100" userdata="Setting|startplay"/>
+          <CheckBox name="System_CB_AutoRun" varwidth="true" text="开机自动启动酷我音乐" padding="156,7,0,0"/>
+		  <Label bkimage="uac.x" width="16" height="18" padding="0,6,0,0"></Label>
+        </HorizontalLayout>
+        <HorizontalLayout height="38" padding="19,0,0,0">
+          <CheckBox name="System_CB_AutoHello" text="播放问候语" width="200" userdata="Setting|starhello"/>
+          <CheckBox name="System_CB_AutoLogIn" text="自动登录账号" width="100" padding="56,2,0,0" userdata="Setting|AutoLog"/>
+        </HorizontalLayout>
+        <HorizontalLayout height="24">
+          <Text name="biaotilan" height="13" width="150" padding="15,0,0,0" font="Config.Button" text="使用时："  />
+        </HorizontalLayout>
+        <HorizontalLayout height="28" padding="19,0,0,0">
+          <CheckBox name="System_CB_ShowMinisete" text="显示今日看点" width="100" userdata="Setting|ShowMiniSite"/>
+          <CheckBox name="System_CB_SoundVisual" text="无损音质音乐播放动效" padding="156,7,0,0" width="180" userdata="soundvisual|enabled"/>
+		  <!--<CheckBox name="System_CB_ShowEggSmash" text="显示抽奖" padding="156,7,0,0" width="80" userdata="UIPopupWndConf|UserShowEggSmashDlg"/>-->
+        </HorizontalLayout>
+        <HorizontalLayout height="40" padding="19,0,0,0">
+          <CheckBox name="System_CB_ExitKwmv" text="退出酷我音乐时退出播放加速引擎" width="220" userdata="Setting|exitkwmv"/>
+          <!--CheckBox name="Cloud_OPT_AutoSync" selected="true" padding="36,8,0,0"  text="同步本地歌曲到云音乐中" width="180" userdata="MusicCloud|LfAutoSyn" /-->
+		  <CheckBox name="System_CB_AnchorOnlineTip" padding="36,8,0,0" varwidth="true" text="显示主播上线提醒" userdata="recallxcuser|showlivepopup"/>
+        </HorizontalLayout>
+        <HorizontalLayout height="25">
+          <Text name="biaotilan" height="13" width="150" padding="15,0,0,0" font="Config.Button" text="关闭主界面："  />
+        </HorizontalLayout>
+        <HorizontalLayout height="28" padding="19,0,0,0">
+          <Option name="Habit_OPT_MinToSysTray" group="Habit_gCloseMainwnd" selected="true" padding="0,8,0,0"  text="最小化到系统托盘" width="130" userdata="Setting|exitchoice" />
+          <Option name="Habit_OPT_Exit" group="Habit_gCloseMainwnd" padding="126,8,0,0" width="110" text="退出酷我音乐" userdata="Setting|exitchoice" />    
+        </HorizontalLayout>
+        <HorizontalLayout height="16" padding="0,8,0,0">
+           <Text name="biaotilan" height="13" width="150" padding="15,0,0,0" text="文件关联："/>
+        </HorizontalLayout>
+        <HorizontalLayout height="37" padding="5,10,0,0">
+           <CheckBox name="FileAssoc_BTN_AccoAll" padding="15,0,0,0" varwidth="true" text="将酷我作为默认音乐播放器" userdata="File|associate"></CheckBox>
+			<Label bkimage="uac.x" width="16" height="18"></Label>
+		</HorizontalLayout>
+        </VerticalLayout>
+        <VerticalLayout name="PnlLyricsContent" text="窗口歌词" height="565">
+        <HorizontalLayout height="43">
+          <Text name="biaotilan" width="31" padding="0,20,0,0" font="Config.DefaultText" text="窗口歌词"  />
+        </HorizontalLayout>
+        <Control height="1" width="518" padding="5,0,0,0" bkcolor="#FFd2d2d2" />
+        <HorizontalLayout height="40">
+          <Text name="biaotilan" height="13" width="150" padding="15,15,0,0" text="歌词界面："  />
+        </HorizontalLayout>
+        <HorizontalLayout height="40" padding="19,0,0,0" >
+          <CheckBox name="System_CB_Startsingerportrait" text="开启歌手写真" width="120" userdata="setting|usedlyricbk"></CheckBox>
+          <CheckBox name="System_CB_ShowTranslate" text="播放外语歌时显示译文歌词" padding="136,8,0,0" width="180" userdata="setting|showtranslate"></CheckBox>
+        </HorizontalLayout>
+        <HorizontalLayout height="25">
+          <Text name="biaotilan" height="13" width="150" padding="15,0,0,0" text="桌面壁纸："  />
+        </HorizontalLayout>
+        <HorizontalLayout height="37" padding="19,0,0,0">
+			<HorizontalLayout width="160">
+				<CheckBox name="System_CB_Startpage" varwidth="true" text="将每日启动图设为壁纸" userdata="WALLPAPER|Startpage"></CheckBox>
+				<Label bkimage="uac.x" width="16" height="18" padding="0,6,0,0"></Label>
+			</HorizontalLayout>
+          <CheckBox name="System_CB_Album" text="播歌时开启桌面写真" padding="95,8,0,0" width="150" userdata="WALLPAPER|Album"></CheckBox>
+        </HorizontalLayout>
+        <HorizontalLayout height="23">
+          <Text name="biaotilan" height="13" width="150" padding="15,0,0,0" text="歌词保存："  />
+        </HorizontalLayout>
+        <!--<HorizontalLayout  height="36">
+          <Label name="LyricsFile_CB_SaveToOther" padding="15,0,0,0" textpadding="0,0,0,0" font="Config.Button" text="歌词文件保存到：" userdata="Lyric|SaveLrcInOtherPath"/>
+          <Edit enabled="false" width="278" height="24" padding="15,0,0,0" text="G:\KwDownload\song" name="LyricsFile_EDT_SavePath" />
+          <Button padding="0,0,0,0" maxwidth="56" maxheight="24" text="浏览" name="LyricsFile_BTN_OpenFolder" userdata="Lyric|LrcSavePath" />
+        </HorizontalLayout>-->
+        <HorizontalLayout height="48">
+          <Label name="LyricsFile_CB_SaveMyLrcx" padding="15,0,0,0" textpadding="0,0,0,0" font="Config.Button" text="自制歌词保存到：" userdata="Lyric|SaveMyLrcxInOtherPath"/>
+          <Edit enabled="true" width="278" height="24" padding="15,0,0,0" text="G:\KwDownload\song" name="LyricsFile_EDT_SaveMyLrcxPath" endellipsis="true" userdata="Setting|makelyricpath"/>
+          <Button padding="0,0,0,0" maxwidth="56" maxheight="24" text="浏览" name="LyricsFile_BTN_MyLrcxOpenFolder" userdata="Setting|makelyricpath" />
+        </HorizontalLayout>
+        <HorizontalLayout height="24">
+          <Text name="biaotilan" height="13" width="150" padding="15,0,0,0" text="字体样式："/>
+        </HorizontalLayout>
+        <HorizontalLayout inset="0,0,0,0" height="34">
+          <Label padding="15,0,0,0" width="64" text="字体" align="left"/>
+          <Combo padding="0,0,0,0" textpadding="5,0,18,0" textstyle="singleline|vcenter" name="Lyrics_CMB_FontFamily" userdata="NowPlayLyricWnd|FontFaceName"/>
+          <Label padding="100,0,0,0" width="64" text="字体大小" align="left"/>
+          <Combo padding="0,0,0,0" name="Lyrics_CMB_FontSize" userdata="NowPlayLyricWnd|FontHeight">
+            <ListLabelElement text="7" userdata="7"/>
+            <ListLabelElement text="8" userdata="8" />
+            <ListLabelElement text="9" userdata="9" />
+            <ListLabelElement text="10" userdata="10" />
+            <ListLabelElement text="11" userdata="11" />
+            <ListLabelElement text="12" userdata="12" selected="true"/>
+            <ListLabelElement text="13" userdata="13" />
+            <ListLabelElement text="14" userdata="14" />
+            <ListLabelElement text="15" userdata="15" />
+            <ListLabelElement text="16" userdata="16" />
+            <ListLabelElement text="17" userdata="17" />
+            <ListLabelElement text="18" userdata="18" />
+            <ListLabelElement text="19" userdata="19" />
+            <ListLabelElement text="20" userdata="20" />
+            <ListLabelElement text="21" userdata="21" />
+            <ListLabelElement text="22" userdata="22" />
+            <ListLabelElement text="23" userdata="23" />
+            <ListLabelElement text="24" userdata="24" />
+            <ListLabelElement text="26" userdata="26" />
+            <ListLabelElement text="28" userdata="28" />
+            <ListLabelElement text="36" userdata="36" />
+            <ListLabelElement text="48" userdata="48" />
+            <ListLabelElement text="72" userdata="72" />
+          </Combo>
+        </HorizontalLayout>
+        <HorizontalLayout inset="0,0,0,0" height="34">
+          <Label padding="15,0,0,0" width="64" text="字形" align="left"/>
+          <Combo padding="0,0,0,0" name="Lyrics_CMB_FontStyle">
+            <ListLabelElement text="常规" userdata="default"/>
+            <ListLabelElement text="粗体" userdata="blod"/>
+            <ListLabelElement text="倾斜" userdata="italic"/>
+            <ListLabelElement text="粗体倾斜" userdata="italicblod"/>
+          </Combo>
+          <HorizontalLayout padding="100,0,0,0" height="34">
+            <Label padding="0,0,0,0" width="66" text="歌词行间" align="left"/>
+            <SpinButton name="Lyrics_SB_LineHeight" padding="-1,2,0,1" width="77" height="22" minrange="1" maxrange="10" userdata="NowPlayLyricWnd|LineInterval"/>
+            <Label padding="5,0,0,0" width="48" textcolor="#FF9B9998" text="(1-10)" align="left"/>
+          </HorizontalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout  height="34">
+          <Label padding="15,0,0,0" width="64" text="普通颜色" align="left"/>
+          <LiveButton statusimage="Config_Combo.png" icontype="color" isgradient="false" icondest="4,4,62,20"
+            width="79" height="24" padding="0,0,0,0" name="Lyrics_CMB_NormalColor" userdata="NowPlayLyricWnd|FontRgb" />
+          <Label padding="100,0,0,0" width="64" text="高亮颜色" align="left"/>
+          <LiveButton statusimage="Config_Combo.png" icontype="color" isgradient="false" icondest="4,4,62,20"
+            width="79" height="24" padding="0,0,0,0" name="Lyrics_CMB_HighlightColor" userdata="NowPlayLyricWnd|FontHiRgb"/>
+        </HorizontalLayout>
+        <HorizontalLayout height="43">
+          <Text width="400" padding="15,15,0,0" height="35" text="预览" align="left"/>
+        </HorizontalLayout>
+        <VerticalLayout height="100" width="380" padding="15,0,0,0" bkcolor="#FF999999">
+		  <Control height="6"/>
+          <Label name="Lyric_LBL_L1" text="好音质，用酷我!" align="center" font="Config.Lyric"/>
+          <Label name="Lyric_LBL_L2" text="好音质，用酷我!" align="center" font="Config.Lyric"/>
+          <Label name="Lyric_LBL_L3" text="好音质，用酷我!" align="center" font="Config.Lyric"/>
+        </VerticalLayout>
+    </VerticalLayout>
+        <VerticalLayout name="PnlDesktopLyricsContent" text="桌面歌词" height="277">
+          <HorizontalLayout height="44">
+            <Text name="biaotilan" padding="0,20,0,0" font="Config.DefaultText" text="桌面歌词"  />
+          </HorizontalLayout>
+          <Control height="1" width="518" padding="5,0,0,0" bkcolor="#FFd2d2d2" />
+          <HorizontalLayout height="40">
+            <Text name="biaotilan" height="13" width="150" padding="15,15,0,0" text="字体样式："/>
+          </HorizontalLayout>
+          <HorizontalLayout height="34" inset="18,0,0,0">
+            <Label text="行数" width="35"  align="left"/>
+            <Combo padding="0,0,0,0" name="Desktop_CMB_LineNumber" userdata="DeskLyric|DLLineCount">
+              <ListLabelElement text="双行" userdata="0"/>
+              <ListLabelElement text="单行" userdata="1"/>
+            </Combo>
+            <Label padding="106,0,0,0" width="35" text="色彩"  align="left"/>
+            <Combo padding="25,0,0,0" name="Desktop_CMB_Color" userdata="DeskLyric|DLColor">
+              <ListLabelElement text="深邃蓝" userdata="0"/>
+              <ListLabelElement text="高贵紫" userdata="1"/>
+              <ListLabelElement text="活力黄" userdata="2"/>
+              <ListLabelElement text="淡雅灰" userdata="3"/>
+              <ListLabelElement text="清新绿" userdata="4"/>
+            </Combo>
+            <CheckBox padding="15,4,0,0" name="Desktop_CB_KaLaShow" text="卡拉OK显示" userdata="LyricDrawCommon|IsKalaOk" />
+            <Control enabled="false" mouse="false" />
+          </HorizontalLayout>
+          <HorizontalLayout height="47" inset="18,0,0,0">
+            <Label padding="0,2,0,0" width="35" text="字体" align="left"/>
+            <Combo padding="0,0,10,0" textpadding="5,0,18,0" textstyle="singleline|vcenter" name="Desktop_CMB_FontFamily" userdata="DeskLyric|DLFaceName"/>
+            <Label padding="96,2,0,0" width="55" text="字体大小"  align="left"/>
+            <Combo padding="5,0,0,0" name="Desktop_CMB_FontSize" userdata="DeskLyric|DLFontHeight"/>
+            <CheckBox padding="15,5,0,0" name="Desktop_CB_EdgeColor" width="17" text="" userdata="DeskLyric|DLShowEdgeColor" />
+            <LiveButton padding="2,2,0,0" width="66" name="Desktop_BTN_Color" backcolor="#f0f8ff" text="描边色" userdata="DeskLyric|DLEdgeColor"
+              textpadding="20,0,0,0" height="22" icondest="3,3,19,19" isgradient="false" icontype="color"/>
+            <!--<CheckBox padding="15,4,0,0" name="Desktop_CB_EdgeColor" width="47" text="描边" userdata="DeskLyric|DLShowEdgeColor" />
+            <LiveButton padding="0,2,0,0" width="67" name="Desktop_BTN_Color" text="描边色" userdata="DeskLyric|DLEdgeColor" textpadding="20,0,0,0" height="22" icondest="3,3,19,19" isgradient="false" icontype="color"/>-->
+            <CheckBox padding="0,5,0,0" name="Desktop_CB_Shardow" text="阴影" userdata="DeskLyric|DLShowEclipse"/>
+          </HorizontalLayout>
+          <HorizontalLayout height="22">
+            <Text name="biaotilan" padding="15,0,0,0" text="自定义色彩："/>
+          </HorizontalLayout>
+          <!--<HorizontalLayout height="25" >
+            <Label text="未播放歌词：" width="200" align="left"/>
+            <Control enabled="false" mouse="false" />
+          </HorizontalLayout>-->
+          <HorizontalLayout height="35">
+              <Text name="biaotilan" width="80" padding="15,3,0,0" text="未播放歌词："/>
+              <Option padding="0,6,0,0" group="gUnplayedLyric" name="Desktop_OPT_UPColor" width="74" text="色彩填充" userdata="DeskLyric|DLLrcNormalIsPic"/>
+              <LiveButton padding="0,0,0,0" width="59" name="Desktop_BTN_UPColor" text="选择" userdata="DeskLyric|DLLrcNormalColor" icontype="color" textpadding="20,0,0,0" height="24" icondest="3,3,19,19" />
+              <Option padding="38,6,0,0" group="gUnplayedLyric" name="Desktop_OPT_UPPic" width="74" text="图片填充" userdata="DeskLyric|DLLrcNormalIsPic"/>
+              <LiveButton padding="0,0,0,0" width="59" name="Desktop_BTN_UPPic" text="选择" userdata="DeskLyric|DLLrcNormalPicPath" icontype="image" textpadding="20,0,0,0" height="24" icondest="3,3,19,19" />
+          </HorizontalLayout>
+          <HorizontalLayout height="50">
+              <Text name="biaotilan" width="80" padding="15,3,0,0" text="已播放歌词："/> 
+              <Option padding="0,6,0,0" group="gPlayedLyric" name="Desktop_OPT_PColor" width="74" text="色彩填充" userdata="DeskLyric|DLLrcHighlightIsPic"/>
+              <LiveButton padding="0,0,0,0" width="59" name="Desktop_BTN_PColor" text="选择" userdata="DeskLyric|DLLrcHighlightColor" icontype="color" textpadding="20,0,0,0" height="24" icondest="3,3,19,19" />
+              <Option padding="38,6,0,0" group="gPlayedLyric" name="Desktop_OPT_PPic" width="74" text="图片填充" userdata="DeskLyric|DLLrcHighlightIsPic"/>
+              <LiveButton padding="0,0,0,0" width="59" name="Desktop_BTN_PPic" text="选择" userdata="DeskLyric|DLLrcHighlightPicPath" icontype="image" textpadding="20,0,0,0" height="24" icondest="3,3,19,19" />
+          </HorizontalLayout>
+        </VerticalLayout>
+        <VerticalLayout name="PnlDownloadContent" text="本地下载" height="485">
+          <HorizontalLayout height="43">
+            <Text name="biaotilan" width="31" padding="0,20,0,0" font="Config.DefaultText" text="本地下载"  />
+          </HorizontalLayout>
+          <Control height="1" width="518" padding="5,0,0,0" bkcolor="#FFd2d2d2" />
+          <HorizontalLayout height="38">
+            <Text name="biaotilan" height="13" width="150" padding="15,15,0,0" text="目录设置："/>
+          </HorizontalLayout>
+          <HorizontalLayout height="36" >
+            <Label padding="17,2,0,0" width="110" text="下载歌曲保存到：" align="left"/>
+            <Edit name="Download_EDT_DownPath" width="279" height="23" enabled="true" endellipsis="true" userdata="Setting|songpath"/>
+            <Button name="Download_BTN_OpenFoder" padding="0,0,0,0" width="56" height="23" text="浏览" userdata="Setting|songpath" />
+          </HorizontalLayout>
+          <HorizontalLayout  height="36">
+            <Label name="LyricsFile_CB_SaveToOther" padding="17,2,0,0" width="110" textpadding="0,0,0,0" font="Config.Button" text="歌词文件保存到：" userdata="Lyric|SaveLrcInOtherPath"/>
+            <Edit enabled="true" width="279" height="23" padding="0,0,0,0" text="G:\KwDownload\song" name="LyricsFile_EDT_SavePath" endellipsis="true" userdata="Lyric|LrcSavePath"/>
+            <Button padding="0,0,0,0" maxwidth="56" maxheight="23" text="浏览" name="LyricsFile_BTN_OpenFolder" userdata="Lyric|LrcSavePath" />
+          </HorizontalLayout>
+          <HorizontalLayout inset="0,0,0,0" height="35">
+            <Label padding="17,2,0,0" text="缓存资源保存到：" width="110" />
+            <Edit name="System_EDT_CacheSavePath" width="279" height="23" enabled="true" endellipsis="true" userdata="Setting|temppath"/>
+            <Button name="System_BTN_OpenFolder" text="浏览" width="56" height="23" padding="0,0,0,0" userdata="Setting|temppath"/>
+          </HorizontalLayout>
+          <HorizontalLayout inset="20,0,0,0" height="32" >
+            <Label padding="0,0,0,0" text="缓存大小设置" width="100" />
+            <Option width="70" padding="0,5,0,10" name="System_OPT_AutoCacheSize" group="System_Cache_Group" userdata="Setting|autocachesize" text="自动"/>
+            <Option width="70" name="System_OPT_ManulCacheSize" padding="0,5,0,10" group="System_Cache_Group" userdata="Setting|autocachesize" text="手动"/>
+            <SpinButton name="System_SB_CacheSize" width="60" maxrange="20480" minrange="512" interval="1" userdata="MaxSpaceSize"/>
+            <Label padding="5,0,0,0" width="100" textcolor="#FF98999B" text="512M-20480M" align="left" />
+            <!--<CheckBox width="107" name="System_OPT_ManulCacheSize" padding="0,3,0,0" group="System_Cache_Group" userdata="Setting|autocachesize" text="设置缓存大小"/>--><!--
+            <SpinButton name="System_SB_CacheSize" width="66" height="21" maxrange="1024" minrange="60" interval="1" userdata="MaxSpaceSize"/>
+            <Label padding="5,0,0,0" text="M" width="15" />
+            <Label padding="5,0,0,0" width="80" textcolor="#FF98999B" text="(60-10240)" align="left" />-->
+          </HorizontalLayout>
+          <HorizontalLayout padding="0,0,0,0" height="47">
+            <Label padding="17,0,0,0" width="110" text="最大同时下载任务" align="left"/>
+            <SpinButton name="Download_SB_MaxTaskCnt"  width="66" height="21" maxrange="5" minrange="1" interval="1" userdata="Setting|MaxTasks"/>
+            <Label padding="5,0,0,0" width="48" textcolor="#FF98999B" text="(1-5)" align="left"/>
+            <Label padding="0,0,0,0" width="65" text="下载端口" align="left"/>
+            <Edit name="Download_EDT_DownPort" width="80" height="22" userdata="ServerPort" digitalonly="true" maxchar="5"/>
+            <Label padding="5,0,0,0" width="100" textcolor="#FF98999B" text="(1025-65535)" align="left"/>
+          </HorizontalLayout>
+          <HorizontalLayout height="25">
+            <Text name="biaotilan" height="13" width="150" padding="15,0,0,0" text="下载习惯："/>
+          </HorizontalLayout>
+          <HorizontalLayout height="29" inset="20,0,0,0">
+            <CheckBox name="Download_CB_DownCover" text="歌曲内置歌词及封面" padding="0,0,0,0" width="150" userdata="downloadsetting|isdowncover"/>
+            <CheckBox name="Download_CB_AddList" text="下载歌曲时加入默认列表" padding="105,0,0,0" width="170" userdata="Setting|DownloadSongAdd2Playlist"/>
+          </HorizontalLayout>
+          <HorizontalLayout height="29" inset="20,0,0,0">
+            <CheckBox name="Download_CB_NotRemindMe" text="每次下载弹出音质选择" padding="0,1,0,0" width="170" userdata="Setting|NoTipDownSongEver"/>
+            <CheckBox name="Download_CB_Downyrics" text="同时下载歌词" padding="85,1,0,0" width="130"userdata="downloadsetting|isdownlyric"/>            
+          </HorizontalLayout>
+          <HorizontalLayout height="36" inset="20,0,0,0">
+            <CheckBox name="Download_CB_ExeStartup" text="启动音乐盒时继续未完成下载任务" padding="0,2,0,0" width="213" userdata="Setting|DownloadSongExeStartup"/>
+            <CheckBox text="开启VIP高速下载" name="Network_CB_VIPDownload" padding="42,2,0,0" width="95" userdata="VPWWndConf|NormSV" />
+            <Button text="" padding="0,0,0,0" width="60" height="16" name="Button_OpenVIP" statusimage="btn_kwconfigopenvip.png" />
+          </HorizontalLayout>
+          <!--<HorizontalLayout height="25">
+            <Text name="biaotilan" height="13" width="150" padding="15,0,0,0" text="下载歌曲格式："/>
+          </HorizontalLayout>
+          <HorizontalLayout height="38" inset="20,0,0,0">
+            <Option name="Download_OPT_Artist_SongName" group="Cloud_gDownloadPanel" selected="true" padding="0,0,0,0"  text="歌手-歌曲名" userdata="downloadsetting|dsFormatSave" />
+            <Option name="Download_OPT_SongName_Artist" group="Cloud_gDownloadPanel" padding="0,0,0,0"  text="歌曲名-歌手" userdata="downloadsetting|dsFormatSave" />
+            <Option name="Download_OPT_SongName" group="Cloud_gDownloadPanel" padding="0,0,0,0"  text="歌曲名" userdata="downloadsetting|dsFormatSave" />
+          </HorizontalLayout >-->
+          <HorizontalLayout height="20">
+            <Text name="biaotilan" height="13" width="150" padding="15,0,0,0" text="添加本地歌曲："/>
+          </HorizontalLayout>
+          <HorizontalLayout inset="0,0,0,0" height="32">
+            <CheckBox name="Download_CB_ScanSubFolder" padding="20,4,0,0" text="扫描子文件夹" width="120" userdata="localmusiclib|isscansubdir"/>
+            <CheckBox name="Download_CB_Skip" padding="135,4,0,0" text="跳过" width="50" userdata="localmusiclib|isskipsong"/>
+            <Edit name="Download_EDT_SkipTime" width="39" height="22" padding="0,0,0,0" digitalonly="true" maxchar="2" userdata="localmusiclib|skipsonglength"/>
+            <Label padding="2,0,0,0" text="秒" width="15" />
+            <Label padding="5,0,0,0" width="140" textcolor="#FF98999B" text="(1-60)以下音频文件" align="left"/>
+          </HorizontalLayout>
+          <HorizontalLayout inset="0,0,0,0" height="14">
+            <CheckBox name="Download_CB_AddDeletedSong" padding="20,0,0,0" text="添加以前从本地曲库删除的歌曲" width="200" userdata="localmusiclib|isaddremovedsong"/>
+          </HorizontalLayout>
+        </VerticalLayout>
+        <VerticalLayout name="PnlHotkeyContent" text="快捷键" height="408" inset="0,0,15,5">
+          
+            <HorizontalLayout height="43">
+              <Text name="biaotilan" width="31" padding="0,20,0,0" font="Config.DefaultText" text="快捷键设置"  />
+            </HorizontalLayout>
+            <Control height="1" width="518" padding="5,0,0,0" bkcolor="#FFd2d2d2" />
+            <VerticalLayout padding="6,6,0,0" border="1" inset="1,1,1,1" height="332">
+              <HorizontalLayout height="37" bkcolor="#FFF7FBFF">
+                <Label width="55" padding="86,0,0,0"  text="动作" align="left"/>
+                <Label width="180" padding="-10,0,0,0"  text="快捷键" align="center"/>
+                <Label width="150" padding="18,0,0,0"  text="全局快捷键" align="center"/>
+              </HorizontalLayout>
+              <HorizontalLayout inset="30,4,0,4" height="32">
+                <Label width="92" text="播放/暂停" align="right"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="30,0,0,0" name="Hotkey_EDT_PlayPause_Local" width="140" userdata="Hotkey|Play"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="42,0,0,0" name="Hotkey_EDT_PlayPause_Global" width="140" userdata="Hotkey|Play2"/>
+              </HorizontalLayout>
+              <HorizontalLayout inset="30,4,0,4" height="32">
+                <Label width="92" text="停止" align="right"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="30,0,0,0" name="Hotkey_EDT_Stop_Local" width="140" userdata="Hotkey|Stop"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="42,0,0,0" name="Hotkey_EDT_Stop_Global" width="140" userdata="Hotkey|Stop2"/>
+              </HorizontalLayout>
+              <HorizontalLayout inset="30,4,0,4" height="32">
+                <Label width="92"  text="播放上一首" align="right"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="30,0,0,0" name="Hotkey_EDT_Previous_Local" width="140" userdata="Hotkey|SongPre"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="42,0,0,0" name="Hotkey_EDT_Previous_Global" width="140" userdata="Hotkey|SongPre2"/>
+              </HorizontalLayout>
+              <HorizontalLayout inset="30,4,0,4" height="32">
+                <Label width="92"  text="播放下一首" align="right"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="30,0,0,0" name="Hotkey_EDT_Next_Local" width="140" userdata="Hotkey|SongNext"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="42,0,0,0" name="Hotkey_EDT_Next_Global" width="140" userdata="Hotkey|SongNext2"/>
+              </HorizontalLayout>
+              <HorizontalLayout inset="30,4,0,4" height="32">
+                <Label width="92"  text="增大音量" align="right"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="30,0,0,0" name="Hotkey_EDT_IncreaseVol_Local" width="140" userdata="Hotkey|AddMute"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="42,0,0,0" name="Hotkey_EDT_IncreaseVol_Global" width="140" userdata="Hotkey|AddMute2"/>
+              </HorizontalLayout>
+              <HorizontalLayout inset="30,4,0,4" height="32">
+                <Label width="92"  text="减小音量" align="right"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="30,0,0,0" name="Hotkey_EDT_DecreaseVol_Local" width="140" userdata="Hotkey|DecMute"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="42,0,0,0" name="Hotkey_EDT_DecreaseVol_Global" width="140" userdata="Hotkey|DecMute2"/>
+              </HorizontalLayout>
+              <HorizontalLayout inset="22,4,0,4" height="32">
+                <Label width="100"  text="静音/取消静音" align="right"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="30,0,0,0" name="Hotkey_EDT_Mute_Local" width="140" userdata="Hotkey|Sound"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="42,0,0,0" name="Hotkey_EDT_Mute_Global" width="140" userdata="Hotkey|Sound2"/>
+              </HorizontalLayout>
+              <HorizontalLayout inset="30,4,0,4" height="32">
+                <Label width="92"  text="最小化" align="right"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="30,0,0,0" name="Hotkey_EDT_MinWnd_Local" width="140" userdata="Hotkey|MinWnd"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="42,0,0,0" name="Hotkey_EDT_MinWnd_Global" width="140" userdata="Hotkey|MinWnd2"/>
+              </HorizontalLayout>
+              <HorizontalLayout inset="30,4,0,4" height="32">
+                <Label width="92"  text="迷你模式" align="right"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="30,0,0,0" name="Hotkey_EDT_MiniMode_Local" width="140" userdata="Hotkey|MiniMod"/>
+                <HotkeyEdit statusimage="download_EditBox.png" padding="42,0,0,0" name="Hotkey_EDT_MiniMode_Global" width="140" userdata="Hotkey|MiniMod2"/>
+              </HorizontalLayout>
+            </VerticalLayout>
+            <HorizontalLayout padding="6,6,0,0"  height="20">
+              <CheckBox padding="0,0,0,0" name="Hotkey_CB_UseGobal" userdata="Hotkey|UserHotkey" width="270" text="启用全局快捷键（播放器后台时也能响应）"/>
+            </HorizontalLayout>
+         
+        </VerticalLayout>
+        <VerticalLayout name="PnlNetworkContent" text="网络代理" height="170">
+          <HorizontalLayout height="44">
+            <Text name="biaotilan" padding="0,20,0,0" font="Config.DefaultText" text="网络代理"  />
+          </HorizontalLayout>
+          <Control height="1" width="518" padding="5,0,0,0" bkcolor="#FFd2d2d2" />
+          <HorizontalLayout height="37" >
+            <Text name="biaotilan" height="13" width="150" padding="0,8,0,0" text="代理设置："/>
+          </HorizontalLayout>
+          <HorizontalLayout inset="0,0,0,0" height="111">
+            <CheckBox name="Network_CB_UseProxy" pos="5,0,0,0" width="150" height="18" float="true" text="开启代理服务器" userdata="Proxy|HTTPProxyUsed" />
+
+            <Label pos="22,24,0,0" width="50" height="25" float="true" text="服务器" />
+            <Edit  pos="65,26,0,0" width="141" height="21" float="true" enabled="false" name="Network_EDT_Host" userdata="Proxy|HTTPProxyHost"/>
+            <Label pos="267,24,0,0" width="50" height="25"  float="true" text="端口" />
+            <Edit  pos="300,26,0,0" width="141" height="21" float="true" enabled="false" name="Network_EDT_Port" userdata="Proxy|HTTPProxyPort"
+              digitalonly="true" maxchar="5"/>
+
+            <Label pos="22,62,0,0" width="50" height="25" float="true" text="用户名" />
+            <Edit  pos="65,64,0,0" width="141" height="21" float="true" enabled="false" name="Network_EDT_User" userdata="Proxy|HTTPProxyUser"/>
+            <Label pos="267,62,0,0" width="50" height="25"  float="true" text="密码" />
+            <Edit  pos="300,64,0,0" width="141" height="21" float="true" enabled="false" name="Network_EDT_Pwd" userdata="Proxy|HTTPProxyPass"
+              password="true"/>
+          </HorizontalLayout>
+        </VerticalLayout>
+        <VerticalLayout name="PnlPluginContent" text="音频设置" height="650">
+          <HorizontalLayout height="43">
+            <Text name="biaotilan" width="31" padding="0,20,0,0" font="Config.DefaultText" text="音频设置"/>
+          </HorizontalLayout>
+          <Control height="1" width="518" padding="5,1,0,0" bkcolor="#FFd2d2d2" />
+          <HorizontalLayout inset="-5,5,0,0" height="25">
+            <Text name="wsapi_tip" width="400" height="15" padding="5,3,0,0" text="输出设置(Wasapi将独占系统音频设备，其它软件没有声音)" />
+			<Button padding="0,3,0,0" width="18" height="18" name="wsapi_help" setcursor="false" statusimage="help.png"/>
+          </HorizontalLayout>
+          <HorizontalLayout inset="-5,5,0,0" height="40">
+            <Text width="40" height="15" padding="5,15,0,0" text="音频输出:"/>
+            <Combo padding="0,11,0,0" width="340" name="Plugin_OutDevice" userdata="Device|OutDevice">
+            <ListLabelElement text="Default DirectSound Device" userdata="0"/>
+            <ListLabelElement text="Default Waveout Device" userdata="1"/>
+            </Combo>
+          </HorizontalLayout>
+	  <HorizontalLayout inset="-5,5,0,0" height="40">
+            <Text width="40" height="15" padding="5,15,0,0" text="视频渲染:"/>
+            <Combo padding="0,11,0,0" width="340" name="Plugin_VideoOutDevice" userdata="MVRender|RenderType">
+            <ListLabelElement text="VMR7 无窗口(默认)" userdata="0"/>
+            <ListLabelElement text="EVR 渲染器" userdata="1"/>
+			<ListLabelElement text="VMR 自定义渲染" userdata="2"/>
+            <ListLabelElement text="覆盖合成器" userdata="3"/>
+            </Combo>
+          </HorizontalLayout>
+          <HorizontalLayout inset="-5,5,0,0" height="50">
+            <Text width="400" height="25" padding="3,10,0,0" text="淡入淡出效果(仅对播放歌曲有效)" />
+          </HorizontalLayout>
+          <VerticalLayout inset="0,0,0,0" height="60">
+            <DefChildAttr class="SpinButton" padding="2,0,0,0" maxrange="3000" minrange="100" interval="100"/>
+            <HorizontalLayout padding="0,0,0,0" height="30">
+              <CheckBox text="播放时" padding="0,0,0,0" name="Play_CB_Play" width="59" userdata="KuwoPlayerFadeParam|EnablePlayFadeIn" />
+              <SpinButton name="Play_SB_Play" userdata="KuwoPlayerFadeParam|FadeInLength" maxrange="3000" minrange="100" interval="100"/>
+              <Label padding="2,0,0,0" height="20" text="毫秒" align="left"/>
+              <CheckBox text="暂停时" padding="0,3,0,0" name="Play_CB_Pause" width="85" userdata="KuwoPlayerFadeParam|EnablePauseFadeOut"  />
+              <SpinButton padding="2,0,0,0" name="Play_SB_Pause" userdata="KuwoPlayerFadeParam|PauseFadeOutLength" maxrange="3000" minrange="100" interval="100"/>
+              <Label padding="2,0,0,0" height="20" text="毫秒" align="left"/>
+            </HorizontalLayout>
+            <HorizontalLayout padding="0,0,0,0" height="30">
+              <CheckBox text="停止时　" padding="0,3,0,0" name="Play_CB_Stop" width="59" userdata="KuwoPlayerFadeParam|EnableStopFadeOut"  />
+              <SpinButton name="Play_SB_Stop" userdata="KuwoPlayerFadeParam|StopFadeOutLength" maxrange="3000" minrange="100" interval="100"/>
+              <Label padding="2,0,0,0" height="20" text="毫秒" align="left"/>
+              <CheckBox text="交叉定位" padding="0,3,0,0" name="Play_CB_CrossFade" width="85" userdata="KuwoPlayerFadeParam|EnableSeekCrossFade"  />
+              <SpinButton name="Play_SB_CrossFade" userdata="KuwoPlayerFadeParam|CrossFadeLength" maxrange="3000" minrange="100" interval="100"/>
+              <Label padding="2,0,0,0" height="20" text="毫秒" align="left"/>
+            </HorizontalLayout>
+          </VerticalLayout>
+          <HorizontalLayout inset="-5,5,0,0" height="33">
+            <Text width="400" height="35" text="Winamp音效插件(dsp_*.dll)" align="left"/>
+          </HorizontalLayout>
+          <HorizontalLayout inset="0,0,0,0" height="28">
+            <Label padding="0,0,0,0" width="66" height="22" text="插件目录：" align="left"/>
+            <Edit width="279" height="23" enabled="false" name="Plugin_EDT_Path" endellipsis="true"/>
+            <Button padding="0,0,0,0" width="56" height="23" text="浏览" name="Plugin_BTN_OpenFolder" />
+          </HorizontalLayout>
+          <HorizontalLayout padding="0,0,0,10" bkcolor="Config.List.BorderColor" width="400"   height="267" inset="1,1,1,1">
+            <List name="Plugin_List" vscrollbar="true" hscrollbar="true" showcheckbox="true" itemalign="center" >
+              <ListHeader height="36" name="Plugin_CHK_Header" bkcolor="Config.List.HeadBkColor1">
+                <ListHeaderItem font="Config.Content" text="" width="50" sepwidth="1"/>
+                <ListHeaderItem font="Config.Content" text="插件描述" width="135" sepwidth="1"/>
+                <ListHeaderItem font="Config.Content" text="文件名" width="200" sepwidth="1"/>
+                <ListHeaderItem font="Config.Content" text="" sepwidth="1"/>
+              </ListHeader>
+            </List>
+          </HorizontalLayout>
+          <HorizontalLayout height="30">
+            <Button name="Plugin_BTN_Config" padding="0,0,10,0" bkcolor="#FFFFFFFF" width="72" text="配置插件" enabled="false" />
+            <Control enabled="false" mouse="false"/>
+            <Label width="95" text="调整加载顺序：" align="right"/>
+            <Button text="上移" padding="10,0,10,0" width="69" name="Plugin_BTN_Up" enabled="false" />
+            <Button text="下移" padding="0,0,10,0" width="69" name="Plugin_BTN_Down" enabled="false" />
+            <Control width="9"/>
+          </HorizontalLayout>
+          <Label padding="0,0,0,0" height="16" text="提示：勾选即可应用，并且可同时应用多个插件！" align="left"/>
+        
+          <Control enabled="false" mouse="false" />
+		  
+			<HorizontalLayout name="hifi_tip" float="true" visible="false" width="458" height="237" bkimage="hifi_tip_down.png" >
+				<HorizontalLayout name="Exclu_Main_Wnd" padding="7,3,7,11" >
+					<VerticalLayout inset="15,10,0,0">
+						<Label name="intro_cont" text="什么是独占模式?" padding="-10,8,0,0" font="YAHEI.NO18"  height="20" textcolor="#FFd99f55" align="center"></Label>
+						<Control  height="20" />
+						<Label text="独占模式可以免除电脑系统对声音的一切污染，使声音无损传输到播放设备" padding="0,0,0,0" font="YAHEI.NO12"  height="20" textcolor="#FFd99f55" align="left"></Label>
+						<Label text="中同时声卡也只被一个程序占用，最大程度保持歌曲的纯净音质。" padding="0,4,0,0" font="YAHEI.NO12"  height="20" textcolor="#FFd99f55" align="left"></Label>
+						<Label text="很多音频发烧软件带有类似配置，但操作有些复杂使用不方便，酷我研发的" padding="0,4,0,0" font="YAHEI.NO12"  height="20" textcolor="#FFd99f55" align="left"></Label>
+						<Label text="一键切换开关彻底解决这一问题，让您一键享受HiFi音质。" padding="0,4,0,0" font="YAHEI.NO12"  height="20" textcolor="#FFd99f55" align="left"></Label>
+						<Label text="由于声音被酷我独占，所以其他软件或网页会没声，您可以关闭HiFi独占模" padding="0,4,0,0" font="YAHEI.NO12"  height="20" textcolor="#FFd99f55" align="left"></Label>
+						<Label text="式来恢复这些声音。" padding="0,4,0,0" font="YAHEI.NO12"  height="20" textcolor="#FFd99f55" align="left"></Label>
+					</VerticalLayout>  		
+				</HorizontalLayout>		
+			</HorizontalLayout>
+        </VerticalLayout>
+      </ConfigDlgVScrollLayout>
+    	
+      <HorizontalLayout name="ApplyArea" height="38">
+		  <Control enabled="false" mouse="false"/>
+		  <Button name="BtnReset" font="Config.Button" text="全部重置" padding="0,3,0,0" width="69" height="24" statusimage="abc.png" textcolor="#FF46B4E6" bkcolor="#00FFFFFF" hottextcolor="#FF46B4E6" pushedtextcolor="#FF46B4E6" focusedtextcolor="#FF46B4E6"/>
+		  <Button text="确认"  font="Config.Button" width="69" height="24" padding="11,3,0,0"  name="BtnOK" />
+		  <Button text="取消"  font="Config.Button" width="69" height="24" padding="11,3,0,0"  name="BtnCancel" />
+		  <Button text="应用"  font="Config.Button" width="69" height="24" padding="11,3,16,0" name="BtnApply" enabled="false" />
+	    </HorizontalLayout>
+  </VerticalLayout>
+  </HorizontalLayout>
+</VerticalLayout>
+</Window>
+
+
+
+
+
+
+<!--  <HorizontalLayout name="about_content" text="关于" height="420">
+				<VerticalLayout inset="15,0,0,5" >
+					<HorizontalLayout height="42" inset="0,0,0,0" padding="0,5,0,0">
+						<Control bkimage="Config_Logo.png" width="122" height="32" padding="5,5,0,0" enabled="false" mouse="false" />
+						<Control enabled="false" mouse="false" />
+						<Label name="AboutUs_LB_Version" width="160" padding="0,10,0,0" text="版本号：V5.1.1.3_BCS9" align="right" />
+						<Label name="AboutUs_LB_ReleaseTime" width="160" padding="25,10,0,0" text="发布日期：2012.12.10" align="right" />
+					</HorizontalLayout>
+					<HorizontalLayout height="1" bkcolor="#FFCCCCCC"></HorizontalLayout>
+					<VerticalLayout height="140" padding="0,20,0,0">
+						<Label name="AboutUs_LB_Summary1" width="500" padding="0,10,10,0" 
+							text="　　酷我音乐，融歌曲、MV资源获取、播放、欣赏于一体，是您小巧、"/>
+						<Label name="AboutUs_LB_Summary1" width="500" padding="0,10,10,0" 
+							text="快捷的音乐资源库。"/>
+						<Label name="AboutUs_LB_Summary2" width="500" padding="0,10,10,0" 
+							text="　　独有多种歌词显示欣赏效果，动态明星秀、同步的歌词显示，都可"/>
+						<Label name="AboutUs_LB_Summary2" width="500" padding="0,10,10,0" 
+							text="轻松获得。"/>
+					</VerticalLayout>
+					<Label name="AboutUs_LB_Company" padding="0,40,0,0" text="北京酷我科技有限公司 版权所有"  />
+					<HorizontalLayout height="25" padding="0,15,0,0">
+						<Label bkcolor="#01FFFFFF" text="酷我主页：" width="80" align="left"/>
+						<Button name="AboutUs_BTN_Address" width="300" statusimage="abc.png" textcolor="#FF46B4E6" bkcolor="#00FFFFFF" bordercolor="#00FFFFFF" textpadding="0,-10,0,0" text="http://www.kuwo.cn" align="left" hottextcolor="#FF46B4E6" pushedtextcolor="#FF46B4E6" focusedtextcolor="#FF46B4E6" />
+					</HorizontalLayout>
+					<HorizontalLayout height="25" padding="0,15,0,0">
+						<Label bkcolor="#01FFFFFF" text="技术论坛：" width="80" align="left"/>
+						<Button name="AboutUs_BTN_Feedback" width="300" statusimage="abc.png" textcolor="#FF46B4E6" bkcolor="#00FFFFFF" bordercolor="#00FFFFFF" textpadding="0,-10,0,0" text="http://www.kuwo.cn/forum/mbox" align="left" hottextcolor="#FF46B4E6" pushedtextcolor="#FF46B4E6" focusedtextcolor="#FF46B4E6" />
+					</HorizontalLayout>
+					<Control enabled="false" mouse="false" />
+				</VerticalLayout>
+			</HorizontalLayout>
+			<HorizontalLayout text="系统" height="420">
+				<VerticalLayout inset="15,-5,5,5">
+					<HorizontalLayout text="启动退出设置" inset="-5,5,0,0" height="40">
+						<Text width="400" text="启动退出设置" align="left"/>
+					</HorizontalLayout>
+					<VerticalLayout text="启动退出设置" inset="0,0,0,0" height="160" >
+						<CheckBox name="System_CB_AutoRun" text="开机时自动启动酷我音乐" padding="0,2,0,0"/>
+						<CheckBox name="System_CB_AutoPlay" text="启动酷我音乐时自动播放歌曲"  userdata="Setting|startplay"/>
+						<CheckBox name="System_CB_AutoHello" text="启动酷我音乐时有问候语" userdata="Setting|starhello"/>
+						<CheckBox name="System_CB_ShowMinisete" text="启动酷我音乐时显示今日看点" userdata="Setting|ShowMiniSite"/>
+						<CheckBox name="System_CB_ExitKwmv" text="退出酷我音乐时退出播放加速引擎" userdata="Setting|exitkwmv"/>
+            <CheckBox name="System_CB_ShowEggSmash" text="启动酷我音乐时有砸蛋抽奖" userdata="UIPopupWndConf|UserShowEggSmashDlg"/>
+					</VerticalLayout>
+          <HorizontalLayout>
+            //
+          </HorizontalLayout>
+
+          <VerticalLayout name="wallpaper">
+            <HorizontalLayout text="音乐壁纸" inset="-5,5,0,0" height="40">
+              <Text align="left" text="音乐壁纸" />
+            </HorizontalLayout>
+            <VerticalLayout text="音乐壁纸" height="80" inset="0,0,0,0">
+              <CheckBox name="System_CB_Startpage" text="将酷我启动画面设为桌面壁纸" userdata="WALLPAPER|Startpage"></CheckBox>
+              <CheckBox name="System_CB_Album" text="播歌时显示桌面写真" userdata="WALLPAPER|Album"></CheckBox>
+            </VerticalLayout>
+          </VerticalLayout>
+          
+					<HorizontalLayout inset="0,8,0,0" height="28" visible="false">
+						<Label width="66" text="宠物设置" align="left"/>
+						<Control enabled="false" mouse="false" bkimage="cfg_line.png" height="1" padding="1,9,0,0"/>
+					</HorizontalLayout>
+					<VerticalLayout text="宠物设置" inset="15,0,0,0" height="50" visible="false">
+						<CheckBox name="System_CB_AutoRunPet" text="登录酷我音乐时，自动运行酷我宠物"  padding="0,2,0,0" userdata="KwGame|AutoStartPet"/>
+						<CheckBox name="System_CB_AutoExitPet" text="退出酷我音乐时，自动退出酷我宠物" userdata="KwGame|AutoExitPet"/>
+					</VerticalLayout>
+					<HorizontalLayout text="酷我音频指纹识别" inset="-5,0,0,0" height="40" visible="false">
+						<Text width="400" text="酷我音频指纹识别" align="left"/>
+					</HorizontalLayout>
+					<VerticalLayout inset="0,0,0,0" height="55" visible="false">
+						<CheckBox name="System_CB_AutoSaveRecognise" text="歌曲播放结束后，自动根据识别结果修改歌曲标签" padding="0,2,0,0" userdata="Lyric|autofprecognise"/>
+					</VerticalLayout>
+					<HorizontalLayout padding="0,10,0,0" text="缓存资源设置(重启后生效)" inset="-5,0,0,0" height="40">
+						<Text width="400" text="缓存资源设置(重启后生效)" align="left"/>
+					</HorizontalLayout>
+					<VerticalLayout inset="0,0,0,0" height="95" >
+						<HorizontalLayout inset="0,0,0,0" height="30">
+							<Label text="缓存资源保存到：" width="115" />
+							<Edit name="System_EDT_CacheSavePath" width="250" enabled="false"/>
+							<Button name="System_BTN_OpenFolder" text="浏览" width="70" padding="5,0,0,0" userdata="Setting|temppath"/>
+						</HorizontalLayout>
+						<Option width="140" padding="0,5,0,10" name="System_OPT_AutoCacheSize" group="System_Cache_Group" userdata="Setting|autocachesize" text="自动设置缓存大小"/>
+						<HorizontalLayout inset="0,0,0,0" height="30" >
+							<Option width="140" name="System_OPT_ManulCacheSize" padding="0,3,0,0" group="System_Cache_Group" userdata="Setting|autocachesize" text="手动设置缓存大小"/>
+							<SpinButton name="System_SB_CacheSize" width="60" maxrange="10240" minrange="60" interval="1" userdata="MaxSpaceSize"/>
+							<Label padding="5,0,0,0" text="M" width="15" />
+							<Label padding="5,0,0,0" width="80" textcolor="#FF98999B" text="(60-10240)" align="left" />
+						</HorizontalLayout>
+					</VerticalLayout>
+				</VerticalLayout>
+			</HorizontalLayout>
+			<HorizontalLayout text="歌词显示" height="420">
+				<VerticalLayout inset="15,-5,5,5" >
+					<HorizontalLayout inset="-5,5,0,0" height="40">
+						<Text width="400" text="字体样式" align="left"/>
+					</HorizontalLayout>
+					<VerticalLayout inset="0,0,15,0" height="180">
+						<HorizontalLayout inset="0,0,0,0" height="25">
+							<Label padding="12,2,0,0" width="64" text="字　　体" align="left"/>
+							<Combo padding="0,0,0,0" width="102" textpadding="0,0,18,0" textstyle="singleline|vcenter" name="Lyrics_CMB_FontFamily" userdata="NowPlayLyricWnd|FontFaceName"/>
+							<Label padding="70,2,0,0" width="64" text="字　　形" align="left"/>
+							<Combo padding="0,0,0,0" width="102" name="Lyrics_CMB_FontStyle">
+								<ListLabelElement text="常规" userdata="default"/>
+								<ListLabelElement text="粗体" userdata="blod"/>
+								<ListLabelElement text="倾斜" userdata="italic"/>
+								<ListLabelElement text="粗体倾斜" userdata="italicblod"/>
+							</Combo>
+						</HorizontalLayout>
+						<HorizontalLayout inset="0,10,0,0" height="40">
+							<Label padding="12,2,0,0" width="64" text="字体大小" align="left"/>
+							<Combo padding="0,0,0,0" width="102" name="Lyrics_CMB_FontSize" userdata="NowPlayLyricWnd|FontHeight">
+								<ListLabelElement text="7" userdata="7"/>
+								<ListLabelElement text="8" userdata="8" />
+								<ListLabelElement text="9" userdata="9" />
+								<ListLabelElement text="10" userdata="10" />
+								<ListLabelElement text="11" userdata="11" />
+								<ListLabelElement text="12" userdata="12" selected="true"/>
+								<ListLabelElement text="13" userdata="13" />
+								<ListLabelElement text="14" userdata="14" />
+                <ListLabelElement text="15" userdata="15" />
+								<ListLabelElement text="16" userdata="16" />
+								<ListLabelElement text="17" userdata="17" />
+								<ListLabelElement text="18" userdata="18" />
+								<ListLabelElement text="19" userdata="19" />
+								<ListLabelElement text="20" userdata="20" />
+                <ListLabelElement text="21" userdata="21" />
+								<ListLabelElement text="22" userdata="22" />
+                <ListLabelElement text="23" userdata="23" />
+								<ListLabelElement text="24" userdata="24" />
+								<ListLabelElement text="26" userdata="26" />
+								<ListLabelElement text="28" userdata="28" />
+								<ListLabelElement text="36" userdata="36" />
+								<ListLabelElement text="48" userdata="48" />
+								<ListLabelElement text="72" userdata="72" />
+							</Combo>
+						</HorizontalLayout>
+						<HorizontalLayout inset="0,10,0,0" height="40">
+							<Label padding="12,2,0,0" width="64" text="普通颜色" align="left"/>
+							<LiveButton statusimage="Config_Combo.png" icontype="color" isgradient="false" icondest="5,5,80,21" 
+								width="102" padding="0,0,0,0" name="Lyrics_CMB_NormalColor" userdata="NowPlayLyricWnd|FontRgb" />
+							<Label padding="70,2,0,0" width="64" text="高亮颜色" align="left"/>
+							<LiveButton statusimage="Config_Combo.png" icontype="color" isgradient="false" icondest="5,5,80,21" 
+								width="102" padding="0,0,0,0" name="Lyrics_CMB_HighlightColor" userdata="NowPlayLyricWnd|FontHiRgb"/>
+						</HorizontalLayout>
+						<HorizontalLayout inset="0,10,0,0" height="40">
+							<Label padding="-3,2,0,0" width="80" text="歌词行间距" align="left"/>
+							<SpinButton name="Lyrics_SB_LineHeight" padding="-1,0,0,0" width="102" minrange="1" maxrange="10" userdata="NowPlayLyricWnd|LineInterval"/>
+							<Label padding="5,0,0,0" width="48" textcolor="#FF9B9998" text="(1-10)" align="left"/>
+						</HorizontalLayout>
+					</VerticalLayout>
+					<HorizontalLayout inset="-5,0,0,0" height="40">
+						<Text width="400" height="35" text="预览" align="left"/>
+					</HorizontalLayout>
+					<VerticalLayout padding="15,10,0,0" inset="0,20,0,0" height="165" width="410" height="155" bkcolor="#FF999999" bordercolor="#FF999999" >
+						<Label name="Lyric_LBL_L1" text="听音乐，用酷我!" align="center" font="Config.Lyric"/>
+						<Label name="Lyric_LBL_L2" text="听音乐，用酷我!" align="center" font="Config.Lyric"/>
+						<Label name="Lyric_LBL_L3" text="听音乐，用酷我!" align="center" font="Config.Lyric"/>
+					</VerticalLayout>
+					<Control enabled="false" mouse="false" />
+				</VerticalLayout>
+			</HorizontalLayout>
+         
+      <VerticalLayout name="PnlDesktopLyricsContent" text="桌面歌词" height="420">
+				<VerticalLayout inset="15,-5,5,5" >
+					<HorizontalLayout inset="-5,5,0,0" height="40">
+						<Text width="400" height="35" text="快速设置" align="left"/>
+					</HorizontalLayout>
+					<HorizontalLayout inset="0,0,0,0" height="55">
+						<Label text="行数" width="35"  align="left"/>
+						<Combo padding="0,0,10,0" width="80" name="Desktop_CMB_LineNumber" userdata="DeskLyric|DLLineCount">
+							<ListLabelElement text="双行" userdata="0"/>
+							<ListLabelElement text="单行" userdata="1"/>
+						</Combo>
+						<Label padding="5,0,0,0" width="35" text="色彩"  align="left"/>
+						<Combo padding="0,0,0,0" width="80" name="Desktop_CMB_Color" userdata="DeskLyric|DLColor">
+							<ListLabelElement text="深邃蓝" userdata="0"/>
+							<ListLabelElement text="高贵紫" userdata="1"/>
+							<ListLabelElement text="活力黄" userdata="2"/>
+							<ListLabelElement text="淡雅灰" userdata="3"/>
+							<ListLabelElement text="清新绿" userdata="4"/>
+						</Combo>
+						<CheckBox padding="15,3,0,0" name="Desktop_CB_KaLaShow" text="卡拉OK显示" userdata="LyricDrawCommon|IsKalaOk" />
+						<Control enabled="false" mouse="false" />
+					</HorizontalLayout>
+					<HorizontalLayout inset="-5,0,0,0" height="40">
+						<Text width="400" height="35" text="歌词显示设置" align="left"/>
+					</HorizontalLayout>
+					<VerticalLayout>
+						<HorizontalLayout padding="0,0,0,10" height="32">
+							<Label padding="0,2,0,0" width="35" text="字体" align="left"/>
+							<Combo padding="0,0,10,0" width="80" textpadding="0,0,18,0" textstyle="singleline|vcenter" name="Desktop_CMB_FontFamily" userdata="DeskLyric|DLFaceName"/>
+							<Label padding="5,2,0,0" width="35" text="字号"  align="left"/>
+							<Combo padding="0,0,0,0" width="80" name="Desktop_CMB_FontSize" userdata="DeskLyric|DLFontHeight"/>
+							<CheckBox padding="15,2,0,0" name="Desktop_CB_EdgeColor" width="17" text="" userdata="DeskLyric|DLShowEdgeColor" />
+							<LiveButton padding="0,2,0,0" width="67" name="Desktop_BTN_Color" text="描边色" userdata="DeskLyric|DLEdgeColor"
+								textpadding="20,0,0,0" height="22" icondest="3,3,19,19" isgradient="false" icontype="color"/>
+							<CheckBox padding="15,2,0,0" name="Desktop_CB_Shardow" text="阴影" userdata="DeskLyric|DLShowEclipse"/>
+						</HorizontalLayout>
+						<HorizontalLayout height="25" >
+							<Label text="未播放歌词：" width="200" align="left"/>
+							<Control enabled="false" mouse="false" />
+						</HorizontalLayout>
+						<HorizontalLayout height="35" >
+							<Option padding="0,3,0,0" group="gUnplayedLyric" name="Desktop_OPT_UPColor" width="80" text="色彩填充" userdata="DeskLyric|DLLrcNormalIsPic"/>
+							<LiveButton padding="5,0,0,0" width="67" name="Desktop_BTN_UPColor" text="选择" userdata="DeskLyric|DLLrcNormalColor" 
+								icontype="color" textpadding="20,0,0,0" height="22" icondest="3,3,19,19" />
+							<Option padding="35,3,0,0" group="gUnplayedLyric" name="Desktop_OPT_UPPic" width="80" text="图片填充" userdata="DeskLyric|DLLrcNormalIsPic"/>
+							<LiveButton padding="5,0,0,0" width="67" name="Desktop_BTN_UPPic" text="选择" userdata="DeskLyric|DLLrcNormalPicPath" 
+								icontype="image" textpadding="20,0,0,0" height="22" icondest="3,3,19,19" />
+						</HorizontalLayout>
+						<HorizontalLayout height="25" >
+							<Label text="已播放歌词（加亮效果显示）：" width="200"  align="left"/>
+							<Control enabled="false" mouse="false" />
+						</HorizontalLayout>
+						<HorizontalLayout height="35" >
+							<Option padding="0,3,0,0" group="gPlayedLyric" name="Desktop_OPT_PColor" width="80" text="色彩填充" userdata="DeskLyric|DLLrcHighlightIsPic"/>
+							<LiveButton padding="5,0,0,0" width="67" name="Desktop_BTN_PColor" text="选择" userdata="DeskLyric|DLLrcHighlightColor" 
+								icontype="color" textpadding="20,0,0,0" height="22" icondest="3,3,19,19" />
+							<Option padding="35,3,0,0" group="gPlayedLyric" name="Desktop_OPT_PPic" width="80" text="图片填充" userdata="DeskLyric|DLLrcHighlightIsPic"/>
+							<LiveButton padding="5,0,0,0" width="67" name="Desktop_BTN_PPic" text="选择" userdata="DeskLyric|DLLrcHighlightPicPath" 
+								icontype="image" textpadding="20,0,0,0" height="22" icondest="3,3,19,19" />
+						</HorizontalLayout>
+						<Control enabled="false" mouse="false" />
+					</VerticalLayout>
+				</VerticalLayout>
+			</VerticalLayout>
+        
+        <VerticalLayout name="PnlLyricsFileContent" text="歌词文件" height="420">
+				<VerticalLayout inset="15,-5,5,5" >
+					<HorizontalLayout inset="-5,5,0,0" height="40">
+						<Text width="400" height="35" text="搜索本地歌词" align="left"/>
+					</HorizontalLayout>
+					<HorizontalLayout inset="0,0,0,0" height="150">
+						<List name="LyricsFile_LrcPathList" width="350" height="110" bordercolor="Config.List.BorderColor" 
+								showcheckbox="true" borderwidth="1" header="hidden">
+							<ListHeader>
+								<ListHeaderItem width="40" />
+								<ListHeaderItem width="300" />
+								<ListHeaderItem />
+							</ListHeader>
+						</List>
+						<VerticalLayout inset="15,0,0,0" >
+							<Button width="73" text="添加" name="LyricsFile_BTN_Add" />
+							<Button width="73" text="删除" name="LyricsFile_BTN_Delete" enabled="false" padding="0,8,0,0" />
+						</VerticalLayout>
+					</HorizontalLayout>
+					<HorizontalLayout inset="-5,0,0,0" height="35">
+						<Text width="400" height="35" text="歌词文件" align="left"/>
+					</HorizontalLayout>
+					<VerticalLayout text="启动退出设置" inset="0,0,0,0" height="45" >
+						<CheckBox name="LyricsFile_CB_AutoDlBest" text="有多个下载时自动下载最佳" padding="0,2,0,0" userdata="Lyric|AutoDown" visible="false"/>
+						<CheckBox name="LyricsFile_CB_AssocAudio" text="下载后关联到音频文件" userdata="Lyric|AutoLrcLink" visible="false"/>
+						<CheckBox name="LyricsFile_CB_SaveToSong" text="保存到歌曲所在的文件夹" userdata="Lyric|SaveLrcInSongPath" visible="false"/>
+						<HorizontalLayout inset="0,0,0,0" height="35">
+							<Label name="LyricsFile_CB_SaveToOther" width="65" bordercolor="#00FF0000" textpadding="0,-8,0,0" text="保存位置" userdata="Lyric|SaveLrcInOtherPath"/>
+							<Edit width="234" enabled="false" name="LyricsFile_EDT_SavePath" />
+							<Button padding="10,0,0,0" width="73" text="浏览" name="LyricsFile_BTN_OpenFolder" userdata="Lyric|LrcSavePath" />
+						</HorizontalLayout>
+						<CheckBox name="LyricsFile_CB_SaveAsSongName" text="保存为歌曲文件相同的文件名" visible="false" userdata="Lyric|SaveLrcFileAsSongFileName"/>
+					</VerticalLayout>
+          <HorizontalLayout inset="-5,0,0,0" height="35">
+            <Text width="400" height="35" text="自制歌词文件" align="left"/>
+          </HorizontalLayout>
+          <HorizontalLayout>
+            <Label name="LyricsFile_CB_SaveMyLrcx" width="65" bordercolor="#00FF0000" textpadding="0,-8,0,0" text="保存位置" userdata="Lyric|SaveMyLrcxInOtherPath"/>
+            <Edit width="234" enabled="false" name="LyricsFile_EDT_SaveMyLrcxPath" />
+            <Button padding="10,0,0,0" width="73" text="浏览" name="LyricsFile_BTN_MyLrcxOpenFolder" userdata="Setting|makelyricpath" hottextcolor="#ff000000" pushedtextcolor="#ff000000" focusedtextcolor="#ff000000" />
+          </HorizontalLayout>
+          <Control enabled="false" mouse="false" />
+				</VerticalLayout>
+			</VerticalLayout>-->
+
+<!--
+          <VerticalLayout name="PnlDownloadContent" text="本地下载" height="455">
+          <VerticalLayout inset="15,-5,5,5" >
+					<HorizontalLayout inset="-5,5,0,0" height="40">
+						<Text width="400" height="35" text="下载任务设置" align="left"/>
+					</HorizontalLayout>
+					<HorizontalLayout padding="0,0,0,20" height="25">
+						<Label padding="0,0,0,0" width="120" text="最大同时下载任务数" align="left"/>
+						<SpinButton name="Download_SB_MaxTaskCnt" width="60" maxrange="5" minrange="1" interval="1" userdata="Setting|MaxTasks"/>
+						<Label padding="5,0,0,0" width="48" textcolor="#FF98999B" text="(1-5)" align="left"/>
+						<Label padding="0,0,0,0" width="65" text="下载端口" align="left"/>
+						<Edit name="Download_EDT_DownPort" width="65" userdata="ServerPort" digitalonly="true" maxchar="5"/>
+						<Label padding="5,0,0,0" width="100" textcolor="#FF98999B" text="(1025-65535)" align="left"/>
+					</HorizontalLayout>
+					<HorizontalLayout inset="-5,0,0,0" height="40">
+						<Text width="400" height="35" text="下载目录设置" align="left"/>
+					</HorizontalLayout>
+					<VerticalLayout height="50" padding="0,0,0,20">
+						<HorizontalLayout height="25" >
+							<Label padding="0,2,0,0" width="110" text="下载歌曲保存到" align="left"/>
+							<Edit name="Download_EDT_DownPath" width="262" enabled="false"/>
+							<Button name="Download_BTN_OpenFoder" padding="10,0,0,0" width="73" text="浏览" userdata="Setting|songpath" />
+						</HorizontalLayout>
+						<HorizontalLayout>
+							<CheckBox name="Download_CB_Downyrics" text="同时下载歌词" userdata="downloadsetting|isdownlyric"/>
+							<CheckBox name="Download_CB_DownCover" text="歌曲内置歌词及封面(MP3)" userdata="downloadsetting|isdowncover"/>
+						</HorizontalLayout>
+					</VerticalLayout>
+					<HorizontalLayout inset="-5,0,0,0" height="40">
+						<Text width="400" height="35" text="下载习惯设置" align="left"/>
+					</HorizontalLayout>
+					<VerticalLayout height="50" padding="0,0,0,20">
+					<HorizontalLayout inset="0,0,0,0" height="25">
+						<CheckBox name="Download_CB_NotRemindMe" text="不要每次下载都提示我" padding="0,2,0,0" userdata="Setting|NoTipDownSongEver"/>
+						<CheckBox name="Download_CB_AddList" text="下载歌曲时加入列表" padding="0,2,0,0" userdata="Setting|DownloadSongAdd2Playlist"/>
+					</HorizontalLayout >
+					<HorizontalLayout inset="0,0,0,0">
+						<Label padding="-3,0,0,0" width="130" textcolor="#FF98999B" text="下载歌曲保存格式:" align="left"/>
+						<Option name="Download_OPT_Artist_SongName" group="Cloud_gDownloadPanel" selected="true" padding="0,5,0,0"  text="歌手-歌曲名" userdata="downloadsetting|dsFormatSave" />
+						<Option name="Download_OPT_SongName_Artist" group="Cloud_gDownloadPanel" padding="0,5,0,0"  text="歌曲名-歌手" userdata="downloadsetting|dsFormatSave" />
+						<Option name="Download_OPT_SongName" group="Cloud_gDownloadPanel" padding="0,5,0,0"  text="歌曲名" userdata="downloadsetting|dsFormatSave" />
+					</HorizontalLayout >
+					</VerticalLayout>
+					<HorizontalLayout inset="-5,0,0,0" height="40">
+						<Text width="400" height="35" text="添加本地歌曲文件夹习惯设置" align="left"/>
+					</HorizontalLayout>
+					<VerticalLayout height="50">
+						<HorizontalLayout inset="0,0,0,0" height="25">
+							<CheckBox name="Download_CB_ScanSubFolder" text="扫描子文件夹" width="118" userdata="localmusiclib|isscansubdir"/>
+							<CheckBox name="Download_CB_Skip" text="跳过" width="50" userdata="localmusiclib|isskipsong"/>
+							<Edit name="Download_EDT_SkipTime" width="40" digitalonly="true" maxchar="2" userdata="localmusiclib|skipsonglength"/>
+							<Label padding="2,0,0,0" text="秒" width="15" />
+							<Label padding="5,2,0,0" width="140" textcolor="#FF98999B" text="(1-60)以下音频文件" align="left"/>
+						</HorizontalLayout>
+						<CheckBox name="Download_CB_AddDeletedSong" text="添加以前从本地曲库删除的歌曲" userdata="localmusiclib|isaddremovedsong"/>
+					</VerticalLayout>
+					<Control enabled="false" mouse="false" />
+				</VerticalLayout>
+			</VerticalLayout>
+        <VerticalLayout name="PnlCloudContent" text="云同步设置" height="420">
+				<VerticalLayout inset="15,-5,5,5" >
+					<HorizontalLayout inset="-5,5,0,0" height="40">
+						<Text width="400" height="35" text="列表中的本地歌曲" align="left"/>
+					</HorizontalLayout>
+					<VerticalLayout inset="0,0,0,0" >
+						<Option name="Cloud_OPT_AutoSync" group="Cloud_gCloudPanel" selected="true" padding="0,8,0,0"  text="同步到音乐云中" userdata="MusicCloud|LfAutoSyn" />
+						<Option name="Cloud_OPT_NoSync" group="Cloud_gCloudPanel" padding="0,8,0,0"  text="不同步" userdata="MusicCloud|LfAutoSyn" />
+					</VerticalLayout>
+				</VerticalLayout>
+			</VerticalLayout>
+        <VerticalLayout name="PnlHabitContent" text="操作习惯" height="420">
+				<VerticalLayout inset="15,-5,5,5" >
+					<HorizontalLayout inset="-5,5,0,0" height="40">
+						<Text width="400" height="35" text="点击关闭主板时" align="left"/>
+					</HorizontalLayout>
+					<VerticalLayout inset="0,0,0,0" >
+						<Option name="Habit_OPT_MinToSysTray" group="Habit_gCloseMainwnd" selected="true" padding="0,8,0,0"  text="最小化到系统托盘" userdata="Setting|exitchoice" />
+						<Option name="Habit_OPT_Exit" group="Habit_gCloseMainwnd" padding="0,8,0,0"  text="退出程序" userdata="Setting|exitchoice" />
+					</VerticalLayout>
+				</VerticalLayout>
+			</VerticalLayout>-->
+
+<!--<VerticalLayout name="PnlHotkeyContent" text="快捷键" height="420">
+				<VerticalLayout inset="15,-5,15,5" >
+					<HorizontalLayout inset="-5,5,0,0" height="40">
+						<Text width="400" height="35" text="快捷键设置" align="left"/>
+					</HorizontalLayout>
+					<VerticalLayout border="1" inset="1,1,1,1" bordercolor="#FF95B4C4" height="334">
+						<HorizontalLayout height="32" bkcolor="#FFF7FBFF">
+							<Label width="75" padding="10,0,0,0"  text="功能说明" align="center"/>
+							<Label width="150" padding="10,0,0,0"  text="快捷键" align="center"/>
+							<Label width="150" padding="10,0,0,0"  text="全局快捷键" align="center"/>
+						</HorizontalLayout>
+						<HorizontalLayout inset="20,4,0,4" height="33" bkcolor="#FFF7F7F7">
+							<Label width="92" text="播放/暂停" align="right"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_PlayPause_Local" width="150" userdata="Hotkey|Play"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_PlayPause_Global" width="150" userdata="Hotkey|Play2"/>
+						</HorizontalLayout>
+						<HorizontalLayout inset="20,4,0,4" height="33" bkcolor="#FFFFFFFF">
+							<Label width="92" text="停止" align="right"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_Stop_Local" width="150" userdata="Hotkey|Stop"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_Stop_Global" width="150" userdata="Hotkey|Stop2"/>
+						</HorizontalLayout>
+						<HorizontalLayout inset="12,4,0,4" height="33" bkcolor="#FFF7F7F7">
+							<Label width="100"  text="静音/取消静音" align="right"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_Mute_Local" width="150" userdata="Hotkey|Sound"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_Mute_Global" width="150" userdata="Hotkey|Sound2"/>
+						</HorizontalLayout>
+						<HorizontalLayout inset="20,4,0,4" height="33" bkcolor="#FFFFFFFF">
+							<Label width="92"  text="播放上一首" align="right"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_Previous_Local" width="150" userdata="Hotkey|SongPre"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_Previous_Global" width="150" userdata="Hotkey|SongPre2"/>
+						</HorizontalLayout>
+						<HorizontalLayout inset="20,4,0,4" height="33" bkcolor="#FFF7F7F7">
+							<Label width="92"  text="播放下一首" align="right"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_Next_Local" width="150" userdata="Hotkey|SongNext"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_Next_Global" width="150" userdata="Hotkey|SongNext2"/>
+						</HorizontalLayout>
+						<HorizontalLayout inset="20,4,0,4" height="33" bkcolor="#FFFFFFFF">
+							<Label width="92"  text="增大音量" align="right"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_IncreaseVol_Local" width="150" userdata="Hotkey|AddMute"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_IncreaseVol_Global" width="150" userdata="Hotkey|AddMute2"/>
+						</HorizontalLayout>
+						<HorizontalLayout inset="20,4,0,4" height="33" bkcolor="#FFF7F7F7">
+							<Label width="92"  text="减小音量" align="right"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_DecreaseVol_Local" width="150" userdata="Hotkey|DecMute"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_DecreaseVol_Global" width="150" userdata="Hotkey|DecMute2"/>
+						</HorizontalLayout>
+						<HorizontalLayout inset="20,4,0,4" height="33" bkcolor="#FFFFFFFF">
+							<Label width="92"  text="最小化" align="right"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_MinWnd_Local" width="150" userdata="Hotkey|MinWnd"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_MinWnd_Global" width="150" userdata="Hotkey|MinWnd2"/>
+						</HorizontalLayout>
+						<HorizontalLayout inset="20,4,0,4" height="33" bkcolor="#FFF7F7F7">
+							<Label width="92"  text="迷你模式" align="right"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_MiniMode_Local" width="150" userdata="Hotkey|MiniMod"/>
+							<HotkeyEdit statusimage="cfg_edit.png" padding="10,0,0,0" name="Hotkey_EDT_MiniMode_Global" width="150" userdata="Hotkey|MiniMod2"/>
+						</HorizontalLayout>
+					</VerticalLayout>
+					<HorizontalLayout inset="0,20,0,0"  height="40">
+						<CheckBox padding="0,0,0,0" name="Hotkey_CB_UseGobal" userdata="Hotkey|UserHotkey" text="启用全局快捷键（播放器后台时也能响应）"/>
+					</HorizontalLayout>
+				</VerticalLayout>
+			</VerticalLayout>-->
+<!--<VerticalLayout name="PnlNetworkContent" text="网络设置" height="420">
+				<VerticalLayout inset="15,-5,5,5" >
+					<HorizontalLayout inset="-5,5,0,0" height="40">
+						<Text width="400" height="35" text="传输速度" align="left"/>
+					</HorizontalLayout>
+					<HorizontalLayout height="50" inset="0,-5,0,0">
+						<CheckBox text="开启VIP高速下载" name="Network_CB_VIPDownload" width="140" userdata="VPWWndConf|NormSV" />
+            <Button text="" padding="0,5,0,0" width="70" height="22" name="Button_OpenVIP" statusimage="btn_kwconfigopenvip.png" />
+					</HorizontalLayout>
+					
+					<HorizontalLayout inset="-5,0,0,0" height="40">
+						<Text width="400" height="35" text="代理服务器" align="left"/>
+					</HorizontalLayout>
+					<HorizontalLayout inset="0,0,0,0">
+						<CheckBox name="Network_CB_UseProxy" pos="0,0,0,0" width="150" height="18" float="true" text="使用代理服务器" userdata="Proxy|HTTPProxyUsed" />
+						
+						<Label pos="15,30,0,0" width="50" height="25" float="true" text="服务器" />
+						<Edit  pos="65,30,0,0" width="150" height="25" float="true" enabled="false" name="Network_EDT_Host" userdata="Proxy|HTTPProxyHost"/>
+						<Label pos="260,30,0,0" width="50" height="25"  float="true"text="端口" />
+						<Edit  pos="300,30,0,0" width="150" height="25" float="true" enabled="false" name="Network_EDT_Port" userdata="Proxy|HTTPProxyPort"
+							digitalonly="true" maxchar="5"/>
+
+						<Label pos="15,70,0,0" width="50" height="25" float="true" text="用户名" />
+						<Edit  pos="65,70,0,0" width="150" height="25" float="true" enabled="false" name="Network_EDT_User" userdata="Proxy|HTTPProxyUser"/>
+						<Label pos="260,70,0,0" width="50" height="25"  float="true"text="密码" />
+						<Edit  pos="300,70,0,0" width="150" height="25" float="true" enabled="false" name="Network_EDT_Pwd" userdata="Proxy|HTTPProxyPass"
+							password="true"/>
+					</HorizontalLayout>
+				</VerticalLayout>
+			</VerticalLayout>
+        <VerticalLayout name="PnlPlayContent" text="播放设置" height="420">
+          <VerticalLayout inset="15,-5,5,5" >
+            <HorizontalLayout inset="-5,5,0,0" height="40">
+              <Text width="400" height="35" text="淡入淡出效果(仅对播放歌曲有效)" align="left"/>
+            </HorizontalLayout>
+            <VerticalLayout inset="0,0,0,0">
+              <DefChildAttr class="SpinButton" padding="2,0,0,0" maxrange="3000" minrange="100" interval="100"/>
+              <HorizontalLayout padding="0,0,0,20" height="30">
+                <CheckBox text="播放时" padding="10,3,0,0" name="Play_CB_Play" width="65" userdata="KuwoPlayerFadeParam|EnablePlayFadeIn" />
+                <SpinButton name="Play_SB_Play" userdata="KuwoPlayerFadeParam|FadeInLength" maxrange="3000" minrange="100" interval="100"/>
+                <Label padding="2,0,0,0" height="20" text="毫秒" align="left"/>
+                <CheckBox text="暂停时" padding="10,3,0,0" name="Play_CB_Pause" width="85" userdata="KuwoPlayerFadeParam|EnablePauseFadeOut"  />
+                <SpinButton padding="2,0,0,0" name="Play_SB_Pause" userdata="KuwoPlayerFadeParam|PauseFadeOutLength" maxrange="3000" minrange="100" interval="100"/>
+                <Label padding="2,0,0,0" height="20" text="毫秒" align="left"/>
+              </HorizontalLayout>
+              <HorizontalLayout padding="0,0,0,20" height="30">
+                <CheckBox text="停止时　" padding="10,3,0,0" name="Play_CB_Stop" width="65" userdata="KuwoPlayerFadeParam|EnableStopFadeOut"  />
+                <SpinButton name="Play_SB_Stop" userdata="KuwoPlayerFadeParam|StopFadeOutLength" maxrange="3000" minrange="100" interval="100"/>
+                <Label padding="2,0,0,0" height="20" text="毫秒" align="left"/>
+                <CheckBox text="交叉定位" padding="10,3,0,0" name="Play_CB_CrossFade" width="85" userdata="KuwoPlayerFadeParam|EnableSeekCrossFade"  />
+                <SpinButton name="Play_SB_CrossFade" userdata="KuwoPlayerFadeParam|CrossFadeLength" maxrange="3000" minrange="100" interval="100"/>
+                <Label padding="2,0,0,0" height="20" text="毫秒" align="left"/>
+              </HorizontalLayout>
+              <HorizontalLayout padding="0,0,0,20" height="30">
+                <CheckBox text="自动切歌淡入淡出" padding="10,3,0,0" name="Play_CB_Switch" width="137" userdata="KuwoPlayerFadeParam|EnableSongSwitchFade"  />
+                <SpinButton name="Play_SB_Switch" userdata="KuwoPlayerFadeParam|SongSwitchFadeLength" width="80" maxrange="5000" minrange="100" interval="100"/>
+                <Label padding="2,0,0,0" height="20" text="毫秒" align="left"/>
+              </HorizontalLayout>
+            </VerticalLayout>
+            <Control enabled="false" mouse="false" />
+          </VerticalLayout>
+        </VerticalLayout>-->
+<!--<VerticalLayout name="PnlPlayContent" text="播放设置" height="420">
+				<VerticalLayout inset="15,-5,5,5" >
+					<HorizontalLayout inset="-5,5,0,0" height="40">
+						<Text width="400" height="35" text="淡入淡出效果(仅对播放歌曲有效)" align="left"/>
+					</HorizontalLayout>
+					<VerticalLayout inset="0,0,0,0">
+						<DefChildAttr class="SpinButton" padding="2,0,0,0" maxrange="3000" minrange="100" interval="100"/>
+						<HorizontalLayout padding="0,0,0,20" height="30">
+							<CheckBox text="播放时" padding="10,3,0,0" name="Play_CB_Play" width="65" userdata="KuwoPlayerFadeParam|EnablePlayFadeIn" />
+							<SpinButton name="Play_SB_Play" userdata="KuwoPlayerFadeParam|FadeInLength" maxrange="3000" minrange="100" interval="100"/>
+							<Label padding="2,0,0,0" height="20" text="毫秒" align="left"/>
+							<CheckBox text="暂停时" padding="10,3,0,0" name="Play_CB_Pause" width="85" userdata="KuwoPlayerFadeParam|EnablePauseFadeOut"  />
+							<SpinButton padding="2,0,0,0" name="Play_SB_Pause" userdata="KuwoPlayerFadeParam|PauseFadeOutLength" maxrange="3000" minrange="100" interval="100"/>
+							<Label padding="2,0,0,0" height="20" text="毫秒" align="left"/>
+						</HorizontalLayout>
+						<HorizontalLayout padding="0,0,0,20" height="30">
+							<CheckBox text="停止时　" padding="10,3,0,0" name="Play_CB_Stop" width="65" userdata="KuwoPlayerFadeParam|EnableStopFadeOut"  />
+							<SpinButton name="Play_SB_Stop" userdata="KuwoPlayerFadeParam|StopFadeOutLength" maxrange="3000" minrange="100" interval="100"/>
+							<Label padding="2,0,0,0" height="20" text="毫秒" align="left"/>
+							<CheckBox text="交叉定位" padding="10,3,0,0" name="Play_CB_CrossFade" width="85" userdata="KuwoPlayerFadeParam|EnableSeekCrossFade"  />
+							<SpinButton name="Play_SB_CrossFade" userdata="KuwoPlayerFadeParam|CrossFadeLength" maxrange="3000" minrange="100" interval="100"/>
+							<Label padding="2,0,0,0" height="20" text="毫秒" align="left"/>
+						</HorizontalLayout>
+						<HorizontalLayout padding="0,0,0,20" height="30">
+							<CheckBox text="自动切歌淡入淡出" padding="10,3,0,0" name="Play_CB_Switch" width="137" userdata="KuwoPlayerFadeParam|EnableSongSwitchFade"  />
+							<SpinButton name="Play_SB_Switch" userdata="KuwoPlayerFadeParam|SongSwitchFadeLength" width="80" maxrange="5000" minrange="100" interval="100"/>
+							<Label padding="2,0,0,0" height="20" text="毫秒" align="left"/>
+						</HorizontalLayout>
+					</VerticalLayout>
+					<Control enabled="false" mouse="false" />
+				</VerticalLayout>
+			</VerticalLayout>-->
+
+<!--<VerticalLayout name="PnlPluginContent" text="音频插件" height="420">
+				<VerticalLayout inset="15,-5,5,5" >
+					<HorizontalLayout inset="-5,5,0,0" height="40">
+						<Text width="400" height="35" text="Winamp音效插件(dsp_*.dll)" align="left"/>
+					</HorizontalLayout>
+					<HorizontalLayout inset="0,0,0,0" height="30">
+						<Label padding="0,0,0,0" width="80" height="22" text="插件目录：" align="left"/>
+						<Edit width="260" enabled="false" name="Plugin_EDT_Path"/>
+						<Button padding="5,0,0,0" width="73" text="浏览" name="Plugin_BTN_OpenFolder" />
+					</HorizontalLayout>
+					<HorizontalLayout padding="0,5,0,10" bkcolor="Config.List.BorderColor" width="477" height="230" inset="1,1,1,1">
+						<List name="Plugin_List" vscrollbar="true" hscrollbar="true" showcheckbox="true"
+							itemalign="center" hscrollbar="true" >
+							<ListHeader height="32" name="Plugin_CHK_Header" bkcolor="Config.List.HeadBkColor1">
+								<ListHeaderItem font="Config.Content" text="" width="50" sepwidth="1"/>
+								<ListHeaderItem font="Config.Content" text="插件描述" width="135" sepwidth="1"/>
+								<ListHeaderItem font="Config.Content" text="文件名" width="200" sepwidth="1"/>
+								<ListHeaderItem font="Config.Content" text="" sepwidth="1"/>
+							</ListHeader>
+						</List>
+					</HorizontalLayout>
+					<HorizontalLayout height="30">
+						<Button name="Plugin_BTN_Config" padding="0,0,10,0" bkcolor="#FFFFFFFF" width="72" text="配置插件" enabled="false" />
+						<Control enabled="false" mouse="false"/>
+						<Label width="95" text="调整加载顺序" align="right"/>
+						<Button text="上移" padding="10,0,10,0" width="72" name="Plugin_BTN_Up" enabled="false" />
+						<Button text="下移" padding="10,0,10,0" width="72" name="Plugin_BTN_Down" enabled="false" />
+					</HorizontalLayout>
+					<Label padding="0,0,0,0" height="16" text="提示：勾选即可应用，并且可同时应用多个插件！" align="left"/>
+				</VerticalLayout>
+			</VerticalLayout>
+        <VerticalLayout name="PnlFileAssociationContent" text="文件关联" height="420">
+				<VerticalLayout inset="15,-5,5,5" >
+					<HorizontalLayout inset="-5,5,0,0" height="40">
+						<Text width="400" height="35" text="文件类型关联" align="left"/>
+					</HorizontalLayout>
+					<HorizontalLayout bordercolor="Config.List.BorderColor" border="1" width="477" padding="0,5,0,0" height="304" inset="1,1,1,1">
+						<List name="FileAssoc_LST_File" itemheight="33" vscrollbar="true"
+							showcheckbox="true" dragable="false" itemalign="center" 
+							>
+							<ListHeader height="32" bkcolor="Config.List.HeadBkColor1">
+								<ListHeaderItem font="Config.Content" dragable="false" text="" width="50" sepwidth="1" name="FileAssoc_LST_File_HeaderCheck"/>
+								<ListHeaderItem font="Config.Content" dragable="false" text="扩展名" width="85" sepwidth="1" align="left" textpadding="0,0,0,0"/>
+								<ListHeaderItem font="Config.Content" dragable="false" text="名称" width="250" sepwidth="1" align="left" />
+								<ListHeaderItem font="Config.Content" dragable="false" text="" sepwidth="1"/>
+							</ListHeader>
+						</List>
+					</HorizontalLayout>
+					<HorizontalLayout height="38" inset="0,0,10,0">
+						<Label padding="0,8,10,10" width="160" height="20" text="" align="left"/>
+						<Control enabled="false" mouse="false"/>
+						<Button text="全部取消关联" name="FileAssoc_BTN_CancelAll" padding="10,8,10,10" width="92" height="24" />
+						<Button text="全部关联" name="FileAssoc_BTN_AccoAll" padding="10,8,0,10" width="95" height="24" />
+					</HorizontalLayout>
+				</VerticalLayout>
+			</VerticalLayout>-->
+
+<!--  -->

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="380,400" caption="0,0,0,35" >
+ <Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+<VerticalLayout name="root" bkcolor="#ffffffff">
+	<HorizontalLayout bkimage="tran_pop.png" width="380" height="130" >
+      <Button name="button_Close" padding="350,7,8,0" width="22" height="22" statusimage="MusicListenTest_Close.png"/>
+    </HorizontalLayout>
+	<VerticalLayout padding="0,0,0,0">
+	<Label padding="26,5,0,0" text="请选择要传到其他设备的歌单：" varwidth="true" height="20" textcolor="#ff999999" font="YAHEI.NO12"/>
+                      <List name="BaseList"
+                            padding="0,20,0,0"
+											bordersize="0"
+											inset="2,0,2,0"
+											header="hidden"
+											acceptdrag="false"
+											dragtarget="false"
+											draghovertype="line"
+											rectangleselect="false"
+											font="YAHEI.N014"
+											itemtextcolor="#ff222222"
+											itemselectedtextcolor="#ff222222"
+											itemhotbkcolor="#fff4f4f4"
+											itemselectedbkcolor="#ffececec"
+											itemactivetextcolor="#ff222222"
+											itemexpandbkcolor="#fff4f4f4"
+											itemdisabledtextcolor="#ff999999"
+											inertiascroll="true"
+											usefadehotbkg="true"
+											multiselecting="false"
+											itemshowhtml="false"
+											itemalign="center"
+											menu="false"
+											vscrollbar="true"
+											hscrollbar="false"
+                          >
+                        <ListHeader>
+                          <ListHeaderItem />
+                        </ListHeader>
+                        <DefChildAttr height="36" menu="true"/>
+                      </List>
+    </VerticalLayout>
+</VerticalLayout>
+</Window>

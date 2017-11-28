@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,30" size="449,301">
+  <Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+  <Default name="HScrollBar" value="buttonlength=&quot;16&quot; height=&quot;12&quot;button1normalimage=&quot;file='scrollbar_public_h.png' source='0,0,16,12'&quot; button1hotimage=&quot;file='scrollbar_public_h.png' source='17,0,33,12'&quot; button1pushedimage=&quot;file='scrollbar_public_h.png' source='34,0,50,12'&quot; button1disabledimage=&quot;file='scrollbar_public_h.png' source='51,0,67,12'&quot; button2normalimage=&quot;file='scrollbar_public_h.png' source='0,13,16,25'&quot; button2hotimage=&quot;file='scrollbar_public_h.png' source='17,13,33,25'&quot; button2pushedimage=&quot;file='scrollbar_public_h.png' source='34,13,50,25'&quot; button2disabledimage=&quot;file='scrollbar_public_h.png' source='51,13,67,25'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_h_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_h_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_h_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_h_4.png&quot; bknormalimage=&quot;file='scrollbar_public_h.png' source='0,26,16,38'&quot; bkhotimage=&quot;file='scrollbar_public_h.png' source='17,26,33,38'&quot; bkpushedimage=&quot;file='scrollbar_public_h.png' source='34,26,50,38'&quot; bkdisabledimage=&quot;file='scrollbar_public_h.png' source=51,26,67,38'&quot;" />
+  <Default name="Edit" value="height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; normalimage=&quot;Config_EditBox_1.png&quot; focusedimage=&quot;Config_EditBox_2.png&quot; disabledimage=&quot;Config_EditBox_3.png&quot; disabledtextcolor=&quot;#FF111111&quot; font=&quot;PopUp.DefaultText&quot;" />
+  <Default name="Label" value="font=&quot;PopUp.SectionTitle&quot; height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; textpadding=&quot;0,-3,0,0&quot; " />
+  <Default name="Button" value="setcursor=&quot;true&quot; height=&quot;25&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;PopUp.SectionTitle&quot; hottextcolor=&quot;#ff000000&quot; pushedtextcolor=&quot;#ff000000&quot; focusedtextcolor=&quot;#ff000000&quot;" />
+  
+	<VerticalLayout>
+		<HorizontalLayout name="titlepanel" height="30">
+    	<Label name="title" padding="7,2,0,0" text="搜索歌词" width="100" height="30" font="PopUp.Title"/>
+      <Control />
+    	<Button name="close" padding="0,7,7,0" width="19" height="20" statusimage="Config_CloseBtn.png" />
+    </HorizontalLayout>
+		<HorizontalLayout padding="15,13,0,0">
+    	<Label text="歌名" width="35"/>
+    	<Edit name="songname" width="125"/>
+			<Label text="歌手" padding="13,0,0,0" width="35"/>
+    	<Edit name="artist" width="125"/>
+    	<Button name="search" padding="10,0,0,0" width="70" text="搜索" />
+    </HorizontalLayout>
+    <TabLayout name="info_result" padding="20,7,20,0" height="175">
+	    <List inset="1,1,1,0" name="ResultList" bordercolor="#ffa6bdcf" bordersize="1" itembkcolor="#fff8f8f8" itemhotbkcolor="#0d000000" itembkcolor2="#fff3f3f3" inertiascroll="true" itemtextcolor="#ff000000" itemselectedbkcolor="#1a000000" itemactivetextcolor="#ff4b9f13" itemshowhtml="false" vscrollbar="true" hscrollbar="false" itemalign="left" menu="true" itemtextpadding="10,0,0,0">
+				<ListHeader>
+				<ListHeaderItem bkimage="listheader_public_bk.png" height="24" width="425" text="歌词文件" align="left" font="PopUp.DefaultText" textpadding="10,0,0,0" />
+				<ListHeaderItem bkimage="listheader_public_bk.png" height="24" text="提交者" align="left" font="PopUp.DefaultText" textpadding="10,0,0,0"/>
+				</ListHeader>
+				<DefChildAttr height="33" menu="true"/>
+				<!--ListTextElement>
+				</ListTextElement>
+							<ListTextElement>
+				</ListTextElement>
+							<ListTextElement>
+				</ListTextElement>
+										<ListTextElement>
+				</ListTextElement>
+										<ListTextElement>
+				</ListTextElement-->
+			</List>
+			<VerticalLayout>
+        <Label text="可选择新的关联关系" height="24" width="150" />
+        <Control height="30"/>
+				<Label text="抱歉，没有找到相关歌词。" padding="140,3,0,0" height="24" font="PopUp.DefaultText"/>
+        <HorizontalLayout padding="0,0,0,0">
+          <Label text="欢迎" padding="150,3,0,0" width="35" height="24" font="PopUp.Title"/>
+          <!--<Label text="或者" padding="-13,2,0,0" width="35" height="24" font="PopUp.Title"/>-->
+          <Button name="uploadLyric" padding="-12,2,0,0" text="制作歌词" textcolor="#FF46B4E6" font="PopUp.Title" hottextcolor="#FF46B4E6" pushedtextcolor="#FF46B4E6" focusedtextcolor="#FF46B4E6" width="75" statusimage="abc.png" />
+        </HorizontalLayout>
+			</VerticalLayout>
+		</TabLayout>
+		<HorizontalLayout padding="20,10,20,0">
+		<Button name="localfind" padding="0,0,0,0" text="本地关联歌词" textcolor="#FF46B4E6" font="PopUp.Title" hottextcolor="#FF46B4E6" pushedtextcolor="#FF46B4E6" focusedtextcolor="#FF46B4E6" width="110" />
+      <Control />
+			<Button name="ok" padding="0,0,0,0" text="确认" width="70" height="24"/>
+			<Button name="cancel" padding="10,0,0,0" text="取消" width="70" height="24"/>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

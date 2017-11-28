@@ -1,0 +1,20 @@
+﻿<Window size="300,140" caption="0,0,0,22">
+  <VerticalLayout>
+    <HorizontalLayout name="titlepanel" height="30">
+      <Label name="title" padding="5,7,0,0" text="正在加载" width="200" font="YAHEI.N014"/>
+    </HorizontalLayout>
+    <Control height="10"/>
+    <VerticalLayout inset="10,0,10,0">
+      <HorizontalLayout height="24">
+        <Label name="info" maxwidth="160" endellipsis="true" varwidth="true" text="正在读取文件"/>
+        <Label name="count" />
+      </HorizontalLayout>
+      <Progress name="progressbar" padding="0,10,0,0" mouse="false" max="100" height="8" bkimage="progress_common_1.png" fgimage="progress_common_2.png"/>
+      <HorizontalLayout padding="0,20,0,0">
+        <Control />
+        <Button name="cancel" text="取消" width="70" height="30" setcursor="true" statusimage="Config_Button.png" font="PopUp.SectionTitle" hottextcolor="#ffffffff" pushedtextcolor="#ffffffff"/>
+        <Control />
+      </HorizontalLayout>
+    </VerticalLayout>
+   </VerticalLayout>
+</Window>

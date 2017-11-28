@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+/*酷我RADIO的css*/
+/*目前使用页面 quku_new.html*/
+/*电台120样式*/
+/*改原来的样式*/
+.br_wrap{margin-right:13px; padding:0;}
+.br_wrap .br_pic{margin-bottom:3px;}
+.br_wrap p{height:18px; line-height:18px; padding:0;}
+.br_wrap .br_name a{display:inline-block; max-width:120px;}
+.br_wrap .br_pic:hover .i_play{transform:translate(0);}
+/*后续改为一下样式*/
+.kw_radiowrap{margin-right:-38px; overflow:hidden;}
+.kw_radio120{float:left; width:120px; margin:0 38px 20px 0;}
+.kw_radioi120{position:relative; display:block; width:120px; height:120px;}
+.kw_radioi120 img{display:block; width:120px; height:120px; border-radius:50%;}
+.kw_radio120s{position:absolute; left:0; top:0; width:120px; height:120px; border-radius:50%; background:#000; opacity:0.35; transform:translateX(3000px);}
+.kw_radioi120:hover .kw_radio120s{transform:translateX(0);}
+.kw_radioi120:hover .i_play_big{left:50%; top:50%; margin-left:-20px; margin-top:-20px; transform:translateX(0);}
+.kw_radioinfoBox{height:14px; line-height:14px; padding:7px 0 13px 0; text-align:center;}
+.kw_raidoinfo{display:inline-block; max-width:120px; height:14px; line-height:14px; font-size:14px; color:#000; overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.kw_raidoinfo:hover{color:#21a0ed;}
+/*电台120结束*/
+
+/*白领电台开始*/
+#kw_wc .br_wrap{width:142px; margin-right:10px; padding:0;}
+#kw_wc .br_wrap .br_pic{width:142px; height:142px; margin-bottom:7px;}
+#kw_wc .br_wrap .br_pic .br_shade{width:142px; height:142px;}
+#kw_wc .br_wrap .br_name a{color:#666;}
+#kw_wc .br_wrap .br_name a:hover{color:#21a0ed;}
+/*白领电台结束*/

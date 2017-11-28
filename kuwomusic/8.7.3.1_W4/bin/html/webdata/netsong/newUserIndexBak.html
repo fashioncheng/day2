@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>新用户首页</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="css/newUserIndex.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/comm2.js" type="text/javascript"></script>
+	<script src="js/music.js" type="text/javascript"></script>
+	<script src="js/newUserIndex.js" type="text/javascript"></script>
+</head>
+<body>
+	<!-- 主动安装 -->
+	<div class="newUserIndex successBox">
+		<a class="closeWindow" href="javascript:;" data-clickFlag="new_user_1_okbtn"></a>
+		<div class="leftBox">
+			<div class="radioBox">
+				<div class="topTitle">
+					<h3>推荐电台</h3>
+					<a href="javascript:;" class="moreRadio"data-clickFlag="new_user_1_more1">更多电台<i></i></a>
+				</div>
+				<ul></ul>
+			</div>
+			<div class="bangBox">
+				<div class="topTitle">
+					<h3>分类榜单</h3>
+					<a href="javascript:;" class="moreBang" data-clickFlag="new_user_1_more2">更多榜单<i></i></a>
+				</div>
+				<div class="bang_list"></div>
+			</div>
+		</div>
+		<div class="rightBox">
+			<div class="topTitle">
+				<h3>Ku音乐流行榜</h3>
+				<a href="javascript:;" class="moreBang" data-clickFlag="new_user_1_more3">更多榜单<i></i></a>
+			</div>
+			<div class="bang_list_right">
+				<div class="bang">
+					<div class="bangCover" c-id="130" data-clickFlag="new_user_1_bang1">
+						<img src="img/newUserIndex/bang_1.jpg" title="风向标" />
+						<div class="shade">
+							<img src="img/i_play_big.png" title="直接播放" />
+						</div>
+					</div>
+					<ul></ul>
+				</div>
+				<div class="bang">
+					<div class="bangCover" c-id="124" data-clickFlag="new_user_1_bang2">
+						<img src="img/newUserIndex/bang_2.jpg" title="华语榜" />
+						<div class="shade">
+							<img src="img/i_play_big.png" title="直接播放" />
+						</div>
+					</div>
+					<ul></ul>
+				</div>
+				<div class="bang">
+					<div class="bangCover" c-id="126" data-clickFlag="new_user_1_bang3">
+						<img src="img/newUserIndex/bang_3.jpg" title="粤语榜" />
+						<div class="shade">
+							<img src="img/i_play_big.png" title="直接播放" />
+						</div>
+					</div>
+					<ul></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 被动安装 -->
+	<div class="newUserIndex_passive successBox">
+		<a class="closeWindow" href="javascript:;" data-clickFlag="new_user_2_okbtn"></a>
+		<div class="leftBox">
+			<div class="xiuBox">
+				<div class="topTitle">
+					<h3>美女主播</h3>
+					<a href="javascript:;" class="moreGirl">更多美女<i></i></a>
+				</div>
+				<ul>
+					<li><a href="javascript:callClient('Jump?channel=mnx');picLog('new_user_2_meinv1');callClient('CloseWindow')"><img src="img/newUserIndex/xiu_1.jpg" /></a></li>
+					<li><a href="javascript:callClient('Jump?channel=mnx');picLog('new_user_2_meinv2');callClient('CloseWindow')"><img src="img/newUserIndex/xiu_2.jpg" /></a></li>
+					<li><a href="javascript:callClient('Jump?channel=mnx');picLog('new_user_2_meinv3');callClient('CloseWindow')"><img src="img/newUserIndex/xiu_3.jpg" /></a></li>
+				</ul>
+			</div>
+			<div class="mvBox">
+				<div class="topTitle">
+					<h3>禁播MV</h3>
+					<a href="javascript:;" class="moreMv">更多MV&nbsp;<i></i></a>
+				</div>
+				<ul></ul>
+			</div>
+			<div class="radioBox">
+				<div class="topTitle">
+					<h3>火热电台</h3>
+					<a href="javascript:;" class="moreRadio" data-clickFlag="new_user_2_more3">更多电台<i></i></a>
+				</div>
+				<ul></ul>
+			</div>
+		</div>
+		<div class="rightBox">
+			<div class="signBox">
+				<h3>有奖签到</h3>
+				<a href="javascript:;" class="sign"><img src="img/newUserIndex/sign.jpg" /></a>
+			</div>
+			<div class="kuMusicBox">
+				<div class="topTitle">
+					<h3>Ku音乐流行榜</h3>
+					<a href="javascript:;" class="moreBang" data-clickFlag="new_user_2_more5">更多榜单<i></i></a>
+				</div>
+				<div class="bang_list_right">
+					<div class="bang">
+						<div class="bangCover" c-id="130" data-clickFlag="new_user_2_bang1">
+							<img src="img/newUserIndex/bang_1.jpg" title="风向标" />
+							<div class="shade">
+								<img src="img/i_play_big.png" title="直接播放" />
+							</div>
+						</div>
+						<ul></ul>
+					</div>
+					<div class="bang">
+						<div class="bangCover" c-id="124" data-clickFlag="new_user_2_bang2">
+							<img src="img/newUserIndex/bang_2.jpg" title="华语榜" />
+							<div class="shade">
+								<img src="img/i_play_big.png" title="直接播放" />
+							</div>
+						</div>
+						<ul></ul>
+					</div>
+					<div class="bang">
+						<div class="bangCover" c-id="126" data-clickFlag="new_user_2_bang3">
+							<img src="img/newUserIndex/bang_3.jpg" title="粤语榜" />
+							<div class="shade">
+								<img src="img/i_play_big.png" title="直接播放" />
+							</div>
+						</div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+	<!-- error -->
+	<div class="errorBox" style="display:none">
+		<a class="closeWindow noPicLog" href="javascript:;"></a>
+		<img src="img/newUserIndex/error.jpg" />
+		<p>酷小我被外星人抓走了...</p>
+		<div class="choose">
+			<a href="javascript:window.location.reload();">拯救他</a>
+			<a href="javascript:callClient('CloseWindow');" class="leave">残忍离开</a>
+		</div>
+	</div>
+</body>
+</html>

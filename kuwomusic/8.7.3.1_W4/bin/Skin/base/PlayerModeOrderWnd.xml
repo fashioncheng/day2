@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="120,260">
+  <VerticalLayout name="root" bkimage="playmode_bk.png">
+    <DefChildAttr align="left" height="18" padding="24,20,0,0" icondest="0,0,18,18" textpadding="20,0,0,0" textcolor="#ffa0a0a0" hottextcolor="#ffffffff" selectedtextcolor="#ffffffff" />
+
+    <Option name="mode_single_once" group="ModeOpt" text="单曲播放" iconstatusimage="playcontrol_play_mode_singleonce.png" iconselectedimage="playcontrol_play_mode_singleonce_3.png"/>
+    <Option name="mode_single_circle" group="ModeOpt" text="单曲循环" iconstatusimage="playcontrol_play_mode_single.png" iconselectedimage="playcontrol_play_mode_single_3.png"/>
+    <Option name="mode_all_order" group="ModeOpt" text="顺序播放" iconstatusimage="playcontrol_play_mode_order.png" iconselectedimage="playcontrol_play_mode_order_3.png"/>
+    <Option name="mode_all_circle" group="ModeOpt" text="循环播放" iconstatusimage="playcontrol_play_mode_circle.png" iconselectedimage="playcontrol_play_mode_circle_3.png"/>
+    <Option name="mode_all_random" group="ModeOpt" text="随机播放" iconstatusimage="playcontrol_play_mode_random.png" iconselectedimage="playcontrol_play_mode_random_3.png"/>
+    <Control height="1" padding="20,15,0,0" width="80" bkcolor="#0cffffff" />
+    <Option name="mode_auto" align="left" padding="24,11,0,0" width="70" height="18" statusimage="playmode_auto.png" selectedimage="playmode_auto_3.png"/>
+  </VerticalLayout>
+</Window>

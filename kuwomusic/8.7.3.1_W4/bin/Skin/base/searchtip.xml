@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window roundcorner="0,0">
+  <Default name="Option" value="setcursor=&quot;true&quot; normalimage=&quot;cfg_radio_1.png&quot; hotimage=&quot;cfg_radio_2.png&quot; selectedimage=&quot;cfg_radio_3.png&quot; disabledimage=&quot;cfg_radio_4.png&quot; height=&quot;15&quot; textpadding=&quot;16,1,1,1&quot; align=&quot;left&quot; " />
+  <VerticalLayout name="root" bkimage="searchbk.png">
+  <!--
+    <HorizontalLayout name="searchtype" height="23" inset="10,2,0,0" bkimage="bk_search_option.png">
+      <Option name="all" text="全部" group="1" />
+      <Option name="lyric" text="歌词" group="1" />
+      <Option name="album" text="专辑" group="1" />
+      <Option name="mv" text="MV" group="1" />
+    </HorizontalLayout>
+  -->
+    <DropDownList 
+		name="DropDownList" 
+		headerheight="5" 
+		footheight="7" 
+		font="Default.FontName" 
+		internalspace="6"
+		textcolor="#ff666666" 
+		keywordcolor="#ffff0000" 
+		hoverbkcolor="#fff1f1f1" 
+		selectbkcolor="#ffe6b446"
+		itemhottextcolor="#ffffffff"
+		inset="3,5,3,6"
+        header="hidden"
+		itemhotbkcolor="#ff46b4e6"
+		itemselectedbkcolor="#ff46b4e6"
+		/>
+  </VerticalLayout>
+</Window>

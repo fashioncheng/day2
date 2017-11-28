@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,500" size="614,370">
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,0,14,14'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;16,-3,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;Config.Button&quot;" />	
+
+  <VerticalLayout name="root">
+    <!--HorizontalLayout height="21">
+      <Control />
+      <Button name="BtnClose" padding="0,4,4,0" width="18" height="21" statusimage="close.png"/>
+    </HorizontalLayout-->
+	
+    <HorizontalLayout name="ConcertInfo" padding="1,1,1,1">
+    </HorizontalLayout>
+	
+	<HorizontalLayout height="20">     
+      <CheckBox name="nextnotip" width="100" text="不再提示" padding="10,0,0,0"/>
+	  <Control />
+	  <Button name="btnclose" padding="0,4,4,0" width="18" height="21"/>
+    </HorizontalLayout>	
+  </VerticalLayout>
+</Window>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="300,278" caption="0,0,0,30" roundcorner="5,5">
+	<Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+	<EventHook event="OnSkinChange">
+		<Attribute control="MusicBox_TXT_Msg" value="textcolor=&quot;PopWnd.title.textcolor&quot;" />
+	</EventHook>
+	<VerticalLayout name="ClientRect" bkcolor="#00000000">
+		<HorizontalLayout name="MsgBox_Content" inset="0,0,0,0" height="30" >
+			<Text name="MusicBox_TXT_Msg" align="center" text="音乐工具" font="PopUp.Title" textcolor="PopWnd.title.textcolor" padding="5,7,0,0"/>
+			<Control />
+			<Button name="MusicBox_BTN_Close" width="19" height="20" padding="0,7,7,0" statusimage="Config_CloseBtn.png"/>
+		</HorizontalLayout>
+
+		<VerticalLayout name="MusicTool_Items" padding="7,7,0,0" childpadding="10" height="236" vscrollbar="true" hscrollbar="false" >
+			
+		</VerticalLayout>
+    <Label name="WaitingText" text="正在加载..." float="true" pos="100,80,0,0" width="105" height="38" visible="false"/>
+	</VerticalLayout>
+</Window>

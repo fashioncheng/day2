@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="300,210" caption="0,0,0,50" roundcorner="5,5">
+	<VerticalLayout bkcolor="#00000000">
+	  	<HorizontalLayout name="titlepanel" height="50">
+    		<Label name="title" padding="15,0,0,0" width="250" font="PopUp.Title"/>
+    		<Control />
+			<Button name="close" width="19" height="20" padding="0,6,0,0" statusimage="Config_CloseBtn.png" />
+			<Control width="6"/>
+		</HorizontalLayout>
+		<Control height="15"/>
+		<Label name="text1" padding="15,0,0,0" font="Config.Content" height="17"/>
+		
+		<HorizontalLayout >
+			<VerticalLayout width= "5" padding="16,0,0,0" >
+			    <Control bkimage="popwnd_point.png" width="2" height="2" padding="0,18,0,0"/>
+			    <Control bkimage="popwnd_point.png" width="2" height="2" padding="0,23,0,0"/>
+			    <Control bkimage="popwnd_point.png" width="2" height="2" padding="0,24,0,0"/>
+			</VerticalLayout>
+			<VerticalLayout padding="0,0,0,0">
+			    <Label text="明天继续下载" padding="0,10,0,0" height="16" />
+				<HorizontalLayout height="16" padding="0,10,0,0">
+					<Button name="openkwviplink" text="开通酷我VIP" padding="0,0,0,0" varwidth="true" minwidth="60" maxwidth="90" setcursor="true" font="PlaylistFindTip.UnderLine" textcolor="Eqdlg.ContentColor"/>
+					<Label name="text2" padding="0,0,0,0" width="150" />
+				</HorizontalLayout>
+				<HorizontalLayout height="16" padding="0,10,0,0">
+					<Label text="已经是酷我VIP?" padding="0,0,0,0" width="96" />
+					<Button name="login" text="登录" padding="0,0,0,0" varwidth="true" minwidth="20" maxwidth="50" setcursor="true" font="PlaylistFindTip.UnderLine" textcolor="Eqdlg.ContentColor"/>
+				</HorizontalLayout>
+			</VerticalLayout>
+		</HorizontalLayout>
+			
+		<Button name="openkwvipbtn" text="开通VIP" padding="200,5,0,0" width="80" height="30" statusimage="Config_Button.png" />
+		<Control height="10"/>
+	</VerticalLayout>
+</Window>

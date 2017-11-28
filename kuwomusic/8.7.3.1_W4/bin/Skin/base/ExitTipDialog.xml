@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="310,130" caption="0,0,0,130" roundcorner="10,10">
+	<Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;16&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,1,14,15'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;17,-2,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;Default.FontName&quot;" /> 
+	
+	<VerticalLayout name="layout_clientrect">
+		<HorizontalLayout name="layout_dialog_title" height="40">
+			<Label name="text_title" padding="8,0,0,0" font="Main.ChannelTitle" height="30" textcolor="#ff333333" text="设置自动关机" />
+			<Control />
+			<Button name="button_Close" padding="0,10,0,10" width="19" height="20" statusimage="download_CloseBtn.png"/>
+		</HorizontalLayout>
+		
+		<Text name="text_text1"  font="Default.FontName" padding="30,9,0,0" align="left" textcolor="#ff333333" text="您的歌曲尚未下载完成,是否退出酷我音乐盒？"/>
+		
+		<HorizontalLayout name="layout_opbutton" height="40" padding="0,22,0,0">
+		  <CheckBox name="checkbox_notip" pos="8,10,100,28" float="true" text="不再提示"/>
+			<Button  name="button_shutdown" align="center" textcolor="#FF333333" text="定时关机" font="Default.FontName" statusimage="Config_Button.png" pos="88,5,158,30" float="true" />
+			<Button  name="button_yes" align="center" textcolor="#FF333333" text="是" font="Default.FontName" statusimage="Config_Button.png" pos="168,5,228,30" float="true" /> 
+			<Button  name="button_no" align="center" textcolor="#FF333333" text="否" font="Default.FontName" statusimage="Config_Button.png" pos="238,5,298,30" float="true" selected="false"/>
+		</HorizontalLayout> 
+		
+	</VerticalLayout>
+</Window>

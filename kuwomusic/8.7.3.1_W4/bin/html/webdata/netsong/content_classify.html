@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>分类内容页面</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="css/content.css" rel="stylesheet" type="text/css"/>
+    <link href="css/content_classfiy.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery.js" type="text/javascript"></script>
+   	<script src="js/comm2.js" type="text/javascript"></script>
+	<script src="js/create_structure.js" type="text/javascript"></script>
+	<script src="js/music.js" type="text/javascript"></script>			
+    <script src="js/content_classify.js" type="text/javascript"></script>
+    <style>
+        .channelContent{padding:0 24px 0 25px;}
+        .music_wrap .moveBox .album{padding-left:20px;}
+        @media (min-width: 1650px) {
+            .channelContent{padding:0 20px 0 20px;}
+        }
+        h1 .checkall font {width:auto;}
+        .kw_mv_list{width:104%;}
+        @media (min-width: 1700px) {
+            .kw_mv_list{width:100%;}
+        }
+    </style>
+</head>
+
+<body>
+<div class="channelContent" >
+    <div id="content" class="max_content">
+        <div class="classify_head">
+            <div class="pic" style="display:none"><img src="img/kuwo.jpg" width="60" height="60" onerror="imgOnError(this,60);"/></div>
+                <p class="name" style="padding-top:6px;"></p>
+        </div>
+        <h3 class="tab" style="position:absolute;left:-99999px;">
+            <a hidefocus href="###" class="classify" c-type="classify">歌单</a>
+            <a hidefocus href="###" class="song" c-type="song">单曲</a>
+        </h3>
+
+        <h1 class="toolbar" style="display:none">
+            <a hidefocus href="###" class="all_play first" title="播放选中歌曲">播放全部</a>
+            <a hidefocus href="###" class="all_add" title="添加选中歌曲">添加</a>
+            <a hidefocus href="###" class="all_down" title="下载选中歌曲">下载</a>
+        </h1>
+
+        <h1 class="selall" style="visibility:hidden;margin-bottom: 0;">
+            <div>
+                <div class="ml">
+                        <span class="checkall"><input type="checkbox" checked="true" class="all_ckb"><font></font></span>
+                    <span class="s_list" style="float:left;width:auto">操作</span>
+                    </div>
+                <div class="mr_box">
+                    <div class="mr_box_r">
+                        <span class="s_list" style="text-align: left;">热度</span>
+                        <span class="s_list" style="width:31px;float: right;margin-right:0px;">音质</span>
+                    </div>
+                    <div class="mr_center_con" style="overflow: hidden;zoom:1;">
+                        <span class="s_list m_name_box">歌名</span>
+                        <span class="s_list m_artist_box">歌手</span>
+                        <span class="s_list m_album_box" style="margin-right: 0">专辑</span>
+                    </div>
+                </div>
+            </div>
+        </h1>
+        <h1 class="selall selall_mv" style="border:0;display:none">
+            <span class="checkall" style="float:right"><font></font></span>
+            <a hidefocus href="###" class="all_playmv" title="播放全部MV" style="margin-left:0">播放全部</a>
+        </h1>
+        <ul class="kw_music_list common_list" style="font-size:0;"></ul>
+        <ul class="kw_album_list common_list" style="width:106%;margin-top:-25px;"></ul>
+        <ul class="kw_mv_list"></ul>
+        <div class="w_nothing"></div>
+        <div class="nothing" style="display:none"><span class="pic"></span><font>暂无相关内容...</font></div>
+        <div class="page"></div>
+    </div>
+</div>
+<a href="###" hidefocus="" class="rtop backTop" onclick="returnTop(); return false;" style="display: none; position: fixed; right: 18px; bottom: 18px;"></a>
+</body>
+</html>

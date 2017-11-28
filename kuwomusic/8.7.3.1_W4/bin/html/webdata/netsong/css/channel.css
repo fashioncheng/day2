@@ -1,0 +1,85 @@
+/* 分类样式 */
+.hot_classify { float:left; width:750px; height:90px; overflow:hidden; margin-bottom:20px;}
+.hot_classify a { float:left; width:230px; height:90px; margin-right:30px; position:relative;}
+.kw_classify_list { float:left; width:750px; height:auto; overflow:hidden; }
+.classify_wrap { float:left; width:750px; height:auto; overflow:hidden; padding-bottom:20px;}
+.classify_wrap .c_c { width:748px; height:auto; overflow:hidden; border:1px solid #e1e1e1;background-color: #fafafa;padding:5px 0;border-radius: 2px}
+.classify_wrap .cc_r img { display:inline; position:relative; top:1px; left:3px;}
+.classify_wrap .c_pic { float:left; width:60px; height:66px; margin:5px 20px 0 10px;display:inline;}
+.classify_wrap span { float:left; width:92px; height:30px; line-height:30px;}
+.classify_wrap span a { color:#333; font-size:14px;float:left; max-width:70px; overflow:hidden; white-space:nowrap;}
+.classify_wrap span a:hover { color:#0aafe6;}
+.classify_wrap .pt22 { padding-top:22px;}
+.classify_wrap .pt3 { padding-top:3px;position:relative;text-align: left;}
+.classify_wrap .pt3 img{margin-left:2px;top:8px;}
+
+/* 频道页焦点图 */
+.focus { float:left;display:inline;width:750px; height:140px; position:relative;zoom:1;cursor:pointer;border-radius: 5px; overflow:hidden; display:none; z-index:99999;}
+.focus .pic { display:none;overflow:hidden;zoom:1;border-radius: 5px;overflow: hidden;}
+.focus a { display:block; position:absolute; z-index:0; width:620px; height:140px;}
+.focus img { position:relative; z-index:0;}
+.focus i { display:none; position:absolute; z-index:100; width:25px; height:58px;}
+.focus .next {right:0; top:50%; margin-top:-29px; background:url(../img/next.png) no-repeat 0 0;}
+.focus .next:hover {right:0; top:50%; margin-top:-29px; background:url(../img/next_h.png) no-repeat 0 0;}
+.focus .next_hover {right:0; top:50%; margin-top:-29px; background:url(../img/next_h.png) no-repeat 0 0;}
+.focus .prev { left:0; top:50%; margin-top:-29px; background:url(../img/prev.png) no-repeat 0 0;}
+.focus .prev:hover { left:0; top:50%; margin-top:-29px; background:url(../img/prev_h.png) no-repeat 0 0;}
+.focus .prev_hover {right:0; top:50%; margin-top:-29px; background:url(../img/prev_h.png) no-repeat 0 0;}
+.focus .focus_shade { display:block; position:absolute; right:0; top:0; z-index:-1; width:161px; height:140px; background:url(../img/channel_shade.png) no-repeat 0 0;}
+.focus .focus_list { position:absolute; right:0; top:0; width:160px; height:140px; z-index:1;}
+.focus .focus_list a { float:left; position:relative; width:140px; padding:0 10px; height:35px; white-space:nowrap; text-overflow:ellipsis; line-height:34px; color:#fff; font-size:12px;background-color: #2b3751;}
+.focus .focus_list a i { display:block; position:absolute; left:-800px; top:0; width:17px; height:35px; background:url(../img/fcl_l.png) no-repeat 0 0;}
+.focus .focus_list .current { background:#41bae7;}
+.focus .focus_list .current i { left:-17px;}
+.focus a .i_play { z-index:999; display:block; width:34px; height:34px; bottom:5px; right:10px; bottom:5px;}
+.mv_focus a .i_play { z-index:999; display:block; width:30px; height:30px;top:122px; right:49px; }
+.focus .btn { display:block; position:absolute; z-index:99; left:10px; bottom:8px;}
+.focus .btn a { overflow:hidden;display: inline-block;width:8px; height:8px; background:#000; border:1px solid #cbced2;  opacity:0.30; position:relative; margin-right:5px;}
+.focus .btn .current { background:#46b4e6; opacity:1;}
+
+
+/* 排行榜频道页 */
+.bang_head { float:left;width: 752px;overflow:hidden;}
+.bang_head a {  float:left;display: inline;width: 249px; height:40px;margin-right:1px;line-height: 40px; overflow:hidden; position:relative;background: #ebedee;text-align:center;color:#666666;}
+.bang_head a:hover {background: #21a0ed;color:#fff;}
+.bang_head a.current {background:#21a0ed; color:#fff;}
+/*打榜倒计时*/
+.bang_head .countdown{ overflow:hidden;padding-top:9px; height:30px; line-height:30px; text-align:center;width:209px;margin:0 auto;display: none;}
+.bang_head .countdown .countdownT{float:left; margin-right:10px; font-size:12px; color:#333;}
+.bang_head .countdown img{float:left; margin-right:3px;}
+.time-box{position: relative;width:101px;height:30px;float:left;background:url(../img/icon_time.png) no-repeat;}
+.time-box .minutes{height:30px;float:left;letter-spacing:15px;padding-left: 6px;font-weight:600;color:#5a5d63;}
+.time-box .seconds{color:#5a5d63;height: 30px;float:right;position:absolute;right:-9px;letter-spacing:15px;font-weight:600;}
+
+.ever_jx{  width: 130px !important;float: left; display: inline; overflow:hidden;*zoom:1;}
+.ever_jx h2{border-bottom: none;height: 24px;line-height: 24px;margin-bottom: 6px;width:110px;}
+.ever_jx h2 .title{font-size: 16px; }
+.fast_wrap { float:right; display:none;}
+.fast_wrap.icon a{background: url(../img/icon_png8.png) no-repeat;background-position: 0px -101px;}
+.fast_wrap a {width:110px;text-align:center;display: block; height:30px;line-height:30px;font-size:12px;margin-bottom: 10px;}
+.fast_wrap .current { background:url(../img/sub_nav.png) no-repeat right -20px; color:#fff !important;}
+.fast_wrap.icon a.current{background:url(../img/icon_png8.png) no-repeat;background-position:0px -133px;}
+
+.fast_wrap .current:hover { color:#fff;}
+.fast_wrap a i { float:left; width:9px; height:20px; }
+.fast_wrap .current i { background:url(../img/sub_nav.png) no-repeat 0 0;}
+
+/*分类专区 by deng 16-4-21-1637*/
+.area {width:750px;height:160px;background:url(../img/def750.jpg);margin-bottom:27px;}
+.area img,.focus a  {width:750px;height:160px;}
+.focus.area a .i_play{display: none;}
+.focus.area:hover .i_play{display:block;}
+.focus.area .btn {width:100%;text-align: center;}
+.chooseTag {float:left;margin-bottom:22px;width:750px;overflow: hidden;}
+.chooseTag ul {width:765px;}
+.chooseTag ul li {float:left;width:80px;height:80px;text-align:center;margin-right:15px;}
+.chooseTag ul li a {display:block;color:#666666;overflow:hidden;}
+.chooseTag ul li img {float:left;width:28px;height:28px;margin:20px 26px 13px 26px;}
+.chooseTag ul li span {float:left;width:100%;text-align: center;}
+#areaModel {width:750px;overflow:hidden;}
+.areaModelItem {float: left;}
+.areaModelItem .fmv_wrap img {width:165px; height:95px;}
+.areaModelItem .b_wrap img {width:120px; height:120px;}
+.areaModelItem ul {float:left;width:800px;}
+.areaModelItem .musicList {width:750px;padding-bottom:27px;}
+.areaModelItem .musicList .music_wrap .m_hd {width:33px;height:17px;}

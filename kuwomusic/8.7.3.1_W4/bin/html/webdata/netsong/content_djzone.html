@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="background:#373737">
+<head>
+	<title>专区内容页面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="css/content.css" rel="stylesheet" type="text/css" />
+	<link href="css/zone2.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/comm2.js" type="text/javascript"></script>
+	<script src="js/create_structure.js" type="text/javascript"></script>
+	<script src="js/music.js" type="text/javascript"></script>
+	<script src="js/content_djzone.js" type="text/javascript"></script>
+</head>
+<body style="margin-left:-5px;">
+ <div class="channelContent" style="background:#373737">
+	<div id="content" class="max_content" style="display:none">
+		<div class="zone_con">
+			<div class="top_banner" style="width:750px; height:auto; overflow:hidden; margin-bottom:5px; display:none;"></div>
+			<div class="hot_wrap">
+				<!--榜单模块-->
+				<div class="bang">
+					<!--榜单tab-->
+					<div class="bang_tab"></div>
+					<div class="line_warp"><div class="move"><div class="movet"></div></div></div>				
+					<!--榜单tab结束-->
+					<div class="aob" c-index="0">
+						<div class="flr" style="margin-top:8px;">
+							<a href="###" hidefocus title="播放全部歌曲" class="all_play icon_bg" c-id="allPlay">播放全部</a>
+							<a href="###" hidefocus title="添加全部歌曲" class="all_add icon_bg" c-id="allAdd">添加</a>
+							<a href="###" hidefocus title="查看更多" class="more icon_bg">查看全部</a>
+						</div>
+					</div>
+					<!--榜单列表-->
+					<div class="bang_list"></div>
+					<!--榜单列表结束-->
+				</div>
+				<!--榜单结束-->
+				<div class="diantai">
+					<div class="diantaiBox">
+						<h1 class="diantai_tit">DJ电台</h1>
+						<div class="ding_pop">
+							<i class="ding_pop_j"></i>
+							<div class="ding_content">
+								<span data-id="1"><input type="checkbox"><a href="###" hidefocus>中文DJ</a></span>
+								<span data-id="2"><input type="checkbox"><a href="###" hidefocus>英文DJ</a></span>
+								<span data-id="3"><input type="checkbox"><a href="###" hidefocus>中文慢摇</a></span>
+								<span data-id="4"><input type="checkbox"><a href="###" hidefocus>英文慢摇</a></span>
+								<span data-id="5"><input type="checkbox"><a href="###" hidefocus>喊麦</a></span>
+								<span data-id="6"><input type="checkbox"><a href="###" hidefocus>DJ舞曲</a></span>
+								<span data-id="7"><input type="checkbox"><a href="###" hidefocus>劲舞团</a></span>
+								<span data-id="8"><input type="checkbox"><a href="###" hidefocus>广场舞</a></span>
+							</div>
+							<div style="padding-top:10px; float:left; width:100%">
+								<div class="tips" style="float:left;"></div>
+								<a href="###" hidefocus class="btn">取消</a>
+								<a href="###" hidefocus class="btn">确定</a>
+							</div>
+						</div>
+						<div class="diantai_list"></div>
+						<a href="###" hidefocus class="ding"></a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="artist_wrap com_wrap">
+				<h1 class="com_tit"><a href="###" hidefocus onclick="commonClick({'source':'-205','sourceid':'1','name':'潮流DJ人','id':'0'})">更多>></a>潮流DJ人</h1>
+				<ul class="artist_list" style="width:750px;"></ul>
+			</div>
+
+			<div class="tui_wrap com_wrap">
+				<h1 class="com_tit"><a href="###" hidefocus onclick="commonClick({'source':'-205','sourceid':'2','name':'精彩推荐','id':'0'})">更多>></a>精彩推荐</h1>
+				<ul class="gedan_list" style="width:750px;"></ul>
+			</div>
+
+			<div class="class_wrap" style="display:none;">
+				<h1 class="com_tit">DJ分类</h1>
+				<ul class="class_list" c-id="main_list"></ul>
+			</div>	
+			
+			<div class="mv_wrap" id="mv_wrap" style="display:none;">
+				<h1 class="com_tit"><a href="###" class="moreMV" onclick="commonClick({'source':'-204','sourceid':'','name':'DJMV','id':'0','extend':'','other':'|psrc=分类->DJ专区->|bread=-2,5,分类,-2;40,88079,DJ,0|type=tagMv|tagDbId=12'})">更多>></a><font>MV推荐</font></h1>
+				<div class="mv_list"></div>			
+			</div>		
+			<div class="bottom_banner" style="width:750px; height:30px; margin-top:10px; display:none;">
+				<img src="" width="750" height="30px"/>
+			</div>
+		</div>			
+	</div>
+</div>
+
+<a href="###" hidefocus="" class="rtop backTop" onclick="returnTop(); return false;" style="display: none; position: fixed; right: 18px; bottom: 18px;"></a>
+
+</body>
+</html>

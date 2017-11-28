@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window mininfo="400,415" maxinfo="400,415" size="400,415" roundcorner="0,0" dbclicktofullscreen="true">
+  <Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+  <Default name="HScrollBar" value="buttonlength=&quot;16&quot; height=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_public_h.png' source='0,0,16,12'&quot; button1hotimage=&quot;file='scrollbar_public_h.png' source='17,0,33,12'&quot; button1pushedimage=&quot;file='scrollbar_public_h.png' source='34,0,50,12'&quot; button1disabledimage=&quot;file='scrollbar_public_h.png' source='51,0,67,12'&quot; button2normalimage=&quot;file='scrollbar_public_h.png' source='0,13,16,25'&quot; button2hotimage=&quot;file='scrollbar_public_h.png' source='17,13,33,25'&quot; button2pushedimage=&quot;file='scrollbar_public_h.png' source='34,13,50,25'&quot; button2disabledimage=&quot;file='scrollbar_public_h.png' source='51,13,67,25'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_h_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_h_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_h_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_h_4.png&quot; bknormalimage=&quot;file='scrollbar_public_h.png' source='0,26,16,38'&quot; bkhotimage=&quot;file='scrollbar_public_h.png' source='17,26,33,38'&quot; bkpushedimage=&quot;file='scrollbar_public_h.png' source='34,26,50,38'&quot; bkdisabledimage=&quot;file='scrollbar_public_h.png' source=51,26,67,38'&quot;" />
+  <Default name="Label" value="textcolor=&quot;#ffb5b9c2&quot;"/>
+  <Default name="Button" value="fadetime=&quot;300&quot;"/>
+  <Default name="Option" value="fadetime=&quot;300&quot;"/>
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,1,16,17'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;16,-3,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;Config.DefaultText&quot;" />	
+  <VerticalLayout name="root" bkimage="playinglistbk.png">
+    <HorizontalLayout height="36" padding="2,0,2,0" bkimage="playinglist_title.png">
+      <Label name="title" padding="10,0,0,0" text="正在播放" endellipsis="true" textcolor="#ffb5b9c2"/>
+      <Button name="view" text="查看" width="64" textcolor="#ffb5b9c2" hottextcolor="#ff21a0ed" disabledtextcolor="#5affffff"/>
+      <Button name="close" width="16" height="16" padding="0,10,5,10" statusimage="playinglist_close.png" />
+    </HorizontalLayout>
+    <TabLayout name="listTab" >
+      <VerticalLayout name="playlistrootpanel">
+        <List name="ListPanel"
+              bordersize="0"
+              inset="2,0,2,0"
+              header="hidden"
+              acceptdrag="true"
+              dragtarget="true"
+              draghovertype="line"
+              rectangleselect="true"
+              font="Default.FontName"
+              itemtextcolor="#d9ffffff"
+              itemselectedtextcolor="#d9ffffff"
+              itemhotbkcolor="#33000000"
+              itemselectedbkcolor="#33000000"
+              itemactivetextcolor="#d9ffffff"
+              itemexpandbkcolor="#40000000"
+              itemdisabledtextcolor="#ff999999"
+              inertiascroll="true"
+              usefadehotbkg="true"
+              multiselecting="true"
+              itemshowhtml="false"
+              itemalign="left"
+              menu="true"
+              vscrollbar="true"
+              vscrollbarstyle="overlay=&quot;true&quot; buttonlength=&quot;8&quot; width=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_playlist_v.png' source='0,0,12,8'&quot; button1hotimage=&quot;file='scrollbar_playlist_v.png' source='13,0,25,8'&quot; button1pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,0,38,8'&quot; button1disabledimage=&quot;file='scrollbar_playlist_v.png' source='39,0,41,8'&quot; button2normalimage=&quot;file='scrollbar_playlist_v.png' source='0,9,12,17'&quot; button2hotimage=&quot;file='scrollbar_playlist_v.png' source='13,9,25,17'&quot; button2pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,9,38,17'&quot; button2disabledimage=&quot;file='scrollbar_playlist_v.png' source='41,9,53,17'&quot; thumbnormalimage=&quot;scrollbar_playlist_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_playlist_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_playlist_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_playlist_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_playlist_v.png' source='0,18,12,19'&quot; bkhotimage=&quot;file='scrollbar_playlist_v.png' source='13,18,25,19'&quot; bkpushedimage=&quot;file='scrollbar_playlist_v.png' source='26,18,38,19'&quot; bkdisabledimage=&quot;file='scrollbar_playlist_v.png' source=39,18,51,19'&quot;"
+            >
+          <DefChildAttr height="36" expandheight="40" menu="true"/>
+          <ListHeader>
+            <ListHeaderItem text="index" width="26" minwidth="26" maxwidth="42" padding="10,0,0,0" />
+            <ListHeaderItem text="name" />
+            <ListHeaderItem text="buttons" width="80" />
+            <ListHeaderItem text="artist" width="120" />
+          </ListHeader>
+        </List>
+        <Control height="19" />
+      </VerticalLayout>
+      <VerticalLayout name="emptylistpannel">
+        <Control height="126"/>
+        <Label align="center" height="26" text="没有歌曲正在播放" font="YAHEI.N016"/>
+        <HorizontalLayout height="40"  >
+          <Control />
+          <HorizontalLayout width="180">
+            <Label varwidth="true" text="去" />
+            <Button name="songlib" varwidth="true" text="曲库" setcursor="true" setlink="true" linkfont="YAHEI.NO12.UNDERLINE" textcolor="#ff21a0ed"/>
+            <Label varwidth="true" text="看看或收听" />
+            <Button name="mylist" varwidth="true" text="我的列表" setcursor="true" setlink="true" linkfont="YAHEI.NO12.UNDERLINE" textcolor="#ff21a0ed"/>
+          </HorizontalLayout>
+          <Control />
+        </HorizontalLayout>
+        <Control />
+      </VerticalLayout>
+    </TabLayout>
+    
+
+  </VerticalLayout>
+</Window>

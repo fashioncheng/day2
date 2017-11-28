@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,32">
+	<EventHook event="OnSkinChange">
+		<Attribute control="title" value="textcolor=&quot;PopWnd.title.textcolor&quot;" />		
+	</EventHook>
+	
+  <VerticalLayout name="root">
+    <HorizontalLayout name="WndTitle" height="60">
+      <Label name="title" font="PopUp.Title" textcolor="PopWnd.title.textcolor" padding="7,2,0,0" width="150" height="30"/>
+      <Control />
+      <Button name="close" padding="0,7,7,0" width="19" height="20" statusimage="Config_CloseBtn.png" />
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

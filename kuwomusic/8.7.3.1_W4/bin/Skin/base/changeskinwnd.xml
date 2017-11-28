@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,30" size="665,460">
+  <Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;16&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,1,14,15'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;14,-3,0,0&quot; padding=&quot;0,8,0,0&quot;" />
+
+	<EventHook event="OnSkinChange">
+		<Attribute control="title" value="textcolor=&quot;PopWnd.title.textcolor&quot;" />
+		<Attribute control="themeTab" value="textcolor=&quot;SkinWnd.tab.textcolor&quot; hottextcolor=&quot;SkinWnd.tab.hottextcolor&quot; pushedtextcolor=&quot;SkinWnd.tab.pushedtextcolor&quot; selectedtextcolor=&quot;SkinWnd.tab.selectedtextcolor&quot;" />
+		<Attribute control="skinTab" value="textcolor=&quot;SkinWnd.tab.textcolor&quot; hottextcolor=&quot;SkinWnd.tab.hottextcolor&quot; pushedtextcolor=&quot;SkinWnd.tab.pushedtextcolor&quot; selectedtextcolor=&quot;SkinWnd.tab.selectedtextcolor&quot;" />
+		<Attribute control="myTab"  value="textcolor=&quot;SkinWnd.tab.textcolor&quot; hottextcolor=&quot;SkinWnd.tab.hottextcolor&quot; pushedtextcolor=&quot;SkinWnd.tab.pushedtextcolor&quot; selectedtextcolor=&quot;SkinWnd.tab.selectedtextcolor&quot;" />
+		<Attribute control="wpTab" value="textcolor=&quot;SkinWnd.tab.textcolor&quot; hottextcolor=&quot;SkinWnd.tab.hottextcolor&quot; pushedtextcolor=&quot;SkinWnd.tab.pushedtextcolor&quot; selectedtextcolor=&quot;SkinWnd.tab.selectedtextcolor&quot;" />
+	</EventHook>
+
+  <VerticalLayout name="ChangeSkinPanel">
+    <HorizontalLayout name="TitlePanel" height="32">
+      <Label name="title" text="更换皮肤" textcolor="PopWnd.title.textcolor" padding="10,0,0,0" font="PopUp.Title"/>
+      <Button name="close" padding="0,7,7,0" width="19" height="20" statusimage="Config_CloseBtn.png" />
+    </HorizontalLayout>    
+    <Control bkcolor="#ffececec" float="true" pos="2,61,661,62" />
+    <HorizontalLayout name="titlepanel" padding="0,0,0,0" height="30" childpadding="5">
+		<DefChildAttr class="OptionUI" statusimage="btn_skinwnd_tab.png" selectedimage="btn_skinwnd_tab_3.png" textcolor="SkinWnd.tab.textcolor" hottextcolor="SkinWnd.tab.hottextcolor" pushedtextcolor="SkinWnd.tab.pushedtextcolor" selectedtextcolor="SkinWnd.tab.selectedtextcolor" />
+		<Option name="themeTab" group="tabs" width="70" padding="10,0,0,0" text="主题皮肤" tooltip="这里是酷我为您推荐的主题皮肤" />
+		<Option name="skinTab" group="tabs" width="70" padding="10,0,0,0" text="背景皮肤" tooltip="这里是酷我为您推荐的背景皮肤" />
+		<Option name="myTab" group="tabs" width="70" text="我的皮肤" tooltip="这里保存了您使用过的皮肤" />
+		<Option name="wpTab" group="tabs" width="70" text="音乐壁纸" tooltip="音乐壁纸" />
+		<Control />
+      <Label padding="10,0,0,0" name="ChangeSkinTitle" text="可以鼠标拖拽本地图片到音乐盒" textcolor="#ff999999" width="180"/>
+	  <!--Button name="addskinpic" padding="0,7,1,1" width="16" height="16" statusimage="list_netsong_add.png" /-->
+    </HorizontalLayout>
+	
+    <TabLayout name="skinpanel" height="380" padding="10,8,10,0">
+      <VerticalLayout>
+	    <TabLayout name="serverorlocalskin" height="336">
+			<VerticalLayout name="serverthemepanel" vscrollbar="true"/>
+			<VerticalLayout name="serverskinpanel" vscrollbar="true"/>
+			<VerticalLayout name="localskinpanel" vscrollbar="true">
+				<HorizontalLayout name="themetitle" height="33">
+					<Label align="left" varwidth="true" font="YAHEI.N014" text="主题皮肤"/>
+				</HorizontalLayout>
+				<VerticalLayout name="localthemes" />
+
+				<HorizontalLayout name="skintitle" height="40" inset="0,10,0,0">
+					<Label text="背景皮肤" font="YAHEI.N014"/>
+				</HorizontalLayout>
+				<VerticalLayout  name="localskins" />
+			</VerticalLayout>
+	    </TabLayout>
+	    <HorizontalLayout>
+		    <CheckBox name="lyricBkCheckBox" text="开启歌手写真" padding="10,15,0,0" textpadding="17,0,0,0" width="100" />
+		    <Control />
+		    <Label name="playlistalphadesc" visible="false" padding="10,-2,0,0" text="列表透明 40%" width="90" textcolor="#ff333333"/>
+	        <Slider name="playlistalpha" visible="false" padding="0,12,22,0" width="175" height="18" bkimage="slider_skinwnd_bk.png" thumbimage="slider_skinwnd_thumb.png" thumbsize="18,18"/>
+	    </HorizontalLayout>  
+	  </VerticalLayout>      
+	  <VerticalLayout name="soundskintab" visible="false">
+        <HorizontalLayout name="soundskinintro" padding="0,5,0,0"  height="40" width="665">
+            <Control />
+            <Label padding="1,1,0,0" text="将启动图片设为电脑壁纸，每日更换音乐心情" width="350" height="25" textcolor="#FF666666" font="ChangeSkin.Title" />
+			<Button name="startorclosesongwallpaper" width="100" height="25" text="开启壁纸" textpadding="17,0,0,0" tooltip="开启壁纸" statusimage="StartSongWallPaper.png" textcolor="#ffffffff" visible="true"/>
+			<Control />
+        </HorizontalLayout>        
+		<VerticalLayout name="soundskinpanel" bkcolor="#00000000" height="330" vscrollbar="true" hscrollbar="false"/>	
+      </VerticalLayout>	 
+    </TabLayout>	  
+  </VerticalLayout>
+</Window>
+
+
+
+
+
+
+
+
+<!--VerticalLayout name="ChangeSkinLayout" padding="10,0,0,0" bkcolor="#00000000" height="120" width="180"/>
+    <Label name="SoundSkinTitle" text="声音皮肤" padding="10,5,0,0" font="ChangeSkin.Title" visible="false"/>
+    <VerticalLayout name="SoundSkinLayout" padding="10,0,0,0" bkcolor="#00000000" height="120" width="180" visible="false"/-->
+
+<!--?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,30" size="665,440">
+  <Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;16&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,1,14,15'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;14,-3,0,0&quot; padding=&quot;0,8,0,0&quot;" />
+  <VerticalLayout name="ChangeSkinPanel">
+    <HorizontalLayout name="TitlePanel" height="32">
+      <Label name="ChangeSkinTitle" text="更换皮肤" textcolor="#ff333333" padding="7,2,0,0" font="PopUp.Title"/>
+      <Button name="close" padding="0,7,7,0" width="19" height="20" statusimage="Config_CloseBtn.png" />
+    </HorizontalLayout>
+    <!--VerticalLayout name="ChangeSkinLayout" padding="10,0,0,0" bkcolor="#00000000" height="120" width="180"/>
+    <Label name="SoundSkinTitle" text="声音皮肤" padding="10,5,0,0" font="ChangeSkin.Title" visible="false"/>
+    <VerticalLayout name="SoundSkinLayout" padding="10,0,0,0" bkcolor="#00000000" height="120" width="180" visible="false"/-->
+    <!--Control bkcolor="#ffececec" float="true" pos="1,61,665,62"/>
+    <HorizontalLayout name="titlepanel"  padding="0,0,0,0" height="30" childpadding="5">
+      <Option name="tab1" width="70" padding="10,0,0,0" text="推荐皮肤" tooltip="这里是酷我为您推荐的皮肤" statusimage="btn_skinwnd_tab.png" selectedimage="btn_skinwnd_tab_3.png" group="skintab" selected="true" textcolor="#ff333333" hottextcolor="#ff46b4e6" pushedtextcolor="#ff46b4e6" selectedtextcolor="#ff46b4e6"/>
+    	<Option name="tab2" width="70" text="我的皮肤" tooltip="这里保存了您使用过的皮肤" statusimage="btn_skinwnd_tab.png" selectedimage="btn_skinwnd_tab_3.png" group="skintab" textcolor="#ff333333" hottextcolor="#ff46b4e6" pushedtextcolor="#ff46b4e6" selectedtextcolor="#ff46b4e6"/>
+      <Option name="tab3" width="70" text="音乐壁纸" tooltip="音乐壁纸" statusimage="btn_skinwnd_tab.png" selectedimage="btn_skinwnd_tab_3.png" group="skintab" textcolor="#ff333333" hottextcolor="#ff46b4e6" pushedtextcolor="#ff46b4e6" selectedtextcolor="#ff46b4e6" visible="true"/>
+      <Control />
+      <Label padding="10,0,0,0" name="ChangeSkinTitle" text="可以鼠标拖拽本地图片到音乐盒" textcolor="#ff999999" width="180"/>
+	  <Button name="addskinpic" padding="0,7,1,1" width="16" height="16" statusimage="list_netsong_add.png" />
+    </HorizontalLayout>
+    <TabLayout name="skinpanel" height="316" padding="10,8,10,0">
+      <VerticalLayout  name="serverskinpanel" bkcolor="#00000000" height="316" vscrollbar="true" hscrollbar="false" />
+      <VerticalLayout  name="localskinpanel" bkcolor="#00000000" height="316" vscrollbar="true" hscrollbar="false" />
+      <VerticalLayout name="soundskintab" visible="false">
+        <HorizontalLayout name="soundskinintro" padding="0,5,0,0"  height="40" width="665">
+            <Control />
+            <Label text="将启动图片设为电脑壁纸，每日更换音乐心情" width="350" height="25" textcolor="#FF666666" font="ChangeSkin.Title" />
+			<Option name="startorclosesongwallpaper" text="开启壁纸" textcolor="#FFffffff" textpadding="17,0,0,0" group="xxx" font="ChangeSkin.Title" width="100" height="25" statusimage="startsongwallpaper.png" selectedimage="closesongwallpaper.png" selected="false" />
+            <Control />
+        </HorizontalLayout>        
+		<VerticalLayout name="soundskinpanel" bkcolor="#00000000" height="276" vscrollbar="true" hscrollbar="false"/>	
+      </VerticalLayout>	  
+    </TabLayout>
+    <HorizontalLayout>
+      <CheckBox name="lyricBkCheckBox" text="开启歌手写真" padding="10,15,0,0" textpadding="17,0,0,0" width="100" />
+      <Control />
+      <Label name="playlistalphadesc" padding="10,-2,0,0" text="列表透明 40%" width="90" textcolor="#ff333333"/>
+      <Slider name="playlistalpha" padding="0,19,22,0" width="175" height="18" bkimage="slider_skinwnd_bk.png" thumbimage="slider_skinwnd_thumb.png" thumbsize="18,18"/>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window-->

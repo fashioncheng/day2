@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>歌手内容页面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="css/content.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/comm2.js" type="text/javascript"></script>
+	<script src="js/create_structure.js" type="text/javascript"></script>
+	<script src="js/music.js" type="text/javascript"></script>	
+	<script src="js/commentModel.js" type="text/javascript"></script>			
+	<script src="js/content_artist.js" type="text/javascript"></script>
+	<style type="text/css">
+		.kw_album_list {margin-top:0px;}
+		h1 .checkall font {width:auto;}
+		h1 .checkall .num {width:33px;}
+		#mv .kw_mv_list{width:104%;}
+		@media (min-width: 1700px) {
+			#mv .kw_mv_list{width:100%;}
+		}
+	</style>
+</head>
+<body>
+	<div class="channelContent" style="padding:0 20px 0 20px;">
+		<div id="content" class="max_content">
+			<div class="artist_head" style="overflow:hidden;margin-top: 20px;">
+				<div class="pic">
+                    <img src="img/kuwo.jpg" width="76" height="76" onerror="imgOnError(this,76);" />
+                </div>
+				<div class="h_r">
+					<p class="name"></p>
+				</div>
+                <div class="art_btn_wrap">
+                    <a hidefocus href="###" class="like_btn like_current" c-target="ARTIST" style="position:static;float:right;margin-right:20px;"></a>
+                    <a hidefocus href="###" class="radio_btn artist_radio" data-from="artist" style="position: static;float:right;"></a>
+                </div>
+
+			</div>
+			
+			<h3 class="tab" style="display:none;">
+				<a hidefocus href="###" class="new" c-type="new">最新</a>	
+				<a hidefocus href="###" class="song current" c-type="song">单曲</a>	
+				<a hidefocus href="###" class="album" c-type="album">专辑</a>	
+				<a hidefocus href="###" class="mv" c-type="mv">MV</a>	
+				<a hidefocus href="###" class="similar" c-type="similar">相似歌手</a>	
+				<a hidefocus href="###" class="info" c-type="info">简介</a>	
+			</h3>
+			<div class="newBox fl" style="width:100%;">
+			
+                <h1 class="toolbar artist" style="display:none;position: relative;z-index:100">
+                    <a hidefocus href="###" class="all_play" title="播放选中歌曲" style="margin-left: 0">播放全部</a>
+                    <a hidefocus href="###" class="all_add" title="添加选中歌曲">添加</a>
+                    <a hidefocus href="###" class="all_down" title="下载选中歌曲">下载</a>
+                    <div class="sort_r" style="">
+                        <span>排序 : </span>
+                        <div class="sort_wrap" id="sort" style="display:none;position: absolute;right:0;top:0;*margin-top:4px">
+                            <a href="###" class="sort current"></a>
+                            <ul style="display:none;">
+                                <li><a href="###" c-sort="0">按热度</a></li>
+                                <li><a href="###" c-sort="1">按时间</a></li>
+                                <li><a href="###" c-sort="3">按专辑</a></li>
+                                <li><a href="###" c-sort="4">按音质</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </h1>
+                <h1 class="selall" style="display:none; position:relative; z-index:99;margin-bottom: 0;">
+                    <div>
+                    <div class="ml" style="width:134px;">
+                        <span class="checkall" style="float:left"><input type="checkbox" checked="true" class="all_ckb"><font class="num"></font></span>
+                    	<span class="s_list" style="float:left;width:auto;">操作</span>
+                    </div>
+                    <div class="mr_box">
+                        <div class="mr_box_r">
+                            <span class="s_list" style="text-align: left;">热度</span>
+                            <span class="s_list" style="width:31px;float: right;margin-right:0px;">音质</span>
+                        </div>
+                        <div class="mr_center_con" style="overflow: hidden;zoom:1;">
+                            <span class="s_list m_name_box" style="width: 70%; margin-right: 0px;">歌名</span>
+                            <span class="s_list m_artist_box" style="width: 29%; margin-right: 0px;">专辑</span>
+                        </div>
+                    </div>
+                </div>
+                </h1>
+            </div>
+			<h1 class="selall mv_selall selall_mv" style="display:none;position:relative;zoom:1;border:0;">
+				<span class="checkall" style="float:right"><font></font></span>
+				<a hidefocus href="###" class="all_playmv fl" title="播放全部MV" style="margin-left:0">播放全部</a>
+			</h1>							
+			<div id="new" class="common_content w_new">
+				<ul class="kw_music_list" style="width:100%;"></ul>
+				<h2 style="display:none;margin-top:10px;"><span class="title">最新专辑</span><span class="more"><em>|</em><a href="###" hidefocus onclick="$('.tab a.album').click();">全部专辑</a></span></h2>
+				<ul class="kw_album_list" style="width:104%; height:160px; position:relative; display:none;margin-bottom: 20px;"></ul>
+				<h2 style="display:none;margin-top:16px;"><span class="title">最新MV</span><span class="more"><em>|</em><a href="###" hidefocus onclick="$('.tab a.mv').click();">全部MV</a></span></h2>
+				<ul class="kw_mv_list" style="width:104%; height:136px; position:relative; display:none;overflow:hidden;margin-bottom:35px;"></ul>
+			</div>
+			<div id="song" class="common_content w_song">
+			<ul class="kw_music_list artist_list" style="width:100%;margin-bottom: 20px;"></ul></div>
+			<div id="album" class="common_content w_album"><ul class="kw_album_list" style="width:106%;"></ul></div>
+			<div id="mv" class="common_content w_mv"><ul class="kw_mv_list"></ul></div>
+			<div id="similar" class="common_content w_similar"><ul class="kw_similar_list" style="width:106%;"></ul></div>
+			<div id="info" class="common_content w_info">
+			    <style>
+			    .songer_ziliao{overflow:hidden;zoom:1;width:100%;}
+                .songer_ziliao li{float:left;width:46%;height:36px;line-height:36px;margin-right:20px;overflow:hidden;font-size:12px;color:#888999;}
+                .l_libg{background:#f8f8f8;}
+                .lc_title{font-size:16px;color:#323c50;line-height:30px;margin-top:10px;float:left;width:100%;}
+                .lc_xiang{float:left;width:100%;}
+                .lc_xiang p{color:#888999;font-size:12px;line-height:35px; word-break:break-all;}
+                .l_ziliao{width:100%;overflow:hidden;float:left;}
+                .artist_list .music_wrap .m_name_box{width: 70%;}
+                .artist_list .music_wrap .m_album_box{width: 29%;}
+			    </style>
+			    <div class="l_ziliao">
+					<ul class="songer_ziliao">
+						<li class="l_libg"><label>姓名：</label><span></span></li>
+						<li class="l_libg"><label>性别：</label><span></span></li>
+						<li><label>别名：</label><span></span></li>
+						<li><label>国籍：</label><span></span></li>
+						<li class="l_libg"><label>语言：</label><span></span></li>
+						<li class="l_libg"><label>出生地：</label><span></span></li>
+						<li><label>生日：</label><span></span></li>
+						<li><label>星座：</label><span></span></li>
+						<li class="l_libg"><label>身高：</label><span></span></li>
+						<li class="l_libg"><label>体重： </label><span></span></li>
+					</ul>
+				</div>
+				<div class="lc_title">详细资料</div>
+				<div class="lc_xiang"><p></p></div>
+			</div>		
+			<div class="page"></div>
+			<div class="nothing" style="display:none;"><span class="pic"></span><font>暂无相关内容...</font></div>				
+		</div>
+	</div>	
+	<a href="###" hidefocus class="rtop backTop" onclick="returnTop(); return false;" style="display: none; position: fixed; right: 18px; bottom: 18px;"></a>
+</body>
+</html>

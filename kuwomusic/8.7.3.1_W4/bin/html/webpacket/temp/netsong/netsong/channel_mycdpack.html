@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>cd收藏下载频道</title>	
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/channel_mycd.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/comm2.js" type="text/javascript"></script>
+	<script src="js/channel_mycd.js" type="text/javascript"></script>
+    <script src="js/pinyin.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="tabBox">
+		<a href="javascript:;" class="finish active">已下载 ( 0 )</a>
+		<a href="javascript:;" class="underway">下载中 ( 0 )</a>
+        <a href="javascript:;" class="collections">收藏夹</a>
+        <span class="hr_sep_left"></span>
+        <span class="hr_sep_right"></span>
+        <s id="redInfoTip" style="display:none"></s>
+	</div>
+	<div class="finishContentBox">
+		<div class="finishInfoOperationBox">
+			<span class="finishCount">共0张专辑</span>
+			<div class="finishOperationBox" style="display:none;">				
+			</div>
+		</div>
+        <div id="finished_content">
+            <ul id="finished_packet" data-model="kw_cdpacket_lists">
+            </ul>
+        </div>
+	</div>
+	<div class="underwayContentBox" style="display:none;">
+		<div class="underwayOperationBox">
+			<a href="javascript:;" class="all_start">全部开始</a>
+			<a href="javascript:;" class="all_stop">全部暂停</a>
+			<a href="javascript:;" class="all_del">清空</a>
+			<a href="javascript:;" class="seting">下载设置</a>
+			<a href="javascript:;" class="time">定时关机</a>
+		</div>
+		<div class="underwayCDListBox">
+            <ul id="user_packet_undownload" data-model="kw_cdpacket_lists">
+            </ul>
+		</div>
+	</div>
+    <div class="CD_Collections" style="display:none;">
+        <div class="coll_top_tag" >
+            <span class="collect_total">共0张专辑</span>
+            <a href="javascript:;" class="coll_total active">全部</a>
+            <a href="javascript:;" class="coll_finished">已下载</a>
+            <a href="javascript:;" class="coll_unfinished">未下载</a>
+            <div class="kw_select">
+                <span>按添加时间</span>
+                <i class="tri_press_down"></i>
+                
+                <ul class="sel_list" style="display:none;">
+				    <li class="active">按添加时间</li>
+                    <li >按艺术家</li>
+                    <li >按专辑名称</li>
+                </ul>			
+            
+            </div>				
+        </div>
+        <div class="collect_CDListBoxs">
+            <ul id="user_packet_collect"></ul>
+        </div>
+    </div>
+	<div id="nocdBox">
+		<div class="nocdImg"></div>
+		<p>还没有下载过内容</p>
+		<p>
+			去
+			<a href="javascript:;" onclick="goHIFIDownPage();">下载专区</a>
+			看看吧~
+		</p>
+	</div>
+    <div class="login_guide" style="display:none;">
+        <div class="nologinImg"></div>
+        <p class="unlogin_tip">登录后才能下载HiFi发烧音乐噢~</p>
+        <a href="###" class="login_btn">马上登录</a>
+    </div>
+    <a href="###" hidefocus class="rtop backTop" onclick="returnTop(); return false;" style="display: none; position: fixed; right: 18px; bottom: 18px;"></a>
+    <!-- model -->
+	<ul id="kw_cdpacket_lists" style="display: none">
+		<li id="{$albumid}" down_status="{$status}"  class="cue_block" c-status="0" downedtime="{$downtime}">
+			<div class="cdPicBox" oncontextmenu="CDContextMenu(this)">				
+				<img class="cdHeadPic lazy" width="140" height="132" src="img/cdpack/second/def150.png" onerror="imgOnError(this,'150cd')" data-original="{$pic}">
+				<span class="cdCoverBox"></span>
+				<span class="shadow"></span>
+                <div class="{$icon_show_type}">母带</div>
+                <p class="down_percent">{$percent}</p>
+				{$canvas}
+				<i class="{$down_status}"></i>
+				<p class="i_info">{$info_tip}</p>
+                <i class="play_icon_normal" title="直接播放"></i>
+                <i class="play_icon"></i>
+                <i class="play_icon_pause"></i>
+			</div>
+			<a href="javascript:;" class="albumName" title="{$albumname}">{$albumname}</a>
+			<a href="javascript:;" class="artistName" title="{$artname}">{$artname}</a>
+            <i class="list_no_dot {$reddot}"></i>
+		</li>
+	</ul>
+    <ul id="kw_cdpacket_coll_lists" style="display:none;">
+        <li id="{$albumid}_coll" down_status="collect" class="cue_block" c-status="-1" downedtime="{$downtime}">
+            <div class="cdPicBox" oncontextmenu="CDContextMenu(this)">				
+				<img class="cdHeadPic lazy" width="140" height="132" src="img/cdpack/second/def150.png" onerror="imgOnError(this,'150cd')" data-original="{$pic}">
+				<span class="cdCoverBox"></span>
+				<span class="shadow"></span>
+                <div class="{$icon_show_type}">母带</div>
+                <i onclick="callDownLoadIconfn(arguments[0],this);return false;" class="i_down" data-id="{$albumid}">
+					<i class="i_Arrow"></i>
+				</i>
+			</div>
+            <a href="javascript:;" class="albumName" title="{$albumname}">{$albumname}</a>
+            <a href="javascript:;" class="artistName" title="{$artname}">{$artname}</a>
+        </li>
+    </ul>
+</body>
+</html>

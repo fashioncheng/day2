@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+/*酷我MV的css*/
+/*目前使用页面 quku_new.html*/
+/*mv可直接播放的方块css*/
+.bmv_wrap{position:relative; padding:0;}
+.bmv_wrap .bmv_info{height:auto; text-align:left;}
+.bmv_wrap .bmv_info a{line-height:18px; font-size:14px; color:#000; word-break:break-all; white-space: normal; text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.bmv_wrap .bmv_pic{margin-bottom:6px;}
+.bmv_wrap .bmv_pic .i_play{transform:translate(0);}
+.bmv_wrap .tm_mv{position:absolute; z-index:100; right:0; top:0; width:27px; height:14px; background:url(../img/tanmu/tm.png) no-repeat;}
+
+/*白领mv样式*/
+#kw_wc .bmv_wrap{width:142px; margin-right:10px;}
+#kw_wc .bmv_wrap .bmv_pic{width:142px; height:80px; margin-bottom:7px; border-radius:0;}
+#kw_wc .bmv_wrap .bmv_pic .bmv_shade{width:142px; height:80px;}
+#kw_wc .bmv_wrap .bmv_info{width:142px;}
+#kw_wc .bmv_wrap .bmv_info:hover{color:#21a0ed;}
+#kw_wc .bmv_wrap .bmv_info a{float:left; width:auto; font-weight:500; color:#666; -webkit-line-clamp:1;}
+#kw_wc .bmv_wrap .bmv_info a:hover{color:#21a0ed};

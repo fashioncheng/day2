@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Skin>
+	<Color>
+		<Color name="playingLayer.bkcolor" value="#33000000" />
+		<Color name="TabPlayControlPanel.bkcolor.normal" value="#00000000" />
+		<Color name="TabPlayControlPanel.bkcolor.playing" value="#33000000" />
+		<Color name="PlayControlPanel.bkcolor.normal" value="#00000000" />
+		<Color name="PlayControlPanel.bkcolor.playing" value="#33000000" />
+		<Color name="PlayControlPanel.bkcolor.mvplaying" value="#ff1b1b1b" />
+		<Color name="PopWnd.title.textcolor" value="#ffffffff" />
+    <Color name="AndroidCopyPanelBK" value="#ff2d1756" />
+	</Color>
+	
+	<BkImage>
+		<Main border="0,0,0,0" blurborder="0,0,0,0" transborder="135,80,330,200">
+			<BkImage name="mainbk" inset="-135,-80,-330,-200" image="main_bk.png" condition="normal"/>
+			<BkImage name="maxbk" inset="0,0,0,0" image="max.png" condition="max" />
+      <BkImage name="themeright" inset="-135,-80,-330,-200" image="themeright.png" border="true" trans="true" blur="true" startxy="420,25" direction="2" z="100" condition="normal" />
+			<BkImage name="bkcolor" inset="0,0,0,0" color="Main.Bk" condition="lyricmv"/>
+			<BkImage name="lyricbk" inset="0,0,0,0" image="bk.xxx" delay="true" condition="lyricmv"/>
+			<BkImage name="blurboder" inset="0,0,0,0" image="playlistborder.png" condition="lyricmv"/>
+		</Main>
+		<PopWnd border="0,0,0,0">
+      		<BkImage name="bkcolor" inset="0,0,0,0" color="PopWnd.Bk" round="2,2"/>
+    	    <BkImage name="bkimg" inset="1,1,1,1" image="PopWnd_bk.xxx" delay="true" round="1,1"/>
+          <BkImage name="bkmask" inset="0,0,0,0" image="popwnd_mask.png" delay="false" round="1,1"/>
+	  </PopWnd>
+    <PopWndAndroid border="0,0,0,0">
+      <BkImage name="bkcolor" inset="0,0,0,0" color="AndroidCopyPanelBK" round="2,2"/>
+      <BkImage name="bkmask" inset="0,0,0,0" image="popwnd_mask1.png" delay="false" round="1,1"/>
+    </PopWndAndroid>
+	</BkImage>
+
+  
+	
+	<Variable>
+		<var name="${LyricBkMask}" value="" />
+		<var name="${LyricBkMask-10}" value="" />
+		<var name="${mylist_mask}" value="" />
+		<var name="${plhline_visible}" value="false" />
+	</Variable>
+</Skin>

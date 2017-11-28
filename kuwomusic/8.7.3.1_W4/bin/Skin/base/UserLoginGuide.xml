@@ -1,0 +1,19 @@
+﻿<Window size="320,115" caption="0,0,0,50" >
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;16&quot; checkinfo=&quot;dest='0,2,13,15'&quot; statusimage=&quot;checkbox.png&quot; textpadding=&quot;14,2,0,0&quot; padding=&quot;0,5,0,0&quot; " />
+  <Default name="Label" value="font=&quot;PopUp.DefaultText&quot;height=&quot;20&quot; " />
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;#ff666666&quot; checkinfo=&quot;dest='0,1,16,17'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;16,-3,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;PopUp.DefaultText&quot;" />
+  <Default name="Button" value="font=&quot;PopUp.DefaultText&quot;setcursor=&quot;true&quot; " />
+  <VerticalLayout>
+    <HorizontalLayout>
+      <Label height="20" text="登录开启音乐云，让你的音乐跟着账号走，" textcolor="#ff666666" padding="20,25,0,0" />
+      <Button name="LoginGuideClose" height="11" width="11" padding="0,14,7,7" statusimage="playlistclosebtn.png" tooltip="关闭"/>
+    </HorizontalLayout>
+    <Label text="电脑手机上一样听。" padding="20,15,0,0" textcolor="#ff666666"/>
+    <HorizontalLayout padding="0,5,0,0">
+      <CheckBox name="LoginGuideShowAgain" font="PopUp.DefaultText" text="不再提示" textcolor="#ff666666" padding="20,10,0,0" width="70" />
+      <Button name="LoginGuideNotNow" padding="40,5,0,0" text="以后再说" textcolor="#ff666666" height="25"/>
+      <Control padding="25,0,0,0" width="1" bordercolor="#ff666666" />
+      <Button name="LoginGuideQuickNow" padding="25,0,0,0" text="马上登录" textcolor="#ff46b4e6" />
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

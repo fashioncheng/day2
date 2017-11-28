@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+		<VerticalLayout name="root" height="100" bkimage="FullScreenControlBk.png">
+      <HorizontalLayout name="SaveLyricDeltaTip" bkcolor="#4D000000" height="30" visible="false">
+        <Label layertext="true" text="您用鼠标调整了歌词时序：" padding="15,2,0,0" width="160" textcolor="#FFFFEA00" font="Default.FontName" />
+        <Option name="SaveLD" layertext="true" padding="-10,10,0,0" width="140" text="保存调整，不再提示" selected="true" textpadding="16,0,0,0" group="savelyricdelta" setcursor="true" textcolor="#B3FFFFFF" normalimage="Radio_Small_1.png" hotimage="Radio_Small_2.png" selectedimage="Radio_Small_3.png" disabledimage="Radio_Small_4.png" height="13" align="left" font="Default.FontName" />
+        <Option name="CancelSaveLD" layertext="true" padding="0,10,0,0" width="120" text="取消本地调整" textpadding="16,0,0,0" group="savelyricdelta" setcursor="true" textcolor="#B3FFFFFF" normalimage="Radio_Small_1.png" hotimage="Radio_Small_2.png" selectedimage="Radio_Small_3.png" disabledimage="Radio_Small_4.png" height="13" align="left" font="Default.FontName" />
+        <Button name="SaveLDBtn" layertext="true" padding="15,3,0,0" text="确定" textcolor="#FFFFFFFF" font="Default.FontName" statusimage="SaveLDBtn.png" width="60" height="24" />
+        <Control />
+        <Button name="SaveLDClose" padding="0,9,10,0" statusimage="SaveLDClose.png" width="13" height="12" />
+      </HorizontalLayout>
+      <VerticalLayout name="playcontrol" height="70">
+		    <PlayProgress name="PlayerProgress" padding="5,0,5,0" height="18" fgpadding="0,0,0,0"  bkimage="PlayerProgress_bk.png" fgimage="PlayerProgress_progress_no.png" downloadimage="PlayerProgress_download.png" thumbimage="PlayerProgress_thumb.png" thumbsize="16,16" thumbimageoffset="0"/>
+	    <HorizontalLayout name="PlayControlPanel" padding="5,0,5,0" height="50" >
+	    	 <HorizontalLayout name="MessagePanel" height="50" >
+	    	 		<Label name="MessageLable" textcolor="#FFFFFFFF" layertext="true" varwidth="true" width="100" minwidth="10" />
+					<Control width="10"/>
+	    	 		<Button name="PlayHighCache" layertext="true" varwidth="true" textcolor="#FFFFFFFF" width="1" setcursor="true" font="YAHEI.N12_UNDERLINE" />
+	    	 	</HorizontalLayout>
+	    	  <HorizontalLayout name="ControlPanel" height="49" width="352">
+	    	 		<Label name="PlayTimeLable" textcolor="#ffFFFFFF" float="true" pos="0,15,80,29" align="left" layertext="true"/>
+	    			<TabLayout name="Play_Pause">
+	    					<Button name="Play" fadetime="500" float="true" pos="151,0,191,40" statusimage="playbtn.png"/>
+	    					<Button name="Pause" fadetime="500" float="true" pos="151,0,191,40" statusimage="pausebtn.png"/>
+	    			</TabLayout>
+	    			<Button name="Pre" fadetime="300" statusimage="prebtn.png" float="true" pos="98,5,132,39"/>
+	    			<Button name="Next" fadetime="300" statusimage="nextbtn.png" float="true" pos="210,5,244,39"/>
+	    			<TabLayout name="MUTE_MUTED" float="true" pos="262,14,290,38"> 		
+	    				<Button name="Muted" statusimage="mutedbtn.png" width="19" height="15"/>
+	    				<Button name="Mute" statusimage="mutebtn.png" width="19" height="15" />
+	    			</TabLayout>
+	    			<Slider name="PlayerVolumn" float="true" pos="293,17,353,28" width="60" height="11" bkimage="playcontrol_volumnbk.png" fgimage="playcontrol_volumnfg.png" fgpadding="1,0,1,0" thumbimage="playcontrol_volumnthumb.png" thumbsize="11,11" step="5"/>
+	    		</HorizontalLayout>
+				<HorizontalLayout height="50">
+	    		<Control />
+	    		<Button name="Normal" fadetime="500" height="27" width="28" padding="0,10,10,10" statusimage="btn_fullplaycontrol_normal.png"/>
+	    	</HorizontalLayout>
+	    </HorizontalLayout>
+      </VerticalLayout>
+    </VerticalLayout>
+</Window>

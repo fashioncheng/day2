@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,30" size="300,130" closeonesc="true">
+	<VerticalLayout>
+		<HorizontalLayout height="32">
+			<Label name="MessageBox_Title" text="酷我提示" padding="10,0,0,0" textcolor="PopWnd.title.textcolor" mouse="false" font="PopUp.Title"/>
+			<Button name="MSG_ACTION_BTN_Close" width="19" height="20" padding="0,7,7,0" statusimage="Config_CloseBtn.png" userdata="2"/>
+		</HorizontalLayout>
+		<VerticalLayout inset="8,8,8,0" name="ClientRect">
+			<HorizontalLayout name="MsgBox_Content" inset="0,0,0,0">
+				<Text name="MessageBox_TXT_Msg" width="250" maxheight="120" mouse="false" padding="23,10,0,0" font="MessageBox.Content" textcolor="Msgbox.message.textcolor"/>
+			</HorizontalLayout>
+			<!-- <Control height="2" enabled="false" mouse="false"/> -->
+			<HorizontalLayout name="buttonrow" height="35" userdata="mainbtn.png" padding="0,5,0,0" >
+				<Button setcursor="true" name="MessageBox_BTN_Link" align="left" textcolor="Msgbox.link.textcolor" />
+				<CheckBox name="MessageBox_CB_DownShowAgain" text="不再提示" textcolor="Msgbox.nomoreshow.textcolor" padding="0,4,0,0" visible="false"
+						setcursor="true" height="17" width="100" checkinfo="dest='0,0,16,17'" statusimage="Config_CheckBox.png" />
+				<Control enabled="false" mouse="false" />
+			</HorizontalLayout>
+		</VerticalLayout>
+		<Control height="5"/>
+	</VerticalLayout>
+</Window>

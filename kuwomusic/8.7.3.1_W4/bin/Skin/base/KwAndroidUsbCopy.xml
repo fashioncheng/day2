@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="230,670" caption="0,0,0,55" roundcorner="10,10">
+<Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+<Default name="HScrollBar" value="buttonlength=&quot;16&quot; height=&quot;12&quot; autohide=&quot;false&quot; button1normalimage=&quot;file='scrollbar_public_h.png' source='0,0,16,12'&quot; button1hotimage=&quot;file='scrollbar_public_h.png' source='17,0,33,12'&quot; button1pushedimage=&quot;file='scrollbar_public_h.png' source='34,0,50,12'&quot; button1disabledimage=&quot;file='scrollbar_public_h.png' source='51,0,67,12'&quot; button2normalimage=&quot;file='scrollbar_public_h.png' source='0,13,16,25'&quot; button2hotimage=&quot;file='scrollbar_public_h.png' source='17,13,33,25'&quot; button2pushedimage=&quot;file='scrollbar_public_h.png' source='34,13,50,25'&quot; button2disabledimage=&quot;file='scrollbar_public_h.png' source='51,13,67,25'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_h_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_h_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_h_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_h_4.png&quot; bknormalimage=&quot;file='scrollbar_public_h.png' source='0,26,16,38'&quot; bkhotimage=&quot;file='scrollbar_public_h.png' source='17,26,33,38'&quot; bkpushedimage=&quot;file='scrollbar_public_h.png' source='34,26,50,38'&quot; bkdisabledimage=&quot;file='scrollbar_public_h.png' source=51,26,67,38'&quot;" />
+<Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,2,14,16'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;14,-2,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;YAHEI.NO12&quot;" />
+<VerticalLayout>
+	<HorizontalLayout name="MsgBox_Content" inset="0,0,0,0" height="55" >
+		<Text text="传歌" font="Main.ChannelTitle" textcolor="#ffffffff" height="16" width="100" padding="7,20,0,0"/>
+		<Control />
+		<Button name="close" padding="0,20,0,0" width="19" height="20" statusimage="download_CloseBtn.png"/>
+		<Control width="10"/>
+	</HorizontalLayout>
+	<TabLayout name="AndroidUsbCopyPanel" padding="1,0,1,0">
+	<VerticalLayout name="MultiDeviceMainPanel">
+	   <VerticalLayout height="98" bkcolor="#fff5f5f5">
+        <Label 	padding="10,40,0,0" text="您可以将电脑中的歌曲传到设备" varwidth="true" height="16" align="center" textcolor="#ff000000" font="YAHEI.N014" mouse="false"/>
+	    <Label 	padding="66,0,0,0" text="无需使用流量"  varwidth="true" height="16" align="center" textcolor="#ff000000" font="YAHEI.N014" mouse="false"/>
+	   </VerticalLayout>
+	   <Control height="1" bkcolor="#fff1f1f1"/>
+	   <VerticalLayout height="275">
+		<Button padding="35,40,0,0" name="usb_connect" width="160" height="60" statusimage="tran_line.png" />
+		<Button padding="35,20,0,0" name="wifi_connect" width="160" height="60" statusimage="tran_wifi.png" />
+		<Label 	name="wifi_tip1" padding="34,0,0,0" visible="false" text="Wi-Fi极速传歌功能即将上线"  width="160" height="16" align="center" textcolor="#ff999999" mouse="false"/>
+		<Label 	name="wifi_tip2" padding="87,0,0,0" visible="false" text="敬请期待"  width="55" height="16" align="center" textcolor="#ff999999" mouse="false"/>
+	   </VerticalLayout>
+	</VerticalLayout>
+	<VerticalLayout name="WifiConnectPanel">
+		<VerticalLayout height="98" bkcolor="#fff5f5f5">
+			<Label 	padding="27,43,0,0" text="使用Wi-Fi无线连接到设备" varwidth="true" height="16" align="center" textcolor="#ff000000" font="YAHEI.N014" mouse="false"/>
+	   </VerticalLayout>
+	   <Control padding="55,40,0,0" name="QRCode" width="120" height="120" tooltip="连不上？点我刷新试试"/>
+	   <HorizontalLayout padding="0,20,0,0" height="20">
+		<Control padding="36,0,0,0" bkimage="wifi_scan.png" width="14" height="14" />
+		<Label padding="5,0,0,0" text="使用" height="16" width="30" />
+		<Label padding="0,-1,0,0" text="手机酷我" height="18" width="63" font="YAHEI.N014.BOLD" />
+		<Label text="扫一扫" height="16" width="50" />
+	   </HorizontalLayout>
+	   <Label padding="8,20,0,0" text="1.电脑和手机必须在同一Wi-Fi网络下" height="16" varwidth="true" />
+	   <HorizontalLayout padding="8,10,0,0" height="20">
+		<Label  text="2.使用手机酷我扫描二维码" height="16" width="155" />
+		<Button padding="0,2,0,0" name="wifi_help" width="12" height="12" statusimage="wifi_help.png" />
+	   </HorizontalLayout>
+	   <Button padding="40,25,0,0" name="download_app_btn" text="下载最新版酷我音乐APP" width="150" height="34" textcolor="#ffffffff" statusimage="multiDevicebtn.png"/>
+	   <Control />
+	   <VerticalLayout height="80">
+	     <Button padding="45,0,0,0" name="local_connect_btn" text="我要使用数据线连接" varwidth="true" height="34" textcolor="#ff21a0ed" pushedtextcolor="#ff1b97e2" hottextcolor="#ff24aafc" font="YAHEI.N014" />
+	   </VerticalLayout>
+	</VerticalLayout>
+    <VerticalLayout name="SearchUsbDevicePanel">
+      <Control height="1" bkcolor="#fff1f1f1"/>
+		   <VerticalLayout height="98" bkcolor="#fff5f5f5">
+			 <Label 	padding="76,30,0,0" text="未连接设备" varwidth="true" height="16" align="center" textcolor="#ff000000" font="YAHEI.N014" mouse="false"/>
+			 <Label 	padding="33,5,0,0" text="请使用数据线连接到电脑"  varwidth="true" height="16" align="center" textcolor="#ff000000" font="YAHEI.N014" mouse="false"/>
+		   </VerticalLayout>
+	   <Control height="1" bkcolor="#fff1f1f1"/>
+      <HorizontalLayout>
+        <Control />
+        <!--<Label name="loading" padding="0,150,0,0" width="16" height="16" bkimage="loading.png" frametime="1200" framenum="12" />
+        <Label 	padding="0,150,0,0" text="正在搜索移动设备..." width="123" height="16" align="center" textcolor="#ff666666" mouse="false"/>-->
+        <Control />
+      </HorizontalLayout>
+      <Control height="20"/>
+    </VerticalLayout>
+	<VerticalLayout name="WifiCopyPanel">
+		    <HorizontalLayout height="98" bkcolor="#fff5f5f5">
+				<Control padding="18,15,0,0" bkimage="WifiDeviceLogo.png" width="36" height="54" mouse="false"/>
+				<VerticalLayout width="200">
+					<Button name="wifi_oneDiskShowlabel" padding="8,10,0,0" width="150" endellipsis="true" textcolor="#ff333333"/>
+            			
+					<PlayProgress name="wifi_OneDiskProgress"enabled="false" padding="10,5,0,0" height="5" width="150" max="100" min="0" fgpadding="1,1,1,1" bkimage="DiskProgress_bk.png" breath="false" fgimage="DiskProgress_Used.png" downloadimage="DiskProgress_Used.png" />
+					<Label 	name="wifi_oneDiskInfo" padding="8,2,10,0" varwidth="true" maxwidth="160" minwidth="80"  mouse="true" endellipsis="true" />
+					<Button name="wifi_disconnect" padding="100,0,0,0" text="断开" textcolor="#ff000000" width="60" height="25" statusimage="btn_downpanelbtn.png" />
+				</VerticalLayout>
+				<Control />
+			</HorizontalLayout>
+			<Control height="1" bkcolor="#fff1f1f1"/>
+			<TabLayout name="wifi_WaitCopyArea" >
+				<VerticalLayout>
+				<HorizontalLayout height="35">
+					<Label name="wifi_TotalSongInfo" padding="10,5,0,0" varwidth="true" maxwidth="200" minwidth="80" textcolor="#ff666666" mouse="false"/>
+					<Control />
+					<Button name="wifi_WaitCopyDelete" padding="0,5,10,0" text="清空" width="40" height="23" textcolor="#ff46b4e6" statusimage="btn_downpanelbtn.png"/>
+				</HorizontalLayout>
+				<List name="wifi_WaitCopyPanel" header="hidden" acceptdrag="true" dragtarget="true" draghovertype="line" rectangleselect="true" itemtextcolor="#ff333333" itemselectedtextcolor="#ffffffff" itemhotbkcolor="#fff7f7f7" itemselectedbkcolor="#fff7f7f7" itemexpandbkcolor="#fff7f7f7" inertiascroll="true" usefadehotbkg="true" multiselecting="true" itemshowhtml="false" vscrollbar="true" hscrollbar="false" itemalign="left" menu="true">
+					<ListHeader>
+						<ListHeaderItem />
+					</ListHeader>
+					<DefChildAttr height="32" expandheight="65" menu="true"/>
+				</List>
+				</VerticalLayout>
+				<WIFI_PLNOSONGACCEPTDRAG enabled="true" mouse="true" bkcolor="#ffffffff">
+					<VerticalLayout >
+					<Label 	 text="请勾选或拖动要复制的歌曲" padding="10,50,0,0" align="center" mouse="false" font="YAHEI.NO12" />
+					<Label 	 text="(按住ctrl或者shift键批量选中歌曲)" padding="10,0,0,0" align="center"  mouse="false" font="YAHEI.NO12"/>
+					<Control bkimage="WaitCopyEmptybk.png" padding="0,20,0,0" width="230" height="230" mouse="false"/>
+					</VerticalLayout>
+				</WIFI_PLNOSONGACCEPTDRAG>
+				<WIFI_PLCOPYFINISHACCEPTDRAG bkcolor="#ffffffff">
+					<VerticalLayout >
+					<Control bkimage="copy_finished.png" padding="85,75,0,0" height="60" width="60" />
+					<Control height="5" />
+					<Label name="wifi_CopyedResultInfo" align="center" textcolor="#ff666666" mouse="false"/>
+					<Button name="wifi_WatchResult" text="点击查看>>" align="center" textcolor="#ff46b4e6" />
+					</VerticalLayout>
+				</WIFI_PLCOPYFINISHACCEPTDRAG>
+			</TabLayout>
+			<TabLayout name="wifi_CopyPrcessInfoArea" height="65">
+				<HorizontalLayout >
+					<CheckBox name="wifi_CopyLyricsCheckBox" visible="false" text="复制歌词" textcolor="#ff666666"  width="80" padding="20,25,0,0"/>
+					<Button name="wifi_StartCopyNow" padding="77,20,10,0" text="开始导入" textcolor="#ffffffff" width="75" height="25" statusimage="btn_dwonpalyall.png"/>
+				</HorizontalLayout>
+				<HorizontalLayout >
+					<VerticalLayout name="wifi_CopyingInfo" width="170">
+						<PlayProgress name="wifi_CopyingProgress"enabled="false" padding="10,25,0,0" height="5" width="150" max="100" min="0" fgpadding="1,1,1,1" bkimage="DiskProgress_tran_bk.png" breath="false" fgimage="DiskProgress_Used.png" downloadimage="DiskProgress_Used.png" />
+						<Label 	name="wifi_CopyingProgressInfo" padding="9,2,0,0" varwidth="true" maxwidth="150" minwidth="80" textcolor="#ff999999" mouse="false"/>
+					</VerticalLayout >
+					<Button name="wifi_StopCopyNow" padding="5,20,10,0" text="暂停" textcolor="#ff666666" width="35" height="25" statusimage="btn_downpanelbtn.png"/>
+				</HorizontalLayout>
+				<HorizontalLayout >
+					<Button name="wifi_ContinueCopyNow" padding="80,20,10,0" text="继续导入" textcolor="#ff666666" width="70" height="25" statusimage="btn_downpanelbtn.png"/>
+				</HorizontalLayout>
+				<HorizontalLayout >
+					<Button name="wifi_TryAgainBtn" padding="20,20,10,0" text="重试" textcolor="#ff666666" width="70" height="25" statusimage="btn_downpanelbtn.png"/>
+					<Button name="wifi_IgnoreBtn" padding="40,20,10,0" text="忽略" textcolor="#ff666666" width="70" height="25" statusimage="btn_downpanelbtn.png"/>
+				</HorizontalLayout>
+				<Control />
+			</TabLayout >
+	</VerticalLayout>
+	<VerticalLayout name="NoUsbDevicePanel">
+	   <Control height="1" bkcolor="#fff1f1f1"/>
+		   <VerticalLayout height="98" bkcolor="#fff5f5f5">
+			 <Label 	padding="76,30,0,0" text="未连接设备" varwidth="true" height="16" align="center" textcolor="#ff000000" font="YAHEI.N014" mouse="false"/>
+			 <Label 	padding="33,5,0,0" text="请使用数据线连接到电脑"  varwidth="true" height="16" align="center" textcolor="#ff000000" font="YAHEI.N014" mouse="false"/>
+		   </VerticalLayout>
+	   <Control height="1" bkcolor="#fff1f1f1"/>
+      <HorizontalLayout padding="0,40,0,0" height="36">
+        <Control />
+        <Button name="SearchDiskBtn" padding="0,0,0,0" text="连接设备" width="120" height="34" textcolor="#ffffffff" font="YAHEI.N014" statusimage="multiDevicebtn.png"/>
+		<Label  name="loading" visible="false" padding="0,0,0,0" width="16" height="16" bkimage="loading.png" frametime="1200" framenum="12" />
+		<Label 	name="usb_loading_text" padding="0,0,0,0" visible="false" text="正在搜索移动设备..." width="123" height="16" align="center" textcolor="#ff666666" mouse="false"/>
+		<Label 	name="usb_failed_text" padding="0,0,0,0" visible="false" text="未发现设备驱动，连接失败" width="173" height="16" align="center" textcolor="#ff666666" mouse="false"/>
+        <Control />
+      </HorizontalLayout>
+	  <HorizontalLayout padding="0,12,0,0" height="25">
+		<Label  padding="35,0,0,0" text="手机已插入，仍然无法连接" textcolor="#ff999999" height="16" width="154" />
+		<Button padding="0,3,0,0" name="usb_device_help" width="12" height="12" statusimage="wifi_help.png" />
+	  </HorizontalLayout>
+	  
+	  <Control padding="18,25,0,0" bkimage="tran_wifi_line.png" width="200" height="120" />
+	  
+	  <Button padding="37,25,0,0" name="usb_download_app_btn" text="下载最新版酷我音乐APP" varwidth="true" height="34" textcolor="#ff21a0ed" pushedtextcolor="#ff1b97e2" hottextcolor="#ff24aafc" font="YAHEI.N014"/>
+	  <Control />
+	  <VerticalLayout height="80">
+		<Button padding="39,0,0,0" visible="false" name="wifi_connect_btn" text="我要使用Wi-Fi无线连接" varwidth="true" height="34" textcolor="#ff21a0ed" pushedtextcolor="#ff1b97e2" hottextcolor="#ff24aafc" font="YAHEI.N014" />
+	  </VerticalLayout>
+	</VerticalLayout>
+	<VerticalLayout name="InstallAppPanel">
+		<Control height="1" bkcolor="#fff1f1f1"/>
+		   <VerticalLayout height="98" bkcolor="#fff5f5f5">
+			 <Label 	padding="76,40,0,0" text="已连接设备" varwidth="true" height="16" align="center" textcolor="#ff000000" font="YAHEI.N014" mouse="false"/>
+		   </VerticalLayout>
+	   <Control height="1" bkcolor="#fff1f1f1"/>
+	   <Label padding="58,50,0,0" text="请先安装手机酷我" width="123" height="16"  font="YAHEI.N014"/>
+       <Label padding="72,4,0,0" text="才可以传歌哦" width="123" height="16" font="YAHEI.N014"/>
+	   <Control padding="74,30,0,0" bkimage="tran_kuwo_logo.png" width="80" height="80"/>
+	   <Button name="app_install" padding="74,30,0,0" text="扫码安装" setcursor="true" width="75" height="34" textcolor="#ff21a0ed" pushedtextcolor="#ff1b97e2" hottextcolor="#ff24aafc" font="YAHEI.N014"/>
+	   <Button name="app_installed" padding="55,30,0,0" text="已安装手机酷我" width="120" height="34" textcolor="#ffffffff" font="YAHEI.N014" statusimage="multiDevicebtn.png"/>
+	   <VerticalLayout name="app_installed_loading" visible="false" padding="0,30,0,0" height="34">
+			<Label  padding="107,0,0,0" width="16" height="16" bkimage="loading.png" frametime="1200" framenum="12" />
+	   </VerticalLayout>
+	   <Control />
+	  <VerticalLayout height="80">
+		<Button padding="36,0,0,0" visible="false" name="appDownPanel_wifi_connect_btn" text="我要使用Wi-Fi无线连接" varwidth="true" height="34" textcolor="#ff21a0ed" pushedtextcolor="#ff1b97e2" hottextcolor="#ff24aafc" font="YAHEI.N014" />
+	  </VerticalLayout>
+	</VerticalLayout>
+	<VerticalLayout name="OneDevicePanel">
+		   <Control height="1" bkcolor="#fff1f1f1"/>
+		   <HorizontalLayout height="98" bkcolor="#fff5f5f5">
+				<Control padding="18,15,0,0" bkimage="WifiDeviceLogo.png" width="36" height="54" mouse="false"/>
+				<VerticalLayout width="200">
+					<Button name="oneDiskShowlabel" padding="8,10,0,0" width="150" endellipsis="true" textcolor="#ff333333"/>
+					<HorizontalLayout>
+						<Button name="oneDiskDisconnect" padding="11,1,0,0" text="断开" textcolor="#ff666666" width="75" height="25" statusimage="btn_downpanelbtn.png"/>
+						<Button name="ResetDiskConnection" visible="false" padding="5,1,0,0" text="重新连接" textcolor="#ff666666" width="75" height="25" statusimage="btn_downpanelbtn.png"/>
+						</HorizontalLayout>					
+						<PlayProgress name="OneDiskProgress" padding="10,5,0,0" height="5" width="150" max="100" min="0" fgpadding="1,1,1,1" bkimage="DiskProgress_bk.png" breath="false" fgimage="DiskProgress_Used.png" downloadimage="DiskProgress_Used.png" />
+						<Label 	name="oneDiskInfo" padding="8,2,10,0" varwidth="true" maxwidth="160" minwidth="80"  mouse="true" endellipsis="true" />
+				</VerticalLayout>
+				<Control />
+			</HorizontalLayout>
+			<Control height="1" bkcolor="#fff1f1f1"/>
+			<TabLayout name="WaitCopyArea" >
+				<VerticalLayout>
+				<HorizontalLayout height="35">
+					<Label name="TotalSongInfo" padding="10,5,0,0" varwidth="true" maxwidth="200" minwidth="80" textcolor="#ff666666" mouse="false"/>
+					<Control />
+					<Button name="WaitCopyDelete" padding="0,5,10,0" text="清空" width="40" height="23" textcolor="#ff46b4e6" statusimage="btn_downpanelbtn.png"/>
+				</HorizontalLayout>
+				<List name="WaitCopyPanel" header="hidden" acceptdrag="true" dragtarget="true" draghovertype="line" rectangleselect="true" itemtextcolor="#ff333333" itemselectedtextcolor="#ffffffff" itemhotbkcolor="#fff7f7f7" itemselectedbkcolor="#fff7f7f7" itemexpandbkcolor="#fff7f7f7" inertiascroll="true" usefadehotbkg="true" multiselecting="true" itemshowhtml="false" vscrollbar="true" hscrollbar="false" itemalign="left" menu="true">
+					<ListHeader>
+						<ListHeaderItem />
+					</ListHeader>
+					<DefChildAttr height="32" expandheight="65" menu="true"/>
+				</List>
+				</VerticalLayout>
+				<PLNOSONGACCEPTDRAG enabled="true" mouse="true" bkcolor="#ffffffff">
+					<VerticalLayout >
+					<Label 	 text="请勾选或拖动要复制的歌曲" padding="10,50,0,0" align="center" mouse="false" font="YAHEI.NO12" />
+					<Label 	 text="(按住ctrl或者shift键批量选中歌曲)" padding="10,0,0,0" align="center"  mouse="false" font="YAHEI.NO12"/>
+					<Control bkimage="WaitCopyEmptybk.png" padding="0,20,0,0" width="230" height="230" mouse="false"/>
+					</VerticalLayout>
+				</PLNOSONGACCEPTDRAG>
+				<PLCOPYFINISHACCEPTDRAG bkcolor="#ffffffff">
+					<VerticalLayout >
+					<Control bkimage="copy_finished.png" padding="85,75,0,0" height="60" width="60" />
+					<Control height="5" />
+					<Label name="CopyedResultInfo" align="center" textcolor="#ff666666" mouse="false"/>
+					<Button name="WatchResult" text="点击查看>>" align="center" textcolor="#ff46b4e6" />
+					</VerticalLayout>
+				</PLCOPYFINISHACCEPTDRAG>
+			</TabLayout>
+			<Control height="1" bkcolor="#fff1f1f1"/>
+			<TabLayout name="CopyPrcessInfoArea" height="65">
+				<HorizontalLayout >
+					<CheckBox name="CopyLyricsCheckBox" visible="false" text="复制歌词" textcolor="#ff666666"  width="80" padding="20,25,0,0"/>
+					<Button name="StartCopyNow" padding="77,20,10,0" text="开始导入" textcolor="#ffffffff" width="75" height="25" statusimage="btn_dwonpalyall.png"/>
+				</HorizontalLayout>
+				<HorizontalLayout >
+					<VerticalLayout name="CopyingInfo" width="170">
+						<PlayProgress name="CopyingProgress" padding="10,25,0,0" height="5" width="150" max="100" min="0" fgpadding="1,1,1,1" bkimage="DiskProgress_bk.png" breath="false" fgimage="DiskProgress_Used.png" downloadimage="DiskProgress_Used.png" />
+						<Label 	name="CopyingProgressInfo" padding="9,2,0,0" varwidth="true" maxwidth="150" minwidth="80" textcolor="#ff999999" mouse="false"/>
+					</VerticalLayout >
+					<Button name="StopCopyNow" padding="5,20,10,0" text="暂停" textcolor="#ff666666" width="35" height="25" statusimage="btn_downpanelbtn.png"/>
+				</HorizontalLayout>
+				<HorizontalLayout >
+					<Button name="ContinueCopyNow" padding="80,20,10,0" text="继续导入" textcolor="#ff666666" width="70" height="25" statusimage="btn_downpanelbtn.png"/>
+				</HorizontalLayout>
+				<HorizontalLayout >
+					<Button name="TryAgainBtn" padding="20,20,10,0" text="重试" textcolor="#ff666666" width="70" height="25" statusimage="btn_downpanelbtn.png"/>
+					<Button name="IgnoreBtn" padding="40,20,10,0" text="忽略" textcolor="#ff666666" width="70" height="25" statusimage="btn_downpanelbtn.png"/>
+				</HorizontalLayout>
+				<Control />
+			</TabLayout >
+	</VerticalLayout>
+	<VerticalLayout name="MultipleDevicePanel">
+			<Control height="1" bkcolor="#fff1f1f1"/>
+			<HorizontalLayout height="98" bkcolor="#fff5f5f5">
+				<Control padding="18,15,0,0" bkimage="MultipleDeviceLogo.jpg" width="32" height="73" mouse="false"/>
+				<VerticalLayout width="200">
+					<Label 	name="multipleshowlabel" padding="10,23,0,0" font="Main.ChannelTitle" varwidth="true" maxwidth="200" minwidth="80" textcolor="#ff333333" mouse="false"/>
+					<Label 	padding="10,-2,0,0" font="Main.ChannelTitle" text="请选择:" varwidth="true" maxwidth="120" minwidth="80" textcolor="#ff333333" mouse="false"/>
+				</VerticalLayout>
+				<Control />
+			</HorizontalLayout>
+			<Control height="1" bkcolor="#fff1f1f1"/>
+			<Control height="30" />
+			<List name="DisksInfoList" header="hidden" rectangleselect="true" itemtextcolor="#ff666666" itemselectedtextcolor="#ffffffff" itemhotbkcolor="#fff7f7f7" itemselectedbkcolor="#fff7f7f7" itemexpandbkcolor="#fff7f7f7" inertiascroll="true" usefadehotbkg="true" multiselecting="true" itemshowhtml="false" vscrollbar="true" hscrollbar="false" itemalign="left" menu="true">
+				<ListHeader>
+					<ListHeaderItem />
+				</ListHeader>
+				<DefChildAttr height="80" menu="true"/>
+			</List>
+			<Control height="20"/>
+	</VerticalLayout>
+    </TabLayout>
+</VerticalLayout>
+</Window>

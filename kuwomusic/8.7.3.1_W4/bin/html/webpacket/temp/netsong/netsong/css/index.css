@@ -1,0 +1,147 @@
+/*首页公用*/
+body{overflow-x:hidden;}
+.index_index{width:750px; margin:0 auto; padding-top:25px;}
+/*各模块的title部分*/
+.indexTitleBox{overflow:hidden; height:18px; line-height:18px; padding-bottom:20px;}
+.indexTitleBox h2{float:left; width:auto; height:18px; line-height:18px; font-size:18px; color:#000;}
+.indexTitleBox .entrance{float:left; max-width:632px; height:18px; overflow:hidden;}
+.indexTitleBox .entrance a{position:relative; float:left; height:18px; line-height:18px; margin-left:20px; color:#999;}
+.indexTitleBox .entrance a:hover{color:#21a0ed;}
+.indexTitleBox .entrance a.rcm{width:75px;}
+.indexTitleBox .entrance .rcm_new{position:absolute; top:2px; right:0; display:inline-block; width:14px; height:14px; background:url(../img/xin.gif) no-repeat;}
+.index_more{float:right; height:18px; line-height:18px; font-size:14px; color:#999;}
+.index_more:hover{color:#21a0ed;}
+.opinion{ color:#999;display: block;float:right;margin:25px 50px 20px 0;}
+.opinion span{font-family: simsun;font-weight: 600}
+.opinion:hover{color:#07b2e5;}
+/*各模块列表公用盒子*/
+.kw_indexListBox{margin-right:-40px; padding-bottom:30px; overflow:hidden;}
+
+/*活动、原创、专栏盒子公用*/
+.hotColumnBox,.kw_originalBox,.musicPeripheryBox{margin-bottom:-20px;}
+/*盒子公用结束*/
+
+/*热门推荐部分css开始*/
+.kw_indexRecommendPlaylist{margin-right:-40px; margin-bottom:-20px;}
+/*精选电台部分css开始*/
+.kw_indexRadio{margin-right:-40px;}
+/*个性化推荐部分css开始*/
+.kw_rcmPl{margin-right:-40px; margin-bottom:-20px;}
+
+/*banner部分css*/
+.bannerBox{width: 750px; height: 160px; margin-bottom:40px; position: relative; z-index: 99999;} 
+.focus{float: left; width: 520px; height: 160px; position: relative; cursor: pointer; border-radius: 5px; overflow: hidden;}
+/*广告*/
+.adarea{width:210px;height:160px;overflow:hidden;}
+.ad{width: 210px; height: 160px; right: 0px; background-color: #fafafa; position: absolute; z-index: 99999;}
+.adx{position: absolute; right: 0px;  top: 0px;  width: 15px; height: 15px; background: url(../img/adx.png);}
+/*vip登录区域*/
+.vip{position:absolute; right:0px; z-index:99999;  display:none; width:210px; height:160px; background-color: #fafafa;}
+.vipcontent{  width:207px;  height:157px; border:1px solid #e5e5e5; background-color:#f4f4f4;text-align: center} 
+.vip .v_name{ height: 24px; line-height: 24px; padding-top: 30px; font-size: 12px; color: #323c50;}
+.vip .v_name b {display: inline-block;vertical-align: top}
+.v_b_name { max-width: 105px; cursor: pointer; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;text-indent: 7px;}
+.v_level{padding: 4px 0 0 15px; clear: both;}
+.vip .v_login {display: none; float: left; line-height: 23px;}
+.v_b_ulevel { width:18px; height:12px; margin-top:5px; overflow:hidden; background:url(../img/btn_userinfo_level.png) no-repeat 1px 0;}
+.v_b_vlevel {width:30px;height: 30px; overflow: hidden;margin:-4px 0 0 -3px; }
+.v_b_vlevel.newVip_0 {background: url(../img/vip.png);background-size: 100%;}
+.v_b_vlevel.newVip_1 {background: url(../img/vip_h.png);background-size: 100%;}
+.v_b_vlevel.newVip_2 {background: url(../img/vipLuxury_h.png);background-size: 100%;}
+.vip .v_name .musicPackIcon {width:25px;height: 25px; overflow: hidden; background: url(../img/icon_musicVip.png);background-size: 100%;display: none;margin-top:-2px;}
+.vip .today_num, .vip .all_num {height: 20px; line-height: 20px; font-size: 12px; color: #888999;}
+.vip .today_num font, .vip .all_num font {display:inline-block;vertical-align: top; font-size: 12px; color: #888999;}
+.vip .today_num span, .vip .all_num span {display:inline-block;line-height: 19px; text-align: left; color: #ff9900; overflow: hidden;}
+.vip_btn{position: absolute; left: 50%; bottom: 25px; width: 93px; height: 25px; line-height: 25px; margin: 10px 0 0 -46px; border: 1px solid #f1745f; border-bottom: 2px solid #de6b59; border-radius: 2px; font-size: 12px; text-align: center; color: #fff; overflow: hidden; background: #ff826e;}
+.vip_btn:hover {background: #fc7560;}
+.pl75{padding-left:75px;}
+/*banner结束*/
+
+/*焦点图相关*/
+#w_focus a{display:none;}
+#w_focus a.current{display:block;}
+/*焦点图左右翻页btn*/
+.focus .prev,.focus .next{display: none; position: absolute; z-index: 100; width: 25px; height: 58px;}
+.focus .prev{left: 0; top: 50%; margin-top: -29px; background: url(../img/prev.png) no-repeat 0 0;}
+.focus .next{right: 0; top: 50%; margin-top: -29px; background: url(../img/next.png) no-repeat 0 0;}
+.focus .prev:hover{background: url(../img/prev_h.png) no-repeat 0 0;}
+.focus .next:hover{background: url(../img/next_h.png) no-repeat 0 0;}
+/*结束*/
+/*焦点图直接播放按钮*/
+#focusplay { position:absolute; right:5px; bottom:5px; width:34px; height:34px; z-index:100; cursor:pointer; display:none;}
+#focusplay a {width:34px; display:block; height:34px; background:url(../img/i_play.png) no-repeat 0 0;}
+#focusplay a:hover {background:url(../img/i_play_h.png) no-repeat 0 0;}
+/*结束*/
+/*焦点图方块选项*/
+#focus_btn{display: block; position: absolute; z-index: 99; width: 100%; bottom: 8px; text-align: center;}
+#focus_btn a{overflow: hidden; display: inline-block; width: 8px;height: 8px; background: #000; border: 1px solid #cbced2; opacity: 0.30; position: relative; margin-right: 5px;}
+#focus_btn a.current{background: #46b4e6; opacity: 1;}
+/*结束*/
+
+/*二通广告区域*/
+.ad2Box{height:60px; padding-bottom:30px;}
+.gxh2015ad2Box {position: relative; float: left; width: 600px; height:60px; overflow: hidden;}
+.adx2{position: absolute; right: 0px; top: 0px; display: block; width: 15px; height: 15px;  background: url(../img/adx.png);}
+.open_vip {float: right; width: 120px; height: 60px; line-height: 60px; text-align: center; font-size: 16px; color: #fff; background-color: #21a0ed;}
+/*二通广告区域结束*/
+
+/*新碟上架模块*/
+.kw_albumList{margin-bottom:-4px;}
+/*新碟上架模块结束*/
+
+/*  广播电台 css */
+
+.radio_locationName{cursor: default;font-weight: 500; color: #000; position: absolute;left: 0;top: 0; margin-right:10px; margin-left:5px; padding-left:20px; background: url('http://image.kuwo.cn/mpage/html5/2016/hitlist/icon_radio_addr.png') no-repeat;}
+
+#radio_listBox {position: absolute;left: 68px;top: 0; width: 255px; height: 20px; overflow:hidden;text-overflow:ellipsis; white-space:nowrap;  }
+#radio_listBox ol{padding-left: 26px;}
+#radio_listBox li{height: 22px; position: relative;}
+#radio_listBox li a{color: #999; font-family: "微软雅黑"; width: 215px; display: inline-block; text-overflow:ellipsis; white-space:nowrap; overflow: hidden;}
+#radio_listBox li a span:first-child{ color: #000;}
+#radio_listBox li a:hover{color: #07b2e5;}
+#radio_listBox li a:hover span{color: #07b2e5;}
+#radio_listBox li a strong{font-weight: 500; color: #000; text-overflow:ellipsis; white-space:nowrap; overflow: hidden;}
+#radio_listBox li a:hover strong{color: #07b2e5;}
+#radio_listBox li:before{content: ''; position: absolute; left: -24px; top: -3px; width: 22px; height: 24px; background: url('http://image.kuwo.cn/mpage/html5/2016/hitlist/icon_radio_voice.png') no-repeat;}
+
+
+.br_wrap .br_pic .lstdiv{position: absolute;width: 140px;height: 25px;top:115px;z-index: 96;}
+.br_wrap .br_pic .listeners{position: relative;float: right;margin-right: 5px;color: #ffffff;font-size: 12px;background: url(../img/play_radio/listen.png)2px no-repeat;padding: 1px 2px 0px 20px;text-shadow: 1px 1px 1px rgba(33,33,33,0.87);}
+
+/*白领首页样式*/
+#kw_wc .focus{border-radius:0;}
+
+#kw_wc .indexTitleBox{position:relative; height:20px; line-height:20px; padding-bottom:15px;}
+#kw_wc .indexTitleBox h2{position:relative; z-index:0; float:none; text-align:center; font-size:20px; color:#222; font-weight:600;}
+#kw_wc .index_more{position:absolute; z-index:99; right:0; top:4px; font-family:simsun; font-weight:600;}
+
+/*白领首页4个icon*/
+#kw_wc .recommendBox{margin-right:-50px; margin-bottom:40px;}
+#kw_wc .recommendBox .recommendListBox{overflow:hidden;}
+#kw_wc .recommendListBox li{float:left; width:180px; height:125px; margin-right:10px;}
+#kw_wc .recommendListBox li a{display:block; width:180px; height:101px;}
+#kw_wc .recommendListBox li a.rcm{height:101px; line-height:101px; font-family:"Arial"; font-size:48px; text-indent:26px; color:#fff; background:url(../img/gxh/week.jpg) no-repeat;}
+#kw_wc .recommendListBox li a.daysong{background:url(../img/gxh/daysong.jpg) no-repeat;}
+#kw_wc .recommendListBox li a.ukhot{background:url(../img/gxh/uk_hot.jpg) no-repeat;}
+#kw_wc .recommendListBox li a.radio{background:url(../img/gxh/radio.jpg) no-repeat;}
+#kw_wc .recommendListBox li a.info{float:left; width:auto; height:14px; line-height:14px; margin-top:10px; font-weight:500; color:#666;}
+#kw_wc .recommendListBox li a.info:hover{color:#21a0ed;}
+/*白领首页4个icon结束*/
+
+/*白领个性化推荐部分css开始*/
+#kw_wc .kw_rcmPl{margin-right:-40px; margin-bottom:-9px;}
+#kw_wc .kw_indexRadio{padding-bottom:38px;}
+#kw_wc .kw_indexMvListBox{padding-bottom:38px;}
+#kw_wc .kw_originalList{padding-bottom:50px;}
+#kw_wc .hotColumnBox{margin-bottom:32px;}
+#kw_wc .ad2Box{padding-bottom:40px;}
+#kw_wc .kw_albumList{margin-bottom:9px;}
+
+/*白领酷我原创样式*/
+.kw_owrap{float:left; width:370px; height:90px; margin:0 10px 10px 0; background:#f5f5f5;}
+.kw_owrap .leftimg{float:left; width:90px; height:90px;}
+.kw_owrap .infoBox a{display:block; margin:10px 0 15px 0; font-size:18px; text-indent:20px; font-weight:500; color:#333;}
+/*白领酷我原创样式结束*/
+
+#kw_wc .newAlbumBox .indexTitleBox h2{margin-bottom:10px;}
+.kw_pl140 span.playcnt {position:absolute;right:5px;top:5px;margin-right: 5px;color: #ffffff;font-size: 12px;background: url(../img/play_radio/listen.png)2px no-repeat;padding: 1px 2px 0px 20px;text-shadow: 1px 1px 1px rgba(33,33,33,0.87);}

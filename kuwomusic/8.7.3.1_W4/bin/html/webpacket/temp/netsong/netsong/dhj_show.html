@@ -1,0 +1,378 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <title>秀场</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+        body{margin:0;padding:0;font-family: "微软雅黑";overflow:hidden;}
+        .juneBox{background:#f9f9f9;height:68px;cursor:pointer;border-top:1px solid #e7e7e7}
+        .juneBoxLeft{float:left;height:68px;width:68px;overflow: hidden;display:inline;position: relative;margin-right: 3px;display: inline;}
+        .juneBoxLeft .pic100{height:68px;width:68px;}
+        .juneBoxRight{overflow: hidden;zoom:1;padding-top:7px;position: relative;height:68px;background: #f9f9f9;padding-left: 3px;}
+        .juneBoxRright{padding-right:17px;position: absolute;top:10px;right:10px;width:140px;}
+        .juneBoxRleftTop{height:20px;}
+        .juneListenicon{float:left;background:url(img/dhj/listenicon2.gif) no-repeat;width:13px;height:17px;margin:4px 9px 0 0;}
+        .juneListenBtn1{float:left;font-size:14px;margin-top:4px;}
+        .juneBoxRleftBottom{height:18px;line-height:18px;font-size: 12px;color: #999;margin-top: 0px;}
+        .juneBoxRleftBottom img{vertical-align: middle;margin-right:10px;}
+        .juneBoxRleftBottom em{margin:0 5px;color: #adadad;}
+        .juneBoxRleftBottom .targetNow{color: #2298d6;}
+        .juneListenBtn2{float:right;width:108px;height:30px;line-height:30px;background:url(img/dhj/dhj_btn_come.png) no-repeat;color:#fff;text-align: center;margin-top:9px; }
+        .juneBoxRrightBottom{height:33px;line-height:33px;text-align: right;clear: both;}
+        .juneBoxRrightBottom em{color: #ff7b77;font-size: 14px;}
+        .targetNow a{color:#2298d6;}
+        .xiu_hot{width:16px;height:7px;float:left;background:url(img/dhj/hot.png) no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/dhj/hot.png');margin-left:4px;margin-top:7px;}
+        .xiuInfoBox{padding-right: 5px;float: left;display: inline;}
+        .musicName{color:#666;font-size:14px;height: 18px;line-height: 18px;float:left;display:inline;}
+        .singerName{color:#666;font-size:12px;height: 20px;line-height: 20px;}
+        .xiuIconBox .realManIcon{
+            height: 20px;
+            width:60px;
+            float: left;
+            display: inline;
+            background: url(img/dhj/dhj_btn.png) no-repeat;
+            margin-right: 5px;
+            line-height: 20px;
+            color: #91875e;
+            font-size: 12px;
+        }
+        .xiuIconBox .ppIcon{width:14px;height: 20px;float:left;background: url(img/dhj/20.gif) no-repeat;}
+        .mask_singer{width:68px;height: 68px;background:url(img/dhj/dhj_mask.png) no-repeat;display:none;position: absolute;top:0px;left:0px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/dhj/dhj_mask.png');}
+    </style>
+    <script src="js/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="heji" id="search_heji_xiu">
+    <div class="juneBox" onclick="openXIU(this,-8);return false;">
+        <div class="juneBoxLeft">
+        </div>
+        <div class="juneBoxRight">
+            <div class="juneBoxRleft">
+                <div class="juneBoxRleftTop" style="overflow:hidden;">
+                    <div class="xiuInfoBox fl">
+                        <div class="musicName"></div>
+                    </div>
+                    <div class="xiuIconBox ">
+                        <div class="realManIcon">
+                        </div>
+                        <span class="ppIcon fl"></span>
+                    </div>
+                    <!--<span class="juneListenicon"></span>-->
+                    <span class="juneListenBtn1"></span>
+                    <!--<span class="xiu_hot"></span>-->
+                </div>
+                <div class="singerName"></div>
+                <div class="juneBoxRleftBottom">
+                </div>
+
+            </div>
+            <div class="juneBoxRright">
+                <div class="juneBoxRrightTop"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+    var isIE = !!(window.attachEvent && !window.opera)||!!window.ActiveXObject||"ActiveXObject" in window;
+    var xiusearchkey = "";
+    var firstsearcharray = [];
+    var getxiujsondata = "";
+    var searchBeginNum = -1; //日志
+    var dhjname;//  日志
+    var dhjreltype = "";
+    var xiu_heji = "loading";
+    var gethejijsondata = "";
+    var isshowxiu = "loading";
+    var version = "";
+    function getVersion(){
+      try{
+        if(version==""){
+            version = callClient("GetVer");
+        }
+        return version;
+      } catch(e){
+          alert(e.message)
+      }
+    }
+    function openURL(url) {
+        if (url.indexOf("x.kuwo.cn") > -1) {
+            var param = callClient("LiveShowParam");
+            if (param != "") {
+                if (url.indexOf("?") > -1) {
+                    url = url + param;
+                } else {
+                    url = url + "?" + param.substr(1);
+                }
+            }
+        }
+        //add by luger 添加秀场盒内弹窗弹出20150521
+        if(url.indexOf("x.kuwo.cn")>-1){
+            if(getVersion() > 'MUSIC_8.0.1.0'){
+                callClient("ShowOpenRoom?width=1400&height=830&url="+encodeURIComponent(url));  //
+                return;
+            }
+        }
+        var backstr = callClient("OpenBrowser?browser=default&url=" + encodeURIComponent(url));
+        if (backstr != 1) {
+            window.open(url);
+        }
+    }
+
+
+
+    function openXIU(obj,pos){
+       var url = $(obj).attr("data-url");
+        if(url.indexOf("?")>-1){
+            url = url + "&cid=" + getUserID("devid");
+        }else{
+            url = url + "?cid=" + getUserID("devid");
+        }
+        //
+        if(pos==-8){
+            var myImg = new Image();
+            myImg.src = "http://g.koowo.com/g.real?aid=text_ad_2102&ver="+getVersion()+"&cid="+getUserID("devid");
+        }else{
+            return;
+        }
+        openURL(url);
+        searchOperationLog("x_open",pos,"music","noref");
+    }
+
+    function getUserID(s){
+        var clientString = callClient("UserState?src=user");
+        var clientid = getValue(clientString,s);
+        if(clientid==""){
+            clientid = 0;
+        }
+        return clientid;
+    }
+    function callClient(call){
+        try{
+            return window.external.callkwmusic(call);
+        }catch(e){
+            return "";
+        }
+    }
+
+    function getValue(url,key){
+        url = url.toString();
+        if(url.indexOf('#')>=0){
+            url = url.substring(0,url.length-1);
+        }
+        var value='';
+        var begin = url.indexOf(key + '=');
+        if(begin>=0){
+            var tmp = url.substring(begin + key.length + 1);
+            var eqIdx = tmp.indexOf('=');
+            var end = 0;
+            if(eqIdx>=0){
+                tmp = tmp.substring(0,eqIdx);
+                end = tmp.lastIndexOf('&');
+            }else{
+                end = tmp.length;
+            }
+            if(end>=0){
+                try{
+                    value = decodeURIComponent(tmp.substring(0,end));
+                }catch(e){
+                    value = tmp.substring(0,end);
+                }
+            }else{
+                try{
+                    value = decodeURIComponent(tmp);
+                }catch(e){
+                    value = tmp;
+                }
+            }
+        }
+        return value;
+    }
+        function getXiuHeJi(jsondata){
+           var data = jsondata;
+            if(typeof(data)!="undefined"&&typeof(data.success)=="boolean"&&data.success===true){
+                xiu_heji = "ok";
+//                if(isshowxiu=="loading"){
+//                    getxiujsondata = data;
+//                    return;
+//                }else if(isshowxiu=="no"){
+//                    return;
+//                }
+                var pic = data.photoUrl;
+                var picstring = "";
+                picstring = '<span class="mask_singer"></span><img src="'+pic+'" onerror="this.src=\'img/kuwo.jpg\'"  class="pic100"/>';
+                $("#search_heji_xiu .juneBoxLeft").html(picstring);
+                var nickname = data.nickname;
+                var songname = data.songname;
+                var everartist = data.artist;
+                try{
+                    nickname = decodeURIComponent(nickname);
+                    songname = decodeURIComponent(songname);
+                    everartist = decodeURIComponent(everartist);
+                }catch(e){}
+                if(nickname.length>8){
+                    nickname = nickname.substr(0,8);
+                }
+                $("#search_heji_xiu .juneBoxRleftBottom").html(data.onlineCnt+"人正在观看");
+                $("#search_heji_xiu .juneBoxRrightTop").html('<a href="###" hidefocus data-url="'+data.musicPlayLink+'" onclick="openXIU(this,-1);return false;" class="juneListenBtn2"></a>');
+                $("#search_heji_xiu").show();
+                $(".juneBox").attr("data-url",data.roomLink);
+                if(firstsearcharray.length>1){
+                    $(".xiuInfoBox .musicName").html(songname);
+                    $(".singerName").html("热门艺人 ：" + nickname);
+                    // if(data.type == "1" || data.type == "4  "){
+                    //     $(".xiuInfoBox .musicName").html(songname)
+                    //     $(".singerName").html("热门艺人 ："+nickname)
+                    // }
+                    // if(data.type == "2"){
+                    //     $(".xiuInfoBox .musicName").html("主播正在唱"+everartist+"的歌曲")
+                    //     $(".singerName").html("热门艺人 ："+nickname)
+                    // }
+                    // if(data.type == "3"){
+                    //     $(".xiuInfoBox .musicName").html(songname)
+                    //     $(".singerName").html(nickname)
+                    // }
+                   $("#search_heji_xiu").show();
+               callClient("DHJShowFinish?h=68&bShow=1");
+		    //主播露出统计
+			var showerWrap = new Image();
+			showerWrap.src = "http://g.koowo.com/g.real?aid=text_ad_2102&ver="+getVersion()+"&type=show"+"&cid="+getUserID("devid");
+		    var call = "MBOXLOG?stype=type_sdhj&snum="+searchBeginNum+"&showdhj=showxiuchang&dhjname="+xiusearchkey;
+                    callClient(call);
+                    if(Math.floor(Math.random()*10)==1){
+                        var xiuimg = new Image();
+                        xiuimg.src = "http://g.koowo.com/g.real?aid=text_ad_2102&ver="+getVersion()+"&type=show"+"&cid="+getUserID("devid");
+                    }
+                }
+            }
+        }
+        function getXiuData(jsondata){
+            var data = jsondata;
+            var call = "";
+            if(typeof(data)!="undefined" && data!=null&&typeof(data.type)!="undefined"){
+                if(data.type=="artist"){
+                    isshowxiu = "no";
+                }else{
+                    isshowxiu = "ok";
+                }
+            }else{
+                isshowxiu = "ok";
+            }
+            if(isshowxiu=="ok"&&xiu_heji=="ok"&&getxiujsondata!=""){
+                getXiuHeJi(getxiujsondata);
+                return;
+            }
+            if(isshowxiu=="ok"&&xiu_heji=="ok"){
+                return;
+            }else if(isshowxiu=="ok"&&xiu_heji=="loading"){
+                gethejijsondata = jsondata;
+                return;
+            }
+            if(typeof(data)=="undefined" || data==null||typeof(data.type)=="undefined"){
+                call = "MBOXLOG?stype=type_sdhj&snum="+searchBeginNum+"&showdhj=none&dhjname=none"; // 记录日志
+                callClient(call);
+                getXiuHeJi(data)
+                return;
+            }
+        }
+$(function(){
+    try{
+    var location = window.location.href;
+    location = ''+location;
+    location = location.replace("%26showadvice","&showadvice");
+    var key = getValue(location,"key");
+    var snum = getValue(location,"snum");
+    if(snum){
+        searchBeginNum = snum;
+    }else{
+        var nowDate = new Date();
+        var pastDate = new Date("1601","00","01");
+        searchBeginNum = "utf8_" + getUserID("devid") + encodeURIComponent(key.replace("&", "")) + parseInt((nowDate.getTime() + nowDate.getTimezoneOffset() * 60 * 1000 - pastDate.getTime())/1000/60/60);
+    }
+    if(typeof(key)=="undefined"||key==""){
+        return;
+    }
+    searchBeginTime = new Date().getTime();
+    key = decodeURIComponent(key);
+    searchKey = key;
+    searchSourceKey = key;
+    key = encodeURIComponent(key);
+    var mliststr = callClient("GetSearchMusicList?key="+key+"&n=1");
+//    if(mliststr==""){
+//        xiu_heji = "error";
+//        getDHJRequest(key);
+//        return;
+//    }
+    var mlistobj = eval('('+mliststr+')');
+    if(!mlistobj.key||mlistobj.key!=key){
+        xiu_heji = "error";
+        getDHJRequest(key);
+        return;
+    }
+    var mlist = mlistobj.musiclist;
+    if(mlist.length==0){
+        xiu_heji = "error";
+        getDHJRequest(key);
+        return;
+    }
+    var firstsearchmusicname = mlist[0].name;
+    var name = mlist[0].name;
+    name = decodeURIComponent(name);
+    var artist = mlist[0].artist;
+        artist = decodeURIComponent(artist);
+
+    var singerId = mlist[0].musicrid
+
+    // if(artist.length>6){
+    //     artist = artist.substr(0,6);
+    // }
+    // if(name.length>12){
+    //     name = name.substr(0,12);
+    // }
+    firstsearcharray[0] = name;
+    firstsearcharray[1] = artist;
+    firstsearcharray[2] = singerId;
+   var song =  decodeURIComponent(firstsearchmusicname)
+    if(xiusearchkey.indexOf("(")>-1){
+        xiusearchkey = xiusearchkey.substr(0,xiusearchkey.indexOf("("));
+    }
+    xiusearchkey = $.trim(xiusearchkey);
+//        act            写死 8
+//        name           音乐盒处理完得到的歌曲名    注:需要进行一次encode处理
+//        artist         key的歌手名                 注:需要进行一次次encode处理
+//        musicrid       歌曲ID
+//        searchContent  搜索输入的关键字            注:需要进行两次encode处理
+//        callback       回调地址 可为空
+//        from 渠道号
+
+            var xcname = encodeURIComponent(name);
+            var xcartist = encodeURIComponent(artist);
+            var mid = singerId;
+            var searchContent =encodeURIComponent(searchKey);
+            var url = "http://x.kuwo.cn/KuwoLive/PersonMusic";
+           // var url111 = "http://x.kuwo.cn/KuwoLive/PersonMusic?act=8&name="+xcname+"&artist="+xcartist+"&musicrid="+mid+"&searchContent="+searchContent+"&from=1001008095";
+        $.ajax({
+            url:url,
+            type:"get",
+            dataType:"text",
+              data:{
+                act:8,
+                name:xcname,
+                artist:xcartist,
+                musicrid:mid,
+                searchContent:searchContent,
+                callback:"",
+                from:"1001008095",
+                dtime:(new Date()).getTime()
+            },
+                crossDomain:false,
+                success: function (data){
+                getXiuHeJi(eval('('+data+')'));
+            }
+        });
+    }catch(e){
+    }
+})
+    </script>
+</div>
+</body>
+</html>

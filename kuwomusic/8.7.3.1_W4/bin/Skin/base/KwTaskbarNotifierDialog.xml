@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="255,165" roundcorner="5,5" >
+	<VerticalLayout bkcolor="#00000000">
+	  <HorizontalLayout name="titlepanel" height="30" padding="13,10,0,0">
+	    <Control  bkimage="starlogo.png" width="16" height="16" />
+    	<Label name="title" padding="5,0,0,0" height="22" width="170" font="UIPopupWnd.Title"/>
+    	<Control />
+    	<Button name="close" height="19" width="25" statusimage="close.png" />
+		<Control width="10"/>
+      </HorizontalLayout>
+	  <HorizontalLayout height="100">
+		<HorizontalLayout width="103" >
+			<Control pos="13,0,107,94" float="true" width="94"  height="94" bkimage="star_icon_bk.png" />
+			<Button name="starimag" pos="15,2,103,90" float="true" width="88"  height="88" />
+		</HorizontalLayout>
+		<VerticalLayout height="90" padding="10,10,0,0" >
+			<Button name="stargreetings1" width="120" height="16" align="left" showhtml="true" textcolor="#FF226699"/>
+			<Button name="stargreetings2" width="120" height="16" align="left" showhtml="true" textcolor="#FF226699"/>
+			<Button name="stargreetings3" width="120" height="16" align="left" showhtml="true" textcolor="#FF226699"/>
+		</VerticalLayout>
+      </HorizontalLayout>
+	  <HorizontalLayout height="30">
+	    <CheckBox name="nottip" padding="13,0,0,0" height="16" width="75" text="不再提示" checkinfo="dest='0,0,13,13'" statusimage="checkbox.png"/>
+	  </HorizontalLayout>
+	</VerticalLayout>
+</Window>

@@ -1,0 +1,1165 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window sizebox="4,4,4,4" mininfo="985,570" roundcorner="0,0" dbclicktofullscreen="true" resizehandle="resizehandle.png">
+  <Default name="VScrollBar" value="buttonlength=&quot;15&quot; width=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_public_v.png' source='0,0,12,15'&quot; button1hotimage=&quot;file='scrollbar_public_v.png' source='13,0,25,15'&quot; button1pushedimage=&quot;file='scrollbar_public_v.png' source='26,0,38,15'&quot; button1disabledimage=&quot;file='scrollbar_public_v.png' source='39,0,41,15'&quot; button2normalimage=&quot;file='scrollbar_public_v.png' source='0,16,12,31'&quot; button2hotimage=&quot;file='scrollbar_public_v.png' source='13,16,25,31'&quot; button2pushedimage=&quot;file='scrollbar_public_v.png' source='26,16,38,31'&quot; button2disabledimage=&quot;file='scrollbar_public_v.png' source='41,16,53,31'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_public_v.png' source='0,32,12,33'&quot; bkhotimage=&quot;file='scrollbar_public_v.png' source='13,32,25,33'&quot; bkpushedimage=&quot;file='scrollbar_public_v.png' source='26,32,38,33'&quot; bkdisabledimage=&quot;file='scrollbar_public_v.png' source=39,32,51,33'&quot;" />
+  <Default name="HScrollBar" value="buttonlength=&quot;16&quot; height=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_public_h.png' source='0,0,16,12'&quot; button1hotimage=&quot;file='scrollbar_public_h.png' source='17,0,33,12'&quot; button1pushedimage=&quot;file='scrollbar_public_h.png' source='34,0,50,12'&quot; button1disabledimage=&quot;file='scrollbar_public_h.png' source='51,0,67,12'&quot; button2normalimage=&quot;file='scrollbar_public_h.png' source='0,13,16,25'&quot; button2hotimage=&quot;file='scrollbar_public_h.png' source='17,13,33,25'&quot; button2pushedimage=&quot;file='scrollbar_public_h.png' source='34,13,50,25'&quot; button2disabledimage=&quot;file='scrollbar_public_h.png' source='51,13,67,25'&quot; thumbnormalimage=&quot;scrollbar_public_thumb_h_1.png&quot; thumbhotimage=&quot;scrollbar_public_thumb_h_2.png&quot; thumbpushedimage=&quot;scrollbar_public_thumb_h_3.png&quot; thumbdisabledimage=&quot;scrollbar_public_thumb_h_4.png&quot; bknormalimage=&quot;file='scrollbar_public_h.png' source='0,26,16,38'&quot; bkhotimage=&quot;file='scrollbar_public_h.png' source='17,26,33,38'&quot; bkpushedimage=&quot;file='scrollbar_public_h.png' source='34,26,50,38'&quot; bkdisabledimage=&quot;file='scrollbar_public_h.png' source=51,26,67,38'&quot;" />
+  <Default name="Button" value="fadetime=&quot;300&quot;"/>
+  <Default name="Option" value="fadetime=&quot;300&quot;"/>
+  <Default name="CheckBox" value="setcursor=&quot;true&quot; height=&quot;18&quot; textcolor=&quot;Config.DefaultText&quot; checkinfo=&quot;dest='0,0,14,14'&quot; statusimage=&quot;Config_CheckBox.png&quot; textpadding=&quot;16,-6,0,0&quot; padding=&quot;0,8,0,0&quot; font=&quot;Config.DefaultText&quot;" />
+  <Default name="Combo" value="statusimage=&quot;Config_Combo.png&quot; textcolor=&quot;Config.DefaultText&quot; height=&quot;24&quot; width=&quot;79&quot; textpadding=&quot;5,4,5,5&quot; itembkcolor=&quot;#FFFFFFFF&quot; itemselectedbkcolor=&quot;#FFa9b2b8&quot; itemhotbkcolor=&quot;#BBd9e2e8&quot; font=&quot;Config.DefaultText&quot; scrollwheel=&quot;ifpushed&quot;" />
+	<EventHook event="OnSkinChange">
+		<Attribute control="UserOpreationLayer" value="bkimage=&quot;${LyricBkMask}&quot;" />
+		<Attribute control="ListAera" value="bkimage=&quot;${mylist_mask}&quot;" />
+		<Attribute control="TabPlayControlPanel" value="bkcolor=&quot;TabPlayControlPanel.bkcolor.normal&quot;" />
+		<Attribute control="PlayControlPanel"  value="bkcolor=&quot;PlayControlPanel.bkcolor.normal&quot;" />
+		<Attribute control="HeadControl" value="bkimage=&quot;${mylist_mask}&quot;" />
+		<Attribute control="plhline" value="visible=&quot;${plhline_visible}&quot;" />
+	</EventHook>
+
+  <VerticalLayout name="root">
+    <VerticalLayout name="UserOpreationLayer">
+        
+      <VerticalLayout name="LyricMVLogoLayout" height="71" float="true" pos="10,10,0,0" visible="false" sendsizemsg="true" >
+        <Control height="10"/>
+        <Container name="LyricMVLogoControl" padding="10,0,0,0" width="171" height="61" bkimage="LyricMVLogo.png" />
+      </VerticalLayout>
+
+      <Container name="bodyContainer" inset="1,1,1,0">
+        <HorizontalLayout name="WindowBody" >
+          <!-- ===================================================playlist begin====================================  -->
+         <HorizontalLayout name="ClassListSepline" width="170" minwidth="170" maxwidth="445" > <!-- bkimage="file='PlaylistSepBkg.png' hole='true'">  inset="0,0,2,0" sepwidth="2" sepimm="true" -->
+            <VerticalLayout name="ListAera" bkimage="${mylist_mask}">
+              <HorizontalLayout name="ListHead" height="54">
+                <Control width="10"></Control>
+                <!-- 登录 -->
+                <TabLayout name="UserLoginArea" height="35" width="125" padding="0,10,0,0">
+                  <HorizontalLayout name="InitLog" height="35" width="125" >
+                    <Button name="mainuserphotolog" width="35" height="35" bkimage="userpiccircle.png" setcursor="true" tooltip="登录开启云音乐，你的列表将可以在任意电脑和手机上查看"/>
+                    <Button name="mainuserlogbtn" text="点此登录" width="59" height="18" padding="0,9,0,0" textcolor="#ffffffff" endellipsis="true" setcursor="true" tooltip="登录开启云音乐，你的列表将可以在任意电脑和手机上查看"/>
+                    <Button name="mainCoolBean" visible="false" width="16" height="16" padding="4,12,0,0" bkimage="coolBean.png" setcursor="true"/>
+					<Button name="mainCoolSignGif" padding="0,9,0,0" fadetime="0" tooltip="签到送好礼" visible="true" bkimage="coolSigngift.png" width="17" height="18" framenum="2" frametime="400" />						  
+				  </HorizontalLayout>
+                  <HorizontalLayout name="LogSuc" height="35" width="125">
+                    <UserPhoto name="mainuserphoto" width="35" height="35" bkimage="userpiccircle.png" setcursor="true"/>
+                    <Button name="mainusername" text="" width="59" height="18" padding="0,9,0,0" textcolor="#ffffffff" endellipsis="true" setcursor="true"/>
+                    <Button name="mainvip" visible="false" width="20" height="20" padding="0,9,0,0" bkimage="logo_supervipgray.png" setcursor="true"/>
+					          <Button name="mainLoginCoolSignGif" visible="true" fadetime="0"  padding="0,9,0,0"  tooltip="签到送好礼" bkimage="coolSigngift.png" width="17" height="18" framenum="2" frametime="400" />						  
+                  </HorizontalLayout>
+                  <HorizontalLayout name="LogFail" height="35" width="106">
+                    <Button name="mainuserphotofail" width="35" height="35" bkimage="userpiccircle.png" setcursor="true"/>
+                    <Button name="mainuserlogfail" text="登录失败" width="59" height="18" padding="0,9,0,0" textcolor="#ffffffff" endellipsis="true" setcursor="true"/>
+                  </HorizontalLayout>
+                  <HorizontalLayout name="Loging" height="35" width="106">
+                    <Button name="mainuserphotologing" width="35" height="35" bkimage="userpiccircle.png" setcursor="false"/>
+                    <Button name="mainuserloging" text="正在登录" width="59" height="18" padding="0,9,0,0" textcolor="#ffffffff" endellipsis="true" setcursor="false"/>
+                  </HorizontalLayout>
+                </TabLayout>
+              </HorizontalLayout>
+
+              <!-- <Control height="1" bkcolor="#20ededed" /> -->
+              <VerticalLayout name="playlistrootpanel">
+
+                <!-- 管理Toolbar -->
+                <HorizontalLayout name="ToolBarArea" visible="false" height="34">
+                  <Button name="toolbarwindow" visible="false" padding="8,13,0,0" statusimage="playlist_tool_window.png" width="29" height="34"></Button>
+                  <Button name="toolbaraddmenu" tooltip="添加本地歌曲" padding="0,1,0,0" statusimage="toolbar_add.png" width="80" height="34"/>
+                  <Control></Control>
+                  <Button name="toolbardustbinmenu" tooltip="快速管理当前列表歌曲" padding="0,1,0,0" statusimage="toolbar_del.png" width="80" height="34"  />
+                  <Control></Control>
+                  <Button name="toolbarfindmenu" tooltip="查找列表中的歌曲" padding="0,1,0,0" statusimage="toolbar_search.png" width="80" height="34"  />
+                  <Button name="toolbarplaymodemenu" tooltip="顺序播放" visible="false" padding="11,5,0,0" statusimage="toolbar_bk.png" iconimage="playmodeorder-5.png" icondest="5,0,55,25" width="62" height="25" />
+                  <Control></Control>
+                  <TabLayout name="cloud_animation_manage_tab" padding="0,1,10,0" width="79" height="34">
+                    <TabLayout name="cloud_animation_logout">
+                      <Button name="cloud_default_logout" statusimage="playlist_cloud_default.png" width="79" height="34" tooltip="登录开启音乐云，你的列表将可以在任意电脑和手机上查看"></Button>
+                      <Label name="cloud_working_logout" bkimage="playlist_cloud_working.png" width="79" height="34" framenum="6" frametime="540" tooltip="正在同步音乐云内容"></Label>
+                      <Button name="cloud_space_full_logout" statusimage="playlist_cloud_space_full.png" width="79" height="34" tooltip="登录开启音乐云，你的列表将可以在任意电脑和手机上查看" ></Button>
+                    </TabLayout>
+                    <TabLayout name="cloud_animation">
+                      <Button name="cloud_default" statusimage="playlist_cloud_default.png" width="79" height="34" tooltip="点击手动云同步"></Button>
+                      <Label name="cloud_working" bkimage="playlist_cloud_working.png" width="79" height="34" framenum="6" frametime="540" tooltip="列表同步中..."></Label>
+                      <Button name="cloud_space_full" statusimage="playlist_cloud_space_full.png" width="79" height="34" tooltip="云空间已满，无法继续上传" ></Button>
+                    </TabLayout>
+                  </TabLayout>
+                  <!--<Control width="15"/>-->
+                </HorizontalLayout>
+
+                <!-- 搜索条 -->
+                <HorizontalLayout name="PlaylistFloatFindPanel" inset="0,0,0,0"  height="36" visible="false">
+                  <HorizontalLayout height="36" bkimage="PlaylistFindBkg.png">
+                    <PLFINDEDIT name="PlaylistFloatFindEdit" height="24" padding="6,6,0,0" textpadding="30,0,100,0" maxchar="20" bkcolor="#00000000" normalimage="PlaylistFindEdit.png" hotimage="PlaylistFindEdit.png" focusedimage="PlaylistFindEdit.png" disabledimage="PlaylistFindEdit.png" font="Default.FontName" textcolor="#ff666666"/>
+                    <Button name="PlaylistFloatFindNext" width="14" height="24" padding="0,6,0,0" statusimage="PlaylistFindPost.png" tooltip="下一个"/>
+                    <Button name="PlaylistFloatFindPre" width="17" height="24" padding="0,6,0,0" statusimage="PlaylistFindPre.png" disable="true" tooltip="上一个"/>
+                    <Button name="PlaylistFloatFindClose" width="9" height="10"  padding="9,14,0,0" statusimage="PlaylistFindClose.png" tooltip="关闭搜索框"/>
+                    <Control width="7"/>
+                    <Control float="true" pos="15,12,27,24"  mouse="false" bkimage="PlaylistFindIco.png"/>
+                    <Label name="PlaylistFloatFindInfoLabel" float="true" pos="-160,12,-65,26" textcolor="#ff999999" mouse="false" font="PlaylistFindTip" align="right"/>
+                  </HorizontalLayout>
+                </HorizontalLayout>
+
+                <!-- 播放列表主体 -->
+                <HorizontalLayout name="PlaylistBody">
+                  <VerticalLayout name="BodyLeft" >
+                    <Button name="CreateList" align="left" visible="false" text="创建列表" textcolor="#ff333333" tooltip="创建列表" textpadding="21,0,0,0" statusimage="playlist_createnew.png" iconimage="playlist_createnew_icon.png" icondest="8,9,20,22" font="Default.FontName" padding="0,0,0,0" height="31"/>
+                    <VerticalLayout padding="0,0,0,0">
+                      <List name="BaseLeftList"
+                            bordersize="0"
+                            header="hidden"
+                            acceptdrag="true"
+                            dragtarget="true"
+                            draghovertype="color"
+                            inertiascroll="true"
+                            font="Default.FontName"
+                            itemtextpadding="0,20,20,0"
+                            usefadehotbkg="true"
+                            itemhotbkcolor="#1a000000"
+                            itemselectedbkcolor="#26000000"
+                            itemexpandbkcolor="#40000000"
+                            itemdisabledbkcolor="#00000000"
+                            padding="0,0,0,0"
+                            itemhotimage="mylist_statusimage_2.png"
+                            itemselectedimage="mylist_statusimage_3.png"
+                          itemshowhtml="false" 
+                          vscrollbar="true" 
+                          hscrollbar="false" 
+                          itemalign="center" 
+                          menu="true" 
+                            checkboximage="playlist_editbk"
+                            vscrollbarstyle="overlay=&quot;true&quot; buttonlength=&quot;8&quot; width=&quot;12&quot; autohide=&quot;true&quot; button1normalimage=&quot;file='scrollbar_playlist_v.png' source='0,0,12,8'&quot; button1hotimage=&quot;file='scrollbar_playlist_v.png' source='13,0,25,8'&quot; button1pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,0,38,8'&quot; button1disabledimage=&quot;file='scrollbar_playlist_v.png' source='39,0,41,8'&quot; button2normalimage=&quot;file='scrollbar_playlist_v.png' source='0,9,12,17'&quot; button2hotimage=&quot;file='scrollbar_playlist_v.png' source='13,9,25,17'&quot; button2pushedimage=&quot;file='scrollbar_playlist_v.png' source='26,9,38,17'&quot; button2disabledimage=&quot;file='scrollbar_playlist_v.png' source='41,9,53,17'&quot; thumbnormalimage=&quot;scrollbar_playlist_thumb_v_1.png&quot; thumbhotimage=&quot;scrollbar_playlist_thumb_v_2.png&quot; thumbpushedimage=&quot;scrollbar_playlist_thumb_v_3.png&quot; thumbdisabledimage=&quot;scrollbar_playlist_thumb_v_4.png&quot; bknormalimage=&quot;file='scrollbar_playlist_v.png' source='0,18,12,19'&quot; bkhotimage=&quot;file='scrollbar_playlist_v.png' source='13,18,25,19'&quot; bkpushedimage=&quot;file='scrollbar_playlist_v.png' source='26,18,38,19'&quot; bkdisabledimage=&quot;file='scrollbar_playlist_v.png' source=39,18,51,19'&quot;"
+                          >
+                        <!-- itemselectedtextcolor="#ffffffff" -->
+                        <!-- itemtextcolor="#ff333333" -->
+                        <!-- itemactivetextcolor="#ffffffff" -->
+                        <ListHeader>
+                          <ListHeaderItem />
+                        </ListHeader>
+                        <DefChildAttr height="28" menu="true"/>
+                      </List>
+                      <LISTACCEPTTOPDRAG name="drag_BaseLeftList" height="1" enabled="true" mouse="true"/>
+                    </VerticalLayout>
+                  </VerticalLayout>
+                </HorizontalLayout>
+
+                <!-- 提示浮层 -->
+                <TabLayout name="PlaylistHelpPanel" inset="1,0,1,0" visible="false" float="true" pos="0,-56,0,-1">
+                  <VerticalLayout name="PlaylistFloatTipsPanel">
+                    <TabLayout name="FloatBubbleTabLayout">
+                      <HorizontalLayout  bkimage="playlist_float_bk.png">
+                        <Button name="PlaylistFloatTipsText" align="left" padding="8,0,0,0" setcursor="true" fadeouttime="500"/>
+                        <Button name="favoriteleft" mouse="true" width="118" padding="8,0,0,0" align="left" />
+                        <Button name="favoritemiddle" mouse="true" width="65" padding="0,0,0,0" align="left" setcursor="true" font="PlaylistFindTip.UnderLine" textcolor="#ff46b4e6" />
+                        <Button name="favoriteright" mouse="true" width="80" padding="0,0,0,0" align="left" />
+                        <Control />
+                        <Button name="PlaylistFloatClose" height="10" width="9" padding="0,15,0,0" statusimage="PlaylistFindClose.png" tooltip="关闭"/>
+                        <Control width="10" mouse="false"/>
+                      </HorizontalLayout>
+                      <VerticalLayout name="Uploading" bkimage="playlist_float_bk.png">
+                        <Label name="UploadingContent" mouse="false" width="200" padding="8,5,0,0" align="left" textcolor="#ff333333"/>
+                        <Button name="UploadingClose" float="true" height="10" width="9" pos="-14,5,-5,15" statusimage="PlaylistFindClose.png" tooltip="关闭"/>
+                        <HorizontalLayout>
+                          <Control />
+                          <Button name="UploadingPause" width="30" text="暂停" textcolor="#ff46b4e6" align="left" setcursor="true"/>
+                          <Control width="1" height="16" bkcolor="#ff46b4e6" padding="5,7,0,7"/>
+                          <Button name="UploadingCancle" width="30" padding="5,0,0,0" text="取消" textcolor="#ff46b4e6" align="left" setcursor="true"/>
+                          <Control />
+                        </HorizontalLayout>
+                      </VerticalLayout>
+                      <HorizontalLayout name="UploadedLocal"  bkimage="playlist_float_bk.png">
+                        <Label name="UploadedContent" varwidth="true" minwidth="100" maxwidth="150" mouse="false" padding="8,0,0,0" align="left" textcolor="#ff333333"/>
+                        <Button name="UploadedWatch" varwidth="true" minwidth="50" maxwidth="80" padding="0,3,0,0" text="查看详情" font="PlaylistFindTip.UnderLine" textcolor="#ff46b4e6" align="left" setcursor="true"/>
+
+                        <Control mouse="false"/>
+                        <Button name="UploadedClose" height="10" width="9" padding="8,13,0,0" statusimage="PlaylistFindClose.png" tooltip="关闭"/>
+                        <Control width="10" mouse="false"/>
+                      </HorizontalLayout>
+                      <HorizontalLayout name="UploadNetwork"  bkimage="playlist_float_bk.png" >
+                        <Label name="UploadNetworkContent" text="网络异常，" textcolor="#ffbb4800" mouse="false" width="70" padding="8,0,0,0" align="left"/>
+                        <Button name="UploadNetworkTryAgain" width="55" padding="0,0,0,0" text="点此重试" font="PlaylistFindTip.UnderLine" textcolor="#ff46b4e6" align="left" setcursor="true"/>
+                        <Control />
+                        <Button name="UploadNetworkClose" height="10" width="9" padding="8,13,0,0" statusimage="PlaylistFindClose.png" tooltip="关闭"/>
+                        <Control width="10" mouse="false"/>
+                      </HorizontalLayout>
+                      <HorizontalLayout name="UploadCommon"  bkimage="playlist_float_bk.png" >
+                        <Label name="UploadCommonContent" textcolor="#ff333333" mouse="false" padding="8,0,0,0" align="left"/>
+                        <Button name="UploadCommonClose" height="10" width="9" padding="8,13,0,0" statusimage="PlaylistFindClose.png" tooltip="关闭"/>
+                        <Control width="10" mouse="false"/>
+                      </HorizontalLayout>
+                      <HorizontalLayout name="InsertSongRepeat"  bkimage="playlist_float_bk.png">
+                        <Label name="InsertSongRepeatContent" minwidth="100" textcolor="#ff333333" mouse="false" padding="8,0,0,0" align="left"/>
+                        <Control width="5"/>
+                        <Button name="InsertSongRepeatDel" width="55" padding="5,3,0,0" text="马上去重" font="PlaylistFindTip.UnderLine" textcolor="#ff46b4e6" align="left" setcursor="true"/>
+                        <Control width="1" height="16" bkimage="bkline.png" padding="2,12,0,0"/>
+                        <Button name="InsertSongRepeatNHint" width="55" padding="5,3,0,0" text="不再提示" font="PlaylistFindTip.UnderLine" textcolor="#ff46b4e6" align="left" setcursor="true"/>
+                        <Control />
+                        <Button name="InsertSongRepeatClose" height="10" width="9" padding="8,15,0,10" statusimage="PlaylistFindClose.png" tooltip="关闭"/>
+                      </HorizontalLayout>
+                      <HorizontalLayout name="UploadLocalBefore"  bkimage="playlist_float_bk.png">
+                        <Label name="UploadLocalBeforeContent" varwidth="true" minwidth="90" maxwidth="130" mouse="false" padding="8,0,0,0" align="left" textcolor="#ff333333"/>
+                        <Button name="UploadLocalBeforeWatch" minwidth="128" maxwidth="150" varwidth="true" align="left" text="继续同步本地歌曲文件" font="PlaylistFindTip.UnderLine" textcolor="#ff46b4e6" setcursor="true"/>
+
+                        <Control />
+                        <Button name="UploadLocalBeforeClose" height="10" width="9" padding="8,13,0,0" statusimage="PlaylistFindClose.png" tooltip="关闭"/>
+                        <Control width="10" mouse="false"/>
+                      </HorizontalLayout>
+                      <HorizontalLayout name="UploadLocalSetting"  bkimage="playlist_float_bk.png">
+                        <Label name="UploadSettingContent1" text="您可以在" width="55" mouse="false" padding="8,0,0,0" align="left" />
+                        <Button name="UploadSettingWatch" minwidth="30" maxwidth="100" varwidth="true" padding="0,0,0,0" text="设置-云同步设置" align="left" font="PlaylistFindTip.UnderLine" textcolor="#ff46b4e6" setcursor="true"/>
+                        <Label name="UploadSettingContent2" text="中开启该功能" varwidth="true" minwidth="30" maxwidth="80" mouse="false" padding="0,0,0,0" align="left" />
+                        <Control />
+                        <Button name="UploadSettingClose"  height="10" width="9" padding="8,13,0,0" statusimage="PlaylistFindClose.png" tooltip="关闭"/>
+                        <Control width="10" mouse="false"/>
+                      </HorizontalLayout>
+                    </TabLayout>
+                  </VerticalLayout>
+
+                </TabLayout>
+              
+                <HorizontalLayout name="plhline" inset="1,0,1,0" height="1">
+                  <Control name="PlaylistZeroLine2" height="1" bkcolor="#1A000000"/>
+                </HorizontalLayout>
+
+              </VerticalLayout>
+              <!-- end of playlistrootpanel-->
+
+            </VerticalLayout>
+         </HorizontalLayout>    
+          <!-- ===================================================playlist end======================================  -->
+
+          <VerticalLayout name="netsongOpAera">
+            <TabLayout name="TabHead" height="55">
+              <VerticalLayout name="Head" height="55" float="true" pos="0,0,0,0">
+                <HorizontalLayout name="HeadControl" padding="0,0,0,0" bkimage="${mylist_mask}">
+
+                  <Button name="back" tooltip="后退" padding="0,18,0,0" width="22" height="18" enabled="false" statusimage="btn_main_back.png" />
+                  <Button name="ref" tooltip="刷新"  padding="8,18,0,0" width="18" height="18" statusimage="btn_main_refresh.png" />
+				  
+                  <HorizontalLayout name="searchpanel" padding="20,12,0,0" width="247" height="30">
+                      <Edit  name="searchedit" defaulttext="今天你想听什么" width="240" textpadding="10,1,33,1" defaulttextcolor="#ff666666" maxchar="128" 
+                             bkcolor="#00000000" normalimage="edit_netsong_search_1.png" hotimage="edit_netsong_search_1.png" focusedimage="edit_netsong_search_1.png"/>
+                    <Button name="searchbtn" tooltip="搜索" width="18" height="18" fadetime="0" statusimage="searchbtn.png" float="true" pos="-28,6,-10,24" setcursor="true"/>
+                  </HorizontalLayout>
+				  <Button name="knowSong" tooltip="听歌识曲"  padding="4,18,0,0" width="20" height="20" statusimage="knowSong.png" />
+				  <HorizontalLayout name="HeadSignBtn" width="96" padding="10,3,0,0">
+					<Button name="sign" statusimage="Sign.png" width="96" height="18" padding="0,15,0,0" fadetime="0" tooltip="签到送好礼"/>
+				  </HorizontalLayout>
+                  <Control />
+                  <HorizontalLayout name="HeadBtns" width="253" padding="0,3,2,0">
+                    <Button name="fold" visible="false" padding="2,17,0,0" width="23" height="21" statusimage="playlist_fold.png" tooltip="收起模式"></Button>
+                    <Button name="game" statusimage="game.png" padding="14,15,0,0" width="48" height="18" fadetime="0" tooltip="游戏"/>
+                    <Option name="pretty" visible="false" group="maintab" padding="19,15,0,0" width="44" height="18" fadetime="0" statusimage="btn_main_pretty.png"  selectedimage="btn_main_pretty_3.png" tooltip="直播"/>
+                    <Label padding="8,16,0,0" width="1" height="16" bkimage="righttop_separator.png" />
+					  <Container padding="8,14,0,0" width="18" height="18">
+						  <WindowProxy name="skinproxy"/>
+						  <Button name="skin" sendsizemsg="true" width="18" height="18" fadetime="0" statusimage="changeskin.png" tooltip="皮肤"/>
+					  </Container>
+					<Button name="menu" statusimage="menu.png" padding="14,15,0,0" width="18" height="18" fadetime="0" tooltip="更多选项"/>    
+                    <Label padding="7,16,0,0" width="1" height="16" bkimage="righttop_separator.png" />
+                    <Button name="mini" padding="10,15,0,0" width="14" height="18" statusimage="palylist_mini.png" fadetime="0" tooltip="迷你模式" ></Button>
+                    <Button name="min" visible="true" statusimage="min.png" padding="14,15,0,0" width="14" height="18" fadetime="0" tooltip="最小化"/>
+                    <Button name="max" visible="true" statusimage="max.png"  padding="15,15,0,0" width="14" height="18" fadetime="0" tooltip="最大化"/>
+                    <Button name="close" visible="true" statusimage="close.png" padding="15,15,0,0"  width="14" height="18" fadetime="0" tooltip="关闭"/>
+                  </HorizontalLayout>
+                </HorizontalLayout>
+				
+
+              </VerticalLayout>
+
+              <VerticalLayout name="FlodHead" height="90">
+                <HorizontalLayout height="35">
+                  <Button name="Foldback" tooltip="后退"  width="28" height="28" statusimage="btn_main_back.png" />
+                  <Control></Control>
+                  <Button name="showleft"  width="25" height="19" statusimage="showleft.png" tooltip="展开左侧" />
+                  <Button name="Foldmin" statusimage="min.png" width="25" height="19" tooltip="最小化"/>
+                  <Button name="Foldmax" statusimage="max.png" width="25" height="19" tooltip="最大化"/>
+                  <Button name="Foldclose" statusimage="close.png" width="25" height="19" tooltip="关闭"/>
+                </HorizontalLayout>
+                <HorizontalLayout name="FoldHL_Info" heihgt="60"  bordercolor="#ff00ff00">
+                  <Button name="FoldBT_AlbumPic" padding="10,0,0,0" width="50" height="50" bkimage="DefaultAlbumPic.png" align="center" />
+                  <VerticalLayout padding="10,0,0,0" height="50">
+                    <Label name="FoldMessageLable" text="这里是歌名-歌手"></Label>
+                    <HorizontalLayout padding="0,10,0,0">
+                      <Button name="FoldBT_Fav" width="16" height="15"  align="center" statusimage="CasualListenWhiteHeart_PlayControl.png" />
+                      <Button name="FoldBT_Download" padding="10,0,0,0" width="14" height="13"  align="center" visible="true" statusimage="playcontrol_download.png" />
+                      <Button name="FoldBT_MV" padding="10,0,0,0" width="16" height="16" align="center" visible="true" statusimage="MV.png"/>
+                      <Label name="FoldLB_CurrentTime" text="00:00 / 00:00"></Label>
+                    </HorizontalLayout>
+                  </VerticalLayout>
+                </HorizontalLayout>
+              </VerticalLayout>
+            </TabLayout>
+
+            <HorizontalLayout name="WindowBodyLeft" minwidth="540">
+
+              <!--窗口中间的歌词部分和网络曲库-->
+              <TabLayout name="TabMainBody">
+                <VerticalLayout name="TabSearch" bkcolor="#FFFFFFFF" vscrollbar="true" vscrollbarstyle="autohide=&quot;false&quot;">
+                  <HorizontalLayout >
+                    <VerticalLayout >
+                      <!--BPF 搜索-->
+                      <Container name="functionwnd" sendsizemsg="true"></Container>
+                    </VerticalLayout>
+                    <!--BPF-->
+                  </HorizontalLayout>
+                </VerticalLayout>
+
+                <VerticalLayout name="NetSong">
+                  <VerticalLayout name="bkBody" sendsizemsg="true" bkcolor="#FFFFFFFF">
+                    <Control />
+                    <HorizontalLayout name="webloadinglayout" visible="true">
+                      <Control />
+                      <Label name="WebLoading" padding="0,80,0,0" width="42" height="42" bkimage="WebLoading.png" frametime="720" framenum="8" />
+                      <Label text="稍等片刻，好音乐马上就来..." width="350" height="200" align="center" font="YAHEI.NO24" textcolor="#FF666666"/>
+                      <Control />
+                    </HorizontalLayout>
+                    <Control />
+                  </VerticalLayout>
+                </VerticalLayout>
+
+                <!--下载音乐开始-->
+                <VerticalLayout name="DownloadChannel" sendsizemsg="true" bkcolor="#ffffffff" vscrollbar="true" vscrollbarstyle=
+				"alawaysplace=&quot;true&quot; autohide=&quot;false&quot;">				  
+                  <HorizontalLayout name="DownloadPageTab" height="59">
+                    <Control />
+                    <Option name="btn_Downloaded" group="downtabwnd" width="110" height="36" padding="0,23,0,0" text="已下载" textcolor="#FF0091e1"  selectedtextcolor="#FFFFFFFF" statusimage="btn_tableft.png"  selectedimage="btn_tableft_3.png" font="Main.ChannelTitle"/>
+					<Control width="1" height ="32" padding="0,25,0,0" bkcolor="#FF0091e1"/>
+                    <Option name="btn_Downloadin" group="downtabwnd" width="110" height="36" padding="0,23,0,0"  text="下载中" textcolor="#FF0091e1" selectedtextcolor="#FFFFFFFF" statusimage="btn_tabright.png" selectedimage="btn_tabright_3.png" font="Main.ChannelTitle"/>
+                    <Control />
+                  </HorizontalLayout>
+                  <TabLayout name="downloadrightwnd" sendsizemsg="true" inset="24,0,20,0">
+                    <VerticalLayout name="downloadedpanel">
+                      <HorizontalLayout height="68">
+                        <Button name="downloadedplayall"  width="85" height="30" padding="0,30,0,0"  text="播放全部" textcolor="#FFFFFFFF" disabledtextcolor="#FF999999" statusimage="btn_myplaylist_all.png" textpadding="18,0,0,0" iconstatusimage="icon_myplaylist_all.png" icondest="12,8,23,22" />
+                        <Button name="downloadeddeleteall" width="75" height="30" padding="10,30,0,0"  text="全部删除" textcolor="#FF000000" disabledtextcolor="#FF999999" statusimage="btn_downpanelbtn.png"/>
+                        <Button name="downloadsetting2" width="75" height="30" padding="10,30,0,0" text="下载设置" textcolor="#FF000000"  statusimage="btn_downpanelbtn.png"/>
+                        <Label width="60" height="24" padding="10, 34, 0, 0" align="center" text="下载目录" textcolor="#FF999999" />
+                        <HorizontalLayout>
+                          <Button name="downloadpath" varwidth="true" height="24" align="left" padding="10, 34, 0, 0" textcolor="#FF999999" pushedtextcolor="#ff333333" hottextcolor="#ff333333" setcursor="true" setlink="true" linkfont="YAHEI.N12_UNDERLINE" />
+                        </HorizontalLayout>
+						<Button name="ExportdownSong" width="75" height="30" padding="10,30,0,0" text="导出歌曲" textcolor="#FF000000"  statusimage="btn_downpanelbtn.png"/>
+                        <Button name="btn_CopyTool" width="70" height="30" padding="15,30,0,0" text="传歌" textcolor="#FF000000" textpadding="10,0,0,0" statusimage="btn_downpanelbtn.png" iconstatusimage="mylist_tran.png" icondest="8,8,24,24"/>
+                      </HorizontalLayout>
+                      <List name="RecentDownedList" passmousewheel="true" rectangleselect="true" itemshowhtml="false" itemalign="left" menu="true" showcheckbox="false" checkboximage="Config_CheckBox" checkboxpos="4,0,0,0">
+                        <ListHeader height="25">
+                        </ListHeader>
+                        <DefChildAttr height="37" menu="true"/>
+                      </List>                     
+                      <VerticalLayout name="downloadedlistempty">
+                        <HorizontalLayout  height="46" padding="0,50,0,0">
+                          <Control />
+                          <Label width="50" height="46" bkimage="down_empty.png" />
+                          <Control />
+                        </HorizontalLayout>
+                        <Label height="30" padding="0,10,0,0" align="center" textcolor="#FF999999" font="YAHEI.N014" text="没有下载完成的歌曲"/>
+                        <HorizontalLayout height="30">
+                          <Control />
+                          <Label text="去" varwidth="true" textcolor="#ff999999" font="YAHEI.N014" />
+                          <Button name="btn_gotosonglib" varwidth="true" align="center" text="曲库"  textcolor="#ff0091e1" setcursor="true" setlink="true" font="YAHEI.N014" linkfont="YAHEI.N014.UNDERLINE" />
+                          <Label text="看看"  varwidth="true" textcolor="#ff999999" font="YAHEI.N014"/>
+                          <Control />
+                        </HorizontalLayout>
+                      </VerticalLayout>                     
+                      </VerticalLayout>
+                    
+                    <VerticalLayout name="downloadingpanel">
+                      <HorizontalLayout name="downingoperatorwnd"  height="68">
+                        <Button name="downloadstartall" width="75" height="30" text="全部开始" textcolor="#FF000000" padding="0,30,0,0" statusimage="btn_downpanelbtn.png"/>
+                        <Button name="downloadpauseall" width="75" height="30" text="全部暂停" textcolor="#FF000000" padding="10,30,0,0" statusimage="btn_downpanelbtn.png"/>
+                        <Button name="downloaddeleteall" width="50" height="30" text="清空" textcolor="#FF000000" padding="10,30,0,0" statusimage="btn_downpanelbtn.png"/>
+                        <Label width="60" height="24" padding="10, 34, 0, 0" align="center" text="下载目录" textcolor="#FF999999" />
+                        <HorizontalLayout>
+                          <Button name="downloadpath1" varwidth="true" height="24" padding="10, 34, 0, 0" align="left" textcolor="#FF999999" pushedtextcolor="#ff333333" hottextcolor="#ff333333" setcursor="true" setlink="true" linkfont="YAHEI.N12_UNDERLINE" />
+                        </HorizontalLayout>
+                        <Button name="downloadshutdown" width="75" height="30" text="定时关机" textcolor="#FF000000" padding="10,30,0,0" statusimage="btn_downpanelbtn.png"/>
+                        <Button name="downloadsetting"  width="75" height="30" text="下载设置" textcolor="#FF000000" padding="10,30,0,0" statusimage="btn_downpanelbtn.png"/>
+                        <Button name="btn_CopyTool1" visible="false" width="70" height="30" padding="10,30,0,0" text="传歌" textcolor="#FF000000" textpadding="18,-3,0,0" statusimage="btn_downpanelbtn.png" iconstatusimage="btn_uidown_copytool_ex.png" icondest="8,8,20,22"/>
+                      </HorizontalLayout>
+                      <List name="DownloadingList" passmousewheel="true" rectangleselect="true" itemshowhtml="false" itemalign="left" menu="true" >
+                        <ListHeader height="25">
+                        </ListHeader>
+                        <DefChildAttr height="37" menu="true"/>
+                      </List>
+                      <VerticalLayout name="downloadinglistempty">
+                        <HorizontalLayout  height="46" padding="0,50,0,0">
+                          <Control />
+                          <Label width="50" height="46" bkimage="down_empty.png" />
+                          <Control />
+                        </HorizontalLayout>
+                        <Label  name="label_emptytext1" height="30" padding="0,10,0,0" align="center" textcolor="#FF999999" font="YAHEI.N014" text="没有歌曲正在下载"/>
+                        <HorizontalLayout height="30">
+                          <Control />
+                          <Label text="去" varwidth="true" textcolor="#ff999999" font="YAHEI.N014" />
+                          <Button name="btn_gotosonglib1" varwidth="true" align="center" text="曲库"  textcolor="#ff0091e1" setcursor="true" setlink="true" font="YAHEI.N014" linkfont="YAHEI.N014.UNDERLINE" />
+                          <Label text="看看" varwidth="true" textcolor="#ff999999" font="YAHEI.N014"/>
+                          <Control />
+                        </HorizontalLayout>
+                      </VerticalLayout>                                                      
+                      </VerticalLayout>
+                  </TabLayout>
+				  <!--GroupFee-->
+                  <TabLayout name="DownManagerFeeTab" visible="false" pos="0,-24,0,0" bkcolor="#80000000" float="true"> 				  
+					<HorizontalLayout name="HorDownMusicPack_1">
+						<Label name="DownLab_Tip1" varwidth="true" textpadding="10,0,0,0" font="YAHEI.N014" textcolor="#FFFFFFFF" text="为了支持正版，会员下载的付费歌曲仅在会员期内可用，离线不可播放，付费下载权益调整"/>
+						<control />	
+						<Button name="BtnFeeClick1" width="60" height="16" padding="0,4,0,0" text="查看>>" font="YAHEI.N014" textcolor="#FFFFFFFF" statusimage="btn_remindupq_yes.png" />					
+					</HorizontalLayout> 				  
+					<HorizontalLayout name="HorDownMusicPack_2">
+						<Label name="DownLab_Tip2" varwidth="true" padding="10,0,0,0" font="YAHEI.N014" textcolor="#FFFFFFFF" text=""/>
+						<control />	
+						<Button name="BtnFeeClick2" width="60" height="16" padding="0,4,0,0" text="查看>>" font="YAHEI.N014" textcolor="#FFFFFFFF" statusimage="btn_remindupq_yes.png" />					
+					</HorizontalLayout>
+					<HorizontalLayout name="HorDownMusicPack_3">
+						<Button name="BtnShowFeeSong" visible="true" width="60" height="16" padding="10,4,0,0" text="<<查看" font="YAHEI.N014" textcolor="#FFFFFFFF" statusimage="btn_remindupq_yes.png" />					
+						<Button name="BtnShowAllSong" visible="false" width="60" height="16" padding="10,4,0,0" text="<<返回"  font="YAHEI.N014" textcolor="#FFFFFFFF" statusimage="btn_remindupq_yes.png" />						
+						<Label name="DownLab_Tip3" varwidth="true" font="YAHEI.N014" padding="10,0,0,0"  textcolor="#FFFFFFFF" text=""/>
+						<Button name="BtnDownedPay" visible="true" width="90" height="16" padding="0,4,0,0" text="立即续费>>" font="YAHEI.N014" textcolor="#FFFFFFFF" statusimage="btn_remindupq_yes.png" />
+					  <control />	
+					</HorizontalLayout>
+					<HorizontalLayout name="HorDownMusicPack_4">						
+						<Label name="DownLab_Tip4" varwidth="true" font="YAHEI.N014" padding="10,0,0,0"  textcolor="#FFFFFFFF" text=""/>
+						<Button name="BtnDownedOpenVip" visible="true" width="60" height="16" padding="0,4,0,0" text="开通>>" font="YAHEI.N014" textcolor="#FFFFFFFF" statusimage="btn_remindupq_yes.png" />
+					  <control />	
+					</HorizontalLayout>
+				  </TabLayout>
+                  <Label width="1"/>
+                </VerticalLayout>
+                <!--下载音乐结束-->
+
+                <!--本地音乐开始-->
+                <VerticalLayout name="LocalMusicChannel" sendsizemsg="true" bkcolor="#ffffffff" vscrollbar="true" vscrollbarstyle="alawaysplace=&quot;true&quot; autohide=&quot;false&quot;">			
+                  <HorizontalLayout name="localmuicpagetab" height="59">
+                    <Control />
+                    <Option name="btn_bysingle" group="localmusictabwnd" width="110" height="36" padding="0,23,0,0" textpadding="21,0,0,0" text="按单曲" textcolor="#FF0091e1" selected="true" selectedtextcolor="#FFFFFFFF" statusimage="btn_tableft.png"  selectedimage="btn_tableft_3.png" iconstatusimage="icon_bysingle.png" selectediconimage="icon_bysingle_3.png" icondest="20,11,36,24" font="Main.ChannelTitle"/>
+                    <Control width="1" height ="32" padding="0,25,0,0" bkcolor="#FF0091e1"/>
+                    <Option name="btn_bydir" group="localmusictabwnd" width="110" height="36" padding="0,23,0,0" textpadding="20,0,0,0" text="按目录" textcolor="#FF0091e1"  selectedtextcolor="#FFFFFFFF" statusimage="btn_tabcenter.png"  selectedimage="btn_tabcenter_3.png" iconstatusimage="icon_bydir.png" selectediconimage="icon_bydir_3.png" icondest="20,11,35,24" font="Main.ChannelTitle"/>
+                    <Control width="1" height ="32" padding="0,25,0,0" bkcolor="#FF0091e1"/>
+                    <Option name="btn_bysinger" group="localmusictabwnd" width="110" height="36" padding="0,23,0,0" textpadding="19,0,0,0" text="按歌手" textcolor="#FF0091e1"  selectedtextcolor="#FFFFFFFF" statusimage="btn_tabright.png"  selectedimage="btn_tabright_3.png" iconstatusimage="icon_bysinger.png" selectediconimage="icon_bysinger_3.png" icondest="20,11,34,24" font="Main.ChannelTitle"/>
+				  <Control />
+                  </HorizontalLayout>
+                  <Control height="30"/>
+                  <HorizontalLayout name="localmusicopwnd" height="30" inset="24,0,20,0">
+                    <Button name="localplaysong" width="85" height="30" text="播放全部" tooltip="播放全部" textcolor="#FFFFFFFF" disabledtextcolor="#FF999999" statusimage="btn_myplaylist_all.png" textpadding="18,0,0,0" iconstatusimage="icon_myplaylist_all.png" icondest="12,8,23,22"/>
+                    <Button name="localaddsong"  width="80" height="30" padding="10,0,0,0" text="导入歌曲" tooltip="导入本地歌曲到曲库" textcolor="#FF000000" statusimage="btn_downpanelbtn.png" align="left" textpadding="10,0,0,0" iconstatusimage="icon_uidownload_addsong.png" icondest="65,13,72,17"/>
+                    <Button name="localrecosong" width="50" height="30" padding="10,0,0,0" text="识别" tooltip="智能修正歌曲混乱信息" textcolor="#FF000000" statusimage="btn_downpanelbtn.png" />
+                    <Button name="localupqualitysong" width="85" height="30" padding="10,0,0,0" text="一键升音质"  tooltip="升级本地音乐的音质" textcolor="#FFFFFFFF" statusimage="btn_upgradequality.png" />
+                    <TabLayout name="localoptabmain" width="175" padding="8,0,5,0">                   
+                      <HorizontalLayout	name="localinfotablayout">
+                        <Label name="label_normaltext" text="" textcolor="#FF999999"/>
+                      </HorizontalLayout>                      
+                      <HorizontalLayout name="localworkingwnd">
+                        <HorizontalLayout	name="workinttextdisplaylayout" width="85">
+                          <Label name="loading" padding="10,6,0,0" width="16" height="16" bkimage="loading.png" frametime="1200" framenum="12"/>
+                          <Label name="label_workingtext" padding="8,0,0,0" textcolor="#FF999999"/>
+                        </HorizontalLayout>
+                        <TabLayout name="tab_controllayout" width="22" >
+                          <Button name="startworkbutton" width="17" height="17" padding="5,6,0,0" tooltip="开始" textcolor="#FF226699" statusimage="btn_localmusic_start.png" />
+                          <Button name="pauseworkbutton" width="17" height="17" padding="5,6,0,0" tooltip="暂停" textcolor="#FF226699" statusimage="btn_localmusic_pause.png" />
+                        </TabLayout>
+                        <TabLayout name="tab_stopworklayout" width="22">
+                          <Button name="stopworkbutton" width="17" height="17" padding="5,6,0,0" tooltip="停止" textcolor="#FF226699" statusimage="btn_localmusic_stop.png" />
+                        </TabLayout>
+                      </HorizontalLayout>
+                    </TabLayout>
+                    <Control />
+                    <HorizontalLayout width="130" minwidth="130">
+                      <Edit name="searchlocalmusicedit" height="24" padding="0,3,0,0" textpadding="4,3,25,3" maxchar="20" defaulttext="搜索本地歌曲" defaulttextcolor="NetSong.EditDefaultTextColor" normalimage="mylist_search_Btn_1.png" hotimage="mylist_search_Btn_2.png" focusedimage="mylist_search_Btn_1.png"/>
+                      <Button name="searchlocalbutton"  width="20" height="20" float="true" pos="-21,5,-1,25"  tooltip="搜索" statusimage="mylist_search.png" />
+                    </HorizontalLayout>                
+                    <Button name="btn_CopyTool2" width="70" height="30" padding="10,0,0,0" text="传歌" tooltip="传歌" textcolor="#FF000000" textpadding="10,0,0,0" statusimage="btn_downpanelbtn.png" iconstatusimage="mylist_tran.png" icondest="8,8,24,24"/>
+                  </HorizontalLayout>  
+                  <Control height="8"/>
+
+                  <HorizontalLayout name="localmusicpanel" inset="24,0,20,0">
+                    <HorizontalLayout name="localleftwnd" width="150">
+                      <VerticalLayout>
+                        <Option name="btn_localarrange" group="localarrange" height="25" align="left" textpadding="8,0,0,0" textcolor="ff000000" selectedtextcolor="#FFFFFFFF" statusimage="list_localtypeimage.png"  selectedimage="list_localtypeimage_3.png" />
+                        <List name="LocalMusicArrangeList" header="hidden" rectangleselect="true" itemshowhtml="false" vscrollbar="true" hscrollbar="false" itemalign="left" menu="true" itemtextcolor="#ff000000" itemselectedtextcolor="#ffffffff" itemhotimage="list_localtypeimage_2.png" itemselectedimage="list_localtypeimage_3.png">
+                          <DefChildAttr height="26" menu="true"/>
+                        </List>
+                      </VerticalLayout>
+                      <Label bkcolor="#ffe6e6e6" width="1" />
+                    </HorizontalLayout>
+                    <VerticalLayout name="locallistpanel">
+                      <List name="localmusicList" rectangleselect="true" itemshowhtml="false" vscrollbar="true" hscrollbar="false" itemalign="left" menu="true" showcheckbox="false" checkboximage="Config_CheckBox" checkboxpos="4,0,0,0">
+                        <ListHeader height="25">
+                        </ListHeader>
+                        <DefChildAttr height="37" menu="true"/>
+                      </List>
+                      <VerticalLayout name="localemptywnd">
+                        <Label height="30" padding="0,50,0,0" align="center" textcolor="#FF999999" font="YAHEI.N014" text="导入本地歌曲，好音乐随时听"/>
+                        <Label height="30" align="center" textcolor="#FF999999" font="YAHEI.N014" text="我们将自动为您匹配高品音质"/>
+                        <HorizontalLayout>
+                          <Control />
+                          <VerticalLayout width="180">
+                            <Button name="btn_localautoscan" width="180" height="42" padding="0,12,0,0" text="自动扫描全盘文件" align="left" textpadding="47,0,0,0"  textcolor="#FF000000" font="YAHEI.N014" statusimage="btn_localempty.png" iconimage="mylist_empty_search.png" icondest="19,12,39,31"/>
+                            <Button name="btn_localaddsong"  width="180" height="42" padding="0,4,0,0" text="添加本地歌曲文件" align="left" textpadding="47,0,0,0" textcolor="#FF000000" font="YAHEI.N014" statusimage="btn_localempty.png" iconimage="icon_localaddsong.png" icondest="16,12,36,31"/>
+                            <Button name="btn_localadddir" width="180" height="42" padding="0,4,0,0" text="添加本地歌曲目录" align="left" textpadding="47,0,0,0" textcolor="#FF000000" font="YAHEI.N014" statusimage="btn_localempty.png" iconimage="mylist_empty_getfavorite.png" icondest="19,12,39,31"/>
+                          </VerticalLayout>
+                          <Control />
+                        </HorizontalLayout>                   
+                      </VerticalLayout>
+                      <HorizontalLayout name="localsearchempty">
+                        <Control />
+                        <Label width="220" height="16" padding="0,100,0,0" text="没有命中任何歌曲" font="YAHEI.N016" textcolor="#ff999999" align="center"/>
+                        <Control />
+                      </HorizontalLayout>
+                    </VerticalLayout>           
+                  </HorizontalLayout>
+
+                  <TabLayout name="localtabbottom" pos="1,-33,-1,-1" visible="false" bkcolor="#80000000" float="true" >
+                    <HorizontalLayout name="localupqualityinfo">
+                      <Button name="stopupqualitybutton" width="22" height="20" padding="10,6,0,0" tooltip="停止" textcolor="#FF226699" statusimage="btn_upquality_stop.png" />
+                      <Label name="lbl_upqualitytitle" varwidth="true" textpadding="10,0,0,0" font="YAHEI.N014" textcolor="#FFFFFFFFF"/>
+                      <Label name="lbl_upqualitypercent" width="40" font="YAHEI.N014" textcolor="#FFFFFFFFF"/>
+                    </HorizontalLayout>
+                    <HorizontalLayout name="localupqualityhint">
+                      <Label name="lbl_upqualityhint" varwidth="true" textpadding="10,0,0,0" font="YAHEI.N014" textcolor="#FFFFFFFFF"/>
+                      <Button name="btn_upqualityOK" width="58" height="20" padding="10,6,0,0" text="是" textcolor="#FFFFFFFFF" statusimage="btn_remindupq_yes.png"/>
+                      <Button name="btn_upqualityCancel" width="58" height="20" padding="20,6,0,0" text="否" textcolor="#FFFFFFFFF" statusimage="btn_remindupq_no.png" />
+                    </HorizontalLayout>
+                  </TabLayout>
+				  <!--GroupFee-->
+                  <TabLayout name="LocalManagerFeeTab" visible="false" pos="0,-24,0,0" bkcolor="#80000000" float="true"> 				  
+					<HorizontalLayout name="HorLocalMusicPack_1">
+						<Label name="LocalLab_Tip1" varwidth="true" textpadding="10,0,0,0" font="YAHEI.N014" textcolor="#FFFFFFFF" text="为了支持正版，会员下载的付费歌曲仅在会员期内可用，离线不可播放，付费下载权益调整"/>
+						<control />	
+						<Button name="LocalBtnFeeClick1" width="60" height="16" padding="0,4,0,0" text="查看>>" font="YAHEI.N014" textcolor="#FFFFFFFF" statusimage="btn_remindupq_yes.png" />					
+					</HorizontalLayout> 				  
+					<HorizontalLayout name="HorLocalMusicPack_2">		
+						<Label name="LocalLab_Tip2" varwidth="true" font="YAHEI.N014" padding="10,0,0,0" textcolor="#FFFFFFFF" text=""/>
+						<control />	
+						<Button name="LocalBtnFeeClick2" width="60" height="16" padding="0,4,0,0" text="查看>>" font="YAHEI.N014" textcolor="#FFFFFFFF" statusimage="btn_remindupq_yes.png" />					
+					</HorizontalLayout>
+					<HorizontalLayout name="HorLocalMusicPack_3">					  
+						<Button name="LocalBtnShowFeeSong" visible="true" width="60" height="16" padding="10,4,0,0" text="<<查看" font="YAHEI.N014" textcolor="#FFFFFFFF" statusimage="btn_remindupq_yes.png" />					
+						<Button name="LocalBtnShowAllSong" visible="false" width="60" height="16" padding="10,4,0,0" text="<<返回"  font="YAHEI.N014" textcolor="#FFFFFFFF" statusimage="btn_remindupq_yes.png" />
+						<Label name="LocalLab_Tip3" varwidth="true" padding="10,0,0,0" font="YAHEI.N014" textcolor="#FFFFFFFF" text=""/>
+						<Button name="BtnLocalPay" visible="true" width="90" height="16" padding="0,4,0,0" text="立即续费>>" font="YAHEI.N014" textcolor="#FFFFFFFF" statusimage="btn_remindupq_yes.png" />
+					</HorizontalLayout>		
+					<HorizontalLayout name="HorLocalMusicPack_4">					  
+						<Label name="LocalLab_Tip4" varwidth="true" padding="10,0,0,0" font="YAHEI.N014" textcolor="#FFFFFFFF" text=""/>
+						<Button name="BtnLocalOpenVip" visible="true" width="60" height="16" padding="0,4,0,0" text="开通>>" font="YAHEI.N014" textcolor="#FFFFFFFF" statusimage="btn_remindupq_yes.png" />
+					</HorizontalLayout>					
+				  </TabLayout>                
+                </VerticalLayout>
+                <!--本地音乐结束-->
+
+                <!--我的播放列表开始-->
+                <VerticalLayout name="PlaylistChannel" bkcolor="#ffffffff" vscrollbar="true"  inertiascroll="true" vscrollbarstyle="alawaysplace=&quot;true&quot; autohide=&quot;false&quot;" autovscroll="true">                  
+                  <!--Tal页的切换-->
+                  <VerticalLayout name="mylistpageSpecil"  padding="25,20,25,0" height="80" >
+                    <!--图片的平铺有点问题  bkimage="file='mylist_defaultBk.png' mask='#FF0000'  dest='0,0,750,60' source='0,0,750,60' fade='255' corner='750,0,900,60' hole='true' ytiled='true' xtiled='true'"-->
+                    <HorizontalLayout name="headBkImgtab" bkimage="file='mylist_defaultBk.png'  res='' restype='0' dest='0,0,5000,60' source='0,0,750,60' ytiled='true' xtiled='true'" height="60">
+                      <Label name="mylist_name" padding="5,0,0,0" font="YAHEI.NO24" textcolor="#ff000000" text="默认列表" endellipsis="true"/>
+                      <HorizontalLayout name="ListheadCtrl" width="315" height="30" padding="0,15,10,0">
+                        <Button name="arange_mylist" width="72" height="30"   textcolor="#FF333333" text="整理" tooltip="快速管理当前列表歌曲" statusimage="btn_myList_downAndShare.png" textpadding="18,0,0,0" iconstatusimage="mylist_edit.png" icondest="15,8,31,24"/>
+                        <Button name="Insert_mylist" width="72" height="30" padding="8,0,0,0"  textcolor="#FF333333" text="导入" tooltip="导入本地歌曲" statusimage="btn_myList_downAndShare.png" textpadding="18,0,0,0" iconstatusimage="mylist_loadin.png" icondest="15,8,31,24"/>
+                        <Button name="cloud_default" visible="true" width="72" height="30" padding="8,0,0,0"  textcolor="#FF333333" text="同步"  tooltip="点击手动云同步" statusimage="btn_myList_downAndShare.png" textpadding="18,0,0,0"  iconstatusimage="mylistCloud_default.png" icondest="10,8,30,24"/>
+						  <Button name="cloud_working" visible="false" width="72" height="30" padding="8,0,0,0"  textcolor="#FF333333" text="同步" tooltip="列表同步中......" statusimage="btn_myList_downAndShare.png" textpadding="18,0,0,0"/>						 
+                        <Label name="cloud_workingIcon" visible="false" bkimage="mylistCloud_working.png" width="20" height="16" framenum="6" frametime="540" float="true" pos="170, 7, 190,23" />
+						<Button name="cloud_space_full"  visible="false" statusimage="mylistCloud_spaceFull.png" width="20" height="16" tooltip="云空间已满，无法继续上传" float="true"  pos="170, 7, 190,23" />
+						<Button name="TranSong_Btn" width="72" height="30" padding="8,0,0,0"  textcolor="#FF333333" text="传歌" textpadding="14,1,0,0" iconstatusimage="mylist_tran.png" icondest="11,7,28,24" statusimage="btn_myList_downAndShare.png" />						
+                      </HorizontalLayout>
+                    </HorizontalLayout>
+                  </VerticalLayout>
+                  <!--全部播放和下载以及搜索排序按钮-->
+                  <HorizontalLayout  name="OptionCtrl"  height="30"  padding="25,0,25,0">
+                    <HorizontalLayout  width="270">
+                      <Button name="PlayAll" width="85" height="30" textcolor="#FFFFFFFF" text="播放全部" tooltip="播放选中歌曲" statusimage="btn_myplaylist_all.png" textpadding="18,0,0,0" iconimage="icon_myplaylist_all.png" icondest="12,8,23,22"/>
+                      <Control width="10"/>
+                      <Button name="Dwonload" width="75" height="30" textcolor="#FF333333" text="下载" tooltip="下载选中歌曲" statusimage="btn_myList_downAndShare.png" textpadding="18,0,0,0" iconstatusimage="icon_myList_down.png" icondest="15,8,32,22"/>
+                      <Control width="10"/>
+                      <Button name="Share"  visible="false" width="85" height="30" textcolor="#FF333333" text="分享" statusimage="btn_myList_downAndShare.png" textpadding="5,0,0,0" iconimage="icon_myList_share.png" icondest="10,8,26,22"/>
+                    </HorizontalLayout>
+                    <Control />
+                    <!--播放列表的搜索-->
+                    <HorizontalLayout  height="30" width="305" minwidth="305">
+                      <HorizontalLayout name="mylistSearch_H" width="160">
+                        <Edit name="mylistFindEdit" height="24" padding="0,3,0,0"  maxchar="20" textpadding="5,0,30,0" defaulttext="搜索列表歌曲" defaulttextcolor="NetSong.EditDefaultTextColor" normalimage="mylist_search_Btn_1.png" hotimage="mylist_search_Btn_2.png" focusedimage="mylist_search_Btn_1.png"  tooltip="查找歌曲"/>
+                        <Button name="mylistSearchBtn"  width="20" height="20" tooltip="查找列表中的歌曲" float="true" pos="135, 5, 155,25" statusimage="mylist_search.png" />
+                      </HorizontalLayout>
+                      <Control width="15" />
+                      <Label text="排序 :"  textcolor="#ff999999"  padding="0,2,0,0"  align="right"/>
+                      <Control width="5"/>
+                      <Combo padding="0,3,0,0" name="mylist_sort"  width="85" height="24" userdata="NowPlayLyricWnd|FontHeight" bordercolor="#ffe6e6e6" itemhottextcolor="#ff0091e1">
+                        <ListLabelElement text="按歌名" userdata="1"/>
+                        <ListLabelElement text="按歌手" userdata="2"/>
+                        <ListLabelElement text="按播放次数" userdata="3"/>
+                        <ListLabelElement text="按添加时间" userdata="4"/>
+                        <ListLabelElement text="随机排序" userdata="5"/>
+                      </Combo>
+                      <!--Button name="mylist_sort" height="24" width="72" statusimage="mylist_search_Btn.png"   align="left" text=" 添加时间 " textcolor="#FF333333" padding="0,4,0,0" iconimage="list_netsong_sort_1.png" icondest="60,10,67,14"/-->
+                    </HorizontalLayout>
+                  </HorizontalLayout>
+
+
+                  <!-- 下面是列表的东西-->
+                  <Control height="8"/>
+                  <!--播放列表的列表歌曲信息-->
+                  <HorizontalLayout name="playlistContent"  padding="25,0,25,0">
+                    <TabLayout name="MusicPanel" minwidth="200" padding="0,0,0,0">
+                      <TabLayout name="MyListPage">
+                        <List name="ListPanel"
+						passmousewheel="true"
+						acceptdrag="true"
+						dragtarget="true"
+						draghovertype="line"
+						rectangleselect="true"
+						inertiascroll="true"
+						usefadehotbkg="true"
+						multiselecting="true"
+						itemtextcolor="#ff333333"
+						itemdisabledtextcolor="#ff999999"
+						menu="true"
+						sendsizemsg="true"
+						itemhottextcolor="#ff0091e1">
+                          <ListHeader height="25">
+                          </ListHeader>
+                          <DefChildAttr height="36" expandheight="36" menu="true"/>
+                        </List>
+                        <HorizontalLayout name="DefaultBlankList" menu="true">
+                          <!--默认列表没有歌曲时面板 -->
+                          <PLACCEPTDRAG name="drag_DefaultBlankList" enabled="true" mouse="true" sendsizemsg="true">
+                            <VerticalLayout  name="MyListPageNoSongs">
+                              <ListHeader height="25">
+                                <ListHeaderItem name="HeadItem_id1" text="" width="45"  textcolor="#ff999999" normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                                <ListHeaderItem name="HeadItem_id2" text="操作" width="85" textcolor="#ff999999" normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                                <ListHeaderItem name="HeadItem_id3" text="歌名" minwidth="288" textcolor="#ff999999"  normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                                <ListHeaderItem name="HeadItem_id4" text="歌手" minwidth="142" textcolor="#ff999999"  normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                                <ListHeaderItem name="HeadItem_id5" text="专辑" minwidth="148" textcolor="#ff999999"  normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                                <ListHeaderItem name="HeadItem_id7" text="音质" width="40" textcolor="#ff999999"  normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                              </ListHeader>
+                              <Container />
+                              <HorizontalLayout height="230">
+                                <Container />
+                                <VerticalLayout width="180" height="230">
+                                  <Label height="16" align="center" textcolor="#FF999999" font="YAHEI.N014" text="列表为空，你可以..."/>
+                                  <Button name="MyLocalPageNoSongs_findbase"  padding="0,12,0,0" width="180" height="42" text="浏览曲库好歌" align="left" textpadding="47,0,0,0"  textcolor="#FF000000" font="YAHEI.N014" statusimage="btn_localempty.png" iconimage="mylist_empty_search.png" icondest="19,12,39,31"/>
+                                  <Button name="MyLocalPageNoSongs_listenradio"  padding="0,10,0,0" width="180" height="42" text="收听个性电台" align="left" textpadding="47,0,0,0" textcolor="#FF000000" font="YAHEI.N014" statusimage="btn_localempty.png" iconimage="mylist_empty_radio.png" icondest="19,12,39,31"/>
+                                  <Button name="MyLocalPageNoSongs_getfavorite"  padding="0,10,0,0" width="180" height="42"  text="添加本地歌曲" align="left" textpadding="47,0,0,0" textcolor="#FF000000" font="YAHEI.N014" statusimage="btn_localempty.png" iconimage="mylist_empty_add.png" icondest="19,12,39,31"/>
+                                  <Button name="MyLocalPageNoSongs_casulisten"  padding="0,10,0,0" width="180" height="42"  text="随便听听几首" align="left" textpadding="47,0,0,0" textcolor="#FF000000" font="YAHEI.N014" statusimage="btn_localempty.png" iconimage="mylist_empty_listen.png" icondest="19,12,39,31"/>
+                                </VerticalLayout>
+                                <Container />
+                              </HorizontalLayout>
+                              <Container />
+                            </VerticalLayout>
+                          </PLACCEPTDRAG>
+                        </HorizontalLayout>
+                        <HorizontalLayout name="MobileDefaultBlankList" menu="true">
+                          <!--手机列表没有歌曲时面板 -->
+                          <PLACCEPTDRAGMOBILE name="drag_MobileDefaultBlankList" enabled="true" mouse="true">
+                            <VerticalLayout name="MyLocalPageNoSongsMobile" sendsizemsg="true">
+                              <ListHeader height="25">
+                                <ListHeaderItem name="HeadItem_id1" text="" width="45"  textcolor="#ff999999" normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                                <ListHeaderItem name="HeadItem_id2" text="操作" width="85" textcolor="#ff999999"  normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                                <ListHeaderItem name="HeadItem_id3" text="歌名" minwidth="288"  textcolor="#ff999999"  normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                                <ListHeaderItem name="HeadItem_id4" text="歌手" minwidth="142" textcolor="#ff999999"  normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                                <ListHeaderItem name="HeadItem_id5" text="专辑" minwidth="148" textcolor="#ff999999"  normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                                <ListHeaderItem name="HeadItem_id7" text="音质" width="40" textcolor="#ff999999"  normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                              </ListHeader>
+                              <Container />
+                              <HorizontalLayout height="185">
+                                <Container />
+                                <VerticalLayout width="220" height="185">
+                                  <Label width="135" height="135" padding="43,0,42,0" bkimage="Mobile_TwodimensionCode.jpg"/>
+                                  <Label width="220" height="16"  padding="0,10,0,0" text="扫描下载酷我音乐APP" font="Main.ChannelTitle" textcolor="#ff999999" align="center"/>
+                                  <Label width="220" height="16" padding="0,8,0,0" text="电脑和手机里的歌曲会自动同步，无需复制" font="Main.ChannelTitle" textcolor="#ff999999" align="center"/>
+                                </VerticalLayout>
+                                <Container />
+                              </HorizontalLayout>
+                              <Container />
+                            </VerticalLayout>
+                          </PLACCEPTDRAGMOBILE>
+                        </HorizontalLayout>
+                        <VerticalLayout name="searchResultEmpty" menu="true" sendsizemsg="true">
+                          <HorizontalLayout height="25">
+                            <List>
+                              <ListHeader height="25">
+                                <ListHeaderItem name="HeadItem_id1" text="" width="45"  textcolor="#ff999999" normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                                <ListHeaderItem name="HeadItem_id2" text="操作" width="85" textcolor="#ff999999" normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                                <ListHeaderItem name="HeadItem_id3" text="歌名" minwidth="288"  textcolor="#ff999999"  normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                                <ListHeaderItem name="HeadItem_id4" text="歌手" minwidth="142" textcolor="#ff999999"  normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                                <ListHeaderItem name="HeadItem_id5" text="专辑" minwidth="148" textcolor="#ff999999"  normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                                <ListHeaderItem name="HeadItem_id7" text="音质" width="40" textcolor="#ff999999"  normalimage="mylist_netsong_head_1.png" sepimage="0" align="left"/>
+                              </ListHeader>
+                            </List>
+                          </HorizontalLayout >
+                          <Control />
+                          <HorizontalLayout height="20">
+                            <Control />
+                            <Label width="220" height="20" text="没有命中任何歌曲" font="YAHEI.N016" textcolor="#ff999999" align="center"/>
+                            <Control />
+                          </HorizontalLayout>
+                          <Control />
+                        </VerticalLayout >
+                      </TabLayout>
+                      <VerticalLayout name="MusicRadioPanel" padding="0,0,0,0">
+                        <List name="MusicRadioList" acceptdrag="true" dragtarget="true" draghovertype="line" sendsizemsg="true" minwidth="10" header="hidden" multiexpanding="true" itemtextcolor="#ff333333" itemselectedtextcolor="#ffffffff" itemhotbkcolor="#1a000000" itemselectedbkcolor="#26000000" itemexpandbkcolor="#40000000" itemactivetextcolor="#ffffffff" inertiascroll="true" usefadehotbkg="true" itemshowhtml="false" vscrollbar="true" hscrollbar="false" itemalign="left" menu="true">
+                          <ListHeader>
+                            <ListHeaderItem bkcolor="#ffff0000"/>
+                          </ListHeader>
+                          <DefChildAttr height="50" menu="true"/>
+                        </List>
+                      </VerticalLayout>
+                    </TabLayout>
+                  </HorizontalLayout>
+                </VerticalLayout>
+                <!--我的播放列表end-->
+
+
+                <!--我的列表-->
+                <VerticalLayout name="MylistContent" bkcolor="#FFFFFFFF" sendsizemsg="true" vscrollbar="true" vscrollbarstyle="autohide=&quot;false&quot;">           
+                  <HorizontalLayout  name="mylist_scroll_height" bkcolor="#FFFFFFFF" >
+                    <Control name="left_sep" width="25" />
+                    <VerticalLayout >
+                      <HorizontalLayout height="54">
+                        <HorizontalLayout width="180" >
+                          <Label name="list_tip" text="我创建的列表" width="118" padding="0,20,0,0" font="YAHEI.NO18" align="right" textcolor="#FF000000"/>
+                          <Control width="3" />
+                          <Label text="共" width="15" padding="0,20,0,0" textcolor="#ff999999" visible="false"/>
+                          <Label text="100" name="list_song_num"  padding="0,20,0,0" align="left" textcolor="#ff999999" />
+		               			<Label text="个" width="15" padding="0,20,0,0" textcolor="#ff999999" visible="false"/> 
+	               			</HorizontalLayout>              		
+                        <Control />
+                        <HorizontalLayout width="190" >
+	               				<Button name="btn_new_list" text="新建列表" tooltip="新建列表" textpadding="18,0,0,0" padding="0,19,0,0" width="90" height="28" statusimage="btn_new_list.png"  iconimage="btn_new_list_icon.png" icondest="12,8,26,22"/> 
+                          <Control width="10" />
+                          <Button name="btn_import_list" text="导入列表" tooltip="导入列表" textpadding="18,0,0,0" padding="0,19,0,0" width="90" height="28" statusimage="btn_import_list.png"  iconimage="btn_import_list_icon.png" icondest="12,8,26,22"/>
+                        </HorizontalLayout>
+                      </HorizontalLayout>
+                      <Control height="1" bkcolor="#FFE6E6E6" />
+		               	<Control height="20"/> 
+		               	<VerticalLayout name="main_list_area">		               		
+	               		</VerticalLayout>              		
+                      </VerticalLayout>
+                    <Control name="right_sep" width="25" />
+	               </HorizontalLayout> 
+               </VerticalLayout >              
+                <!--我的列表结束-->
+
+				<!--听歌识曲-->
+				<VerticalLayout name="KnowSongChannel" sendsizemsg="true" bkcolor="#ffffffff">
+					<VerticalLayout height="55">
+						<HorizontalLayout>
+							<Label text="听歌识曲" height="25" width="100" padding="25,15,0,0" textcolor="#FF222222" font="YAHEI.N016"/>
+							<Control minwidth="300"/>
+							<CheckBox name="create_qulick" text="同时创建桌面快捷方式" padding="0,19,8,0" textcolor="#FF999999" width="170"/>
+						</HorizontalLayout>
+					</VerticalLayout>
+					<Control height="1" bkcolor="#FFF4F4F4" />
+					<VerticalLayout name="KnowSongBody" sendsizemsg="true" vscrollbar="true" vscrollbarstyle="autohide=&quot;false&quot;" autovscroll="true">
+						<Control />
+						<VerticalLayout height="470" align="center">
+							<TabLayout name="knowSongTab" padding="0,15,0,0" height="288">
+								<HorizontalLayout name="knowSongLoading" >
+									<Control />
+									<Control name="knowSongIcon" padding="0,38,0,0" width="213" height="213" bkimage="knowSongIcon.png"/>
+									<Control />
+								</HorizontalLayout>
+								<HorizontalLayout name="knowSongLyricTab" >
+									<Control />
+									<HorizontalLayout width="840" align="center">
+										<VerticalLayout padding="90,10,0,0" width="225" height="300">
+											<Control name="ks_image" width="225" height="225" />
+											<HorizontalLayout padding="0,20,0,0" width="225" height="30">
+												<Button name="ks_play" width="26" height="26" statusimage="knowSong_play.png" tooltip="播放" />
+												<Button name="ks_fav" padding="41,0,0,0" width="26" height="26" statusimage="knowSong_nofav.png" />
+												<Button name="ks_download" padding="41,0,0,0" width="26" height="26" statusimage="knowSong_download.png" tooltip="下载" />
+												<Button name="ks_addtolist" padding="40,0,0,0" width="26" height="26" statusimage="knowSong_store.png" tooltip="添加" />
+											</HorizontalLayout>
+										</VerticalLayout>
+										<VerticalLayout name="knowSongLyric" padding="0,0,0,0" width="485">
+											<HorizontalLayout height="25">
+												<Label name="ks_song_name" varwidth="true" text="" align="center" height="25" textcolor="#FF222222" font="YAHEI.N022"/>
+												<Control name="ks_perfect" padding="6,6,0,0" width="45" height="16" visible="false" bkimage="knowSong_perfect.png"/>
+											</HorizontalLayout>
+											<HorizontalLayout padding="50,15,0,0" height="25">
+												<Label name="ks_artist_name" text="歌手：" padding="70,0,0,0" width="50" height="25" textcolor="#FF222222" font="YAHEI.N014"/>
+												<Label name="ks_artist" text="" hscrolltype="1" align="left" width="115" height="25" textcolor="#FF20a1ed" hottextcolor="#FF0091E1" selectedtextcolor="#ff0091e1" font="YAHEI.N014"/>
+												<Label name="ks_album_name" text="专辑：" padding="2,0,0,0" width="50" height="25" textcolor="#FF222222" font="YAHEI.N014"/>
+												<Label name="ks_album" text="" hscrolltype="1" align="left" width="130" height="25" textcolor="#FF20a1ed" hottextcolor="#FF0091E1" selectedtextcolor="#ff0091e1" font="YAHEI.N014"/>
+											</HorizontalLayout>
+											<Control name="ks_lyric_tip"/>
+											<List name="Ks_LyricListPanel"
+											padding="0,20,0,0"
+											bordersize="0"
+											inset="2,0,2,0"
+											header="hidden"
+											acceptdrag="false"
+											dragtarget="false"
+											draghovertype="line"
+											rectangleselect="false"
+											font="YAHEI.N014"
+											itemtextcolor="#ff222222"
+											itemselectedtextcolor="#ff222222"
+											itemhotbkcolor="#ffffffff"
+											itemselectedbkcolor="#ffffffff"
+											itemactivetextcolor="#ff222222"
+											itemexpandbkcolor="#ffffffff"
+											itemdisabledtextcolor="#ff999999"
+											inertiascroll="false"
+											usefadehotbkg="true"
+											multiselecting="false"
+											itemshowhtml="false"
+											itemalign="center"
+											menu="false"
+											vscrollbar="true"
+											hscrollbar="false"
+											>
+											<ListHeader>
+											<ListHeaderItem text="index" />
+											</ListHeader>
+											</List>
+										</VerticalLayout>
+									</HorizontalLayout>
+									<Control />
+								</HorizontalLayout>
+							</TabLayout>
+							<Control name="ks_tmp1" height="37"/>
+							<Label name="ks_loading_label" text="智能识别电脑中正在播放的音乐..." padding="0,7,0,0" align="center" textcolor="#FF222222" font="YAHEI.N020"/>
+							<Label name="ks_tip_label" text="请确定电脑中有歌曲正在播放哦" visible="false" padding="0,16,0,0" align="center" textcolor="#FF999999" font="YAHEI.N016"/>
+							<HorizontalLayout height="50" padding="0,20,0,0">
+								<Control />
+								<Button name="ks_btn" width="200" height="50" align="center" text="开始识别" textcolor="#ffffffff" statusimage="know_song_btn.png" font="YAHEI.N020" />
+								<Control />
+							</HorizontalLayout>
+						</VerticalLayout>
+						<Control />
+					</VerticalLayout>
+				</VerticalLayout >
+				<!--听歌识曲-->
+				
+                <!--我喜欢听-->
+                <VerticalLayout name="FavoriteChannel" sendsizemsg="true" bkcolor="#ffffffff">
+                  <HorizontalLayout name="favoritepagetab" height="53">
+                    <Option name="btn_byfavsingle" group="favoritetabwnd" width="100" height="30" padding="25,23,-1,0" text="我的单曲(0)" textcolor="#FF333333" hottextcolor="#FF0091E1" selected="true" selectedtextcolor="#ff0091e1" normalimage="tab_my_fav_normal.png"  hotimage="tab_my_fav_normal.png" pushedimage="tab_my_fav_select.png" selectedimage="tab_my_fav_select.png"  font="Main.ChannelTitle"/>
+                    <Option name="btn_byfavartist" group="favoritetabwnd" width="100" height="30" padding="0,23,-1,0" text="我的歌手(0)" textcolor="#FF333333"  hottextcolor="#FF0091E1" selectedtextcolor="#ff0091e1" normalimage="tab_my_fav_normal.png" hotimage="tab_my_fav_normal.png" pushedimage="tab_my_fav_select.png" selectedimage="tab_my_fav_select.png" font="Main.ChannelTitle"/>
+                    <Option name="btn_byfavalbum" group="favoritetabwnd" width="100" height="30" padding="0,23,-1,0" text="我的专辑(0)" textcolor="#FF333333" hottextcolor="#FF0091E1" selectedtextcolor="#ff0091e1" normalimage="tab_my_fav_normal.png" hotimage="tab_my_fav_normal.png" pushedimage="tab_my_fav_select.png" selectedimage="tab_my_fav_select.png"  font="Main.ChannelTitle"/>
+                    <Control height="1" bkcolor="#ffdbdbdb" padding="0,52,17,0"/>
+                  </HorizontalLayout>
+<!-- 				  <HorizontalLayout  height="1" padding="400,0,0,0">
+						
+				  </HorizontalLayout> -->
+
+                  <TabLayout name="favoritepagewnd" sendsizemsg="true" inset="24,0,0,0">
+                    <VerticalLayout name="favoriteempty">
+                      <HorizontalLayout  height="46" padding="0,50,0,0">
+                        <Control />
+                        <Label width="50" height="46" bkimage="down_empty.png" />
+                        <Control />
+                      </HorizontalLayout>
+                      <Label height="22" padding="0,5,0,0" align="center" textcolor="#FF999999" font="YAHEI.N014" text="您还没有任何收藏"/>
+                      <HorizontalLayout height="22" padding="-10,-2,0,0">
+                        <Label align="right" text="去" textcolor="#ff999999" font="YAHEI.N014" />
+                        <Button name="btnfav_gotosonglib" width="35" align="center" text="曲库"  textcolor="#ff0091e1" setcursor="true" setlink="false" font="YAHEI.N014" linkfont="YAHEI.N014.UNDERLINE" />
+                        <Label align="left" text="看看"  textcolor="#ff999999" font="YAHEI.N014"/>	
+                      </HorizontalLayout>
+                    </VerticalLayout>
+                    <VerticalLayout name="favoritelistsingle" bkcolor="#ffffffff" vscrollbar="true"  inertiascroll="true" vscrollbarstyle="alawaysplace=&quot;true&quot; alawaysplace=&quot;true&quot; buttonlength=&quot;5&quot; width=&quot;12&quot; autohide=&quot;false&quot; showbutton1=&quot;false&quot; showbutton2=&quot;false&quot; bknormalimage=&quot;file=''&quot; bkhotimage=&quot;file=''&quot; bkpushedimage=&quot;file=''&quot; bkdisabledimage=&quot;file=''&quot; thumbnormalimage=&quot;searchScollList_v_1.png&quot; thumbhotimage=&quot;searchScollList_v.png&quot; thumbpushedimage=&quot;searchScollList_v_3.png&quot;thumbdisabledimage=&quot;searchScollList_v_4.png&quot;" autovscroll="true">
+                      <Control height="20"/>
+                      <!--我喜欢听 全部播放和下载以及搜索排序按钮-->
+                      <HorizontalLayout  name="Fav_OptionCtrl"  height="30"  padding="5,0,25,0">
+                        <HorizontalLayout  width="220">
+                          <Button name="Fav_PlayAll" width="85" height="30" textcolor="#FFFFFFFF" text="播放全部" statusimage="btn_myplaylist_all.png" textpadding="18,0,0,0" iconimage="icon_myplaylist_all.png" icondest="12,8,23,22" tooltip="播放选中歌曲"/>
+                          <Control width="10"/>
+                          <Button name="Fav_Dwonload" width="75" height="30" textcolor="#FF333333" text="下载" statusimage="btn_myList_downAndShare.png" textpadding="18,0,0,0" iconstatusimage="icon_myList_down.png" icondest="15,8,32,22" tooltip="下载选中歌曲"/>
+                          <Control width="10"/>
+                          <Button name="Fav_Share"  visible="false" width="85" height="30" textcolor="#FF333333" text="分享" statusimage="btn_myList_downAndShare.png" textpadding="5,0,0,0" iconimage="icon_myList_share.png" icondest="10,8,26,22"/>
+                        </HorizontalLayout>
+                        <Control />
+                        <!--播放列表的搜索-->
+                        <HorizontalLayout  name="Fav_header" height="30" width="520" minwidth="520">
+                          <HorizontalLayout name="FavSearch_H" width="160">
+                            <Edit name="FavFindEdit" height="24" padding="0,3,0,0"  maxchar="20" textpadding="5,0,30,0" defaulttext="搜索列表歌曲" defaulttextcolor="NetSong.EditDefaultTextColor" normalimage="mylist_search_Btn_1.png" hotimage="mylist_search_Btn_2.png" focusedimage="mylist_search_Btn_1.png"  tooltip="查找歌曲"/>
+                            <Button name="FavSearchBtn"  width="20" height="20" tooltip="查找列表中的歌曲" float="true" pos="135, 5, 155,25" statusimage="mylist_search.png" />
+                          </HorizontalLayout>
+                          <!--  <Control width="15" /> -->
+                          <Label text="排序 :" width="40" textcolor="#ff999999"  padding="0,0,0,0"  align="right"/>
+                          <!--  <Control width="5"/> -->
+                          <Combo padding="5,3,0,0" name="Fav_sort"  width="85" height="24" userdata="NowPlayLyricWnd|FontHeight" bordercolor="#ffe6e6e6" itemhottextcolor="#ff0091e1">
+                            <ListLabelElement text="歌名" userdata="1"/>
+                            <ListLabelElement text="歌手" userdata="2"/>
+                            <ListLabelElement text="播放次数" userdata="3"/>
+                            <ListLabelElement text="添加时间" userdata="4"/>
+                            <ListLabelElement text="随机排序" userdata="5"/>
+                          </Combo>
+
+                          <HorizontalLayout padding="30,0,0,0">
+                            <Button name="FAVzhengli_Btn"  width="55" height="30" padding="10,0,0,0"  textcolor="#FF333333" text="整理" textpadding="16,0,0,0" iconstatusimage="mylist_edit.png" icondest="3,8,19,24" tooltip="快速管理当前列表歌曲"/>
+                            <Label padding="0,8,0,0" width="1" height="18" bkimage="righttop_separator.png" />
+                            <Button name="FAVcloud_default" statusimage="mylistCloud_default.png" padding="5,8,0,0" width="20" height="16" tooltip="点击手动云同步"/>
+                            <Label name="FAVcloud_working" visible="false" bkimage="mylistCloud_working.png" width="20" padding="5,8,0,0" height="16"  framenum="6" frametime="540" tooltip="列表同步中..."/>
+                            <Button name="FAVcloud_space_full" visible="false" statusimage="mylistCloud_spaceFull.png" padding="5,8,0,0" width="20" height="16" tooltip="云空间已满，无法继续上传" />
+                            <Label  text="同步" width="30" padding="5,0,0,0" tooltip="点击手动云同步" textcolor="#00000000" />
+							<Label padding="5,8,0,0" width="1" height="18" bkimage="righttop_separator.png" />
+							<Button name="FAVTranSong_Btn"  width="55" height="30" padding="5,0,0,0"  textcolor="#FF333333" text="传歌" textpadding="16,1,0,0" iconstatusimage="mylist_tran.png" icondest="3,8,19,24" />
+                          </HorizontalLayout>
+                        </HorizontalLayout>
+
+                      </HorizontalLayout>
+                      <Control height="9"/>
+
+                      <List name="ListPanel_favorite"
+						passmousewheel="true" 
+						acceptdrag="true" 
+						dragtarget="true" 
+						draghovertype="line"
+						rectangleselect="true"
+						inertiascroll="true"
+						usefadehotbkg="true" 
+						multiselecting="true"
+						itemhotbkcolor="#fff5f5f5" 
+						itemselectedbkcolor="#fff5f5f5"
+						itemtextcolor="#ff333333"
+						itemdisabledtextcolor="#ff999999"
+						menu="true"
+						sendsizemsg="true"
+						itemhottextcolor="#ff0091e1"
+						padding="0,0,25,0">
+                        <ListHeader height="25">
+                        </ListHeader>
+                        <DefChildAttr height="36" expandheight="36" menu="true"/>
+                      </List>
+                    </VerticalLayout>
+                    <VerticalLayout name="favoritelistcommon">
+
+                    </VerticalLayout>
+                  </TabLayout>
+                </VerticalLayout>
+                <!--我喜欢听结束-->
+
+                <!--我的电台-->
+               <VerticalLayout name="MyRadioContent" bkcolor="#FFFFFFFF" sendsizemsg="true" vscrollbar="true" vscrollbarstyle="autohide=&quot;false&quot;"> 
+	               <VerticalLayout name="my_radio_scroll" >                             
+		               <HorizontalLayout height="60"><!--头部区域-->
+                      <Control width="25" />
+                      <VerticalLayout height="60">
+                        <Control height="18" />
+		               			<HorizontalLayout  height="32"  >               				
+                          <Label text="我的电台"  font="YAHEI.NO18" textcolor="#FF000000" width="85" align="right" padding="0,12,0,0" />
+                          <Label name="radio_num" text="20" width="180"  align="left" textcolor="#ff999999" padding="4,16,0,0" />
+                          <Control />
+			               			<!--HorizontalLayout name="ver_login_tip" bkcolor="#FF00ab00" -->			               				
+                          <Button text="登录收听私人电台,发现你的专属音乐" name="btn_login_radio_tip" width="210" align="right" textcolor="#FF999999" />
+			               				<Control width="5" />	               					 
+                          <Button name="btn_login_radio" text="登录" width="60" height="32" statusimage="btn_radio_unlogin.png"/>
+                          <Control width="1" />
+                          <!--/HorizontalLayout-->
+                          <Control width="1" />
+                        </HorizontalLayout >
+                        <Control height="5"/>
+		               			<Control height="1" bkcolor="#FFE6E6E6" />               			            			
+                      </VerticalLayout>
+                      <Control width="25" />
+                    </HorizontalLayout>
+                    <Control height="13"  />
+		               <HorizontalLayout><!--中间的主区域-->
+                      <Control width="6" />
+		               	<VerticalLayout name="main_radio_area">	               		
+                      </VerticalLayout>
+                      <Control width="6" />
+                    </HorizontalLayout>
+                  </VerticalLayout>
+                </VerticalLayout>
+               <!--我的电台结束-->   
+               
+              </TabLayout>
+            </HorizontalLayout>
+
+          </VerticalLayout>
+        </HorizontalLayout>
+
+        <VerticalLayout name="playingLayer" visible="false" bkcolor="playingLayer.bkcolor">
+          <Control name="shutter" userdata="60;100" visible="false"></Control>
+          <VerticalLayout name="lyricmvhead" height="50">
+            <Control />
+            <HorizontalLayout name="lyric_mv_menu" height="50" float="true">
+              <Control />
+              <Button name="lyric_mv_small" width="32" height="34" padding="0,15,0,0" statusimage="lyric_mv_small.png" tooltip="最小化"/>
+              <Button name="lyric_mv_full" width="34" height="34" padding="4,15,0,0" statusimage="lyric_mv_full.png" tooltip="全屏" />
+              <Button name="lyric_mv_down" width="41" height="34" padding="6,15,16,0" statusimage="lyric_mv_down.png" tooltip="收起"/>
+            </HorizontalLayout>
+          </VerticalLayout>
+          <TabLayout name="artcontainer">
+			  <VerticalLayout name="nothing"/>
+            <WindowProxy name="mvwindow" sendsizemsg="true" visible="false"/>
+            
+            <VerticalLayout name="LyricWnd" sendsizemsg="true">
+              <Control name="SoundVisualView" height="1" visible="false" tooltip="双击收起动效"></Control>
+
+              <Label name="ApeBufTip" bkimage="APE_Buffering_bk.png" text="正在为您播放无损音乐..." textcolor="#FFFFEE60" textpadding="25,0,0,0" float="true" pos="-1,-1,-1,-1" height="23" align="center" visible="false" />
+              <HorizontalLayout name="SaveLyricDeltaTip" bkcolor="#4D000000" float="true" pos="-1,-1,-1,-1" height="30" visible="false">
+                <Label text="您用鼠标调整了歌词时序：" padding="15,2,0,0" width="160" textcolor="#FFFFEA00" font="Default.FontName" />
+                <Option name="SaveLD" padding="-10,10,0,0" width="140" text="保存调整，不再提示" selected="true" textpadding="16,0,0,0" group="savelyricdelta" setcursor="true" textcolor="#B3FFFFFF" normalimage="Radio_Small_1.png" hotimage="Radio_Small_2.png" selectedimage="Radio_Small_3.png" disabledimage="Radio_Small_4.png" height="13" align="left" font="Default.FontName" />
+                <Option name="CancelSaveLD" padding="0,10,0,0" width="120" text="取消本次调整" textpadding="16,0,0,0" group="savelyricdelta" setcursor="true" textcolor="#B3FFFFFF" normalimage="Radio_Small_1.png" hotimage="Radio_Small_2.png" selectedimage="Radio_Small_3.png" disabledimage="Radio_Small_4.png" height="13" align="left" font="Default.FontName" />
+                <Button name="SaveLDBtn" padding="15,3,0,0" text="确定" textcolor="#FFFFFFFF" font="Default.FontName" statusimage="SaveLDBtn.png" width="60" height="24" />
+                <Control />
+                <Button name="SaveLDClose" padding="0,9,10,0" statusimage="SaveLDClose.png" width="13" height="12" />
+              </HorizontalLayout>
+
+              <HorizontalLayout name="LyricAlbumTip" float="true" visible="false">
+                <Control />
+                <VerticalLayout width="175">
+                  <Control />
+                  <VerticalLayout height="40" bkimage="LyricTipbk.png">
+                    <Label font="YAHEI.NO18" padding="0,10,0,0" align="center" textcolor="#ffffffff" text="桌面写真已经开启！"></Label>
+                    <!-- <Label font="YAHEI.NO18" padding="0,10,0,0" align="center" textcolor="#ffffffff" text="再次点击或在电脑屏幕右上角可以关闭写真哦~"></Label> -->
+                  </VerticalLayout>
+                  <Control />
+                </VerticalLayout>
+                <Control />
+              </HorizontalLayout>
+
+            </VerticalLayout>
+
+			  <VerticalLayout name="CDArtWnd">				  
+			  </VerticalLayout>
+
+		  </TabLayout>
+        </VerticalLayout>
+
+      </Container>
+
+      <!--左侧上方控制条，包括歌词、mv、K歌-->
+      <VerticalLayout name="Lyric_mvController" bkimage="LyricControlBk.png" float="true" floatrelativeleft="true" pos="0,80,110,0" width="110" height="80" visible="false">
+        <DefChildAttr class="all" textcolor="#FFFFFFFF" height="35" width="110"/>
+        <!-- 只对OptionUI子节点有效，效果跟all叠加 -->
+        <Option name="lyric" padding="0,5,0,0" statusimage="LyricBk.png" group="nowplayingtab" selectedimage="LyricBk_3.png" selected="true"/>
+        <Option name="mv" statusimage="MvBk.png" group="nowplayingtab" selectedimage="MvBk_3.png" enabled="false"/>
+      </VerticalLayout>
+
+      <!--左侧控制条，歌词界面，包括字体大小、搜索歌词、上传歌词等等-->
+      <VerticalLayout name="LyricController" bkimage="LyricControlBk.png" float="true" floatrelativeleft="true" pos="0,205,110,0" width="110" height="260" visible="false">
+        <DefChildAttr class="all" textcolor="#FFFFFFFF" height="35" width="110"/>
+        <Option name="LyricAlbum" sendsizemsg="true" padding="0,5,0,0" statusimage="LyricAlbum.png" selectedimage="LyricAlbum_3.png"/>
+        <Button name="LyricFadeSidebar" statusimage="FixedSidebar.png" enabled="true"/>
+        <Button name="LyricPic" statusimage="LyricPicBk.png"/>
+        <Button name="LyricFontSize" statusimage="LyricFontSizeBk.png"/>
+        <Button name="LyricSearch" statusimage="LyricSearchBk.png" enabled="false"/>
+        <Button name="LyricConfig" statusimage="LyricConfigBk.png"/>
+        <Button name="LyricError" padding="0,0,0,5" statusimage="LyricErrorBk.png"/>
+      </VerticalLayout>
+      
+      <VerticalLayout name="TranslateLayout" bkimage="LyricControlBk.png" width="110" height="35" float="true" floatrelativeleft="true" pos="-1,486,-10,0" visible="false" >
+        <Button name="TranslateHideCtrl" width="110" height="35" visible="true" statusimage="TranslateHide.png" />
+        <Button name="TranslateShowCtrl" width="110" height="35" visible="false" statusimage="TranslateShow.png" />
+      </VerticalLayout>
+      
+      <VerticalLayout name="LyricBkPanel" bkimage="LyricBkPanelBk.png" float="true" pos="-20, 300, -10, 0" width="90" height="115" visible="false">
+        <Option name="ArtistPic" padding="0,5,0,0" width="90" height="35" group="LyricBk" selected="true" normalimage="ArtistPicBk_1.png" hotimage="ArtistPicBk_2.png" pushedimage="ArtistPicBk_3.png" disabledimage="ArtistPicBk_4.png" selectedimage="ArtistPicBk_5.png" />
+        <Option name="SkinPic" group="LyricBk" width="90" height="35" normalimage="SkinPicBk_1.png" hotimage="SkinPicBk_2.png" pushedimage="SkinPicBk_3.png" disabledimage="SkinPicBk_4.png" selectedimage="SkinPicBk_5.png" />
+        <Option name="LocalPic" group="LyricBk" width="90" height="35" normalimage="LocalPicBk_1.png" hotimage="LocalPicBk_2.png" pushedimage="LocalPicBk_3.png" disabledimage="LocalPicBk_4.png" selectedimage="LocalPicBk_5.png"/>
+      </VerticalLayout>
+
+      <VerticalLayout name="LyricFontSizePanel" bkimage="LyricBkPanelBk.png" float="true" pos="-20, 300, -10, 0" width="175" height="67" visible="false">
+        <HorizontalLayout name="LyricColorPanel" height="35">
+          <Option name="LyricColorGray" padding="8,8,0,0" group="LyricColor" statusimage="LyricColorGray.png" selectedimage="LyricColorGray_4.png" width="25" height="25"/>
+          <Option name="LyricColorBlue" padding="8,8,0,0" group="LyricColor" statusimage="LyricColorBlue.png" selectedimage="LyricColorBlue_4.png" width="25" height="25"/>
+          <Option name="LyricColorPurple" padding="8,8,0,0" group="LyricColor" statusimage="LyricColorPurple.png" selectedimage="LyricColorPurple_4.png" width="25" height="25"/>
+          <Option name="LyricColorYellow" padding="8,8,0,0" group="LyricColor" statusimage="LyricColorYellow.png" selectedimage="LyricColorYellow_4.png" width="25" height="25"/>
+          <Option name="LyricColorGreen" padding="8,8,0,0" group="LyricColor" statusimage="LyricColorGreen.png" selectedimage="LyricColorGreen_4.png" width="25" height="25"/>
+        </HorizontalLayout>
+        <HorizontalLayout name="LyricSizePanel">
+          <Label name="LabelSmall" text="小" padding="12,2,0,0" height="25" width="25" textcolor="#FFFFFFFF"/>
+          <Slider name="LyricSizeProgress" padding="4,7,0,0" width="91" height="15" min="14" max="24" bkimage="FontSizeProgress_bk.png" fgimage="FontSizeProgress_bk.png" fgpadding="4,0,4,0" thumbimage="FontSize_thumb.png" thumbsize="14,14" />
+          <Label name="LabelBig" text="大" padding="9,2,0,0" height="25" width="25" font="YAHEI.NO18" textcolor="#FFFFFFFF"/>
+        </HorizontalLayout>
+      </VerticalLayout>
+
+      <VerticalLayout name="LyricCopySuc" bkimage="LyricFontSizePanelBk.png" float="true" pos="-20, 400, -10, 0" width="150" height="60" visible="false">
+        <Label text="已成功复制歌曲" padding="25,10,0,0" font="PopUp.SectionTitle"/>
+        <Label text="你可以粘贴使用了。" padding="25,0,0,0"/>
+      </VerticalLayout>
+
+      <!--左侧控制条、MV界面，包括原唱、高清、全屏等等-->
+      <VerticalLayout name="MvController" bkimage="MvControlBk.png" float="true" floatrelativeleft="true" pos="-1,181,-10,0" width="110" height="225" visible="false">
+        <DefChildAttr class="all" textcolor="#FFFFFFFF" height="35"/>
+        <HorizontalLayout padding="0,5,0,0">
+          <Control name="KtvTag" bkimage="MvIcon1_disable.png" width="34"/>
+          <Option name="MvOriginal" statusimage="MvOriginalBk.png" group="MvMusic" width="31" selectedimage="MvOriginalBk_3.png"/>
+          <Option name="MvAccompaniment" statusimage="MvAccompanimentBk.png" group="MvMusic" width="31" selectedimage="MvAccompanimentBk_3.png"/>
+        </HorizontalLayout>
+        <Button name="MvFixedSidebar" width="110" height="36" statusimage="FixedSidebar.png"/>
+        <Button name="MvFullScreen" width="110" height="36" statusimage="MvFullScreenBk.png"/>
+        <Button name="MvDownload" width="110" height="36" statusimage="MvDownloadBk.png"/>
+        <Button name="MvError" padding="0,-3,0,0" width="110" statusimage="LyricErrorBk.png"/>
+      </VerticalLayout>
+
+      <!--播放控制栏-->
+      <!--Control name="TabPlayContrlPanelPlaceHolder" height="65"/-->
+      <TabLayout name="TabPlayControlPanel" height="70" bkcolor="TabPlayControlPanel.bkcolor.normal">
+        <!-- begin PlayControlPanel  -->
+        <VerticalLayout name="PlayControlPanel" height="70" float="true" pos="0,0,0,0" bkcolor="PlayControlPanel.bkcolor.normal">
+         
+          <HorizontalLayout name="HLPlayControl" height="70">
+            <!-- 播放控制按钮 -->
+            <HorizontalLayout name="PlayButtonPanel" width="170" minwidth="170">
+              <HorizontalLayout height="52" padding="16,6,0,4">
+                <Button name="Pre" padding="0,12,0,0" width="34" height="34" align="center" statusimage="prebtn.png" tooltip="上一首(Ctrl+Shift+Left)"/>
+                <TabLayout padding="15,9,0,0" name="Play_Pause" width="40" height="40">
+                  <Button name="Play" tooltip="播放(Ctrl + F5)" pos="0,0,0,0" height="40" align="center" statusimage="playbtn.png" />
+                  <Button name="Pause" tooltip="暂停(Ctrl + F5)" pos="0,0,0,0" height="40" align="center" statusimage="pausebtn.png" />
+                </TabLayout>
+                <Button name="Next"  padding="14,12,0,0" width="34" height="34" align="center" statusimage="nextbtn.png" tooltip="下一首(Ctrl+Shift+Right)"/>
+              </HorizontalLayout>  
+              </HorizontalLayout>
+			
+            <!-- 正下角歌曲信息 -->
+            <HorizontalLayout name="HL_Info" padding="0,0,0,0">
+              <Button name="BT_AlbumPic" width="55" height="55" padding="0,7,0,0" bkimage="DefaultAlbumPic.png" align="center" fadetime="0" tooltip="打开音乐详情页" normalimage="AlbumBtn_2.png" hotimage="AlbumBtn_3.png" pushedimage="AlbumBtn_3.png" />
+              <!-- normalimage="BT_AlbumPic_mask.png"/> -->
+              <!-- <Button name="BT_AlbumPic_btn" visible="false" setcursor="true" float="true" width="33" height="21" statusimage="AlbumBtn.png"/> -->
+              <Container padding="0,0,0,0" >
+                <HorizontalLayout inset="6,0,6,0">
+                  <Control name="HL_PlaySongInfo"></Control>
+                </HorizontalLayout>
+                <VerticalLayout padding="5,0,0,0">
+                  <HorizontalLayout name="HL_Message" height="24" float="true" pos="5,15,0,0" sendsizemsg="true">
+                    <!--<Control name="Message_tmp" visible="false" padding="2,0,0,0" minwidth="160" ></Control>
+                    <Label name="MessageLable" visible="true" padding="2,0,0,0" text="好音质 用酷我" hscrolltype="1" align="center" minwidth="160" textcolor="#FFFFFFFF"/>-->
+                    <Label name="Message_Tip" visible="true" padding="2,0,0,0" text="好音质 用酷我" hscrolltype="1" align="left" minwidth="160" textcolor="#FFFFFFFF"/>
+                    <Label name="MessageLable" visible="false" padding="2,0,0,0" float="true" pos="10,10,0,0" hscrolltype="1" sendsizemsg="true" textcolor="#FFFFFFFF"/>
+                    <Label name="LB_CurrentTime" align="right" padding="1,2,0,0" textcolor="#B2FFFFFF" varwidth="true" text="00:00" />
+                    <Label padding="0,0,0,0" textcolor="#B2FFFFFF" text="/" width="7"/>
+                    <Label name="LB_TotalTime" padding="0,2,1,0" textcolor="#B2FFFFFF" varwidth="true" text="00:00" />
+                    <Button name="PL_BTN_Quality" padding="4,3,0,0" text="高品" enabled="false" width="46" height="22" align="left" textcolor="#99FFFFFF" pushedtextcolor="#ffffffff" hottextcolor="#ffffffff" textpadding="4,-1,0,0" statusimage="quality_btbk.png"/>
+                    <Control width="2" />
+                    <Button name="HighCache" visible="false" padding="0,0,0,0" font="YAHEI.N12_UNDERLINE" varwidth="true" textcolor="#FFFFFFFF" width="1" setcursor="true" />
+                  </HorizontalLayout>
+                  <PlayProgress name="PlayerProgress" visible="true" padding="2,37,0,0" height="18" max="100" min="0" fbpadding="3,0,5,0" fgpadding="0,0,0,0" btnvisible="true" bkimage="PlayerProgress_bk.png" breath="false"  thumbimageoffset="0" fgimage="PlayerProgress_progress_no.png" downloadimage="PlayerProgress_download.png" thumbimage="PlayerProgress_thumb.png" breathbk="PlayerProgressBar_breath.png" thumbsize="16,16"/>
+                  <Control width="4" />
+                </VerticalLayout>
+              </Container>
+            </HorizontalLayout>
+
+            <!-- 音量控制和右下角按钮 -->
+            <HorizontalLayout name="HL_Misc" width="390">
+              <Button name="BT_PlayMode" padding="19,25,0,0" width="18" height="18" tooltip="播放模式" statusimage="playcontrol_play_mode_order.png"></Button>
+              <TabLayout name="MUTE_MUTED" padding="15,26,0,0" width="18" height="18">
+                <Button name="Muted" tooltip="静音(Ctrl + Alt + S)" height="18" align="center" statusimage="mutedbtn.png" />
+                <Button name="Mute" tooltip="取消静音(Ctrl + Alt + S)" visible="false" height="18" align="center" statusimage="mutebtn.png" />
+                <Button name="Mute_exclu" tooltip="取消静音(Ctrl + Alt + S)" visible="false" height="18" align="center" statusimage="exclu_muted.png" />
+              </TabLayout>
+
+              <Button name="BT_GoodSound" padding="25,24,0,0" text="音效" tooltip="音效" width="50" height="22" align="left" textcolor="#99FFFFFF" pushedtextcolor="#ffffffff" hottextcolor="#ffffffff" textpadding="17,0,0,0" iconstatusimage="GoodSound_YX.png" icondest="0,3,16,19" endellipsis="true"/>
+              <Button name="BT_ExclusivePlay" padding="8,25,0,0" width="43" height="20" align="center" tooltip="开启独占模式" statusimage="hifi_close.png"/>
+              <Option name="OP_DeskLyric" padding="25,26,1,0" width="18" height="18" align="center" tooltip="显示桌面歌词" statusimage="playcontrol_lyric.png" selectedimage="playcontrol_lyric_3.png"/>
+              <Slider name="PlayerVolumn" visible="false" step="5" value="80" padding="0,33,0,0" width="52" height="11" bkimage="playcontrol_volumnbk.png" fgimage="playcontrol_volumnfg.png" fgpadding="0,0,1,0" thumbimage="playcontrol_volumnthumb.png" thumbsize="11,11" />
+              <Button name="BT_Fav" padding="14,26,0,0" width="18" height="18" statusimage="CasualListenWhiteHeart_PlayControl.png"/>
+              <Button name="BT_More" padding="15,26,0,0" width="18" height="18" tooltip="更多" statusimage="playcontrol_more.png"></Button>
+              <HorizontalLayout padding="25,27,0,0" width="46">
+                <Button name="BT_Playlist" varwidth="true" width="18" height="18" tooltip="当前播放列表" iconstatusimage="playcount_list.png" icondest="0,0,18,18" align="left" textpadding="18,-2,0,0" textcolor="#99FFFFFF" pushedtextcolor="#ffffffff" hottextcolor="#ffffffff" text="" />
+              </HorizontalLayout>
+              <Button name="BT_Tools" padding="3,24,0,0" width="38" height="28" visible="false" statusimage="bt_tools.png" tooltip="打开工具"/>
+              <Control width="0" ></Control>
+            </HorizontalLayout>
+
+          </HorizontalLayout>
+          
+        </VerticalLayout>
+        <!-- end PlayControlPanel -->
+      </TabLayout>
+        
+
+    </VerticalLayout>
+
+  </VerticalLayout>
+</Window>

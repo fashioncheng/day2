@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="300,200" caption="0,0,0,50" roundcorner="5,5">
+	<VerticalLayout bkcolor="#00000000">
+	  	<HorizontalLayout name="titlepanel" height="50">
+    		<Label name="title" padding="15,0,0,0" width="250" text="MV下载限额已用尽" font="PopUp.Title"/>
+    		<Control />
+			<Button name="close" width="19" height="20" padding="0,6,0,0" statusimage="Config_CloseBtn.png" />
+			<Control width="6"/>
+		</HorizontalLayout>
+		<Control height="15"/>
+		<Label text="您本月的MV下载限额已用尽, 您可以:" padding="15,0,0,0" font="Config.Content" height="17"/>
+		<HorizontalLayout >
+			<VerticalLayout padding="16,0,0,0" width="5">
+				<Control bkimage="vip_point.png" width="2" height="2" padding="0,17,0,0" />
+			    <Control bkimage="vip_point.png" width="2" height="2" padding="0,24,0,0" />
+			</VerticalLayout>
+			<VerticalLayout>
+				<Label name="info" padding="0,10,0,0" height="16" />
+				<Button name="watchhistory" text="查看下载历史记录>>" align="left" padding="5,10,0,0" font="PlaylistFindTip.UnderLine" height="16" textcolor="Vip.MvLimitClolr" setcursor="true"/>
+			</VerticalLayout>
+		</HorizontalLayout>
+		<Button name="openkwvipbtn" text="确定" padding="200,5,0,0" width="80" height="30" statusimage="Config_Button.png" />
+		<Control height="10"/>
+	</VerticalLayout>
+</Window>

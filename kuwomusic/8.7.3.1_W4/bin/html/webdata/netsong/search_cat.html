@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>搜索内容页面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="css/content.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/comm2.js"></script>
+	<script type="text/javascript" src="js/searchcat.js"></script>
+	<style>
+	.common_content{display:none;}
+	html{overflow-y:auto;overflow-x:hidden;position:relative;}
+	body::-webkit-scrollbar{
+		width:15px;
+	}
+	body::-webkit-scrollbar-track {
+
+	background-color: #fafafa;
+
+	} /* 滚动条的滑轨背景颜色 */
+
+	 
+
+	body::-webkit-scrollbar-thumb {
+	border:1px solid #dbdfe2;
+	background-color: #f3f3f3;
+
+	} /* 滑块颜色 */
+
+	body::-webkit-scrollbar-button {
+	 background:transparent;
+	/*background-color: #7c2929;*/
+
+	} /* 滑轨两头的监听按钮颜色 */
+
+	/*显示滚动条上方的渐增按钮*/
+	body::-webkit-scrollbar-button:start:decrement,
+	body::-webkit-scrollbar-button:end:increment {
+		    display: block;
+		    height:15px;
+		}
+		/*隐藏滚动条上方的渐增按钮*/
+	body::-webkit-scrollbar-button:vertical:start:increment,
+	body::-webkit-scrollbar-button:vertical:end:decrement {
+		    display: none;
+		}
+		/* 定义滚动条渐增按扭的样式 */
+	body::-webkit-scrollbar-button:end:increment {
+		    background-image: url(img/bar_down.jpg);
+		    margin-top:2px;
+		}
+		/* 定义滚动条渐减按扭的样式 */
+	body::-webkit-scrollbar-button:start:decrement {
+		    background-image: url(img/bar_up.jpg);
+		    margin-bottom:2px;
+		}
+	.channelContent{margin-left:3px;}
+	.l_p1{color:#000;font-size:18px;margin-top:50px;}
+    .l_p1 em{color:#ff6600}
+    .l_p2{color:#999;font-size:18px;margin-top:40px;}
+    .l_p3{line-height:31px;color:#333}
+    .l_p3 a{color:#69c2eb;text-decoration:underline;}
+    .l_p4 a{margin-right:20px;}
+    .ff66{color:#ff6600!important;font-style: normal;}
+    .sou_geci{margin-left:134px;color: #888999;height: 38px;line-height: 38px;overflow:hidden;}
+	.sou_geci span{width:100%;height:38px;float:left;overflow: hidden;font-size:12px;}
+    .copyright .ff66{color:#adadad!important;}
+    .music_wrap{background-color: rgb(245,245,245);}
+/*修改搜索歌词样式*/
+    .m_left {float:left;width:134px;}
+    .m_middle {overflow: hidden;}
+    .m_right {float:right;width:133px;}
+    .box_right {float:right;width:133px;}
+    .music_wrap a.earth {float:left;margin-left:0;margin-left:5px;}
+    .music_wrap .pz {float:left;margin-left:5px;}
+    .music_wrap .m_score {margin-right:0;}
+	.mr_box {overflow: hidden;}
+	.music_wrap .nameMv,.nameMv{float:left;width:55%;}
+	.music_wrap .m_artist,.m_artist {float:left;width:22%;}
+	.music_wrap .m_album,.m_album {float:left;width:22%;}
+	.kw_album_list {margin-top:20px ;width: 103%}
+	h1 .checkall{width:58px;}
+	h1 .checkall font {width:auto;}
+	.w_noresult {padding:0 36px 0 12px;}
+	.bmv_wrap{z-index:0;}
+	/*修改电台样式*/
+	.br_wrap{margin-right:16px;}
+	</style>
+
+</head>
+<body>
+	<div class="channelContent">
+	    <div class="max_content" id="content">
+	        <div class="common_content w_artist">
+	            <ul class="kw_album_list">                  
+	            </ul>
+	        </div>   
+	        <div class="common_content w_album">
+	            <ul class="kw_album_list">                   
+	            </ul>
+	        </div>      
+	        <div class="common_content w_mv">
+	            <h1 class="selall selall_mv" style="padding-top:20px;width:99.5%;border:0">
+				    <a hidefocus href="###" class="all_playmv" title="播放全部MV" style="margin-left:0">播放全部</a>
+				    <span class="checkall checkallNum" style="float:right;margin-right:20px;"><font></font></span>
+			    </h1>	
+	            <ul class="kw_mv_list" style="width:102%;">
+	            </ul>
+	        </div>       
+            <div class="common_content w_playlist">
+                <ul class="kw_playlist" style="width:102%; margin-top:20px;">
+                </ul>
+            </div>
+            <div class="common_content w_radiolist">
+                <ul class="kw_radiolist" style="width:102%; margin-top:20px;">
+                </ul>
+            </div>
+	        <div class="common_content w_lrc" style="margin-top:3px;">
+	            <h1 class="selall tag" style="padding-top:17px;border:0">
+					<a style="margin:0" title="播放选中歌曲" class="all_play" href="###" hidefocus>播放全部</a>
+					<a title="添加选中歌曲" class="all_add" href="###" hidefocus>添加</a>
+				    <a title="下载选中歌曲" class="all_down" href="###" hidefocus>下载</a>				    
+			    </h1>
+				<h1 class="selall" style="position: static; left: 0px;border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;">
+	                <div>
+	                    <div class="ml">
+	                            <span class="checkall"><input type="checkbox" checked="true" class="all_ckb"><font></font></span>
+	                        <span class="s_list" style="float:left;width:auto">操作</span>
+	                        </div>
+	                    <div class="mr_box">
+	                        <div class="mr_box_r">
+	                            <span class="s_list" style="text-align: left;">热度</span>
+	                            <span class="s_list" style="width:31px;float: right;margin-right:0px;">音质</span>
+	                        </div>
+	                        <div class="mr_center_con" style="overflow: hidden;zoom:1;">
+	                            <span class="s_list m_name_box">歌名</span>
+	                            <span class="s_list m_artist_box">歌手</span>
+	                            <span class="s_list m_album_box" style="margin-right: 0">专辑</span>
+	                        </div>
+	                    </div>
+	                </div>
+	            </h1>
+
+
+	            <ul class="kw_music_list">
+	            </ul>
+	        </div>          
+	        <div class="common_content w_noresult">
+	            <p class="l_p1" style="word-break:break-all;word-wrap:break-word;">没有找到与“<em></em>”相关的结果，换个词再试试？</p>
+				<p class="l_p2">酷我音乐建议您：</p>
+				<p class="l_p3">请检查输入的关键词是否有误或过长。</p>
+				<p class="l_p3">请向我们<a hidefocus href="###" onclick="callClient('UserFeedback');">反馈</a>，我们将尽快补充数据。</p>
+				<p class="l_p3 l_p4" id="noresult_con">
+				</p>
+	        </div>       
+	        <div class="page"></div>            
+	    </div>
+	</div>
+	<style>
+	.w_rtop { 
+	    position:fixed;
+	    _position:absolute; 
+	    display:none; 
+	    width:26px; 
+	    height:26px; 
+	    background:url(img/top.png) no-repeat 0 0; 
+	    z-index:9999999; 
+	    right:10px; 
+	    bottom:10px;
+	    _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)-10));
+	 }
+    .w_rtop:hover { background:url(img/top_hover.png) no-repeat 0 0;}
+	</style>
+	<a href="#" hidefocus class="w_rtop"></a>
+</body>
+</html>

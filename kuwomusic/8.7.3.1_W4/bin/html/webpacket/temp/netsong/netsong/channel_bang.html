@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>排行榜频道页面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<link href="css/channel.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<!-- <script src="js/jquery.countdown.js"></script>-->
+	<script src="js/comm2.js" type="text/javascript"></script>
+	<script src="js/create_structure.js" type="text/javascript"></script>
+	<script src="js/music.js" type="text/javascript"></script>
+	<script src="js/channel_bang.js" type="text/javascript"></script>	
+</head>
+<body>	
+	<div class="channelContent">
+		<div id="content" class="content bang_con">
+			<div class="bang_head">
+				<a hidefocus href="###" c-id="16" c-sourceid="26" c-name="酷我热歌榜" title="酷我热歌榜" class="hot_tag current" id="hot_tag">酷我热歌榜</a>
+                <!-- <a hidefocus href="###" c-id="132" c-sourceid="-99" c-name="酷音乐亚洲排行榜" title="酷音乐亚洲排行榜" class="rise_tag" id="rise_tag">酷音乐亚洲排行榜</a> -->
+				<a hidefocus href="###" c-id="17" c-sourceid="25" c-name="酷我新歌榜" title="酷我新歌榜" class="new_tag" id="new_tag">酷我新歌榜</a>
+				<a hidefocus href="###" c-id="93" c-sourceid="80358" c-name="酷我飙升榜" title="酷我飙升榜" class="rise_tag" id="rise_tag">酷我飙升榜</a>
+				<!-- <div class="countdown">
+					<span class="countdownT">距下次排名更新：</span>
+                    <div class="time-box">
+                        <div class="minutes">32</div>
+                        <div class="seconds">45</div>
+                    </div>
+                </div> -->
+            </div>
+			<h1 class="selall toolbar toolbar_right" style="border:0;overflow:hidden;"></h1>
+            <div class="fixed_list_asia fixed_list">
+            </div>
+            <span style='clear:both;'/>
+			<div class="fixed_list">
+			</div>
+			<div class="bang_list" style="display:none;">
+                <div class="B_common">
+
+                </div>
+                <div class="B_special">
+
+                </div>
+			</div>
+		</div>
+		<div class="client-modal modal-db js-db" style="display:none">
+	        <div class="top-bd"></div>
+	        <div class="modal-head">
+	            <p class="modal-title js-modal-title">榜单规则</p>
+	            <a href="javascript:;" class="modal-close js-close"></a>
+	        </div>
+	        <div class="left-bd"></div>
+	        <div class="right-bd"></div>
+	        <div class="modal-body modal-body-channel">
+	            <div class="inner-box" style="background: #fff;width:538px;margin: 0 auto;height:183px;">
+	                <p class="text">以下操作均可为歌曲打榜加分，完整播放/分享每天最多累计10次，投票无上限。</p>
+	                <div class="btn-group" >
+	                    <a href="javascript:;" class="m_play btn btn-play" id="js-play" title="播放打榜">
+	                        <i class="tip score1"></i>
+	                    </a>
+	                    <a href="javascript:;" class="btn btn-share" id="js-share" title="分享打榜">
+	                        <i class="tip score10"></i>
+	                    </a>
+	                    <a href="javascript:;" class="btn btn-add" id="js-add" title="投票打榜">
+	                        <i class="tip score100"></i>
+	                    </a>
+	                </div>
+	            </div>
+
+	        </div>
+	        <div class="bottom-bd"></div>
+	    </div>
+	    <div class="client-modal modal-gz js-modal-gz" style="display:none">
+	        <div class="top-bd"></div>
+	        <div class="modal-head">
+	    		<p class="modal-title js-modal-title">榜单规则</p>
+	    		<a href="javascript:;" class="modal-close js-close"></a>
+	        </div>
+	        <div class="left-bd-b"></div>
+	        <div class="right-bd-b"></div>
+	        <div class="modal-body">
+	            <div class="text-info">
+	                <dl class="info-box">
+	                    <dt>1.榜单介绍</dt>
+	                    <dd>酷音乐亚洲排行榜是基于酷狗、酷我音乐平台，以歌曲播放量、分享量为</dd>
+	                    <dd>基础，加上粉丝投票数据综合生成，体现流行趋势的权威榜单</dd>
+	                </dl>
+	                <dl class="info-box">
+	                    <dt>2. 计分规则：</dt>
+	                    <dd>计分项目：对歌曲的完整播放、分享、投票3项数据综合计算，得出排名。</dd>
+	                    <dd>完整播放：1次完整播放计1分，单个用户每天最多计10次。</dd>
+	                    <dd>分享：1次分享计10分，单个用户每天最多计10次。</dd>
+	                    <dd>投票：1次付费投票计100分，无上限</dd>
+	                </dl>
+	                <dl class="info-box">
+	                    <dt>3. 计分周期：</dt>
+	                    <dd>每周一 00:00点至下周一00:00点，每周一中午12点公布上期榜单成绩。</dd>
+	                </dl>
+	                <dl class="info-box">
+	                    <dt>4. 刷新时间：</dt>
+	                    <dd>每10分钟刷新一次排名和分数。</dd>
+	                </dl>
+	            </div>
+	        </div>
+	        <div class="bottom-bd"></div>
+	    </div>
+	</div>
+	<a href="###" hidefocus class="rtop backTop" onclick="returnTop(); return false;" style="display: none; position: fixed; right: 18px; bottom: 18px;"></a>
+</body>
+</html>

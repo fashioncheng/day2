@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="300,420" caption="0,0,0,35" >
+<VerticalLayout name="root" bkcolor="#ffffffff">
+	<HorizontalLayout height="34">
+	  <Label padding="28,7,0,0" text="手机Wi-Fi连接向导" textcolor="#ff999999" varwidth="true" height="22" font="YAHEI.NO12"/>
+      <Button name="button_Close" padding="130,7,8,0" width="22" height="22" statusimage="MusicListenTest_Close.png"/>
+    </HorizontalLayout>
+	<Control padding="15,7,0,0" width="270" height="310" bkimage="tran_iphone_wifi.png" />
+	
+	<Button name="finished" padding="110,28,0,0" width="80" height="24" statusimage="tran_pop_know.png"/>
+</VerticalLayout>
+</Window>

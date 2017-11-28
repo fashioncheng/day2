@@ -1,0 +1,80 @@
+/*酷我评论部分css 16-3-24-deng*/
+/*输入框区域*/
+#commentArea {font-size: 14px; line-height: 120%; color:#333333;font-family: "微软雅黑";padding:40px 0;}
+#commentArea.z1_commentArea{padding-top:0; padding-bottom:40px;}
+#commentArea p.title_ {text-align:left;font-size:14px;font-weight: 600;margin-bottom:18px;}
+#commentArea p.title_ span {color:#666;font-size:12px;margin-left:6px;}
+#commentArea #message { text-align: left; width: 100%;height:125px;position: relative;margin-bottom:20px;}
+#commentArea .textBox {border:1px solid #eee;overflow: hidden;padding:5px;}
+#commentArea #messageCon {width: 100%;height: 49px;resize: none;border:0px;outline:none;}
+#commentArea #messageBtn {width:78px;height:28px;text-align: center;line-height: 28px;position: absolute;right: 0;bottom:0;border: 1px solid #eee;color:#333333; border-radius:3px;}
+#commentArea #messageBtn:hover{color:#fff; background:#21a0ed;}
+#commentArea .word {color:#999999;font-size:12px;line-height: 25px;float: right;margin-right: 10px;}
+#commentArea .word .length {color:#d65555}
+#commentArea span.emotion{width:20px; height:20px; background:url(../img/comment/icon.gif) no-repeat 2px 2px;cursor:pointer;position:absolute;left:0;bottom:10px;}
+#commentArea span.emotion:hover{background-position:2px -28px;}
+#commentArea .faceBox {display:none;position:absolute;padding:0px 5px 3px 2px;width:336px;height:110px;overflow:auto;border:1px solid #f2f2f2;background:#fff;left:0;top:116px;z-index:111;}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+.scrollBox::-webkit-scrollbar{width: 6px;height: 6px;background-color: #F5F5F5;}
+/*定义滚动条轨道 内阴影+圆角*/
+.scrollBox::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);border-radius: 3px;background-color: #F5F5F5;}
+/*定义滑块 内阴影+圆角*/
+.scrollBox::-webkit-scrollbar-thumb{border-radius: 3px;background-color: #999999;}
+#commentArea .faceBox img {float:left;width:19px;margin:3px 0 0 3px;cursor: pointer;}
+/*评论回复列表区域*/
+#commentArea .listBox h4{padding:30px 0 10px 0; font-size:14px; font-weight:normal; color:#999; border-bottom:1px solid #e4e4e4;}
+#commentArea #rec_list,#commentArea #list { margin: 0 auto; text-align: left; width: 100%;}
+#commentArea #list.noComment {text-align:center;}
+#commentArea #list img,#commentArea #rec_list img {display: inline !important;}
+.contentComment img {width:19px;position:relative;top:4px;margin-left:3px;}
+#commentArea .box { border-bottom: 1px solid #f2f2f2; width: 100%; padding: 10px 0}
+#commentArea .boxLast{border-bottom:none;}
+#commentArea .picBox {float: left;margin-right: 10px;width: 45px; height: 45px;overflow:hidden;border-radius: 50%}
+#commentArea .head {width: 45px; height: 45px;}
+#commentArea .contentComment { padding-left:59px;}
+#commentArea .main { margin-bottom: 15px;}
+#commentArea .replyBox { margin-bottom: 10px;line-height:22px;word-wrap:break-word;position: relative;}
+#commentArea .user { color: #585890;display: block;margin-bottom:5px;}
+#commentArea .user a {color: #999;}
+#commentArea .user a:hover{color:#0091e1;}
+#commentArea .userComment {display: inline;color: #585890;}
+#commentArea .userComment a {color: #585890;}
+#commentArea .userComment a:hover{color:#0091e1;}
+#commentArea .time{font-style: normal;position: absolute;top:0;right: 0;color:#999999;font-size:12px;}
+#commentArea .info_ { height: 13px; font-size: 14px; margin: 0 0 10px 0;}
+#commentArea .info_ a {float: right;color: #666;margin-right:10px; }
+#commentArea .info_ a:hover{color:#0091e1;}
+#commentArea .info_ span {float:right;width: 1px;height: 10px;background: #cccccc;margin:4px 10px 0 0;overflow: hidden;display: none;}
+#commentArea .info_ .delete {display: none;}
+#commentArea .info_ .reply {display: none;}
+#commentArea .info_ .praise { height: 13px; padding-right: 18px; background: url("../img/comment/bg2.jpg") no-repeat right top;margin-right:0}
+#commentArea .info_ .praise:hover{background:url("../img/comment/bg3.jpg") no-repeat right top;}
+#commentArea .info_ .praised {background: url("../img/comment/bg3.jpg") no-repeat right top;}
+#commentArea .commentBox {padding: 10px; background:#f1f1f1;margin-bottom:16px;line-height:22px;color:#666666; word-break:break-all;}
+/*评论翻页*/
+.pageComment { float:left; width:100%; height:30px; text-align:center; padding-top:30px;}
+.pageComment a { text-decoration:none; font-size:12px; color:#323c50; padding:2px 7px; margin:0 8px;}
+.pageComment a:hover { color:#29b7e5;}
+.pageComment .current:hover { color:#fff;}
+.pageComment .current { background:#29b7e5; color:#fff;}
+.pageComment .next { padding:2px 5px; font-size:12px; color:#323c50; margin-left:10px;}
+.pageComment .nonext { padding:2px 5px; font-size:12px; color:#888999; margin-left:10px;}
+.pageComment .nonext:hover { color:#888999;}
+.pageComment .prev { padding:2px 5px; font-size:12px; color:#323c50; margin-right:10px;}
+.pageComment .noprev { padding:2px 5px; font-size:12px; color:#888999; margin-right:10px;}
+.pageComment .noprev:hover { color:#888999;}
+
+/*关于删除确定弹窗样式*/
+.popup_mask{position:absolute; left:0; top:0; display:none; width:100%; height:100%; background:#000; opacity:0.3;z-index:1111;}
+.popup{position:fixed; left:50%; top:50%; width:306px; height:160px; margin-left:-153px; margin-top:-80px;background:#fff;z-index:1111;}
+.popup .titleBox{height:14px; line-height:14px; padding:12px 0 0 10px;}
+.popup .desc{padding-top:30px; text-align:center; font-size:14px; color:#333;}
+.popup .close{position:absolute; right:10px; top:13px; width:12px; height:12px; background:url(../img/listening/close.png) no-repeat;}
+.popup .btnBox{margin-top:25px; padding-left:74px;}
+.popup .cancel,.popup .confirm{float:left; width:68px; height:25px; line-height:25px; margin-right:20px; text-align:center; color:#666; border:1px solid #bac5cf; border-radius:3px; background:linear-gradient(#fdfdfd 44%,#e2edf1 94%,#e2fbff);}
+.popup .cancel:hover,.popup .confirm:hover{width:66px; height:23px; line-height:23px; border:2px solid #4db3e3;}
+/*结束*/
+
+/*关于评论成功以及频繁部分的css*/
+.end_box{position:fixed; left:50%; top:50%; display:none; width:206px; height:70px; line-height:70px; margin-left:-103px; margin-top:-35px; text-align:center; font-size:16px; color:rgba(255,255,255,0.8); background:#282828;z-index:999;box-shadow: 0 0 20px 3px rgba(0,0,0,0.3);border-radius: 4px;}
+/*结束*/

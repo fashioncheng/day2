@@ -1,0 +1,20 @@
+/*（每日新歌）个性化推荐歌单内容页新样式 by rsw 2015-10-13*/
+.channelContent{background:url(../img/gedanlatest/gedanhead_bg.png) repeat-x;}
+.gedan_head{margin-top:0; height:125px;}
+.selall{_margin-bottom:0;}
+.selall a{_margin-top:2px;}
+.selall .bnew{float:left; margin-top:8px; *margin-top:8px; padding-left:11px; background:none; font-size:12px; height:26px; line-height:26px;}
+.headBigPic{position:absolute; left:50%; margin-left:-300px; width:600px; height:125px; background:url(../img/gedanlatest/gedanlatest_big.png) no-repeat;}
+.gedan_head .headTitle{width:600px; line-height:20px; padding:2px 0; margin-top:24px; color:#fff; font-size:22px; text-align:center; overflow:hidden;}
+.gedan_head .headTitle .headTitleBox{width:248px; margin:0 auto; overflow:hidden;}
+.dateNumber{float:left; width:16px; height:22px;}
+.dateLine{width:10px;}
+.dayTitle{float:right; width:90px; height:22px; background:url(../img/gedanlatest/daytitle.png) no-repeat;}
+.tabBtnBox{display:none; width:586px; padding-left:14px; height:50px; padding-top:24px; overflow:hidden;}
+.tabBtnWrap{width:600px; height:38px;}
+.newTabBtnBox{position:relative; float:left; width:80px; height:38px; margin-right:18px; padding-top:10px;}
+.tabBtn{float:left; width:80px; height:30px; line-height:30px; text-align:center; color:#fff; overflow:visible; background:url(../img/gedanlatest/tabbtn.png) no-repeat;}
+.tabBtn.hover{background:url(../img/gedanlatest/tabbtn_hover.png) no-repeat;}
+.tabBtn.active{height:38px; background:url(../img/gedanlatest/tabbtn_active.png) no-repeat;}
+.updateNum{position:absolute; top:0; left:50%; margin-left:-15px; width:31px; height:16px; line-height:16px; color:#fff; text-align:center; background:url(../img/gedanlatest/update_bg.png) no-repeat;}
+/*新增结束*/

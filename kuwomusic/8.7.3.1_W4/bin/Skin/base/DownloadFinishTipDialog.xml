@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="256,106" caption="0,0,0,98" roundcorner="10,10">
+	<VerticalLayout name="layout_clientrect">
+		<HorizontalLayout name="layout_dialog_title" height="32">
+			<Label name="text_title" pos="5,8,75,22" float="true" align="left" font="Playlist.PlayingSongName" text="酷我提示" />
+			<Button name="button_Close" pos="224,2,243,22" float="true" statusimage="Config_CloseBtn.png"/>
+		</HorizontalLayout>
+		<Control />
+		<VerticalLayout name="layout_text1" height="40">
+			<Text name="text_text1" pos="5,2,250,18" float="true" align="left" text="" font="Main.ChannelTitle" />
+			<Text name="text_text2" pos="5,22,250,38" float="true" align="left" text="" font="Main.ChannelTitle" />
+			<Text name="text_text3" pos="5,42,300,58" float="true" align="left" text="" visible="false" font="Main.ChannelTitle"/>
+		</VerticalLayout> 
+		<Control />
+		<HorizontalLayout name="layout_opbutton" height="40">
+			<Button  name="label_veiwtast" align="left" textcolor="#FF226699" text="查看任务" pos="42,5,110,20" float="true" font="Default.FontName.UnderLine" setlink="true" setcursor="true"/>
+			<Button  name="label_opendir" align="left" textcolor="#FF226699" text="打开目录" pos="113,5,181,20" float="true" font="Default.FontName.UnderLine" setlink="true" setcursor="true"/> 
+			<Button  name="label_playall" align="left" textcolor="#FF226699" text="播放全部" pos="184,5,252,20" float="true" font="Default.FontName.UnderLine" setlink="true" setcursor="true"/>
+		</HorizontalLayout> 
+		
+	</VerticalLayout>
+</Window>

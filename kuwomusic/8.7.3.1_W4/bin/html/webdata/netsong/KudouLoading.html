@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			background-color: #fafafa;
+		}
+		/*loading*/
+		.loadingPage, .ajaxErrBox {
+			width: 250px;
+			overflow: hidden;
+			background-color: #fafafa;
+			margin: 0 auto;
+			text-align: center;
+		}
+		
+		.loadingPage img {
+			margin-top: 60px;
+			display: inline-block;
+			animation: animateLoading 1.2s infinite ease;
+		}
+		
+		.loadingPage p {
+			font-family:"微软雅黑";
+			margin-top: 20px;
+			font-size: 16px;
+			color: #666666;
+			-webkit-user-select: none;
+		}
+		
+		@keyframes animateLoading {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<!--  loading  --> 
+	<div class="loadingPage" style="display: block">
+	    <img src="img/loading.png">
+	    <p>正在为您加载...</p>
+	</div>
+</body>
+</html>

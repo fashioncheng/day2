@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="312,150" caption="0,0,0,128">
+  <Default name="Edit" value="height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; normalimage=&quot;Config_EditBox_1.png&quot; focusedimage=&quot;Config_EditBox_2.png&quot; disabledimage=&quot;Config_EditBox_3.png&quot; disabledtextcolor=&quot;#FF111111&quot; font=&quot;PopUp.DefaultText&quot;" />
+  <Default name="Label" value="font=&quot;PopUp.SectionTitle&quot; height=&quot;25&quot; textcolor=&quot;Config.DefaultText&quot; textpadding=&quot;0,-3,0,0&quot; " />
+  <Default name="Button" value="setcursor=&quot;true&quot; height=&quot;25&quot; statusimage=&quot;Config_Button.png&quot; font=&quot;PopUp.SectionTitle&quot; hottextcolor=&quot;#ff000000&quot; pushedtextcolor=&quot;#ff000000&quot; focusedtextcolor=&quot;#ff000000&quot;" />
+  <VerticalLayout name="layout_clientrect">
+		<HorizontalLayout name="layout_dialog_title" height="40">
+      <Label padding="7,2,0,0" width="120" align="left" font="PopUp.Title" text="请输入列表名称" />
+			<Control />
+			<Button name="btn_close" width="19" height="20" padding="13,6,0,0" statusimage="Config_CloseBtn.png" tooltip="关闭"/>
+			<Control width="6"/>
+		</HorizontalLayout>
+		<Edit name="edt_list_name" width="270" height="26" maxchar="20" padding="20,16,0,0"/>
+		<Text name="list_err_tip" text="" padding="17,5,0,0" height="16" textcolor="#FFFF0000"/>
+    <Control></Control>
+    <HorizontalLayout name="layout_opbutton" height="25" padding="0,5,0,0">
+      <Control></Control>
+			<Button name="btn_list_ok" text="确认" width="70" focus="true"/>
+			<Button name="btn_list_cancel" text="取消" width="70" padding="10,0,15,0"/>
+		</HorizontalLayout>
+		<Control height="10"/>		
+	</VerticalLayout>
+</Window>

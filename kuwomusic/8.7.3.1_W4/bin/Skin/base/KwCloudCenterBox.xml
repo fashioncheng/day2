@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="702,472" caption="0,0,0,40" roundcorner="5,5" >
+
+	<EventHook event="OnSkinChange">
+		<Attribute control="t1" value="textcolor=&quot;PopWnd.title.textcolor&quot;" />
+		<Attribute control="t2" value="textcolor=&quot;PopWnd.title.textcolor&quot;" />
+	</EventHook>
+	
+	<VerticalLayout  bkcolor="#00000000" >
+	  <HorizontalLayout name="titlepanel" height="40" >
+	    <Text name="t1" text="酷我音乐云" padding="10,10,0,0" font="Cloud.BigFont" textcolor="PopWnd.title.textcolor"/>
+		<Text name="t2" text="列表随身带，备份不丢失" padding="6,12,0,0" width="140" font="Cloud.SmallFont" textcolor="PopWnd.title.textcolor"/>
+		<Control />
+    	<Button name="close" width="19" height="20" statusimage="CloudCenter_close.png" padding="0,6,10,0"/>
+      </HorizontalLayout>
+	  <Control />
+	</VerticalLayout>
+</Window>

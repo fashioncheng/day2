@@ -1,0 +1,17 @@
+.content{position:absolute; left:111px; width:100%; margin:0; margin-left:-111px;}
+.radio_con{float:left; margin-left:137px; margin-right:-27px; overflow:hidden;}
+h2{width:100%;}
+
+/*左侧导航css*/
+.leftNav{position:fixed; z-index:22; left:0; top:20px; width:110px; height:100%; padding-top:20px; background:url(../img/bg_radio_nav.png) right 21px repeat-y; border-right:1px solid #f0f0f0;}
+.leftNav a{position:relative; display:block; width:110px; height:49px; line-height:49px; text-indent:25px; font-size:16px; color:#333;}
+.leftNav a:hover{color:#209ce8;}
+/*.leftNav a:hover span{position:absolute; right:15px; top:24px; width:24px; height:2px; background:#209ce8;}*/
+.leftNav a.current{color:#209ce8;}
+.leftNav a.current span{position:absolute; right:15px; top:24px; width:24px; height:2px; background:#209ce8;}
+
+/*电台*/
+.kw_radio_list{width:100%;}
+
+.kw_radio_list .br_wrap .br_pic .lstdiv{position: absolute;width: 140px;height: 25px;top:115px;z-index: 96;}
+.kw_radio_list .br_wrap .br_pic .listeners{position: relative;float: right;margin-right: 5px;color: #ffffff;font-size: 12px;background: url(../img/play_radio/listen.png)2px no-repeat;padding: 1px 2px 0px 20px;text-shadow: 1px 1px 1px rgba(33,33,33,0.87);}
